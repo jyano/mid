@@ -22,6 +22,7 @@ GRAIL = function () {
 	]).id('main')
 	$.ftr().A('footer').A()
 }
+
 FLEX = function () {
 	$.x('g', 'flex')
 	$CSS({
@@ -56,6 +57,7 @@ FLEX = function () {
 		'justify-content': 'space-between'
 	})
 }
+
 BASIS = function () {
 	$.x('o', 'basis')
 	// http://jsfiddle.net/jakub_g/s5jAB/
@@ -143,7 +145,7 @@ FLEXCT = function () {
 		).css({margin: 20}).C('b')
 	}
 }
-function notSure() {
+//notSure() 
 	GME = function () {
 		$.x('y', 'gme');
 		$CSS({

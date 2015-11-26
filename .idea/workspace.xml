@@ -34,38 +34,80 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dirs.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="dirs.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dirs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.016853932">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routing.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="flexApps.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/flexApps.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+              <folding>
+                <element signature="e#1809#1846#0" expanded="false" />
+                <element signature="e#2855#3149#0" expanded="false" />
+                <element signature="e#5072#5107#0" expanded="false" />
+                <element signature="e#5113#5148#0" expanded="false" />
+                <element signature="e#5208#5239#0" expanded="false" />
+                <element signature="e#5248#5276#0" expanded="false" />
+                <element signature="e#5386#5406#0" expanded="false" />
+                <element signature="e#5523#5556#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="polyMath.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/poly/polyMath.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cxGpc.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/canvas/gpcCan/cxGpc.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routing.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routing.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0764045">
-              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
               <folding>
-                <element signature="e#2556#2602#0" expanded="false" />
-                <element signature="e#3093#3312#0" expanded="false" />
-                <element signature="e#3415#3500#0" expanded="false" />
-                <element signature="e#4110#4129#0" expanded="false" />
-                <element signature="e#4143#4193#0" expanded="false" />
-                <element signature="e#4204#4521#0" expanded="false" />
-                <element signature="e#4808#4938#0" expanded="false" />
-                <element signature="e#5673#5702#0" expanded="false" />
-                <element signature="e#6420#6454#0" expanded="false" />
-                <element signature="e#6460#6524#0" expanded="false" />
-                <element signature="e#7795#7828#0" expanded="false" />
-                <element signature="e#8159#8211#0" expanded="false" />
-                <element signature="e#8226#8294#0" expanded="false" />
-                <element signature="e#8714#8725#0" expanded="false" />
-                <element signature="e#9903#9925#0" expanded="false" />
-                <element signature="e#10251#10278#0" expanded="false" />
+                <element signature="e#87#127#0" expanded="true" />
+                <element signature="e#240#284#0" expanded="true" />
+                <element signature="e#321#383#0" expanded="true" />
+                <element signature="e#2548#2594#0" expanded="false" />
+                <element signature="e#3085#3304#0" expanded="false" />
+                <element signature="e#3407#3492#0" expanded="false" />
+                <element signature="e#4102#4121#0" expanded="false" />
+                <element signature="e#4135#4185#0" expanded="false" />
+                <element signature="e#4196#4513#0" expanded="false" />
+                <element signature="e#4800#4930#0" expanded="false" />
+                <element signature="e#5665#5694#0" expanded="false" />
+                <element signature="e#6412#6446#0" expanded="false" />
+                <element signature="e#6452#6516#0" expanded="false" />
+                <element signature="e#7787#7820#0" expanded="false" />
+                <element signature="e#8151#8203#0" expanded="false" />
+                <element signature="e#8218#8286#0" expanded="false" />
+                <element signature="e#8706#8717#0" expanded="false" />
+                <element signature="e#9895#9917#0" expanded="false" />
+                <element signature="e#10243#10270#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -76,7 +118,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
-              <folding />
+              <folding>
+                <marker date="1448533306000" expanded="true" signature="25:910" placeholder="..." />
+                <marker date="1448533306000" expanded="true" signature="45:868" placeholder="..." />
+                <marker date="1448533306000" expanded="true" signature="58:138" placeholder="..." />
+                <marker date="1448533306000" expanded="true" signature="392:437" placeholder="..." />
+                <marker date="1448533306000" expanded="true" signature="784:829" placeholder="..." />
+                <marker date="1448533306000" expanded="true" signature="877:910" placeholder="..." />
+                <marker date="1448533306000" expanded="true" signature="888:910" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -105,12 +155,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/server/views/basic.jade" />
-        <option value="$PROJECT_DIR$/server/routing.js" />
         <option value="$PROJECT_DIR$/views/basic.jade" />
-        <option value="$PROJECT_DIR$/dirs.js" />
         <option value="$PROJECT_DIR$/a.js" />
         <option value="$PROJECT_DIR$/routing.js" />
+        <option value="$PROJECT_DIR$/superWeb/flexApps.js" />
+        <option value="$PROJECT_DIR$/canvas/gpcCan/cxGpc.js" />
+        <option value="$PROJECT_DIR$/dirs.js" />
       </list>
     </option>
   </component>
@@ -189,11 +239,11 @@
       <recent name="$PROJECT_DIR$/docs" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/superWeb" />
-      <recent name="$PROJECT_DIR$/both" />
-      <recent name="$PROJECT_DIR$/server" />
-      <recent name="$PROJECT_DIR$/front/jqueryUI" />
-      <recent name="$PROJECT_DIR$/front/_frontLater" />
+      <recent name="$PROJECT_DIR$/both/_deps" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/world" />
+      <recent name="$PROJECT_DIR$/spaz/geo" />
+      <recent name="$PROJECT_DIR$/canvas" />
     </key>
   </component>
   <component name="RunManager">
@@ -215,7 +265,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25035262" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21791255" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.027921407" sideWeight="0.5080058" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -264,39 +314,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/server/node/webworkerThreads.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/both/console.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="18" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
-          <folding>
-            <element signature="e#76#137#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/basic.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dirs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/a.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -310,26 +327,70 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routing.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0764045">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
           <folding>
-            <element signature="e#2556#2602#0" expanded="false" />
-            <element signature="e#3093#3312#0" expanded="false" />
-            <element signature="e#3415#3500#0" expanded="false" />
-            <element signature="e#4110#4129#0" expanded="false" />
-            <element signature="e#4143#4193#0" expanded="false" />
-            <element signature="e#4204#4521#0" expanded="false" />
-            <element signature="e#4808#4938#0" expanded="false" />
-            <element signature="e#5673#5702#0" expanded="false" />
-            <element signature="e#6420#6454#0" expanded="false" />
-            <element signature="e#6460#6524#0" expanded="false" />
-            <element signature="e#7795#7828#0" expanded="false" />
-            <element signature="e#8159#8211#0" expanded="false" />
-            <element signature="e#8226#8294#0" expanded="false" />
-            <element signature="e#8714#8725#0" expanded="false" />
-            <element signature="e#9903#9925#0" expanded="false" />
-            <element signature="e#10251#10278#0" expanded="false" />
+            <element signature="e#87#127#0" expanded="true" />
+            <element signature="e#240#284#0" expanded="true" />
+            <element signature="e#321#383#0" expanded="true" />
+            <element signature="e#2548#2594#0" expanded="false" />
+            <element signature="e#3085#3304#0" expanded="false" />
+            <element signature="e#3407#3492#0" expanded="false" />
+            <element signature="e#4102#4121#0" expanded="false" />
+            <element signature="e#4135#4185#0" expanded="false" />
+            <element signature="e#4196#4513#0" expanded="false" />
+            <element signature="e#4800#4930#0" expanded="false" />
+            <element signature="e#5665#5694#0" expanded="false" />
+            <element signature="e#6412#6446#0" expanded="false" />
+            <element signature="e#6452#6516#0" expanded="false" />
+            <element signature="e#7787#7820#0" expanded="false" />
+            <element signature="e#8151#8203#0" expanded="false" />
+            <element signature="e#8218#8286#0" expanded="false" />
+            <element signature="e#8706#8717#0" expanded="false" />
+            <element signature="e#9895#9917#0" expanded="false" />
+            <element signature="e#10243#10270#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/flexApps.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+          <folding>
+            <element signature="e#1809#1846#0" expanded="false" />
+            <element signature="e#2855#3149#0" expanded="false" />
+            <element signature="e#5072#5107#0" expanded="false" />
+            <element signature="e#5113#5148#0" expanded="false" />
+            <element signature="e#5208#5239#0" expanded="false" />
+            <element signature="e#5248#5276#0" expanded="false" />
+            <element signature="e#5386#5406#0" expanded="false" />
+            <element signature="e#5523#5556#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poly/polyMath.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/canvas/gpcCan/cxGpc.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dirs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.016853932">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

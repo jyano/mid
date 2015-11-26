@@ -17,15 +17,11 @@ module.exports=function routing(dirN){
 		})
 	})
 	
-
     _.e(dirs, function (dir) {
         $a.use($e.static(
 		        dirN + '/' + dir))
     })
-	 
-	 
 }
-
 
 function mounts() {
 	$a.g('/web/:a/:p?', function (q, p) {
