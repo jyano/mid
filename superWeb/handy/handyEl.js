@@ -64,3 +64,22 @@ _$=function(ob){
     }
 
 }
+function make() {
+	$.tg = function (a) {
+		return $('<' + a + '>')
+	}
+	 
+	
+	$.frg = function () {
+		return $(
+				document.createDocumentFragment()
+		)
+	}
+	
+	$El = function (tag) {
+		if (tag) {
+			return document.createElement(tag)
+		}
+	}
+}
+make()

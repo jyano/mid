@@ -1,7 +1,4 @@
-$load([
-	
-    'statt'
-])
+$load(['statt'])
  
 $.fn.st=$.fn.stop
 $.fn.fT=$.fn.f2=$.fn.fadeTo

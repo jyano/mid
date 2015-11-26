@@ -3,6 +3,7 @@ $.sty=function(h){
 	styleTag.h(h)
 	return styleTag
 }
+
 $rule=function(sel,decs,rulesOb){
 	var str
 	var SelOb={
