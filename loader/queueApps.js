@@ -6,22 +6,31 @@ QU=QUEUE = function () {
 	queue.loadManifest([
 		{id: "myImage", src: "/me.png"}, {id: "guyImage", src: "/guy.png"}
 	])
+	
+	
 	function handleComplete() {
 		image = queue.getResult("myImage")
 		s.A($Bm(image))
 	}
 }
 
+
 MF = function () {
 	W().C('r')
 	
 	Q(['me', 'guy', 'chicks', 'sun'], function () {
 		w.C('g')
+
+		
 		w.i.A(
-		Q.b('me'), 
-		Q.b('guy')
+
+				Q.b('me'),
+				Q.b('guy')
 		)
+		
 	})
+	
+	
 }
 
 
@@ -37,7 +46,9 @@ QUEUEMUG = QM = function () {
 				})
 }
 
+
 TXWQ=function(){//needs play 
+
 // with WQ.. just pass in a function to be called when ready
 // i dont think it receives anything, it dont need it
 // to access an image: var me = Q.b('me')
@@ -53,6 +64,8 @@ TXWQ=function(){//needs play
 // to get an image : // var me = w.i.qB("me")
 
 QU3=function(){Q([{src:'/me.png',id:'me'}],function(){$.A(Q.i('me'))})}
+
 QU2=function(){Q(['me'],function(){$.A(Q.i('me'))})}
+
 QU1=function(){Q('me',function(){$.A(Q.i('me'))})}
 
