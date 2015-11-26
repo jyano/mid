@@ -1,0 +1,26 @@
+function GravityScale() {
+// You can use the gravity scale to adjust the gravity on a single body.
+// Be careful though, increased gravity can decrease stability.
+//
+// // Set the gravity scale to zero so this body will float
+//
+// bodyDef.gravityScale = 0.0f;
+}
+
+
+// Every body has a mass (scalar), center of mass (2-vector),
+// and rotational inertia (scalar). 
+// For static bodies, the mass and rotational inertia are set to zero.
+// When a body has fixed rotation, its rotational inertia is zero.
+//
+// Normally the mass properties of a body are established automatically
+// when fixtures are added to the body. You can also adjust 
+// the mass of a body at run-time. 
+// This is usually done when you have
+// special game scenarios that require altering the mass. 
+// void SetMassData(const b2MassData* data);
+// After setting a body's mass directly, 
+// you may wish to revert to the natural mass dictated by the fixtures.
+// You can do this with: / void ResetMassData();
+// The body's mass data is available through the following functions:
+// float32 GetMass() const;// float32 GetInertia() const; / const b2Vec2& GetLocalCenter() const; // void GetMassData(b2MassData* data) const;

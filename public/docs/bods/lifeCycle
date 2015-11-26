@@ -1,0 +1,10 @@
+// You usually keep pointers to all the bodies you create.
+// This way you can query the body positions to update the positions of your graphical entities. 
+// You should also keep body pointers so you can destroy them when you are done with them.
+ 
+// Before a body is created you must create a body definition (b2BodyDef). 
+// The body definition holds the data needed to create and initialize a body.
+ 
+// Box2D copies the data out of the body definition; it does not keep a pointer to the body definition.
+// This means you can recycle a body definition to create multiple bodies.
+ 

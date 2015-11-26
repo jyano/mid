@@ -1,0 +1,20 @@
+
+bD.XY is the key function of body def prototype
+//basically, it allows you to set the position of the bodydef,
+//and hence, the body
+ 
+ 
+/// ook we doin this shiiite with $bD..
+// make just a basic bodyDef with default type (STATIC=0)
+// dont matter.. cause we never gonna use that..
+// instead be more explicit and create bodes 
+// of the specific type u want:
+// this is also a fine time to pass in x and y
+
+//
+//b.f is insteresting
+// if you pass it it an array..
+// it maps that through fxPar
+// that's how we can pass arrays of numbers that 
+// represent circle and rect fixts
+//without having to instantiate them all the way ourselves!

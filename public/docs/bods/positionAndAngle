@@ -1,0 +1,24 @@
+
+  
+// The body definition gives you the chance to initialize the position of the body on creation.
+// This has far
+ better performance than creating the body at the world origin and then moving the body.
+//
+// Caution
+//
+// Do not create a body at the origin and then move it. If you create several bodies at the origin,
+// then performance will suffer.
+ 
+ // Fixtures and joints are attached relative to the body's origin.
+ 
+ 
+// bodyDef.position.Set(0.0f, 2.0f);   // the body's origin position.
+// bodyDef.angle = 0.25f * b2_pi;      // the body's angle in radians.
+ 
+ // You can access the position and rotation of a body.
+ // This is common when rendering your associated game actor. 
+ // You can also set the position,
+ // although this is less common since you will normally use Box2D to simulate movement.
+ //
+ // bool SetTransform(const b2Vec2& position, float32 angle); const b2Transform& GetTransform() const; 
+ // const b2Vec2& GetPosition() const; float32 GetAngle() const;

@@ -1,0 +1,16 @@
+// What does sleep mean? 
+// Well it is expensive to simulate bodies,
+// so the less we have to simulate the better. 
+// When a body comes to rest we would like to stop simulating it.
+// When Box2D determines that a body (or group of bodies) 
+// has come to rest, the body enters a sleep state which 
+// has very little CPU overhead.
+// If a body is awake and collides with a sleeping body,
+// then the sleeping body wakes up. 
+// Bodies will also wake up if a joint or contact attached to them is destroyed.
+// You can also wake a body manually.
+// The body definition lets you specify whether a body can sleep
+// and whether a body is created sleeping.
+//
+// bodyDef.allowSleep = true;
+// bodyDef.awake = true;

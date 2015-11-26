@@ -1,0 +1,23 @@
+
+ // The Collision module contains bilateral functions that take a pair of shapes and compute some results. These include:
+ //
+ // ·         Overlap
+ // ·         Contact manifolds
+ // ·         Distance
+ // ·         Time of impact
+ }
+
+
+
+ function Distance() {
+ //
+ // The b2Distance function can be used to compute the distance between two shapes.  The distance function needs both shapes to be converted into a b2DistanceProxy. There is also some caching used to warm start the distance function for repeated calls. You can see the details in b2Distance.h.
+ //
+ //
+ }
+
+ function TimeOfImpact() {
+ //
+ 
+ }
+ 

@@ -1,0 +1,22 @@
+Bodies have position, velocity -can apply:impulses, forces,  torques -can be: static, kinematic, dynamic 
+
+   
+ 
+// Joints may be connected to inactive bodies. These joints will not be simulated. 
+// *be careful when you activate a body that its joints are not distorted.
+//
+
+// User Data is a void pointer. This gives you a hook to link your application objects to bodies. // You should be consistent to use the same object type for all body user data.// bodyDef= b2BodyDef(); bodyDef.userData = &myActor;
+
+ 
+ 
+
+ 
+  
+// You can access the linear and angular velocity. 
+// The linear velocity is for the center of mass. 
+// Therefore, the linear velocity may change if the mass properties change.
+
+ 
+
+ 

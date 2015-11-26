@@ -1,0 +1,22 @@
+
+	function Forces() {
+// You can apply forces, torques, and impulses to a body. When you apply a force or an impulse, you provide a world point where the load is applied. This often results in a torque about the center of mass.
+//
+// void ApplyForce(const b2Vec2& force, const b2Vec2& point);
+//
+// void ApplyTorque(float32 torque);
+//
+// void ApplyLinearImpulse(const b2Vec2& impulse, const b2Vec2& point);
+//
+// void ApplyAngularImpulse(float32 impulse);
+//
+// Applying a force, torque, or impulse wakes the body. Sometimes this is undesirable. For example, you may be applying a steady force and want to allow the body to sleep to improve performance. In this case you can use the following code.
+//
+// if (myBody->IsAwake() == true)
+//
+// {
+//
+// myBody->ApplyForce(myForce, myPoint);
+//
+// }
+//

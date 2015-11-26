@@ -1,0 +1,26 @@
+
+1.9 User Data
+
+The b2Fixture, b2Body, and b2Joint classes allow you to attach user data as a void pointer. This is handy when you are examining Box2D data structures and you want to determine how they relate to the entities in your game engine.
+
+For example, it is typical to attach an actor pointer to the rigid body on that actor. This sets up a circular reference. If you have the actor, you can get the body. If you have the body, you can get the actor.
+
+GameActor* actor = GameCreateActor();
+
+b2BodyDef bodyDef;
+
+bodyDef.userData = actor;
+
+actor->body = box2Dworld->CreateBody(&bodyDef);
+
+Here are some examples of cases where you would need the user data:
+
+•                    Applying damage to an actor using a collision result.
+•                    Playing a scripted event if the player is inside an axis-aligned box.
+•                    Accessing a game structure when Box2D notifies you that a joint is going to be destroyed.
+
+Keep in mind that user data is optional and you can put anything in it. However, you should be consistent. For example, if you want to store an actor pointer on one body, you should keep an actor pointer on all bodies. Don't store an actor pointer on one body, and a foo pointer on another body. Casting an actor pointer to a foo pointer may lead to a crash.
+
+User data pointers are NULL by default.
+ 
+ 

@@ -1,0 +1,23 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~ METHODS ~~
+ 
+ 
+ addChildAt
+  getChildAt
+ getChildByName
+ getChildIndex
+ 
+ contains
+ 
+ removeChild
+  removeAllChildren
+  removeChildAt
+  
+  
+ ~~ PROPERTIES ~~
+  
+ 
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -1,0 +1,14 @@
+
+	 8.11 Wheel Joint
+	
+	 The wheel joint restricts a point on bodyB to a line on bodyA. The wheel joint also provides a suspension spring. See b2WheelJoint.h and Car.h for details.
+	
+	 
+	 8.13 Rope Joint
+	
+	 The rope joint restricts the maximum distance between two points. This can be useful to prevent chains of bodies from stretching, even under high load. See b2RopeJoint.h and RopeJoint.h for details.
+	
+	 8.14 Friction Joint
+	
+	 The friction joint is used for top-down friction. The joint provides 2D translational friction and angular friction. See b2FrictionJoint.h and ApplyForce.h for details.
+	

@@ -1,0 +1,7 @@
+
+Box2D includes a simple small vector and matrix module.
+ This has been designed to suit the internal needs of Box2D and the API. 
+ All the members are exposed, so you may use them freely in your application.
+
+The math library is kept simple to make Box2D easy to port and maintain.
+ 

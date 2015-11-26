@@ -1,0 +1,38 @@
+	// **** EDGES  ****
+// edges are easy
+//just call w.eg and pass in x,y of first point
+// and x,y of second point
+//u are specifying a line segment, thats all 
+// you see that SAE takes two verts.
+//that's because native SetAsEdge takes that!
+	// 4.5 Edge Shapes
+// Edge shapes are line segments (no volume) 
+//  - assist in making a free-form static environment for your game.
+// major limitation:  can collide with circles and polygons, but not with themselves.
+//  ( collision algorithms   require that at least one of two colliding shapes have volume)
+
+// In many cases a game environment is constructed by:
+// connecting several edge shapes end-to-end.
+// warning: when a polygon slides along the chain of edges -> ghost collisions
+//   ( caused   when the polygon collides with an internal vertex 
+//      generating an internal collision normal )
+// If edge1 did not exist this collision would seem fine.
+// With edge1 present,the internal collision seems like a bug.
+// But normally when Box2D collides two shapes,it views them in isolation.
+//
+// Fortunately, the edge shape provides a mechanism for eliminating ghost collisions
+// by storing the adjacent ghost vertices.
+// Box2D uses these ghost vertices to prevent internal collisions.
+
+// In general stitching edges together this way is a bit wasteful and tedious.
+// This brings us to the next shape type... chains..
+//
+// The chain shape provides an efficient way to connect many edges together 
+// to construct your static game worlds.
+// Chain shapes automatically eliminate ghost collisions 
+// and provide two sided collision.
+// // This a chain shape with isolated vertices
+//// You may have a scrolling game world and would like to connect
+// several chains together. 
+// You can connect chains together using ghost vertices, 
+// like we did with b2EdgeShape.

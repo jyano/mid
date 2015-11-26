@@ -1,0 +1,44 @@
+//
+// Bodies are created and destroyed using a body factory provided by the world class.
+// This lets the world create the body with an efficient allocator
+// and add the body to the world data structure.
+//
+// Bodies can be dynamic or static depending on the mass properties.
+// Both body types use the same creation and destruction methods.
+//
+// b2Body* dynamicBody = myWorld->CreateBody(&bodyDef);
+//
+// ... do stuff ...
+//
+// myWorld->DestroyBody(dynamicBody);
+//
+// dynamicBody = NULL;
+//
+// Caution
+//
+// You should never use new or malloc to create a body. 
+// The world won't know about the body and the body won't be properly initialized.
+//
+// Static bodies do not move under the influence of other bodies.
+// You may manually move static bodies, but you should be careful 
+// so that you don't squash dynamic bodies between two or more static bodies. 
+// Friction will not work correctly if you move a static body.
+// Static bodies never collide with static or kinematic bodies. 
+// It is faster to attach several shapes to a static body 
+// than to create several static bodies with a single shape on each one. 
+// Internally, Box2D sets the mass and inverse mass of static bodies to zero.
+// This makes the math work out so that most algorithms don't need to treat
+// static bodies as a special case.
+// Box2D does not keep a reference to the body definition or any of the data it holds
+// (except user data pointers). So you can create temporary body definitions
+// and reuse the same body definitions.
+//
+// Box2D allows you to avoid destroying bodies by deleting your b2World object, 
+// which does all the cleanup work for you. 
+// However,
+// you should be mindful to nullify body pointers that you keep in your game engine.
+//
+// When you destroy a body, 
+// the attached fixtures and joints are automatically destroyed.
+// This has important implications for how you manage shape and joint pointers.
+// 

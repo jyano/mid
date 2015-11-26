@@ -1,0 +1,32 @@
+
+//The Collision module contains shapes and functions that operate on them. 
+// The module also contains:
+// -dynamic tree 
+// -broad-phase to acceleration collision processing of large systems.
+//The collision module is designed to be usable outside of the dynamic system. 
+// (ex:  use  dynamic tree  for something  (in your game?) besides physics) 
+ 
+ 
+ // The b2DynamicTree class is used by Box2D to organize large numbers of shapes efficiently. The class does not know about shapes. Instead it operates on axis-aligned bounding boxes (AABBs) with user data pointers.
+ //
+ // The dynamic tree is a hierarchical AABB tree. Each internal node in the tree can has two children. A leaf node is a single user AABB. The tree uses rotations to keep the tree balance, even in the case of degenerate input.
+ //
+ // The tree structure allows for efficient ray casts and region queries. For example, you may have hundreds of shapes in your scene. You could perform a ray cast against the scene in a brute force manner by ray casting each shape. This would be inefficient because it does not take advantage of shapes being spread out. Instead, you can maintain a dynamic tree and perform ray casts against the tree. This traverses the ray through the tree skipping large numbers of shapes.
+ //
+ // A region query uses the tree to find all leaf AABBs that overlap a query AABB. This is faster than a brute force approach because many shapes can be skipped.
+ //
+ //
+ //
+ //
+ //
+ // Normally you will not use the dynamic tree directly. Rather you will go through the b2World class for ray casts and region queries. If you do plan to create your own dynamic tree, you can learn how to use it by looking at how Box2D uses it.
+ 
+
+  BroadPhase 
+ // Collision processing in a physics step can be divided into narrow-phase and broad-phase. In the narrow-phase we compute contact points between pairs of shapes. Imagine we have N shapes. Using brute force, we would need to perform the narrow-phase for N*N/2 pairs.
+ //
+ // The b2BroadPhase class reduces this load by using a dynamic tree for pair management. This greatly reduces the number of narrow-phase calls.
+ //
+ // Normally you do not interact with the broad-phase directly. Instead, Box2D creates and manages a broad-phase internally. Also, b2BroadPhase is designed with Box2D’s simulation loop in mind, so it is likely not suited for other use cases.
+ 
+ 

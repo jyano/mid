@@ -1,0 +1,19 @@
+ // If two shapes are moving fast, they may tunnel through each other in a single time step.
+ //
+ //
+ //
+ // The b2TimeOfImpact is used to determine the time when two moving shapes collide. This is called the time of impact (TOI). The main purpose of b2TimeOfImpact is for tunnel prevention. In particular, it is designed to prevent moving objects from tunneling outside of static level geometry.
+ //
+ // This function accounts for rotation and translation of both shapes, however if the rotations are large enough, then the function may miss a collision. However the function will still report a non-overlapped time and will capture all translational collisions.
+ //
+ // The time of impact function identities an initial separating axis and ensures the shapes do not cross on that axis. This will miss collisions that are clear at the final positions. While this approach may miss some collisions, it is very fast and adequate for tunnel prevention.
+ //
+ //
+ //
+ //
+ //
+ // It is difficult to put a restriction on the rotation magnitude. There may be cases where collisions are missed for small rotations. Normally, these missed rotational collisions should not harm game play.
+ //
+ // The function requires two shapes (converted to b2DistanceProxy) and two b2Sweep structures. The sweep structure defines the initial and final transforms of the shapes.
+ //
+ // You can use fixed rotations to perform a shape cast. In this case, the time of impact function will not miss any collisions.

@@ -1,0 +1,58 @@
+
+In the distribution of Box2D is a Hello World project. The program creates a large ground box and a small dynamic box. This code does not contain any graphics. All you will see is text output in the console of the box's position over time.
+
+This is a good example of how to get up and running with Box2D.
+
+2.1 Creating a World
+
+Every Box2D program begins with the creation of a b2World object. b2World is the physics hub that manages memory, objects, and simulation. You can allocate the physics world on the stack, heap, or data section.
+
+It is easy to create a Box2D world. First, we define the gravity vector. Also we tell the world to allow bodies to sleep when they come to rest. A sleeping body doesn't require any simulation.
+
+b2Vec2 gravity(0.0f, -10.0f);
+
+bool doSleep = true;
+
+Now we create the world object. Note that we are creating the world on the stack, so the world must remain in scope.
+
+b2World world(gravity, doSleep);
+
+So now we have our physics world, let's start adding some stuff to it.
+
+2.2 Creating a Ground Box
+
+Bodies are built using the following steps:
+
+1.                   Define a body with position, damping, etc.
+2.                   Use the world object to create the body.
+3.                   Define fixtures with a shape, friction, density, etc.
+4.                   Create fixtures on the body.
+
+For step 1 we create the ground body. For this we need a body definition. With the body definition we specify the initial position of the ground body.
+
+b2BodyDef groundBodyDef;
+
+groundBodyDef.position.Set(0.0f, -10.0f);
+
+For step 2 the body definition is passed to the world object to create the ground body. The world object does not keep a reference to the body definition. Bodies are static by default. Static bodies don't collide with other static bodies and are immovable.
+
+b2Body* groundBody = world.CreateBody(&groundBodyDef);
+
+For step 3 we create a ground polygon. We use the SetAsBox shortcut to form the ground polygon into a box shape, with the box centered on the origin of the parent body.
+
+b2PolygonShape groundBox;
+
+groundBox.SetAsBox(50.0f, 10.0f);
+
+The SetAsBox function takes the half-width and half-height (extents). So in this case the ground box is 100 units wide (x-axis) and 20 units tall (y-axis). Box2D is tuned for meters, kilograms, and seconds. So you can consider the extents to be in meters. Box2D generally works best when objects are the size of typical real world objects. For example, a barrel is about 1 meter tall. Due to the limitations of floating point arithmetic, using Box2D to model the movement of glaciers or dust particles is not a good idea.
+
+We finish the ground body in step 4 by creating the shape fixture. 
+For this step we have a shortcut. 
+We do not have a need to alter the default fixture material properties, so we can pass the shape directly to the body without creating a fixture definition. Later we will see how to use a fixture definition for customized material properties. The second parameter is the shape density in kilograms per meter squared. A static body has zero mass by definition, so the density is not used in this case.
+
+groundBody->CreateFixture(&groundBox, 0.0f);
+
+Box2D does not keep a reference to the shape. It clones the data into a new b2Shape object. 
+
+Note that every fixture must have a parent body, even fixtures that are static. However, you can attach all static fixtures to a single static body.
+

@@ -1,0 +1,6 @@
+
+// You may want a rigid body, such as a character, to have a fixed rotation.
+// Such a body should not rotate, even under load.
+ // You can use the fixed rotation setting to achieve this: bodyDef.fixedRotation = true;
+ // The fixed rotation flag causes the rotational inertia 
+  and its inverse to be set to zero.

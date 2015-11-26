@@ -1,0 +1,73 @@
+include l/u
+include l/m
+
+
+!!! 5
+html(lang="en")
+
+    head
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+        script.
+
+          _app = wappyApp = '#{app}'
+
+          _pam = wappyPam = '#{pam}'
+
+        +css('bs')
+
+        +css('themes')
+
+        //deps
+        +S(["us","jq","bs","cjs","string","bx"])
+
+
+        //html/base
+        +S([ 'spriteSheets', 'objects',  'core', 'mobile'  ])
+        +S([ 'jqueryplugins',  'event', 'html', 'boot','ui' ,'sys',  'images',   'can'  ])
+
+
+        //easel
+        +S([ 'easel', 'displayObject', 'stage',  'shape', 'text'])
+        +S([ 'bitmap','sprites', 'tween'   ])
+        +S([ 'filt', 'draw', 'animate', 'solve','playgame','iso' ])
+
+
+
+        //box2d
+        +S([ 'b2dbasics'  ])
+        +S([ 'boxWorld' ])
+    
+        +S([  'coll','gamey' ,'joints','wheel', 'spacezoom', 'coinwarp', 'webguy'])
+        +S([    'play', 'shooter','boxBody' ])
+        +S([  'boxFixt'])
+        +S([   'pinball', 'examples','movieClip','boxCam'])
+
+        body
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
