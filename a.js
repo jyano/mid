@@ -3,7 +3,11 @@ require('./server/serverBoth');
 $l(' - mid - \n');
 
 nodeHelperModules()
-
+function nodeHelperModules() {
+	$h = http = require('http');
+	$p = path = require('path');
+	require('./server/superFileSystem')
+}
 require('./server/expressApp')(__dirname)
 
 //require('./server/database')
@@ -24,11 +28,7 @@ $hS.listen(80, function () {
 })
 
 
-//require('./server/serverSockets')
-function nodeHelperModules() {
-	$h = http = require('http');
-	$p = path = require('path');
-	require('./server/superFileSystem')
-}
+require('./server/serverSockets')
+
 
  
