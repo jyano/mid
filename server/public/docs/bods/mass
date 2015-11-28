@@ -1,4 +1,0 @@
-/ Normally,  bodies acquire their mass properties from the fixtures. 
-// However, you can override the mass properties after a body is constructed.  
- 
- 

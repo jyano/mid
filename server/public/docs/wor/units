@@ -1,9 +1,0 @@
- 
-	//Quoting the manual: "Box2D works with floating point numbers,
-	//so some tolerances have to be used to make Box2D perform well. 
-	//These tolerance have been tuned to work well with meters-kilogram-second (MKS) units.
-	//In particular, Box2D has been tuned to work well with moving objects between 0.1 and 10 meters.
-	//So this means objects between soup cans and buses in size should work well."
- 
-
-  

@@ -1,4 +1,0 @@
-//worldstep(time(keep in sync with easel),
-// vel iterations?(calcs forces - higher is more accurate but more intensive),
-//  pos iterations  //can set both to 10
-// )

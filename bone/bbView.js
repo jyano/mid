@@ -1,65 +1,70 @@
+Bb.V = Bb.View;
+Bb.V.x = Bb.V.extend;
+vw = Bb.View.prototype;
+Bb.sEv(vw)
+_$$V = function (ob) {
+	ob = ob || {}
+	ob.id = D(ob.id) ? ob.id : ob.x || ob._ || ob['#']
+	ob.tagName = ob.tagName || ob.tn || ob.t
+	ob.className = ob.className || ob.k //if (ob.k) {ob.className = ob.k}
+	ob.defaults = ob.defaults || ob.df || ob.d
+	ob.events = ob.events || ob.E || ob.ev || ob.e // || {$: function () {}}//; EVob = {$: 'click', $$: 'dblclick', v: 'mouseover'}; _.e(ob.events, function (v, k) {if (EVob[k]) {ob.events[EVob[k]] = v}})
+	//ob.render = ob.render ||ob.R|| ob.rn || ob.rr || ob
+	ob.model = ob.model || ob.md || ob.m
+	ob.collection = ob.collection || ob.cl || ob.c
+	ob.el = ob.el || ob.q
+	if (F(ob.i)) {
+		ob.initialize = ob.i
+		function _$$V_init() {
+			ob._i = ob.initialize || ob.i
+			ob.initialize = function (op) {
+				// ok so i think i see what is happening here...
+				// first of all, i am clearly overwriting 'initialize' here
+				// so why bother setting it prior?
+				this.q = this.$el
+				if (F(ob._i)) {
+					_.b(ob._i, this)(op)
+				}
+			}
+			if (ob.I) {
+				ob.initialize = ob.I
+			}
+		}
+	}
+	return Bb.V.x(ob)
+}
+$$V = function (ob) {
+	var Vw = _$$V(ob || {})
+	return function (ob, q) {
+		ob = ob || {}
+		ob.model = ob.model || ob.md || ob.m
+		ob.collection = ob.collection || ob.cl || ob.c
+		var vw = new Vw(ob);
+		vw.md = vw.model;
+		vw.cl = vw.collection
+		vw.q = vw.$el
+		if (q) {
+			alert('see $$V');
+			vw.a2(q)
+		}
+		return vw
+	}
+}
+$V = function (ob, a, b, c) {
+	return $$V(ob, a, b, c)()
+}
+$.uV = $.ulV = function (ob) {
+	ob = ob || {};
+	ob.t = 'ul';
+	return $V(ob)
+} // make a bbV with t:ul
+$v = function (ob) {
+	var m = new Bb.View(ob);
+	return m
+}
+//
 Bb.V= Bb.View; Bb.V.x=Bb.V.extend; vw = Bb.View.prototype; Bb.sEv(vw)
-vw.g=function(m){
- if(this.model){
-  return this.model.get(m)
- }
-
- else if(this.collection && this.collection.get){
-  return this.collection.get(m)
- }
-}
-vw.s=function(a,b){this.model.set(a,b); return this}
-vw.E=function(){this.q.E();return this}
-vw.e=function(a,b){return (this.collection || this.cl).each(a,b)}
-vw.cl= vw.eCl= function(fn){
- //
- var cl=this.collection
- if(U(fn)){return cl}
- if(cl){_.e(cl,fn)}
- return this
-}
-vw.ECl= function(fn){this.E();return this.eCl(fn)}
-vw.eM=function(fn){
- _.e(this.model, fn);
- return this
- function alt(){
-  vw.e= function(a, b){
-   var cl = this.collection || this.cl;
-   cl.each(a, b)
-   return this}}
-}
-vw.h=function(a){
- if(U(a)){return this.$el.h()}
- this.$el.h(a);return this
-}//=vw.H
-vw.j=function(fn){var vw=this,j
- if(this.collection){
-  j= this.collection.toJSON()
-  if(F(fn)){_.e(j,fn);return vw}
-  return j}
- if(this.model){return this.model.toJSON()}
-}
-vw.a2 = function (a) {$l('vw.a2')
- if(!this. q){alert('vw.a2 !q'); return this}
- return this.q.a2(a)
-}
-vw.A = function (ob) {
- var g = G(arguments)
-  //if (S(ob)) {ob = this.g(ob)}
-  if (ob) {
-   this.$el.A(ob) }
- if (U(ob)||g.p) {this.$el.A() }
- return this
-}
-vw.oC=function(){
- if(!this.model){return false}
- this.model.oC.apply(this.model, arguments)
- return this
-}
-vw.C$=function(s){
- alert('vw.C$')
- this.$el.C$(s); return this
-}
+ 
 _$$V= function(ob){ob = ob || {}
  ob.id = D(ob.id) ? ob.id : ob.x || ob._ || ob['#']
  ob.tagName = ob.tagName || ob.tn || ob.t
@@ -118,6 +123,7 @@ $V=function(ob, a,b,c){return $$V(ob,a,b,c)()}
 $.uV=$.ulV=function(ob){
  ob=ob||{};ob.t = 'ul'; return $V(ob)
 } // make a bbV with t:ul
+
 DEFAULT= function(){$.x('n')
  md = $$M({defaults: {
   n:'j', a:20, o:'p'

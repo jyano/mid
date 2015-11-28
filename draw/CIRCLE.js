@@ -1,21 +1,28 @@
-cjs.circ = cjs.circle = function (radius, fc) {
-	if (!N(radius)) {
-		return cjs.circ(8, radius)
+cjs.circ = cjs.circle = function (rad, fc) {
+	
+	if (!N(rad)) {
+	
+			return cjs.circ(8, rad)
 	}
+	
 	fc = oO('c', fc || 'z')
-	return cjs.shape().f(fc).dc(0, 0, radius)
+	
+	return cjs.shape().f(fc).dc(0, 0, rad)
 }
+ 
 cjs.circle2 = function (r, z, x, y) {
 	graphics = new cjs.Graphics()
 	if (!S(r)) {
 		return circle2('red', r, z, x)
 	}
+	
 	z = N(z) ? z : 32
 	x = N(x) ? x : 100
 	y = N(y) ? y : 100
 	graphics.ss(z / 8).f(r, 'black').dc(0, 0, z)
 	return cjs.shape(graphics).XY(x || 100, y || 100)
 }
+
 cjs.circle3 = function (x, y, r, fc, sc) {
 	var shape, h
 	shape = h = cjs.shape()
@@ -31,6 +38,7 @@ cjs.circle3 = function (x, y, r, fc, sc) {
 	SL(shape)
 	return shape
 }
+
 cjs.cir = function () {
 	var g = G(arguments), o, h
 	o = g.O ? g.f :
@@ -56,3 +64,4 @@ cjs.cir = function () {
 	h.alpha = N(o.al, 1)
 	return h
 }
+

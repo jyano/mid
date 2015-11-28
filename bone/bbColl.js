@@ -1,12 +1,5 @@
 Bb.C = Bb.Collection; Bb.C.x = Bb.C.extend; cl = Bb.Collection.prototype; Bb.sEv(cl)
-cl.A = cl.add
-cl.rm=cl.remove
-cl.s= function(a,b,c){var cl=this
-    if(O(a) && O(b)){if(b.v){b.validate= b.v?true:false}}
-    if(S(a) && O(c)){if(c.v){c.validate= c.v?true:false}}
-    cl.set(a,b,c)
-    return cl
-}
+ 
 _$$C = function(ob){ob=ob||{}
     //var g=G(arguments), o= g.F_? {fn: g.f, ob: g.s} : {ob: g.f, fn: g.s}; o=o||{}
     if(!F(ob.initialize) && F(ob.i) ) {  ob.initialize = ob.i  }
@@ -80,6 +73,90 @@ C$= function(a){var b,c
         return b}
 }
 
+//
+Bb.C = Bb.Collection;
+Bb.C.x = Bb.C.extend;
+Bb.sEv(cl)
+_$$C = function (ob) {
+	ob = ob || {}
+	//var g=G(arguments), o= g.F_? {fn: g.f, ob: g.s} : {ob: g.f, fn: g.s}; o=o||{}
+	if (!F(ob.initialize) && F(ob.i)) {
+		ob.initialize = ob.i
+	}
+	if (!O(ob.collection) && (O(ob.cl) || O(ob.c))) {
+		ob.collection = ob.cl || ob.c
+	}
+	if (!O(ob.model) && (O(ob.md) || O(ob.m))) {
+		ob.model = ob.md || ob.m
+	}
+	//ob.model= ob.model || ob.md || ob.m
+	//if(ob.m){ob.model= ob.m}
+	ob.defaults = ob.defaults || ob.df || ob.d
+	ob.id = D(ob.id) ? ob.id : ob.x
+	ob.idAttribute = ob.idAttribute || ob._id
+	ob.events = ob.events || ob.ev || ob.e
+	ob.validate = ob.validate || ob.v
+	function more() {
+		if (ob.fn) {
+			ob.i = ob.fn
+		}
+		ob.initialize = ob.initialize || ob.i
+		ob._i = ob.initialize
+		ob.id = D(ob.id) ? ob.id : ob.x
+		ob.className = ob.className || ob.k
+		ob.tagName = ob.tagName || ob.tn || ob.t
+		ob.defaults = ob.defaults || ob.df || ob.d
+		ob.events = ob.events || ob.ev || ob.e
+		ob.render = ob.render || ob.rr || ob.r
+		ob.tagName = ob.tagName || ob.tn || ob.t
+		ob.collection = ob.collection || ob.cl || ob.c
+		// ob.render= ob.render || ob.rr || ob.r
+		ob.render = ob.render || ob.rn
+	}
+	
+	return Bb.C.x(ob || {})
+}
+$$C = function (ob) {
+	var Cl = _$$C(ob)
+	return function (ob, b, c, d) {
+		ob = ob || {}
+		var cl
+		ob.collection = ob.collection || ob.cl || ob.c
+		ob.model = ob.model || ob.md || ob.m
+		cl = new Cl(ob, b, c, d) //if(q){cl.a2(q)}
+		cl.q = cl.$el
+		cl.a2 = function (a) {
+			return cl.q.a2(a)
+		}
+		cl.g = function (a) {
+			if (a) {
+				return cl.model.get(a)
+			}
+		}
+		/*
+		 cl.A=function(ob){
+		
+		 var g=G(arguments)
+		 if(S(ob)){ob = cl.g(ob)}
+		 if(ob){this.$el.A(ob)}
+		 if(U(ob) || g.p){ this.$el.A() }
+		 return this.$el
+		 }
+		 //_.b(ob._i,cl) (op)
+		 */
+		return cl
+	}
+}
+$C = function (ob, a, b, c) {
+	return $$C(ob, a, b, c)()
+}
+C$ = function (ob) {
+	return $$C()(ob)
+}
+$c = function (ob) {
+	var m = new Bb.Collection(ob);
+	return m
+}
 BBSORT00 = function () {
     $.x('a', 'sort dont work')
     chps = $Cl({m: Chp = $M()})()
@@ -95,20 +172,27 @@ BBSORT00 = function () {
 }
 
 SORT=function(){z()
+    
     Chp = $$M()
+    
     chps =  $$C({ m:Chp })()
     chps.comparator = function (a) {
         return a.tt
     }
+    
     chps.add(Chp({p:9, tt:"End_"}))
     chps.add(Chp({p:1, tt:"Beg2_"}))
     chps.add(Chp({p:5, tt:"Mid_"}))
     chps.add(Chp({p:1, tt:"Beg_"}))
+    
     $Ms(chps.pluck('tt'))
-
+    
     chps.sort()
+    
     $Ms(chps.pluck('tt'))
+    
 }
+
 
 
 

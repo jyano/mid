@@ -1,33 +1,84 @@
-md=Bb.Model.prototype
-md.at = md.attributes
-md.at= function(){return this.attributes}
-md.S= md.save
-md.hC=function(at){var md=this,
-    g=G(arguments),o
-    o= g.F? {fn: g.f} :
-        F(g.s)? {at: g.f, fn: g.s}:{}
-    if(o.fn ){
-        if(md.hC(o.at)){
-            o.fn()
-        }
-        return this
-    }
-    return this.hasChanged(at)
+Bb.M = Bb.Model;
+Bb.M.x = Bb.M.extend;
+Bb.sEv(md)
+_$$M = function (ob) {
+	ob = ob || {} // o= g.F_? {fn: g.f, ob: g.s} : {ob: g.f, fn: g.s} //o=o||{}
+	ob.initialize = ob.initialize || ob.i || function () {
+	}
+	function init() {
+		if (ob.fn) {
+			ob.i = o.fn
+		}
+		ob._i = ob.initialize
+		if (!F(ob.initialize) && F(ob.i)) {
+			ob.initialize = ob.i
+		}
+		ob.initializeX = function (op) {
+			this.q = this.$el
+			this.a2 = function (a) {
+				return this.q.a2(a)
+			}
+			//$l('gen init..')
+			this.g = function (a) {
+				if (a) {
+					return this.model.get(a)
+				}
+			}
+			this.A = function (ob) {
+				var g = G(arguments),
+						q = this.q
+				if (S(ob)) {
+					ob = this.g(ob)
+				}
+				if (ob) {
+					q.A(ob)
+				}
+				if (U(ob) || g.p) {
+					q.A()
+				}
+				return q
+			}
+			_.b(ob._i, this)(op)
+		}
+	}
+	
+	ob.className = ob.className || ob.k
+	ob.defaults = ob.defaults || ob.df || ob.d
+	ob.events = ob.events || ob.ev || ob.e
+	ob.id = D(ob.id) ? ob.id : ob.x
+	ob.idAttribute = ob.idAttribute || ob._id
+	ob.model = ob.model || ob.md || ob.m
+	ob.collection = ob.collection || ob.cl || ob.c
+	ob.render = ob.render || ob.rr || ob.rn || ob.r
+	ob.tagName = ob.tagName || ob.tn || ob.t
+	ob.validate = ob.validate || ob.v
+	return Bb.M.x(ob || {})
 }
-md.J = md.tJ = md.toJSON
-md.jS = md.tS = function () {
-    return _.jS(this.J())
+$$M = function (ob, a, b, c) {
+	ob = ob || {}
+	var g = G(arguments), Md;
+	Md = _$$M(ob, a, b, c)
+	return function (ob, q) {
+		var md
+		ob = ob || {}
+		ob.collection = ob.collection || ob.cl || ob.c
+		ob.model = ob.model || ob.md || ob.m
+		md = new Md(ob)
+		if (q) {
+			md.a2(q)
+		}
+		return md
+	}
 }
-md.$l = md.lJ = function () {
-    return $l(this.jS())
+$M = function (op, a, b, c) {
+	return $$M(op, a, b, c)()
+}
+$m = function (ob) {
+	var m = new Bb.Model(ob);
+	return m
 }
 
-
-
-
-late()
-function late(){
-    toAlrt()
+  
     old = function () {
 //md.o = function () {var g = G(arguments);this.on.apply(this, g)}
 
@@ -152,7 +203,7 @@ function late(){
 
 
     }
-}
+ 
 
 
 

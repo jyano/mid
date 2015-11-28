@@ -1,9 +1,0 @@
-// You can iterate over a body's fixtures. This is mainly useful if you need to access the fixture's user data.
-//
-// for (b2Fixture* f = body->GetFixtureList(); f; f = f->GetNext())  { 
-		MyFixtureData* data = (MyFixtureData*) f.GetUserData(); ... do something with data ...  }
-
-// You can similarly iterate over the body's joint list.
-// The body also provides a list of associated contacts. 
-You can use this to get information about the current contacts. 
-Be careful, because the contact list may not contain all the contacts that existed during the previous time step.

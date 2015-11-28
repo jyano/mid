@@ -26,6 +26,12 @@ cjs.cir = function () {
 }
 
 ct.cir = function () {
+	var h = this.h()
+	return h.cir.apply(h, arguments)
+}
+
+
+ct.cir = function () {
 	var ct = this, g = G(arguments),
 			h = this.h(), o
 	o = g.O ? g.f :
@@ -38,8 +44,3 @@ ct.cir = function () {
 	h.dc(o.x, o.y, o.r)
 	return h
 }
-ct.cir = function () {
-	var h = this.h()
-	return h.cir.apply(h, arguments)
-}
-	

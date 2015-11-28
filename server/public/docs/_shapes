@@ -1,8 +1,0 @@
-shape types: poly(p), circle(c), array(a)
-box2d provides bH.GetType (GT) but this provides a number
-i can also use contstructor to get the real shape name
-	use b2d.isShape (iH) to get a letter representing the shape.. or false if it is not a shape at all..
-or use bH.ty to get the letter type from a known shape
-there are also checkers for for the specific shape types
-
-use bH.rad to get/set radius

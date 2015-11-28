@@ -1,30 +1,6 @@
-GRAIL = function () {
-	$.bd().E()
-	o = {
-		bd: {f: '24px Helvetica', C: 'a', c: 'b'},
-		'header, footer': {C: 'x', d: 'b', M: 4, P: 5, h_: 100, B: ['bor', 'r'], bRd: '7pt'},
-		$main: {h_: 800, M: 0, P: 0, d: '$', $D: 'r'},
-		'$main > article': {M: 4, P: 5, B: ['bor', 'p'], bRd: '7pt', C: 'g', _: 2, $: '3 1 50%'},
-		'$main > nav': {C: 'o', M: 4, P: 5, B: ['bor', 'g'], bRd: '7pt', $: '1 6 30%', $O: -1},
-		'$main > aside': {M: 4, P: 5, B: ['bor', 'g'], bRd: '7pt', C: 'x', $: '1 6 20%', $O: 3},
-		"@media all and (max-width:640px)": $subRules({
-			"#main, #page": {$D: 'c'},
-			"#main>article, #main>nav, #main>aside": {$O: 0},
-			"#main>nav, #main>aside,  header,  footer": {h_: 50, _h: 50}
-		})
-	}
-	$CSS(o)
-	$('<header> heeeeader!!! </header>').A() //$.hdr('header').A()
-	$.d([
-		$.ac('article'),
-		$.nv().A('nav'),
-		$.as('aside')
-	]).id('main')
-	$.ftr().A('footer').A()
-}
-
+$l('flexApps')
 FLEX = function () {
-	$.x('g', 'flex')
+	$l('FLEX')
 	$CSS({
 		_sB: {d: '$', $D: 'r', $W: 'w', $J: 'sB'},
 		_sA: {d: '$', $D: 'r', $W: 'w', $J: 'sA'}
@@ -57,7 +33,30 @@ FLEX = function () {
 		'justify-content': 'space-between'
 	})
 }
-
+GRAIL = function () {
+	$.bd().E()
+	o = {
+		bd: {f: '24px Helvetica', C: 'a', c: 'b'},
+		'header, footer': {C: 'x', d: 'b', M: 4, P: 5, h_: 100, B: ['bor', 'r'], bRd: '7pt'},
+		$main: {h_: 800, M: 0, P: 0, d: '$', $D: 'r'},
+		'$main > article': {M: 4, P: 5, B: ['bor', 'p'], bRd: '7pt', C: 'g', _: 2, $: '3 1 50%'},
+		'$main > nav': {C: 'o', M: 4, P: 5, B: ['bor', 'g'], bRd: '7pt', $: '1 6 30%', $O: -1},
+		'$main > aside': {M: 4, P: 5, B: ['bor', 'g'], bRd: '7pt', C: 'x', $: '1 6 20%', $O: 3},
+		"@media all and (max-width:640px)": $subRules({
+			"#main, #page": {$D: 'c'},
+			"#main>article, #main>nav, #main>aside": {$O: 0},
+			"#main>nav, #main>aside,  header,  footer": {h_: 50, _h: 50}
+		})
+	}
+	$CSS(o)
+	$('<header> heeeeader!!! </header>').A() //$.hdr('header').A()
+	$.d([
+		$.ac('article'),
+		$.nv().A('nav'),
+		$.as('aside')
+	]).id('main')
+	$.ftr().A('footer').A()
+}
 BASIS = function () {
 	$.x('o', 'basis')
 	// http://jsfiddle.net/jakub_g/s5jAB/
@@ -146,64 +145,64 @@ FLEXCT = function () {
 	}
 }
 //notSure() 
-	GME = function () {
-		$.x('y', 'gme');
-		$CSS({
-			'html, body': {w: '100%', h: '100%', M: 0, P: 0},
-			'body.box': {d: $, flD: 'column'},
-			'body > *': {P: '.5em'},
-			header: {C: 'b'},
-			article: {C: 'r', $: 1},
-			footer: {C: 'g'},
-			'header.cnt': {'-moz-column-count': 3},
-			'header:not(.cnt)': {'-moz-column-width': 100}
-		})
-		$.hdr().A('Click', $.br(), 'to change', $.br(),
-				'header {column-…}').A()
-		$.ac().A('Click',
-				$.br(),
-				'to', $.br(), 'change', $.br(), 'body {display: …}').A()
-		$.ftr().A()
-		$("header").$(function () {
-			$(this).toggleClass("cnt");
-			logClass();
-		});
-		$("article").$(function () {
-			$.bd().toggleClass("box");
-			logClass()
-		})
+GME = function () {
+	$.x('y', 'gme');
+	$CSS({
+		'html, body': {w: '100%', h: '100%', M: 0, P: 0},
+		'body.box': {d: $, flD: 'column'},
+		'body > *': {P: '.5em'},
+		header: {C: 'b'},
+		article: {C: 'r', $: 1},
+		footer: {C: 'g'},
+		'header.cnt': {'-moz-column-count': 3},
+		'header:not(.cnt)': {'-moz-column-width': 100}
+	})
+	$.hdr().A('Click', $.br(), 'to change', $.br(),
+			'header {column-…}').A()
+	$.ac().A('Click',
+			$.br(),
+			'to', $.br(), 'change', $.br(), 'body {display: …}').A()
+	$.ftr().A()
+	$("header").$(function () {
+		$(this).toggleClass("cnt");
+		logClass();
+	});
+	$("article").$(function () {
+		$.bd().toggleClass("box");
 		logClass()
-		function logClass() {
-			var logTxt = "Header: "
-			if ($("header").hasClass("cnt")) {
-				logTxt += "column-count"
-			} else {
-				logTxt += "column-width"
-			}
-			logTxt += "; Body: ";
-			if ($("body").hasClass("box")) {
-				logTxt += "flex-box"
-			}
-			else {
-				logTxt += "block"
-			}
-			$("footer").text(logTxt)
+	})
+	logClass()
+	function logClass() {
+		var logTxt = "Header: "
+		if ($("header").hasClass("cnt")) {
+			logTxt += "column-count"
+		} else {
+			logTxt += "column-width"
 		}
+		logTxt += "; Body: ";
+		if ($("body").hasClass("box")) {
+			logTxt += "flex-box"
+		}
+		else {
+			logTxt += "block"
+		}
+		$("footer").text(logTxt)
 	}
-	FB = function () {
-		$.x('o', 'flex')
-		$CSS({
-			_ct: {
-				d: '$',
-				//  define  flow dir
-				// and
-				// if we allow the items to wrap
-				//  Remember this is the same as:
-				$D: 'r',
-				$W: 'w',
-				//      'flex-flow' : 'row wrap',
-				// Then we define how is distributed the remaining space
-				flJC: 'space-around'
-			}
-		})
-	}
+}
+FB = function () {
+	$.x('o', 'flex')
+	$CSS({
+		_ct: {
+			d: '$',
+			//  define  flow dir
+			// and
+			// if we allow the items to wrap
+			//  Remember this is the same as:
+			$D: 'r',
+			$W: 'w',
+			//      'flex-flow' : 'row wrap',
+			// Then we define how is distributed the remaining space
+			flJC: 'space-around'
+		}
+	})
+}

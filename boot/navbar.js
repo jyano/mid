@@ -172,7 +172,7 @@ function makeNb(){
                 ])
         }
 };makeNb()
-PERFECT=function(){z()
+PERFCT=function(){z()
         
         
         bt=Bs.nbGgBt('#nb').K("hidden-sm-up")
@@ -1129,8 +1129,7 @@ navbar  = $('<nav class="navbar navbar-dark bg-inverse"></nav>').A()
                     ),$.dK("collapse navbar-toggleable-xs").id("nav-content").A(
                         $.a('Logo').K("navbar-brand"),
                         
-                        $.ul(
-                            [
+                        $.ul([
                                    
                                     $.li().K('nav-item').A($.a('Link 1').K('nav-link')),
                                     $.li().K('nav-item').A($.a('Link 2').K('nav-link')),

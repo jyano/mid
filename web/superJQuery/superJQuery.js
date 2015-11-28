@@ -73,7 +73,7 @@ $.fn.i = $.fn.sr = $.fn.src = function (a) {
 	if (U(a)) {
 		return this.attr('src')
 	}
-	this.attr('src', $.src(a))
+	this.attr('src', _.src(a))
 	return this
 }
 $.fn.n = function (name) {

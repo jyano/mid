@@ -16,6 +16,8 @@ cjs.rect2 = function (width, height, x, y, fc, sc) {
 			.lt(-halfwidth + x, -halfheight + y)
 	return h
 }
+
+
 cjs.rect = function self(width, height, fc, sc) {
 	width = width || 100
 	height = height || width

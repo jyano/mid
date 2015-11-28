@@ -1,8 +1,9 @@
-function color() {
-	cjs.HSL = function (a, b, c) {
-		if (U(a)) {
-			return HSL(Math.rand() * 360, 100, 50)
-		}
-		return cjs.Graphics.getHSL(a, b, c)
-	}
+
+cjs.HSL = function (a, b, c) {
+		
+		return U(a)?
+				HSL(M.r() * 360, 100, 50): 
+				cjs.Graphics.getHSL(a, b, c)
+	
 }
+ 

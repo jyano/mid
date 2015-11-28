@@ -5,27 +5,22 @@ $H = $h = function () {
 //pass in your own obj to use 'o.i/o.bf' or 'o.lf' or 'o.rf'
 			o = g.O ? g.f :
 					g.N_ ? ( N(g[3]) ? // 'c-C-l' pattern
-					{x: g.f, y: g.s, C: g.t, l: g[3]} : {x: g.f, y: g.s, c: g.t, C: g[3], l: g[4]} ) :
+					{x: g.f, y: g.s, C: g.t, l: g[3]} :
+					{x: g.f, y: g.s, c: g.t, C: g[3], l: g[4]} ) :
 						// 'c-C-l' pattern
 							N(g.s) ? {C: g.f, l: g.s} :
 							{c: g.f, C: g.s, l: g.t}
 	_h = h
+	
 	h.XY(N(o.x, 0), N(o.y, 0))
 	h.c(o.c || 'z', o.C || 'w', o.l || 8)
-	if (o.C) {
-		h.C(o.C)
-	}
-	if (N(o.l)) {
-		h.l(o.l)
-	}
-	if (g.p) {
-		h.dg()
-	}
+	if (o.C) {h.C(o.C)}
+	if (N(o.l)) {h.l(o.l)}
+	if (g.p) {h.dg()}
 	return h
 }
-cjs.iH = function (h) {
-	return O(h) && h.graphics
-}
+
+
 ct.h = function () {
 	var ct = this,
 			h = $H.apply($H, arguments)
@@ -73,6 +68,8 @@ SIR = function () {
 			$H().cirs({}, {x: 300, c: 'b'}, {y: 200, C: 'o'})
 	)
 }
+
+
 TSIR = function () {
 	$.C('b')
 	$S({
@@ -97,6 +94,8 @@ oDef = function (o) {
 		o.h = N(o.h, 50)
 		return o
 	}
- 
-  
+cjs.iH = function (h) {
+	return O(h) && h.graphics
+}
+
  
