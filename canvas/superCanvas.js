@@ -199,7 +199,7 @@ function _superCanvas(el) {
 	_superCanvasText(el)
 	_superCanvasTransform(el)
 
-	_superCanvasMug()
+	_superCanvasMug(el)
 	_superCanvasPath(el)
 	
 	 cv.sun = function (a, b, s) {

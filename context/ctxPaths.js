@@ -165,14 +165,12 @@ x.x = x.cP = x.cp = function () {
 	this.closePath();
 	return this
 }
-clip = x.cl = function () {
-	this.clip();
-	return this
-}
+ 
 isInPoint = x.iP = function (x, y) {
 	return this.isPointInPath(x, y)
 }
-arc = x.a = function () {
+ 
+x.a = function () {
 	var g = G(arguments), x = this,
 			o = N(g.s) ? {x: g.f, y: g.s, r: g.t, rt1: g[3], rt2: g[4]} :
 			{r: g.f}
@@ -185,13 +183,13 @@ arc = x.a = function () {
 	this.arc(o.x, o.y, o.r, M.tR(o.rt1), M.tR(o.rt2), o.ccw)
 	return g.n ? x.s() : g.p ? x.f() : g.m ? x.D() : x
 }
-arc2 = x.at = function () {
+x.arc2 = x.at = function () {
 	var g = G(arguments), o
 	o = {x1: g.f, y1: g.s, x2: g.t, y2: g[3], r: g[4]}
 	this.arcTo(o.x1, o.y1, o.x2, o.y2, o.r)
 	return g.n ? x.s() : g.p ? x.f() : g.m ? x.D() : x
 }
-quadratic = x.qt = function () {
+x.quadratic = x.qt = function () {
 	this.quadraticCurveTo();
 	return this
 }

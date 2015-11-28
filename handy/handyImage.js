@@ -6,8 +6,13 @@ $.i = $.img = function () {
 			o.fn(e.target, e)
 		}, $i))
 	}
+	
+	
+	
 	if (o.sr) {
 		$i.sr(o.sr)
 	}
+	
+	
 	return $i
 }

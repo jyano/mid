@@ -1,16 +1,3 @@
-gr = xGr = CanvasGradient.prototype
-gr.cS = gr.s = gr.c = function (n, c) {
-	var g = G(arguments), gr = this
-	if (g.O) {
-		_.e(g.f, function (n, c) {
-			gr.cS(n, c)
-		})
-	}
-	else {
-		this.addColorStop(n, oO('c', c))
-	}
-	return this
-}
  
 x.lG = x.linGrad = function (a, b, c, d) {
 	return this.createLinearGradient(a, b, c, d)

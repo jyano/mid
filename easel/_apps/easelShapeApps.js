@@ -1,5 +1,250 @@
- 
-	cjs.cirX = function (stg, x, y, r, f, s, width, opt) {
+SIR = function () {
+	$.C('b')
+	$S({
+		body: {fZ: 40, c: 'o'},
+		canvas: {M: 20}
+	})
+	$.h1('SIR')
+	st = new cjs.Stage($.c(600, 300)[0]).t()
+	st.A(new cjs.Text('h.dc', '50px Arial', 'white').X(400))
+	h = $H().a2(st)
+	h.dc()
+	h.dc(36)
+	h.dc(18, 'o')
+	h.dc(200, 100)
+	h.dc(300, 100, 20, 'r')
+	h.dc(300, 200, 20)
+	//
+	st2 = new cjs.Stage($.c(600, 300)[0]).t()
+	st2.A(new cjs.Text('h.cirs', '50px Arial', 'white').X(400))
+	st2.A($H().cirs({}, {x: 300, c: 'b'}, {y: 200, C: 'o'}))
+	//
+	st1 = new cjs.Stage($.c(600, 300)[0]).t()
+	st1.A(new cjs.Text('cjs.cir', '50px Arial', 'white').X(400))
+	st1.A(cjs.cir(300, 'g'))
+	st1.A(cjs.cir(140, 220, 20, 'o').dc())
+	st1.A(cjs.cir('r').XY(220, 200))
+	st3 = new cjs.Stage($.c(600, 300)[0]).t()
+	st3.A(new cjs.Text('cjs.cirs', '50px Arial', 'white').X(400))
+	st3.A(
+			$H().cirs({}, {x: 300, c: 'b'}, {y: 200, C: 'o'})
+	)
+}
+TSIR = function () {
+	$.C('b')
+	$S({
+		body: {fZ: 40, c: 'o'},
+		canvas: {M: 20}
+	})
+	$.h1('SIR')
+	st = new cjs.Stage($.c(600, 300)[0]).t()
+	st.A(new cjs.Text('h.dc', '50px Arial', 'white').X(400))
+	h = $H().a2(st)
+	h.dc()
+}
+SIR = function () {
+	$.C('b')
+	$S({
+		body: {fZ: 40, c: 'o'},
+		canvas: {M: 20}
+	})
+	$.h1('SIR')
+	st = new cjs.Stage($.c(600, 300)[0]).t()
+	st.A(new cjs.Text('h.dc', '50px Arial', 'white').X(400))
+	h = $H().a2(st)
+	h.dc()
+	h.dc(36)
+	h.dc(18, 'o')
+	h.dc(200, 100)
+	h.dc(300, 100, 20, 'r')
+	h.dc(300, 200, 20)
+	//
+	st2 = new cjs.Stage($.c(600, 300)[0]).t()
+	st2.A(new cjs.Text('h.cirs', '50px Arial', 'white').X(400))
+	st2.A($H().cirs({}, {x: 300, c: 'b'}, {y: 200, C: 'o'}))
+	//
+	st1 = new cjs.Stage($.c(600, 300)[0]).t()
+	st1.A(new cjs.Text('cjs.cir', '50px Arial', 'white').X(400))
+	st1.A(cjs.cir(300, 'g'))
+	st1.A(cjs.cir(140, 220, 20, 'o').dc())
+	st1.A(cjs.cir('r').XY(220, 200))
+	st3 = new cjs.Stage($.c(600, 300)[0]).t()
+	st3.A(new cjs.Text('cjs.cirs', '50px Arial', 'white').X(400))
+	st3.A(
+			$H().cirs({}, {x: 300, c: 'b'}, {y: 200, C: 'o'})
+	)
+}
+TSIR = function () {
+	$.C('b')
+	$S({
+		body: {fZ: 40, c: 'o'},
+		canvas: {M: 20}
+	})
+	$.h1('SIR')
+	st = new cjs.Stage($.c(600, 300)[0]).t()
+	st.A(new cjs.Text('h.dc', '50px Arial', 'white').X(400))
+	h = $H().a2(st)
+	h.dc()
+}
+HPL = function () {
+	st = $St()
+	h = st.h('+').XY(0, 0)
+	h.pol({v: vs1, c: 'r', C: 'y', bf: 'flame'})
+	h.pol(vs1, 'r', 'y', 30)
+	h.pol(vs1, 200, 200, 'r', 'y', 3)
+}
+HDL = function () {
+	__St()
+	h.dl(50, 50, 200, 200)
+	h.dl(V(300, 500), [500, 200])
+}
+CLT1 = function () {
+	__St();
+	h.dg()
+	h.lt(100, 100)
+	h.lt(150, 190)
+	h.lt(300, 300)
+	h.lt(350, 390)
+	if (R()) {
+		h.cp()
+	}
+}
+CLT = function () {
+	__St();
+	h.dg()
+	h.mt(240, 210)
+	h.lt(450, 410)
+	h.lt(600, 500)
+	h.lt(500, 500)
+	h.cp()
+}
+CLT = function () {
+	__St()
+	h.mt(240, 210)
+	//h.lt([450, 410],[600, 500], [500, 500])
+	//h.lt([[450, 410], [600, 500], [500, 500]])
+	//h.lt( V(450, 410), V(600, 500), V(500, 500))
+	h.lt([V(450, 410), V(600, 500), V(500, 500)])
+	h.cp()
+}
+CJGPC = CJG = function () {
+	$.h1('easel gpc');
+	st = $St();
+	h = st.h()
+	p1 = $pD(vs1);
+	p2 = $pD(vs2)
+	Bt('diff', 'D');
+	Bt('inter', 'I');
+	Bt('uni', 'U');
+	Bt('xor', 'X')
+	setup()
+	function drawP(pol, sC, ox, oy) {
+		pol.e(function (p, i, n) {
+			var col = oO('c', i == 0 ? sC : ['G', 'n', 'o', 'v'][i % n])
+			h.f(p.iH() ? 'z' : rgba({r: 255}, .1)).l(4).s(col)
+			h.vs(p.pts(), ox, oy)
+					.cp().s().f()
+		})
+	}
+	
+	function setup() {
+		h.clr(400, 400);
+		drawP(p1, "b", 0, -30);
+		drawP(p2, "r", 0, -30)
+	}
+	
+	function Bt(tx, op) {
+		return $.bt(tx, function () {
+			var p = p1[op](p2)
+			setup();
+			drawP(p, 'g', 0, 150)
+		})
+	}
+}
+CJG2 = function () {
+	__St()
+	bts()
+	setup()
+	function drawP(pD, sC, ox, oy) {
+		pD.e(function (innerPoly, i, n) {
+			var col = oO('c', i == 0 ? sC : ['G', 'n', 'o', 'v'][i % n])
+			h.f(innerPoly.iH() ? 'z' : rgba({r: 255}, .1))
+					.l(4).s(col)
+					.vs(innerPoly.pts(), ox, oy).cp()
+					.f().s()
+		})
+	}
+	
+	function setup() {
+		h.clr(400, 400);
+		drawP(p1, "b", 0, -30);
+		drawP(p2, "r", 0, -30)
+	}
+	
+	function bts() {
+		Bt('diff', 'D');
+		Bt('inter', 'I');
+		Bt('uni', 'U');
+		Bt('xor', 'X')
+		function Bt(tx, op) {
+			return $.bt(tx, function () {
+				var p = p1[op](p2)
+				setup();
+				drawP(p, 'g', 0, 150)
+			})
+		}
+	}
+}
+CJG1 = function () {
+	__St()
+	bts()
+	setup()
+	function drawP(pD, sC, ox, oy) {
+		pD.e(function (innerPoly, i, n) {
+			var sCol = oO('c', i == 0 ? sC : ['G', 'n', 'o', 'v'][i % n]),
+					fCol = innerPoly.iH() ? 'z' : rgba({r: 255}, .1),
+					v = innerPoly.pts()
+			h.c(fCol, sCol, 4).mt(v, ox, oy)
+			//h.pol(v, ox, oy, fCol, sCol, 4)
+			h.cp();
+			h.f().s()
+		})
+	}
+	
+	function setup() {
+		h.clr(400, 400);
+		drawP(p1, "b", 0, -30);
+		drawP(p2, "r", 0, -30)
+	}
+	
+	function bts() {
+		Bt('diff', 'D');
+		Bt('inter', 'I');
+		Bt('uni', 'U');
+		Bt('xor', 'X')
+		function Bt(tx, op) {
+			return $.bt(tx, function () {
+				var p = p1[op](p2)
+				setup();
+				drawP(p, 'g', 0, 150)
+			})
+		}
+	}
+}
+CPOL = function () {
+	__St()
+	vs = [V(240, 210), V(450, 410), V(600, 500), V(500, 500)]
+	//h.lt([450, 410],[600, 500], [500, 500])
+	//h.lt([[450, 410], [600, 500], [500, 500]])
+	//h.lt( V(450, 410), V(600, 500), V(500, 500))
+	h.pol({
+		c: 'r',
+		C: 'b',
+		l: 20,
+		v: vs
+	})
+}
+cjs.cirX = function (stg, x, y, r, f, s, width, opt) {
 		var shp = cjs.shape(stg, x, y, f, s, width, opt) // ss = N(ss)?ss: radius/8
 		shp.dc(0, 0, r)
 		return shp
@@ -358,3 +603,158 @@
 		c2 = $.can('X', 800, 400)
 		c3 = $.can('X', 800, 400)
 	}
+
+//lineTo Draw apps:
+	HDL = function () {
+		__St()
+		h.dl(50, 50, 200, 200)
+		h.dl(V(300, 500), [500, 200])
+	}
+	CLT1 = function () {
+		__St();
+		h.dg()
+		h.lt(100, 100)
+		h.lt(150, 190)
+		h.lt(300, 300)
+		h.lt(350, 390)
+		if (R()) {
+			h.cp()
+		}
+	}
+	CLT = function () {
+		__St();
+		h.dg()
+		h.mt(240, 210)
+		h.lt(450, 410)
+		h.lt(600, 500)
+		h.lt(500, 500)
+		h.cp()
+	}
+	CLT = function () {
+		__St()
+		h.mt(240, 210)
+		//h.lt([450, 410],[600, 500], [500, 500])
+		//h.lt([[450, 410], [600, 500], [500, 500]])
+		//h.lt( V(450, 410), V(600, 500), V(500, 500))
+		h.lt([V(450, 410), V(600, 500), V(500, 500)])
+		h.cp()
+	}
+	CJGPC = CJG = function () {
+		$.h1('easel gpc');
+		st = $St();
+		h = st.h()
+		p1 = $pD(vs1);
+		p2 = $pD(vs2)
+		Bt('diff', 'D');
+		Bt('inter', 'I');
+		Bt('uni', 'U');
+		Bt('xor', 'X')
+		setup()
+		function drawP(pol, sC, ox, oy) {
+			pol.e(function (p, i, n) {
+				var col = oO('c', i == 0 ? sC : ['G', 'n', 'o', 'v'][i % n])
+				h.f(p.iH() ? 'z' : rgba({r: 255}, .1)).l(4).s(col)
+				h.vs(p.pts(), ox, oy)
+						.cp().s().f()
+			})
+		}
+		
+		function setup() {
+			h.clr(400, 400);
+			drawP(p1, "b", 0, -30);
+			drawP(p2, "r", 0, -30)
+		}
+		
+		function Bt(tx, op) {
+			return $.bt(tx, function () {
+				var p = p1[op](p2)
+				setup();
+				drawP(p, 'g', 0, 150)
+			})
+		}
+	}
+	CJG2 = function () {
+		__St()
+		bts()
+		setup()
+		function drawP(pD, sC, ox, oy) {
+			pD.e(function (innerPoly, i, n) {
+				var col = oO('c', i == 0 ? sC : ['G', 'n', 'o', 'v'][i % n])
+				h.f(innerPoly.iH() ? 'z' : rgba({r: 255}, .1))
+						.l(4).s(col)
+						.vs(innerPoly.pts(), ox, oy).cp()
+						.f().s()
+			})
+		}
+		
+		function setup() {
+			h.clr(400, 400);
+			drawP(p1, "b", 0, -30);
+			drawP(p2, "r", 0, -30)
+		}
+		
+		function bts() {
+			Bt('diff', 'D');
+			Bt('inter', 'I');
+			Bt('uni', 'U');
+			Bt('xor', 'X')
+			function Bt(tx, op) {
+				return $.bt(tx, function () {
+					var p = p1[op](p2)
+					setup();
+					drawP(p, 'g', 0, 150)
+				})
+			}
+		}
+	}
+	CJG1 = function () {
+		__St()
+		bts()
+		setup()
+		function drawP(pD, sC, ox, oy) {
+			pD.e(function (innerPoly, i, n) {
+				var sCol = oO('c', i == 0 ? sC : ['G', 'n', 'o', 'v'][i % n]),
+						fCol = innerPoly.iH() ? 'z' : rgba({r: 255}, .1),
+						v = innerPoly.pts()
+				h.c(fCol, sCol, 4).mt(v, ox, oy)
+				//h.pol(v, ox, oy, fCol, sCol, 4)
+				h.cp();
+				h.f().s()
+			})
+		}
+		
+		function setup() {
+			h.clr(400, 400);
+			drawP(p1, "b", 0, -30);
+			drawP(p2, "r", 0, -30)
+		}
+		
+		function bts() {
+			Bt('diff', 'D');
+			Bt('inter', 'I');
+			Bt('uni', 'U');
+			Bt('xor', 'X')
+			function Bt(tx, op) {
+				return $.bt(tx, function () {
+					var p = p1[op](p2)
+					setup();
+					drawP(p, 'g', 0, 150)
+				})
+			}
+		}
+	}
+	CPOL = function () {
+		__St()
+		vs = [V(240, 210), V(450, 410), V(600, 500), V(500, 500)]
+		//h.lt([450, 410],[600, 500], [500, 500])
+		//h.lt([[450, 410], [600, 500], [500, 500]])
+		//h.lt( V(450, 410), V(600, 500), V(500, 500))
+		h.pol({
+			c: 'r',
+			C: 'b',
+			l: 20,
+			v: vs
+		})
+	}
+
+ 

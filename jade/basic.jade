@@ -8,30 +8,69 @@ html(lang="en")
         +css('bs')
         +css('bs-theme')
         
+        
+        // *** BOTH  
         +S(['us', 'string', 'moment', 'superJs', 'gee', 'console', 'both'])
         
+        
+        // *** FRONT 
+        //JQUERY DEPS
         +S([ 'jq', 'jQueryPlus', 'frontOb', 'defs'])
+        //SUPER JQUERY, FRONT, RULES
+        +S(['superJQuery', 'superJQuerySty', 'superJQueryAnim', 'rules'])
+        //HANDY
+        +S(['handy', 'handyInputs', 'handyCanvas', 'handyDivs', 'handyEl', 'handyImage', 'handyIpsum', 'handyLists', 'handyNest', 'handyText' ])
+        //FRONT APPS
+        +S(['superWebApps', 'flexApps'])
+        
+        // ***CLIPPER
+        +S(['gpc', 'gpcApp0', 'clipperBase', 'clipper'])
+        
+        
+        // *** CANVAS ELEMENT
+        //CONTEXT
+        +S(['ctxProto', 'superContext2D']) 
+        +S([ 'ctxColor', 'ctxPaths','ctxTransform', 'drawImage','gradients','pixels']) 
+        
+        +S(['ctxCrop','ctxClip'])
+        +S([ 'polyCtx'])
+        //CONTEXT APPS
+        +S([ 'ctxApps', 'ctxBad','ctxImgApps','ctxPathApps','ctxPixelApps' ])
+        
+        //CANVAS
+        +S(['canEl', 'superCanvas' ])
+        +S([ 'canGradProto', 'canGrad', 'canPixel', 'canText','canTransform','canDraw','canPath' ])
+        
+        +S(['parallax'])
+        //CANVAS  APPS
+        +S(['canAppsData','canApps', 'canGradApps','canLoaderApps','canBad','canFormat','canHull','canRub'])
+        //MUGGY CANVAS
+        +S(['canMug'])
+        
+        //TWITTER BOOTSTRAP 4
         +S(['bs', 'boot4', 'bootButtons', 'bs4More' ,   'dropdown', 'navbar'])
         
-        +S(['superJQuery', 'superJQuerySty', 'superJQueryAnim', 'rules'])
+        //BACKBONE
+        +S(['bb', 'bbBase', 'bbCore', 'bbEvent', 'bbModel', 'bbRoute', 'bbRtr', 'bbView', 'perfect'])
         
-        +S(['handy', 'handyInputs', 'handyCanvas', 'handyDivs', 'handyEl', 'handyImage', 'handyIpsum', 'handyLists', 'handyNest', 'handyText' ])
-        +S(['superWebApps', 'flexApps'])
+        
+        //CREATE DEPS
         +S(['cjs', 'cjsMC'])
-        +S(['bb','bbBase', 'bbCore', 'bbEvent', 'bbModel', 'bbRoute', 'bbRtr', 'bbView', 'perfect'])
-        +S(['gpc', 'gpcApp0', 'clipperBase', 'clipper'])
-        +S(['superCanvas' ])
         
-        +S(['superContext2D', 'ctxColor', 'ctxPaths','ctxTransform', 'drawImage','gradients','pixels', 'polyCtx'])
         
-        +S(['canApps' ,'ctxApps' ])
-       
-        //+S(['create', 'cjsLQ', 'easel', 'paths', 'easelShape', 'bitmapFill', 'tween', 'sprite', 'movie', 'anims'])
-        //+S(['createApps', 'queueApps', 'cjsAnimApps', 'mcApps', 'matrixApps', 'easelGpc'])
-
-
-     
+        //LOADER
+        +S(['loader', 'loaderProto', 'loaderApps'])
+        
+        
+        //EASEL
+        +S(['easelBase','easelDraw','easelText','ticker','tran'])
+        +S(['dOProto', 'containerProto','easelGraphicsProto','easelShapeProto','easelTextProto','eDProto','stageProto'])
+        +S(['easelApps','easelBitmapFillApps','easelShapeApps','easelTextApps','injector','examples'])
+        
+        
+        
         +loadApps(app, pam)
+        
         
     body
         h1 jade worked

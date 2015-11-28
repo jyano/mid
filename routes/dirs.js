@@ -12,6 +12,7 @@ dirs=[
 	'anim', 
 	'bone',  
 	'box',  
-	'world'
+	'world',
+	'loader'
 ]
 
