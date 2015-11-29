@@ -10,16 +10,11 @@ HBF = function () {
 		h.dc(300).drag()
 	})
 }
-LDB = function () {
-	St()
-	$Ld('me', function (ld) {
-		st.h(300, 200, '+').bf(ld.i('me')).dc(100)
-		st.h(500, 100, '+').bf('me').dc(100)
-	})
-}
-SBS = function () {
+HBS = function () {
 	$Ld(function (ld) {
-		St(1000, 500).h(810, 410, '+').l(8).bf(ld.get('chicks'), $Mx(1, 0, 0, 1, -800, -400)).rec(1600, 800)
+		St(1000, 500).h(810, 410, '+').l(8)
+				.bf(ld.get('chicks'), 
+				$Mx(1, 0, 0, 1, -800, -400)).rec(1600, 800)
 		ch = ld.get('chicks')
 		me = ld.get('me')
 		Ch(200, 200).rec(200, 300)
@@ -36,47 +31,37 @@ SBS = function () {
 		return h
 	}
 }
-TMX = function () {
+TFM = function () {
 	$.i('chicks', function (img) {
 		St().h(100, 100, '+').sC('b', 50)
 				._bf(img, null, $tMx(210, 230, .5, .5))
 				.dc(100, 100, 100)
 	})
 }
-PFC = function () {
-	Q(function (ld) {
-		St()
-		im = Q.i('me')
-		$im = $(im).A()
-		h.bf(im)
-		h.cir({x: 40, y: 289, r: 100})
-		h.mt(vs1)
-		h.mt([
-			[550, 20],
-			[800, 100], [700, 300], [500, 120]
-		])//.cp()
-		h.mt([
-			[750, 20],
-			[900, 100], [900, 300], [700, 120]
-		], 50, 200)//.cp()
-		h.mt([
-			[550, 20],
-			[800, 100], [700, 300], [500, 120]
-		], 0, 50)//.cp()
-		h.cir({
-			x: 550, y: 20, r: 20, c: 'b'
-		})
-		h.cir({
-			x: 800, y: 100, r: 30, c: 'b'
-		})
-		h.cir({
-			x: 700, y: 300, r: 20, c: 'g'
-		})
-		h.cir({
-			x: 500, y: 120, r: 30, c: 'g'
-		})
+LDB = function () {
+	St()
+	$Ld('me', function (ld) {
+		st.h(300, 200, '+').bf(ld.i('me')).dc(100)
+		st.h(500, 100, '+').bf('me').dc(100)
 	})
 }
+LB1 = function () {
+	$Ld(function (ld) {
+		St().h('+')
+				.C('z').dr(0, 0, 40, 40)
+				.bf(ld.get('me'), -100).dr(0, 0, 500, 200).dr(100, 100, 500, 200)
+	})
+}
+PFC = function () {St()
+	$Ld(function (ld) {h.bf($(ld.get('me')).A()[0])
+		.cir({x: 40, y: 289, r: 100}).mt(vs1).mt([[550, 20],
+			[800, 100], [700, 300], [500, 120]]).mt([[750, 20],
+			[900, 100], [900, 300], [700, 120]], 50, 200).mt([[550, 20],
+			[800, 100], [700, 300], [500, 120]], 0, 50)
+				.cir({x: 550, y: 20, r: 20, c: 'b'})
+				.cir({x: 800, y: 100, r: 30, c: 'b'})
+				.cir({x: 700, y: 300, r: 20, c: 'g'})
+				.cir({x: 500, y: 120, r: 30, c: 'g'}) })}
 HBC = function () {
 	St()
 	$Ld(function (ld) {
@@ -89,7 +74,7 @@ HBC = function () {
 		})
 	})
 }
-BFO= BHS= function () {
+BFH= function () {
 	
 	h = $St().h(300, 100, '+').bf({
 	
@@ -100,11 +85,10 @@ BFO= BHS= function () {
 	
 	
 }
-LBF = function () {
-	$Ld(function (ld) {
-		St().h('+')
-				.C('z').dr(0, 0, 40, 40)
-				.bf(ld.get('me'), -100).dr(0, 0, 500, 200).dr(100, 100, 500, 200)
+BMC = function () {
+	st = $St().t()
+	st.h(300, 200).bmCir({
+		circs: [{r: 100}, {x: 200, y: 200}, {}]
 	})
 }
 BFS = function () {
@@ -140,12 +124,7 @@ BCS= function () {St()
 	 h2.bmCir({ circs: vs })
 	
 }
-BMC = function () {
-	st = $St().t()
-	st.h(300, 200).bmCir({
-		circs: [{r: 100}, {x: 200, y: 200}, {}]
-	})
-}
+
  
  
  
