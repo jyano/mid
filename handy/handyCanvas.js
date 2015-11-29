@@ -1,4 +1,4 @@
-$.cv = $.c = $.c2 = function (c, width, h, x, y) {
+$.can = $.canvas = $.cv = $.c = $.c2 = function (c, width, h, x, y) {
 	var g = G(arguments), o, q
 	o = g.S_ ?
 	{c: g.f, w: g.s, h: g.t, x: g[3], y: g[4]} :

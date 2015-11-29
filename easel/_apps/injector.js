@@ -62,12 +62,7 @@
     };
 
 })(jQuery)
-
-CAMERA=function(){
-
-
-}
-
+ 
 
 
 USINGLAYERSINEASEL=function(){z()

@@ -343,13 +343,7 @@ function statt(){
 		return $
 	}
 	$.ct = $.cts = $.contains
-	$.iI=function(i){
-		if(O(i)){
-			return S($(i)[0].src)
-		}
-	}
-	
-	
+ 
 	$.src=function f(e){
 		
 		if(e.image){e=e.image}

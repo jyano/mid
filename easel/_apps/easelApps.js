@@ -3264,4 +3264,250 @@ $.ev(.2, function () {
 	})
 }
 }
+SETTRANSFORM = function () {
+	s = cjs.stage(800).A()
+	s.bm('me', function (me) {
+		b = me
+		b.setTransform(0, 0, 2, .5, 0, 40, 4, 2, 3)
+		m = b.getMatrix()
+		function tf(a, b, c, d, e, f, g, h, i) {
+			return this.x = a || 0,
+					this.y = b || 0,
+					this.scaleX = null == c ? 1 : c,
+					this.scaleY = null == d ? 1 : d,
+					this.rotation = e || 0,
+					this.skewX = f || 0,
+					this.skewY = g || 0,
+					this.regX = h || 0,
+					this.regY = i || 0,
+					this
+		}
+	})
+}
+testInStage = function () {
+	s = cjs.stg()
+	s.bm('me', function (b) {
+		me = b
+		me.startMoving(10, 10)
+		cjs.tick(function () {
+			$l(me.inStage())
+		})
+	})
+}
+SETTRANSFORM = function () {
+	s = cjs.stage(800).A()
+	s.bm('me', function (me) {
+		b = me
+		b.setTransform(0, 0, 2, .5, 0, 40, 4, 2, 3)
+		m = b.getMatrix()
+		function tf(a, b, c, d, e, f, g, h, i) {
+			return this.x = a || 0,
+					this.y = b || 0,
+					this.scaleX = null == c ? 1 : c,
+					this.scaleY = null == d ? 1 : d,
+					this.rotation = e || 0,
+					this.skewX = f || 0,
+					this.skewY = g || 0,
+					this.regX = h || 0,
+					this.regY = i || 0,
+					this
+		}
+	})
+}
+testInStage = function () {
+	s = cjs.stg()
+	s.bm('me', function (b) {
+		me = b
+		me.startMoving(10, 10)
+		cjs.tick(function () {
+			$l(me.inStage())
+		})
+	})
+}
+SETTRANSFORM = function () {
+	s = cjs.stage(800).A()
+	s.bm('me', function (me) {
+		b = me
+		b.setTransform(0, 0, 2, .5, 0, 40, 4, 2, 3)
+		m = b.getMatrix()
+		function tf(a, b, c, d, e, f, g, h, i) {
+			return this.x = a || 0,
+					this.y = b || 0,
+					this.scaleX = null == c ? 1 : c,
+					this.scaleY = null == d ? 1 : d,
+					this.rotation = e || 0,
+					this.skewX = f || 0,
+					this.skewY = g || 0,
+					this.regX = h || 0,
+					this.regY = i || 0,
+					this
+		}
+	})
+}
+HUD = function () {
+	z()
+	s = cjs.HUD('r', 500, 500).A()
+	s.bm('guy')
+	s.HUD.A().bm('me', function (b) {
+		TR(b)
+	})
+}
+STG2 = function () {
+	z();
+	return cjs.stage(800, 300).A()
+}
+mockStage = function () {
+	z()
+	return s = stage = cjs.stage(800, 500).tick().A()
+}
+STG = function () {
+	z();
+	s = cjs.stage(1000, 500).A()
+	s.bm('me',
+			function (bb) {
+				b = bb.drag()
+			})
+}
+NEWSTG = function () {
+	z()
+	//three ways to make a new stage
+	s = cjs.stg('r', 100).A().bm('me')
+	s.can.drag()
+	c = $.canvas('b', 100).A().drag().XY(400)
+	s1 = cjs.stg(c)
+	s1.A().bm('me')
+	c2 = $.canvas('b', 100).A().id('someId').drag().XY(300, 100)
+	s2 = cjs.stg(['someId'])
+	s2.tick().bm('me')
+}
+CHALK = function () {
+	w = b2d.mW()
+	s = w.s
+	s.bm('me')
+	text = cjs.chalk('some information ....')
+	text2 = cjs.chalk('some more').XY(50, 90)
+	s.A(text, text2)
+}
+HUD = function () {
+	z()
+	s = cjs.HUD('r', 500, 500).A()
+	s.bm('guy')
+	s.HUD.A().bm('me', function (b) {
+		TR(b)
+	})
+}
+STG2 = function () {
+	z();
+	return cjs.stage(800, 300).A()
+}
+mockStage = function () {
+	z()
+	return s = stage = cjs.stage(800, 500).tick().A()
+}
+STG = function () {
+	z();
+	s = cjs.stage(1000, 500).A()
+	s.bm('me',
+			function (bb) {
+				b = bb.drag()
+			})
+}
+NEWSTG = function () {
+	z()
+	//three ways to make a new stage
+	s = cjs.stg('r', 100).A().bm('me')
+	s.can.drag()
+	c = $.canvas('b', 100).A().drag().XY(400)
+	s1 = cjs.stg(c)
+	s1.A().bm('me')
+	c2 = $.canvas('b', 100).A().id('someId').drag().XY(300, 100)
+	s2 = cjs.stg(['someId'])
+	s2.tick().bm('me')
+}
+testImgRegCenter = function () {
+	mockStage()
+	s.bm('me', function (bm) {
+		b1 = bm
+		bm.spin().drag()
+	})
+	s.bm('me', function (bm) {
+		b2 = bm
+		bm.sXY(0.5, 0.3).spin().drag()
+	})
+	s.A(c = cjs.circle(4).XY(200))
+}
+$mugTest = function () {
+	z();
+	s = cjs.stage(800, 800).A()
+	s.mug(function (mug) {
+		m = mug
+	})
+}
+testGrow = function () {
+	z()
+	s = cjs.stage(500, 500).A()
+	s.bm('me', function (bm) {
+		b = bm
+		bm.grow().drag()
+	})
+}
+HUD = function () {
+	z()
+	s = cjs.HUD('r', 500, 500).A()
+	s.bm('guy')
+	s.HUD.A().bm('me', function (b) {
+		TR(b)
+	})
+}
+STG2 = function () {
+	z();
+	return cjs.stage(800, 300).A()
+}
+mockStage = function () {
+	z()
+	return s = stage = cjs.stage(800, 500).tick().A()
+}
+STG = function () {
+	z();
+	s = cjs.stage(1000, 500).A()
+	s.bm('me',
+			function (bb) {
+				b = bb.drag()
+			})
+}
+CHALK = function () {
+	w = b2.mW()
+	s = w.s
+	s.bm('me')
+	text = cjs.chalk('some information ....')
+	text2 = cjs.chalk('some more').XY(50, 90)
+	s.A(text, text2)
+}
+$mugTest = function () {
+	z();
+	s = cjs.stage(800, 800).A()
+	s.mug(function (mug) {
+		m = mug
+	})
+}
+NEWSTG = function () {
+	z()
+	//three ways to make a new stage
+	s = cjs.stg('r', 100).A().bm('me')
+	s.can.drag()
+	c = $.canvas('b', 100).A().drag().XY(400)
+	s1 = cjs.stg(c)
+	s1.A().bm('me')
+	c2 = $.canvas('b', 100).A().id('someId').drag().XY(300, 100)
+	s2 = cjs.stg(['someId'])
+	s2.tick().bm('me')
+}
+CHALK = function () {
+	w = b2.mW()
+	s = w.s
+	s.bm('me')
+	text = cjs.chalk('some information ....')
+	text2 = cjs.chalk('some more').XY(50, 90)
+	s.A(text, text2)
+}
  

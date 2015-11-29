@@ -231,10 +231,28 @@ i.grow = function () {
 	$Tw(this, [{sxy: 10}, 10000]);
 	return this
 }
+i.grow = function () {
+	$Tw(this, [{sxy: 10}, 10000]);
+	return this
+}
+i.RT = function () {
+	RT(this);
+	return this
+}
+i.TR = function () {
+	TR(this);
+	return this
+}
+i.dg = i.drag = i.SL = function () {
+	cjs.SL(this);
+	return this
+}
 i.TR = function () {
 	cjs.TR(this);
 	return this
 }
+
+
 cjs.SL = function (b, b2) {
 	var g = G(arguments),
 			b = g[0], b2 = g[1] || b
@@ -376,22 +394,7 @@ cjs.rtSh = cjs.rotateShake = function (bm) {
 cjs.scSh = cjs.scaleShake = function (bm) {
 	$Tw([bm, 'l'], {sxy: 1}, [{sxy: .95}, 1], [{sxy: 1.05}, 1])
 }
-i.grow = function () {
-	$Tw(this, [{sxy: 10}, 10000]);
-	return this
-}
-i.RT = function () {
-	RT(this);
-	return this
-}
-i.TR = function () {
-	TR(this);
-	return this
-}
-i.dg = i.drag = i.SL = function () {
-	cjs.SL(this);
-	return this
-}
+
 function tran() {
 	cjs.bindSlide = SL = function () {
 		var g = G(arguments),

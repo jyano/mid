@@ -1,3 +1,4 @@
+$l('ticker.js')
 T = cjs.Ticker
  
 	cjs.ticker = tt = function (a, b, c) {

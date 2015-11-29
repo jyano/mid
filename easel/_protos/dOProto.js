@@ -980,3 +980,11 @@ events = ['added',
 	'removed',
 	'tick'
 ]
+dO.ix = function (n) {
+	var dO = this, g = G(arguments)
+	if (g.u) {
+		return
+	}
+	dO.parent.sChIx(dO, n)
+	return dO
+}

@@ -37,6 +37,7 @@ html(lang="en")
         //CONTEXT APPS
         +S([ 'ctxApps', 'ctxBad','ctxImgApps','ctxPathApps','ctxPixelApps' ])
         
+        
         //CANVAS
         +S(['canEl', 'superCanvas' ])
         +S([ 'canGradProto', 'canGrad', 'canPixel', 'canText','canTransform','canDraw','canPath' ])
@@ -58,16 +59,24 @@ html(lang="en")
         +S(['cjs', 'cjsMC'])
         
         
-        //LOADER
-        +S(['loader', 'loaderProto', 'loaderApps'])
-        
+     
         
         //EASEL
         +S(['easelBase','easelDraw','easelText','ticker','tran'])
-        +S(['dOProto', 'containerProto','easelGraphicsProto','easelShapeProto','easelTextProto','eDProto','stageProto'])
+        +S(['dOProto', 'containerProto','easelGraphicsProto','easelShapeProto', 'easelShapeProtoColor','easelTextProto','eDProto','stageProto'])
         +S(['easelApps','easelBitmapFillApps','easelShapeApps','easelTextApps','injector','examples'])
+        //LOADER
+        +S(['loader', 'loaderProto', 'loaderApps'])
+
+
+        // SPRITE SHEET
+        +S(['spriteProto','SSProto', 'SSBuilderProto'])
+        +S(['spriteSheet', 'meSprite'])
+        +S(['SSData','SSApps'])
         
         
+        // TWEEN
+        +S(['tween','easing','tweenProto','displayObTween', 'tweenData','tweenApps'])
         
         +loadApps(app, pam)
         

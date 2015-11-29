@@ -13,6 +13,7 @@ dirs=[
 	'bone',  
 	'box',  
 	'world',
+	'spriteSheet', 'tween',
 	'loader'
 ]
 

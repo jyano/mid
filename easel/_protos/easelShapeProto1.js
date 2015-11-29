@@ -1,6 +1,70 @@
+$l('easelShapeProto.js')
+
 h = cjs.Shape.prototype
 
+h.ef = function () {
+	this.graphics.endFill.apply(
+			this.graphics, arguments)
+	return this
+}
+h.es = function () {
+	var h = this, gx = h.graphics
+	gx.es()
+	return h
+}
 
+h.cp = function () {
+	this.graphics.cp();
+	return this
+}
+
+h.clr = h.z = h.clear = function () {
+	this.graphics.clear();
+	return this
+}
+ 
+h._mt =   function (x, y) {
+	var v = V(x, y)
+	this.graphics.mt(v.x, v.y)
+	return this
+}
+h.mt = function () {
+	var g = G(arguments), o
+	if (g.N) {
+		return this._mt(g.f, g.s)
+	}
+	o = AO(g) ? {
+		firPt: _.f(g.f), restPts: _.r(g.f),
+		ox: g.s, oy: g.t
+	} : {firPt: g.f, restPts: g.r}
+	
+	return this._mt(
+			o.firPt[0] + N(o.ox, 0),
+			o.firPt[1] + N(o.oy, 0)
+	).lt(M.os(o.restPts, o.ox, o.oy))
+}
+h._lt = function (x, y) {
+	var v = V(x, y)
+	this.graphics.lt(v.x, v.y)
+	return this
+}
+h.lt = function (x, y) {
+	var h = this, g = G(arguments)
+	if (AO(g.f)) {
+		g.e(function (v) {
+			h.lt.apply(h, v)
+		})
+	}
+	else if (O(g.s)) {
+		g.e(function (pt) {
+			h.lt(pt)
+		})
+	}
+	else {
+		this.graphics.lt(V(x, y).x, V(x, y).y)
+	}
+	return this
+}
 h._dc = function () {
 	var h = this
 	h.graphics.dc.apply(h.graphics, arguments)
@@ -81,6 +145,8 @@ HCR = function () {
 	_$St().A(h).u()
 }
 
+
+
 h.cirs = function () {
 	var h = this, g = G(arguments)
 	g.e(function (c) {
@@ -88,6 +154,8 @@ h.cirs = function () {
 	})
 	return this
 }
+
+
 //tricky short name:
 //OVERLAPNAMEWITHCOLOR = h.c = function (rad) {return this.dc(0, 0, rad)}
 h._dr = function () {
@@ -105,6 +173,7 @@ h.dr = function () {
 	gx.dr(o.x, o.y, o.w, o.h)
 	return h
 }
+
 h.dr2 = function (x, y, W, H) {
 	var h = this, g = G(arguments), o
 	if (g.OO_) {
@@ -122,7 +191,8 @@ h.dr2 = function (x, y, W, H) {
 	o.h = N(o.h, o.w)
 	h.dr(-o.w / 2 + o.x, -o.h / 2 + o.y, o.w, o.h)
 	return h
-}
+} 
+ 
 h.rect = h.rectangle = function (x, y, w, h, fc, sc) {
 	var gx = this.graphics
 	if (fc) {
@@ -134,6 +204,7 @@ h.rect = h.rectangle = function (x, y, w, h, fc, sc) {
 	gx.dr(x, y, w, h)
 	return this
 }
+ 
 h.rec = function () {
 	var h = this, g = G(arguments), o
 	if (g.OO_) {
@@ -174,153 +245,63 @@ h.rec = function () {
 	return h
 }
 
-h._lt = function (x, y) {
-	var v = V(x, y)
-	this.graphics.lt(v.x, v.y)
-	return this
-}
-h.lt = h._lt = function (x, y) {
-	var h = this, gx = h.graphics, g = G(arguments)
-	//A(a) && O(a[0])
-	if (AO(g.f)) {
-		g.e(function (v) {
-			h.lt.apply(h, v)
-		})
-		return h
-	}
-	O(g.s) ?
-			g.e(function (pt) {
-				h.lt(pt)
-			}) :
-			gx.lt(V(x, y).x, V(x, y).y)
-	return h
-}
-h.lt = function (x, y) {
-	var h = this, g = G(arguments)
-	if (AO(g.f)) {
-		g.e(function (v) {
-			h.lt.apply(h, v)
-		})
-	}
-	else if (O(g.s)) {
-		g.e(function (pt) {
-			h.lt(pt)
-		})
+h.poly = function (verts, f, s, width) {
+	var that = this, gx = this.graphics
+	if (N(verts[0])) //verts passed in directly
+	{
+		_.each(arguments,
+				function (vert) {
+					gx.lt(vert[0], vert[1])
+				});
+		gx.cp()
 	}
 	else {
-		this.graphics.lt(V(x, y).x, V(x, y).y)
-	}
-	return this
-}
-h._mt = function (x, y) {
-	var g = G(arguments)
-	var pt = V(g.f, g.s)
-	this.graphics.mt(pt.x, pt.y)
-	return this
-}
-h._mt = function (x, y) {
-	var v = V(x, y)
-	this.graphics.mt(v.x, v.y)
-	return this
-}
-h.mt = function () {
-	var g = G(arguments), o
-	if (g.N) {
-		return this._mt(g.f, g.s)
-	}
-	o = AO(g) ? {
-		firPt: _.f(g.f), restPts: _.r(g.f),
-		ox: g.s, oy: g.t
-	} : {firPt: g.f, restPts: g.r}
-	return this._mt(
-			o.firPt[0] + N(o.ox, 0),
-			o.firPt[1] + N(o.oy, 0)
-	).lt(M.os(o.restPts, o.ox, o.oy))
-}
-h.mt = function () {
-	var g = G(arguments), o
-	if (g.N) {
-		return this._mt(g.f, g.s)
-	}
-	o = AO(g) ? {
-		firPt: _.f(g.f), restPts: _.r(g.f),
-		ox: g.s, oy: g.t
-	} : {firPt: g.f, restPts: g.r}
-	return this._mt(
-			o.firPt[0] + N(o.ox, 0),
-			o.firPt[1] + N(o.oy, 0)
-	).lt(M.os(o.restPts, o.ox, o.oy))
-}
-h.poly = function (vxs, f, s, wd) {
-	h.poly = function (verts, f, s, width) {
-		var that = this, gx = this.graphics
-		if (N(verts[0])) //verts passed in directly
+		this.graphics.fs(f, s, width)
 		{
-			_.each(arguments,
-					function (vert) {
-						gx.lt(vert[0], vert[1])
-					});
+			_.each(verts, function (vert) {
+				gx.lt(vert[0], vert[1])
+			});
 			gx.cp()
 		}
-		else {
-			this.graphics.fs(f, s, width)
-			{
-				_.e(verts, function (vert) {
-					gx.lt(vert[0], vert[1])
-				});
-				gx.cp()
-			}
-		}
-		return this
 	}
-	h.poly = function (verts, f, s, width) {
-		var that = this, gx = this.graphics
-		if (N(verts[0])) { //verts passed in directly
-			_.e(arguments,
-					function (vert) {
-						gx.lt(vert[0], vert[1])
-					});
-			gx.cp()
-		}
-		else {
-			this.graphics.fs(f, s, width)
-			{
-				_.e(verts, function (vert) {
-					gx.lt(vert[0], vert[1])
-				});
-				gx.cp()
-			}
-		}
-		return this
-	}
-var h = this,g= arguments
-	h.fs(f, s, wd)
-	if (A(vxs) && N(vxs[0])) {
-		_.e(g, function (v) {h.lt(v[0], v[1])})}
-	else {  _.e(vxs, function (v) {h.lt(v)})}
-	return h.cp()
+	return this
 }
-h.pol = function () {
-	var h = this, g = G(arguments), o;
-	//O$ >>  O(o) && !F(o) && !A(o)
-	o = O$(g.f) ? g.f :
-			N(g.s) && N(g.t) ?
-			{v: g.f, x: g.s, y: g.t, c: g.fo, C: g.fi, l: g.si} :
-			{v: g.f, c: g.s, C: g.t, l: g.fo}
-	o.v = M.os(o.v, o.x, o.y)
-	o = oDef(o || {})
-	h.ef().es().c(o)
-	if (o.bf) {
-		var bf = S(o.bf) ? o.bf : 'me'
-		h.bf(bf, function draw() {
-			h.mt(o.v).cp()
+h.poly = function (verts, f, s, width) {
+	var h = this
+	h.fs(f, s, width)
+	if (A(verts) && N(verts[0])) {
+		_.each(arguments, function (v) {
+			h.lt(v[0], v[1])
 		})
+	}//verts passed in directly AS NUMBERS ??
+	else {
+		_.each(verts, function (v) {
+			h.lt(v)
+		})
+	}//passed in array
+	h.cp()
+	return this
+}
+h.poly = function (verts, f, s, width) {
+	var that = this, gx = this.graphics
+	if (N(verts[0])) //verts passed in directly
+	{
+		_.each(arguments,
+				function (vert) {
+					gx.lt(vert[0], vert[1])
+				});
+		gx.cp()
 	}
 	else {
-		h.lt(o.v)
-		h.cp()
+		this.graphics.fs(f, s, width)
+		{
+			_.each(verts, function (vert) {
+				gx.lt(vert[0], vert[1])
+			});
+			gx.cp()
+		}
 	}
-	return h
+	return this
 }
 
 //******** here is the problem.. gotta let h.poly also defer to rect (and circ?)
@@ -670,39 +651,6 @@ h.rs = function me() {
 	return h
 }
 //
-h.dl = h.ln = h.line = function () {
-	var h = this, g = G(arguments), o
-	o = g.N_ ?
-	{x1: g.f, y1: g.s, x2: g.t, y2: g[3]} :
-	{x1: g.f.x, y1: g.f.y, x2: g.s.x, y2: g.s.y}
-	this.mt(o.x1, o.y1).lt(o.x2, o.y2)
-	return this
-}
-//alpha:
-h.$vs = function (polVs, ox, oy) {
-	if (gpc.iP(polVs)) {
-		polVs = polVs.vs()
-	}
-	return this.vs(polVs, ox, oy)
-}
-h.ef = function () {
-	this.graphics.endFill.apply(
-			this.graphics, arguments)
-	return this
-}
-h.es = function () {
-	var h = this, gx = h.graphics
-	gx.es()
-	return h
-}
-h.cp = function () {
-	this.graphics.cp();
-	return this
-}
-h.clr = h.z = h.clear = function () {
-	this.graphics.clear();
-	return this
-}
 function curves() {
 	h.arc = h._a = function (x, y, r, startA, endA, aCW) {
 		var h = this, gx = h.graphics
@@ -791,8 +739,7 @@ function curves() {
 		return h
 	}
 }
-curves()
-//function advanced() {
+function advanced() {
 	h.dl = h.ln = h.line = function () {
 		var h = this, g = G(arguments), o
 		o = g.N_ ?
@@ -819,7 +766,7 @@ curves()
 		gx.drawPolyStar(o.x, o.y, o.r, o.s, o.p, o.a)
 		return h
 	}
- 
+}
 function old() {
 	function drawPoly() {
 		h.drawPolygon = h.drawConnectedLines = function (poly, sc) {
@@ -964,5 +911,79 @@ function old() {
 		//  takes [pt,pt..] and draws it.. with optional offsets..
 		//used by (but NOT  dependent on) gPoly 
 	}
+}
+h.lt = h._lt = function (x, y) {
+	var h = this, gx = h.graphics, g = G(arguments)
+	//A(a) && O(a[0])
+	if (AO(g.f)) {
+		g.e(function (v) {
+			h.lt.apply(h, v)
+		})
+		return h
+	}
+	O(g.s) ?
+			g.e(function (pt) {
+				h.lt(pt)
+			}) :
+			gx.lt(V(x, y).x, V(x, y).y)
+	return h
+}
+h._mt = function (x, y) {
+	var g = G(arguments)
+	var pt = V(g.f, g.s)
+	this.graphics.mt(pt.x, pt.y)
+	return this
+}
+h.mt = function () {
+	var g = G(arguments), o
+	if (g.N) {
+		return this._mt(g.f, g.s)
+	}
+	o = AO(g) ? {
+		firPt: _.f(g.f), restPts: _.r(g.f),
+		ox: g.s, oy: g.t
+	} : {firPt: g.f, restPts: g.r}
+	return this._mt(
+			o.firPt[0] + N(o.ox, 0),
+			o.firPt[1] + N(o.oy, 0)
+	).lt(M.os(o.restPts, o.ox, o.oy))
+}
+h.pol = function () {
+	var h = this, g = G(arguments), o;
+	//O$ >>  O(o) && !F(o) && !A(o)
+	o = O$(g.f) ? g.f :
+			N(g.s) && N(g.t) ?
+			{v: g.f, x: g.s, y: g.t, c: g.fo, C: g.fi, l: g.si} :
+			{v: g.f, c: g.s, C: g.t, l: g.fo}
+	o.v = M.os(o.v, o.x, o.y)
+	o = oDef(o || {})
+	h.ef().es().c(o)
+	if (o.bf) {
+		var bf = S(o.bf) ? o.bf : 'me'
+		h.bf(bf, function draw() {
+			h.mt(o.v).cp()
+		})
+	}
+	else {
+		h.lt(o.v)
+		h.cp()
+	}
+	return h
+}
+h = cjs.Shape.prototype
+h.dl = h.ln = h.line = function () {
+	var h = this, g = G(arguments), o
+	o = g.N_ ?
+	{x1: g.f, y1: g.s, x2: g.t, y2: g[3]} :
+	{x1: g.f.x, y1: g.f.y, x2: g.s.x, y2: g.s.y}
+	this.mt(o.x1, o.y1).lt(o.x2, o.y2)
+	return this
+}
+//alpha:
+h.$vs = function (polVs, ox, oy) {
+	if (gpc.iP(polVs)) {
+		polVs = polVs.vs()
+	}
+	return this.vs(polVs, ox, oy)
 }
  

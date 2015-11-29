@@ -791,8 +791,7 @@ function curves() {
 		return h
 	}
 }
-curves()
-//function advanced() {
+function advanced() {
 	h.dl = h.ln = h.line = function () {
 		var h = this, g = G(arguments), o
 		o = g.N_ ?
@@ -819,7 +818,7 @@ curves()
 		gx.drawPolyStar(o.x, o.y, o.r, o.s, o.p, o.a)
 		return h
 	}
- 
+}
 function old() {
 	function drawPoly() {
 		h.drawPolygon = h.drawConnectedLines = function (poly, sc) {
