@@ -1,3 +1,5 @@
+$l('ctProtoBm.js')
+ct = cjs.Container.prototype
 ct.bm = ct.b = function () {
 	var ct = this, g = G(arguments), o, bm
 	o = N(g.s) ? {i: g.f, sc: g.s, fn: g.t} :
@@ -54,7 +56,9 @@ ct.bmRegCenterX = ct.bm0X = function (img, func) {
 	})
 	return this
 }
+
 ct.qB = ct.bQ = function (name, x, y, sX, sY, rt) {
+$l('ct.qB = ct.bQ in ctProtoBm.js')
 	var b, g = G(arguments)
 	b = Q.b(name)
 			.XY(N(x, 0), N(y, 0))
@@ -63,6 +67,7 @@ ct.qB = ct.bQ = function (name, x, y, sX, sY, rt) {
 	if (!g.n) {
 		b.rC()
 	}
+	
 	if (g.p) {
 		b.drag()
 	}

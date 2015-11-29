@@ -153,3 +153,21 @@ $mugTest = function () {
 		m = mug
 	})
 }
+function mugLoader() {
+	QU6 = QUEUEMUG = QM = function () {
+		s = new cjs.Stage($.c('b', 500, 500)[0])
+		Q([{id: "mug", src: "/myMug"}],
+				function () {
+					mug = new cjs.Bitmap($.i(Q.i('mug'))).dg()
+					s.A(mug)
+				})
+	}
+	QU9 = QUEUEMUG = QM = function () {
+		s = new cjs.Stage($.c('b', 500, 500)[0])
+		Q([{id: "mug", src: "/myMug"}],
+				function () {
+					mug = $Bm($.i(Q.i('mug'))).dg()
+					s.A(mug)
+				})
+	}
+}

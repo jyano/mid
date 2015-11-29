@@ -106,8 +106,14 @@ function superString(){
         return s$(a).contains('data:')
     }
     _.src=function(a){
-        a = _.ext(a);return s$(a).startsWith('/')? a : '/'+ a
+        
+        a=a||''
+        a = _.ext(a );
+	    return s$(a).startsWith('/')? a : '/'+ a
     }
+    
+    
+    
     _.fCC = function (a) {
         return String.fromCharCode(a)
     }

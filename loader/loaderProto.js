@@ -1,73 +1,52 @@
-q = cjs.LoadQueue.prototype
-q.i = q.r = function (i) {
+ld=cjs.LoadQueue.prototype
+ld.get= ld.g= ld.gR=ld.i=ld.r=function (i) {
 	i = this.getResult(i);
 	i.w = i.width;
 	i.h = i.height;
 	return i
 }
-q.$ = function (i) {
-	return $(this.i(i))
-}
-q.m = q.mf = q.manifest = function () {
-	// q.m:
-// protosig:
-// 'me',..
-// {src:'me', id:'him'},..
-// [ {src:*, id:*}, 'me',.. ]
-	var g = G(arguments)
-	if (g.u) {
-		return this
+ld.done= ld.rdy =ld.c = ld.complete = function (fn) {
+	 
+	
+	if (F(fn)) {
+		this.on("complete", fn)
 	}
-	var mf = _.m(g.A ? g.f :
-			g, function (i) {
-		return S(i) ?
-		{src: _.src(i), id: i} :
-				i
-	})
-	this.loadManifest(mf)
+	
 	return this
 }
-q.manifest = function (manifest) {
-	this.loadManifest(manifest)
-	return this
-}
-q.mf = function () {
-	this.loadManifest(cjs.mf.apply(null, arguments))
-	return this
-}
-q.bm = function (img) {
-	img = this.getResult(img)
-	return cjs.bitmap(img)
-}
-q.b = q.bm = function (i, ct, x, y) {
-	var bm = $Bm(this.i(i));
-	if (ct) {
-		bm.a2(ct, x, y)
-	}
+ld.bm = ld.b = function (i, ct, x, y) {var ld=this
+	var bm = _$Bm(ld.get(i))
+	if (N(ct)) {bm.XY(ct, x)}
+	else if (O(ct)) { bm.a2(ct, x, y)  }
 	return bm
 }
-q.c = q.complete = function (fn) {
-	var q = this
-	if (F(fn)) {
-		q.on("complete", fn)
-	}
-	return q
+ld.mf = function (mf) {
+	  // q.mf protosig: 
+	  // (1) 'me',..
+	  // (2)  {src:'me', id:'him'},.. 
+	  // (3) [ {src:*, id:*}, 'me',.. ]		
+	  mf = $its(A(mf) ? mf : G(arguments))
+	  this.loadManifest(  mf  )
+	  return this
 }
-q.complete = function (func) {
-	this.addEventListener("complete", func)
-	return this
-}
-q.dfF = cjs.handleFileLoad = function (e) {
+function fileLoad(){
+ld.dfF = cjs.handleFileLoad = function (e) {
+	alert('q.dfF = cjs.handleFileLoad in loaderProto.js')
+	images = window['images'] || {}
 	if (e.item.type == "image") {
 		images[e.item.id] = e.result
 	}
 }
-q.f = q.l = q.fl = q.fileload = function (fn) {
-	var q = this
-	q.on("fileload", fn)
-	return q
-}
-q.fileload = function (func) {
-	this.addEventListener("fileload", func)
+ld.file = ld.f = ld.l = ld.fl = ld.fileload = function (fn) {
+	this.on("fileload", fn)
 	return this
 }
+}
+ld.jQuery=ld.$ = function (i) {
+	return $(this.i(i))
+}
+
+ 
+
+
+ 

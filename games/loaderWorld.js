@@ -54,3 +54,26 @@
 			)
 		})
 	}
+	function apps() {
+		QU5 = PEEP = PEEPHOLE = WIND = function () {
+			W()._(function () {
+				$.hdr().A($.h1('grahics winding')).A()
+				bm = w.i.qB('chicks').X(470).drag()
+				h = w.i.h()
+				h.graphics.f("pink").dr(20, 20, 450, 360)
+						.arc(160, 160, 110, 0, M.PI * 2, true).closePath()
+						.arc(330, 240, 110, 0, M.PI * 2, true).closePath()
+				bm.mask = h.same().X(470)
+			})
+		}//B+
+		QU5 = MF = function () {
+			W().C('r')
+			Q(['me', 'guy', 'chicks', 'sun'], function () {
+				w.C('g')
+				w.i.A(
+						Q.b('me'),
+						Q.b('guy')
+				)
+			})
+		}
+	}
