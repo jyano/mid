@@ -1,94 +1,9 @@
 gx = cjs.Graphics.prototype
-gx._f = function(col){
-	return this.f(oO('c', col))
-}
-gx._s = function (col) {
-	return this.s(oO('c', col))
-}
-gx._ss=function(thickness, caps, joints, miterLm, ignoreScale){var gx=this//=0//=0//=10//=false
-	gx.setStrokeStyle(thickness, caps, joints, miterLm, ignoreScale )
-	return gx
-}
-gx.C = gx.fC = gx.cCL = gx.fs = function (f, s, w) {
-
-	return this._f(f || 'z')._s(s)._ss(N(w, 2))
-}
-gx.col  = gx.sC = function (sCol, thickness) {return this._s( sCol ).SS( thickness )}
-gx.F = function (col) {
-	return this._f(col || 'z')
-}
-gx.FS=function(){
-	return this.F().S().SS()
-}
-gx.S = function (col) {
-	return this._s(col || 'w')
-}
-gx.SS = function (thickness, caps, jts, mtrLm, igSc) {
-	return this._ss(N(thickness, 4), caps, jts, mtrLm, igSc)
-}
-gx._bf = function (i, tf) {
-	return this.bf(i, null, tf)
-}
-gx._bs = function (i, tf) {
-	return this.bs(i, null, tf)
-}
+ 
 //https://en.wikipedia.org/wiki/Form_follows_function
 //answer: art follows fiz structure
 //art follows form follows function? form is the art
 //art/fiz ~ form/function
-gx._lt = function (x, y) {
-	var gx = this, g = G(arguments), o
-	o = {x: g.f, y: g.s}
-	gx.lt(o.x, o.y)
-	return gx
-}
-gx._mt = function (x, y) {
-	var gx = this, g = G(arguments), o
-	o = {x: g.f, y: g.s}
-	gx.mt(o.x, o.y)
-	return gx
-}
-gx._pol = function () {
-	var gx = this, g = G(arguments)
-	if (g.A) {
-		return gx._pol.apply(gx, g.f)
-	}
-	gx.mt(g.f[0], g.f[1])
-	_.e(_.r(g), function (pt) {
-		gx.lt(pt[0], pt[1])
-	})
-	gx.lt(g.f[0], g.f[1])
-	return gx
-}
-gx.pol = function (pts, f, s, w) {
-	var gx = this, g = G(arguments)
-	//  _.each(arguments,function(vert){that.lt(vert[0],vert[1])});this.cp()
-	if (N(pts[0])) {
-		_.e(g, function (pt) {
-			gx.lt(pt[0], pt[1])
-		})
-	}
-	else {
-		gx.fs(f, s, w)
-		_.e(pts, function (pt) {
-			gx.lt(pt[0], pt[1])
-		});
-	}
-	return gx.cp()
-}
-gx.fancyLt = gx.poly = function (vs, f, s, w) {
- 
-	var gx = this, g = G(arguments), o
-	o = AA(g.f) ? {vs: g.f, cCL: [g.s, g.t, g[3]]} : {vs: g}
-	if (o.cCL) {
-		gx.cCL.apply(gx, o.cCL)
-	}
-	_.e(o.vs, function (v) {
-		gx.lt(v[0], v[1])
-	})
-	gx.cp()
-	return this
-}
  
 gx.dcO=function(o){o=o ||{}
 	o.x = N(o.x, 0)
