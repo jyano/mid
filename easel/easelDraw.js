@@ -411,11 +411,22 @@ old = function () {
 		//used by (but NOT  dependent on) gPoly 
 	}
 }
-
-
-
-
-
-
+cjs.cirX = function (stg, x, y, r, f, s, width, opt) {
+	var shp = cjs.shape(stg, x, y, f, s, width, opt) // ss = N(ss)?ss: radius/8
+	shp.dc(0, 0, r)
+	return shp
+}
+function drawSquare(ct, x, y) {
+	var h = $H()
+	h.a2(ct).f($r())
+	h.graphics.dr(5, 5, 70, 70)
+	if (x) {
+		h.X(x)
+	}
+	if (y) {
+		h.Y(y)
+	}
+	return h
+}
  
 

@@ -1,3 +1,5 @@
+_MF = ['me', 'guy', 'chicks', 'sun', 'flame', 'earth']
+
 cjs.loadQueue = cjs.lq = function (mf, func) {
 	var q = new cjs.LoadQueue(true)
 	if (A(mf)) {
@@ -35,8 +37,6 @@ cjs.makeManifest = cjs.makeMan = function (a) {
 	)
 }
  
-_MF = ['me', 'guy', 'chicks', 'sun', 'flame', 'earth']
-
  
 Q = function () {//starts off as a fn (obviously)
 //but ends up as an obj
@@ -88,8 +88,4 @@ Q1 = function (imgs, fn) {
 
 
  
- $.A=function(){var g=G(arguments)
- 
-	 g.e(function(el){$('body').A(el)})
- }
  

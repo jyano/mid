@@ -1,8 +1,45 @@
-HBFF = function () {
-	st = $St().t()
-	Q('me', function () {
-		st.h(300, 200, '+').bf(Q.i('me')).dc(100)
-		st.h(500, 100, '+').bf('me').dc(100)
+BMH8 = function () {
+	s = $St()
+	v = [[-100, 0], [0, -100], [100, 50]]
+	h = s.h(100, 300)
+	h.drag()
+	h.bmCir({
+		cirs: [{r: 150},
+			{x: 200, r: 150},
+			[300, 100, 100], [400, 100, 100]]
+	})
+	h2 = s.h(700, 300)
+	h2.drag()
+	h2.bV({
+		v: [
+			[[-100, 0], [0, -100], [100, 50]],
+			[[-200, 0], [-100, -100], [0, 50]],
+			[[0, 200], [0, -200], [400, -300], [400, 300]]]
+	})
+}//D
+//good:
+MXD = function () {
+	z()
+	st = $St()
+	m = $tMx(210, 230, .5, .5)
+	$.i('chicks', function (i) {
+		h = st.h(100, 100, '+').l(0)
+		gx = h.graphics
+		h.dr(0, 0, 200, 200)
+		gx.bf(i, null, m)
+		h.l(20).C('r', 20).dc(100, 100, 100)
+	})
+}
+M2D = CJSM2D = function () {
+	z()
+	m = $Mx()
+	$l(m)
+	$St().bm('me', function (bm) {
+		b = bm.XY(400, 200)
+		p = b.getConcatenatedDisplayProps();
+		$l(p)
+		cm = b.getConcatenatedMatrix()
+		$l(cm)
 	})
 }
 HBFHS = function () {
@@ -26,9 +63,8 @@ HBMCIR = function () {
 	st.h(300, 200).bmCir({
 		circs: [{r: 100}, {x: 200, y: 200}, {}]
 	})
-} 
-
-  
+}
+//loader:
 BMCR = function () {
 	$St()._(function (st) {
 		h = st.h('+')
@@ -40,7 +76,6 @@ BMCR = function () {
 		})
 	})
 }
-
 TXB = function () {
 	$St()._(function (st) {
 		h = st.h('+')
@@ -82,37 +117,11 @@ BMFV = function () {
 		})
 	})
 }
-POLLL = function () {
-	verts = [
-		[[5, 100], [0, -100], [200, -150], [200, 150]],
-		[[-50, 50], [-50, -100], [450, -50], [450, 50]]
-	]
-	W()._(function (w) {
-		w.D(250, 300).pol({
-			v: verts,
-			c: {c: 'r', C: 'y', l: 10},
-			bf: 'chicks'
-		})
-		w.D(450, 300).pol({
-			v: verts,
-			c: {c: 'r', C: 'y', l: 10},
-			bf: 'me'
-		})
-	})
-}
-POLLB = function () {
-	W()._(function (w) {
-		v = [[[5, 100], [0, -100], [200, -150], [200, 150]], [[-50, 50], [-50, -100], [450, -50], [450, 50]]]
-		w.D(250, 300).pol({
-			//c: {c: 'r', C: 'y', l: 10},
-			bf: Q.i('chicks'),
-			v: v
-		})
-		w.D(450, 300).pol({
-			v: v,
-			c: {c: 'r', C: 'y', l: 10},
-			bf: Q.i('me')
-		})
+HBFF = function () {
+	st = $St().t()
+	Q('me', function () {
+		st.h(300, 200, '+').bf(Q.i('me')).dc(100)
+		st.h(500, 100, '+').bf('me').dc(100)
 	})
 }
 SAND = function () {
@@ -157,33 +166,7 @@ SAN = function () {
 		Ch(900, 250).rec(200, 300)
 	})
 }
- 
- 
- //matrix
-M2D = CJSM2D = function () {
-	z()
-	m = $Mx()
-	$l(m)
-	$St().bm('me', function (bm) {
-		b = bm.XY(400, 200)
-		p = b.getConcatenatedDisplayProps();
-		$l(p)
-		cm = b.getConcatenatedMatrix()
-		$l(cm)
-	})
-}
-MXD = function () {
-	z()
-	st = $St()
-	m = $tMx(210, 230, .5, .5)
-	$.i('chicks', function (i) {
-		h = st.h(100, 100, '+').l(0)
-		gx = h.graphics
-		h.dr(0, 0, 200, 200)
-		gx.bf(i, null, m)
-		h.l(20).C('r', 20).dc(100, 100, 100)
-	})
-}
- 
- 
+
+
+
  

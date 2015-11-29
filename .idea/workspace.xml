@@ -21,145 +21,104 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="examples.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/easel/_apps/examples.js">
+      <file leaf-file-name="easelBitmapFillApps.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/easel/_apps/easelBitmapFillApps.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="1" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="171" column="1" selection-start-line="171" selection-start-column="1" selection-end-line="171" selection-end-column="1" />
+              <folding>
+                <element signature="e#372#375#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="loaderWorld.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/games/loaderWorld.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="easelApps.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/easel/_apps/easelApps.js">
+      <file leaf-file-name="loader.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/loader/loader.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="510" column="1" selection-start-line="510" selection-start-column="1" selection-end-line="510" selection-end-column="1" />
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding>
-                <element signature="e#1913#1935#0" expanded="false" />
-                <element signature="e#1946#1975#0" expanded="false" />
-                <element signature="e#1986#2010#0" expanded="false" />
-                <element signature="e#2154#2194#0" expanded="false" />
-                <element signature="e#2391#2440#0" expanded="false" />
-                <element signature="e#3112#3117#0" expanded="false" />
-                <element signature="e#4267#4336#0" expanded="false" />
-                <element signature="e#4358#4618#0" expanded="false" />
-                <element signature="e#4626#4806#0" expanded="false" />
-                <element signature="e#10043#10063#0" expanded="false" />
-                <element signature="e#10130#10157#0" expanded="false" />
-                <element signature="e#10188#10213#0" expanded="false" />
-                <element signature="e#10220#12282#0" expanded="false" />
+                <element signature="e#148#193#0" expanded="false" />
+                <element signature="e#208#303#0" expanded="false" />
+                <element signature="e#381#416#0" expanded="false" />
+                <element signature="e#759#791#0" expanded="false" />
+                <element signature="e#1043#1058#0" expanded="false" />
+                <element signature="e#1069#1151#0" expanded="false" />
+                <element signature="e#1162#1177#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="transformApps.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/easel/_apps/transformApps.js">
+      <file leaf-file-name="loaderProto.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/loader/loaderProto.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="loaderApps.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/loader/loaderApps.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.31746033">
+              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
               <folding>
-                <element signature="e#701#996#0" expanded="false" />
-                <element signature="e#1378#1810#0" expanded="false" />
-                <element signature="e#1498#1529#0" expanded="false" />
-                <element signature="e#1535#1629#0" expanded="false" />
-                <element signature="e#2502#2803#0" expanded="false" />
-                <element signature="e#3198#3642#0" expanded="false" />
-                <element signature="e#3321#3354#0" expanded="false" />
-                <element signature="e#3360#3457#0" expanded="false" />
-                <element signature="e#4337#5009#0" expanded="false" />
+                <element signature="e#222#286#0" expanded="true" />
+                <element signature="e#361#407#0" expanded="false" />
+                <element signature="e#998#1044#0" expanded="false" />
+                <element signature="e#1061#1169#0" expanded="false" />
+                <element signature="e#1076#1108#0" expanded="false" />
+                <element signature="e#1117#1150#0" expanded="false" />
+                <element signature="e#1190#1213#0" expanded="false" />
+                <element signature="e#1315#1361#0" expanded="false" />
+                <element signature="e#1378#1486#0" expanded="false" />
+                <element signature="e#1393#1425#0" expanded="false" />
+                <element signature="e#1434#1467#0" expanded="false" />
+                <element signature="e#1507#1530#0" expanded="false" />
+                <element signature="e#1948#1994#0" expanded="false" />
+                <element signature="e#2011#2119#0" expanded="false" />
+                <element signature="e#2026#2058#0" expanded="false" />
+                <element signature="e#2067#2100#0" expanded="false" />
+                <element signature="e#2140#2163#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="alphaMaskReveal.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/easel/_apps/alphaMaskReveal.js">
+      <file leaf-file-name="easelBalls.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/easel/_apps/easelBalls.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="160" column="1" selection-start-line="160" selection-start-column="1" selection-end-line="160" selection-end-column="1" />
+              <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
               <folding>
-                <element signature="e#36#5148#0" expanded="true" />
-                <element signature="e#539#1344#0" expanded="true" />
-                <element signature="e#1380#1482#0" expanded="true" />
-                <element signature="e#1518#2047#0" expanded="true" />
-                <element signature="e#2081#2132#0" expanded="true" />
-                <element signature="e#2170#2554#0" expanded="true" />
-                <element signature="e#2577#5146#0" expanded="true" />
-                <element signature="e#3064#3887#0" expanded="true" />
-                <element signature="e#3925#4031#0" expanded="true" />
-                <element signature="e#4069#4615#0" expanded="true" />
-                <element signature="e#4651#4705#0" expanded="true" />
-                <element signature="e#4745#5143#0" expanded="true" />
+                <element signature="e#31#108#0" expanded="true" />
+                <element signature="e#238#306#0" expanded="true" />
+                <element signature="e#336#400#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="distract.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/easel/_apps/distract.js">
+      <file leaf-file-name="nip.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/easel/_apps/nip.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-              <folding>
-                <element signature="e#43#120#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ctProtoBm.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/easel/_protos/ctProtoBm.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-              <folding>
-                <element signature="e#237#276#0" expanded="false" />
-                <element signature="e#294#315#0" expanded="false" />
-                <element signature="e#329#369#0" expanded="false" />
-                <element signature="e#446#467#0" expanded="false" />
-                <element signature="e#621#642#0" expanded="false" />
-                <element signature="e#654#672#0" expanded="false" />
-                <element signature="e#685#706#0" expanded="false" />
-                <element signature="e#1018#1035#0" expanded="false" />
-                <element signature="e#1234#1247#0" expanded="false" />
-                <element signature="e#1258#1273#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="easelShapeApps.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/easel/_apps/easelShapeApps.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.022522522">
-              <caret line="106" column="1" selection-start-line="106" selection-start-column="1" selection-end-line="106" selection-end-column="1" />
-              <folding>
-                <element signature="e#2578#2591#0" expanded="false" />
-                <element signature="e#2750#2791#0" expanded="false" />
-                <element signature="e#4990#5031#0" expanded="false" />
-                <element signature="e#11835#11858#0" expanded="false" />
-                <element signature="e#13415#13428#0" expanded="false" />
-                <element signature="e#13589#13630#0" expanded="false" />
-                <element signature="e#15832#15873#0" expanded="false" />
-                <element signature="e#19710#19724#0" expanded="false" />
-                <element signature="e#19857#19863#0" expanded="false" />
-                <element signature="e#21066#21080#0" expanded="false" />
-                <element signature="e#25051#25135#0" expanded="false" />
-                <element signature="e#26485#26502#0" expanded="false" />
-                <element signature="e#26515#26532#0" expanded="false" />
-                <element signature="e#26545#26562#0" expanded="false" />
-                <element signature="e#29415#29430#0" expanded="false" />
-                <element signature="e#29931#29993#0" expanded="false" />
-                <element signature="e#30209#30224#0" expanded="false" />
-                <element signature="e#31204#31223#0" expanded="false" />
-                <element signature="e#31490#31503#0" expanded="false" />
-                <element signature="e#31512#31525#0" expanded="false" />
-                <element signature="e#32066#32087#0" expanded="false" />
-                <element signature="e#33266#33385#0" expanded="false" />
-              </folding>
+              <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -236,12 +195,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/easel/_apps/distract.js" />
-        <option value="$PROJECT_DIR$/easel/_apps/alphaMaskReveal.js" />
-        <option value="$PROJECT_DIR$/easel/_apps/transformApps.js" />
-        <option value="$PROJECT_DIR$/easel/_apps/examples.js" />
-        <option value="$PROJECT_DIR$/easel/_apps/easelApps.js" />
-        <option value="$PROJECT_DIR$/easel/_apps/easelShapeApps.js" />
+        <option value="$PROJECT_DIR$/jade/basic.jade" />
+        <option value="$PROJECT_DIR$/games/worldStage.js" />
+        <option value="$PROJECT_DIR$/easel/_apps/easelBitmapFillApps.js" />
+        <option value="$PROJECT_DIR$/handy/handy.js" />
+        <option value="$PROJECT_DIR$/loader/loader.js" />
+        <option value="$PROJECT_DIR$/loader/loaderApps.js" />
       </list>
     </option>
   </component>
@@ -253,9 +212,9 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="132" />
-    <option name="y" value="89" />
-    <option name="width" value="1479" />
+    <option name="x" value="-4" />
+    <option name="y" value="29" />
+    <option name="width" value="1315" />
     <option name="height" value="1094" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -310,25 +269,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="easel" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forty" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forty" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="easel" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="_apps" />
+              <option name="myItemId" value="loader" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -353,11 +294,11 @@
       <recent name="$PROJECT_DIR$/server/views" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/spriteSheet" />
+      <recent name="$PROJECT_DIR$/games" />
       <recent name="$PROJECT_DIR$/tween/_protos" />
       <recent name="$PROJECT_DIR$/tween/_apps" />
       <recent name="$PROJECT_DIR$/tween/_data" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/games" />
     </key>
   </component>
   <component name="RunManager">
@@ -382,14 +323,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="132" y="89" width="1479" height="1094" extended-state="0" />
+    <frame x="-4" y="29" width="1315" height="1094" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924336" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26278117" sideWeight="0.49199417" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18312757" sideWeight="0.86236936" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20633695" sideWeight="0.86236936" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22652885" sideWeight="0.13763066" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.027921407" sideWeight="0.5080058" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -437,122 +378,102 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/easel/_apps/easelCirApps.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="198" column="0" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
+          <folding>
+            <element signature="e#18#1453#0" expanded="true" />
+            <element signature="e#34#82#0" expanded="true" />
+            <element signature="e#1473#1767#0" expanded="true" />
+            <element signature="e#1489#1537#0" expanded="true" />
+            <element signature="e#1790#1969#0" expanded="true" />
+            <element signature="e#1943#1966#0" expanded="true" />
+            <element signature="e#1991#2230#0" expanded="true" />
+            <element signature="e#2252#2539#0" expanded="true" />
+            <element signature="e#2343#2400#0" expanded="true" />
+            <element signature="e#2561#2830#0" expanded="true" />
+            <element signature="e#2857#3062#0" expanded="true" />
+            <element signature="e#3118#4714#0" expanded="true" />
+            <element signature="e#3145#3469#0" expanded="true" />
+            <element signature="e#3710#3824#0" expanded="true" />
+            <element signature="e#3833#4006#0" expanded="true" />
+            <element signature="e#4113#4174#0" expanded="true" />
+            <element signature="e#4140#4170#0" expanded="true" />
+            <element signature="e#4196#4711#0" expanded="true" />
+            <element signature="e#4204#4279#0" expanded="true" />
+            <element signature="e#4316#4438#0" expanded="true" />
+            <element signature="e#4512#4612#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handy/handy.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.86580086">
+          <caret line="213" column="1" selection-start-line="213" selection-start-column="1" selection-end-line="213" selection-end-column="1" />
+          <folding>
+            <element signature="e#27#170#0" expanded="true" />
+            <element signature="e#3276#3344#0" expanded="true" />
+            <element signature="e#3319#3341#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loader/loader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="e#148#193#0" expanded="false" />
+            <element signature="e#208#303#0" expanded="false" />
+            <element signature="e#381#416#0" expanded="false" />
+            <element signature="e#759#791#0" expanded="false" />
+            <element signature="e#1043#1058#0" expanded="false" />
+            <element signature="e#1069#1151#0" expanded="false" />
+            <element signature="e#1162#1177#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loader/loaderProto.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jade/basic.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="70" column="132" selection-start-line="70" selection-start-column="132" selection-end-line="70" selection-end-column="132" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/loader/loaderApps.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="247" column="19" selection-start-line="247" selection-start-column="19" selection-end-line="247" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.31746033">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
           <folding>
-            <element signature="e#152#223#0" expanded="true" />
-            <element signature="e#199#220#0" expanded="true" />
-            <element signature="e#2751#2797#0" expanded="false" />
-            <element signature="e#2814#2922#0" expanded="false" />
-            <element signature="e#2829#2861#0" expanded="false" />
-            <element signature="e#2870#2903#0" expanded="false" />
-            <element signature="e#2943#2966#0" expanded="false" />
-            <element signature="e#3068#3114#0" expanded="false" />
-            <element signature="e#3131#3239#0" expanded="false" />
-            <element signature="e#3146#3178#0" expanded="false" />
-            <element signature="e#3187#3220#0" expanded="false" />
-            <element signature="e#3260#3283#0" expanded="false" />
-            <element signature="e#3384#3430#0" expanded="false" />
-            <element signature="e#3447#3555#0" expanded="false" />
-            <element signature="e#3462#3494#0" expanded="false" />
-            <element signature="e#3503#3536#0" expanded="false" />
-            <element signature="e#3576#3599#0" expanded="false" />
-            <element signature="e#3701#3747#0" expanded="false" />
-            <element signature="e#3764#3872#0" expanded="false" />
-            <element signature="e#3779#3811#0" expanded="false" />
-            <element signature="e#3820#3853#0" expanded="false" />
-            <element signature="e#3893#3916#0" expanded="false" />
-            <element signature="e#4169#4480#0" expanded="true" />
-            <element signature="e#4198#4477#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/easel/_apps/transformApps.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding>
-            <element signature="e#701#996#0" expanded="false" />
-            <element signature="e#1378#1810#0" expanded="false" />
-            <element signature="e#1498#1529#0" expanded="false" />
-            <element signature="e#1535#1629#0" expanded="false" />
-            <element signature="e#2502#2803#0" expanded="false" />
-            <element signature="e#3198#3642#0" expanded="false" />
-            <element signature="e#3321#3354#0" expanded="false" />
-            <element signature="e#3360#3457#0" expanded="false" />
-            <element signature="e#4337#5009#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/easel/_apps/examples.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="1" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/easel/_apps/promote.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="45" column="1" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/easel/_apps/easelApps.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="510" column="1" selection-start-line="510" selection-start-column="1" selection-end-line="510" selection-end-column="1" />
-          <folding>
-            <element signature="e#1913#1935#0" expanded="false" />
-            <element signature="e#1946#1975#0" expanded="false" />
-            <element signature="e#1986#2010#0" expanded="false" />
-            <element signature="e#2154#2194#0" expanded="false" />
-            <element signature="e#2391#2440#0" expanded="false" />
-            <element signature="e#3112#3117#0" expanded="false" />
-            <element signature="e#4267#4336#0" expanded="false" />
-            <element signature="e#4358#4618#0" expanded="false" />
-            <element signature="e#4626#4806#0" expanded="false" />
-            <element signature="e#10043#10063#0" expanded="false" />
-            <element signature="e#10130#10157#0" expanded="false" />
-            <element signature="e#10188#10213#0" expanded="false" />
-            <element signature="e#10220#12282#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/easel/_apps/easelShapeApps.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.022522522">
-          <caret line="106" column="1" selection-start-line="106" selection-start-column="1" selection-end-line="106" selection-end-column="1" />
-          <folding>
-            <element signature="e#2578#2591#0" expanded="false" />
-            <element signature="e#2750#2791#0" expanded="false" />
-            <element signature="e#4990#5031#0" expanded="false" />
-            <element signature="e#11835#11858#0" expanded="false" />
-            <element signature="e#13415#13428#0" expanded="false" />
-            <element signature="e#13589#13630#0" expanded="false" />
-            <element signature="e#15832#15873#0" expanded="false" />
-            <element signature="e#19710#19724#0" expanded="false" />
-            <element signature="e#19857#19863#0" expanded="false" />
-            <element signature="e#21066#21080#0" expanded="false" />
-            <element signature="e#25051#25135#0" expanded="false" />
-            <element signature="e#26485#26502#0" expanded="false" />
-            <element signature="e#26515#26532#0" expanded="false" />
-            <element signature="e#26545#26562#0" expanded="false" />
-            <element signature="e#29415#29430#0" expanded="false" />
-            <element signature="e#29931#29993#0" expanded="false" />
-            <element signature="e#30209#30224#0" expanded="false" />
-            <element signature="e#31204#31223#0" expanded="false" />
-            <element signature="e#31490#31503#0" expanded="false" />
-            <element signature="e#31512#31525#0" expanded="false" />
-            <element signature="e#32066#32087#0" expanded="false" />
-            <element signature="e#33266#33385#0" expanded="false" />
+            <element signature="e#222#286#0" expanded="true" />
+            <element signature="e#361#407#0" expanded="false" />
+            <element signature="e#998#1044#0" expanded="false" />
+            <element signature="e#1061#1169#0" expanded="false" />
+            <element signature="e#1076#1108#0" expanded="false" />
+            <element signature="e#1117#1150#0" expanded="false" />
+            <element signature="e#1190#1213#0" expanded="false" />
+            <element signature="e#1315#1361#0" expanded="false" />
+            <element signature="e#1378#1486#0" expanded="false" />
+            <element signature="e#1393#1425#0" expanded="false" />
+            <element signature="e#1434#1467#0" expanded="false" />
+            <element signature="e#1507#1530#0" expanded="false" />
+            <element signature="e#1948#1994#0" expanded="false" />
+            <element signature="e#2011#2119#0" expanded="false" />
+            <element signature="e#2026#2058#0" expanded="false" />
+            <element signature="e#2067#2100#0" expanded="false" />
+            <element signature="e#2140#2163#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -1,4 +1,6 @@
- 
+$S$ = function () {
+	return st = _$St().t()
+}
 GXPOL = function () {
 	$S$().Gx().FS().poly([vs1])
 }

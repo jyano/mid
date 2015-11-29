@@ -184,3 +184,138 @@ MX0 = MATRIX0 = function () {
 		})
 	})
 }
+MOUSE = BUB8 = MOUSEVENTS = BUBBLE = function () {
+	St()
+	output = $T(
+			"try clicking on the background vs the label text\n\nthe background & label are both inside of a Container named 'button'",
+			"13px courier").lWH(280, 13).XY(190, 10)
+	bg = $H().n("background")
+	bg.graphics.f("red").rr(0, 0, 150, 60, 10)
+	lb = $T("click me!", "bold 24px Arial", "#FFFFFF").XY(150 / 2, 60 / 2).n('label').tA("center")//.tB("middle")
+	// setting mouseChildren to false will cause events to be dispatched directly from the button instead of its children.
+	// button.mouseChildren = false;
+	st.A(bt = $Ct().XY(20).n('button').A(bg, lb), output)
+	// set up listeners for all display objects, for both the non-capture (bubble / target) and capture phases:
+	_.e([st, bt, lb, bg], function (tg) {
+		tg.$(handleClick, false);
+		tg.$(handleClick, true)
+	})
+	st.u()
+	function handleClick(e) {
+		if (e.currentTarget == st && e.eventPhase == 1) {
+			output.text = "target : eventPhase : currentTarget\n"
+		}// this is the first dispatch in the event life cycle, clear the output.
+		output.text += e.target.name + " : " + e.eventPhase + " : " + e.currentTarget.name + "\n";
+		if (e.currentTarget == st && e.eventPhase == 3) {
+			st.u()
+		}// this is the last dispatch in the event life cycle, render the stage.
+	}
+}//B+
+HITC1 = HITCIRCLES1 = function () {
+	z()
+	var pt
+	st = $St(1000, '+') // look no .tick() necesary!! look below :)
+	ct = $Ct()
+	st.A(ct.XY(150))
+	_.t(25, function () {
+		$H().XY(
+				randomLocation(), randomLocation()).f(randomHSL()).dc(30).a2(ct)
+	})
+	T.on("tick", function (e) {
+		ct.rotation += 3
+		n = ct.getNumChildren()
+		ct.ch(function (ch) {
+			uM = ch.uM()
+			ch.alpha = ch.uM() ? 1 : 0.1
+			pt = ch.globalToLocal(st.m().x, st.m().y)
+			if (st && st.mouseInBounds && ch.hitTest(pt.x, pt.y)) {
+				ch.al(1)
+			}
+		})
+	})
+	function randomLocation() {
+		return M.random() * 300 - 150
+	}
+	
+	function randomHSL() {
+		return cjs.Graphics.getHSL(M.random() * 360, 100, 50)
+	}
+}//A
+HITC=HITCIRCLES = function () {
+	z()
+	var pt
+	st = $St(1000, '+') // look no .tick() necesary!! look below :)
+	ct = $Ct()
+	st.A(ct.XY(150))
+	_.t(25, function () {
+		$H().XY(
+				randomLocation(), randomLocation()).f(randomHSL()).dc(30).a2(ct)
+	})
+	T.on("tick", function (e) {
+		ct.rotation += 3
+		n = ct.getNumChildren()
+		ct.ch(function (ch) {
+			uM = ch.uM()
+			ch.alpha = ch.uM() ? 1 : 0.1
+			pt = ch.globalToLocal(st.m().x, st.m().y)
+			if (st && st.mouseInBounds && ch.hitTest(pt.x, pt.y)) {
+				ch.al(1)
+			}
+		})
+	})
+	function randomLocation() {
+		return M.random() * 300 - 150
+	}
+	
+	function randomHSL() {
+		return cjs.Graphics.getHSL(M.random() * 360, 100, 50)
+	}
+}//A
+RMEVT8 = function () {
+	St()
+	st.bm('me', function (b) {
+		me = b
+		cb = b.on('pressmove', function () {
+			this.x++
+		})
+	})
+	st.bm('guy', function (b) {
+		b.handleEvent = function () {
+			this.y++
+			me.off('pressmove', cb)
+		}
+		b.on('pressmove', b)
+	})
+	///////
+	s.can.P('a').XY(300)
+	s.A(h = shape = $h())
+	h.rec(100, 200, 0, 200, 'red')
+			.rec(100, 100, 100, 20, 'green')
+			.rec(145, 120, 10, 80, 'orange')
+			.cir(105, 100, 20, 'blue')
+			.cir(105, 100, 8, 'black')
+			.cir(200, 100, 20, 'blue')
+			.cir(200, 100, 8, 'black')
+			.cir(100, 20, 100, 'green')
+			.rXY(100, 300).XY(100, 300).drag()
+	p = function () {
+		shape.twL(
+				[{r: 25}, 200], [{r: -25}, 400], [{r: 0}, 200],
+				[{r: 25}, 200], [{r: -25}, 400], [{r: 0}, 200],
+				[{r: 25}, 200], [{r: -25}, 400], [{r: 0}, 200],
+				[{r: 25}, 200], [{r: -25}, 400], [{r: 0}, 200],
+				[{r: 25}, 200], [{r: -25}, 400], [{r: 0}, 200],
+				[{r: 25}, 200], [{r: -25}, 400], [{r: 0}, 200])
+		shape.twL(
+				[{sxy: 1.5}, 200], [{sxy: .5}, 400], [{sxy: 1}, 200],
+				[{sxy: 1.5}, 200], [{sxy: .5}, 400], [{sxy: 1}, 200],
+				[{sxy: 1.5}, 200], [{sxy: .5}, 400], [{sxy: 1}, 200],
+				[{sxy: 1.5}, 200], [{sxy: .5}, 400], [{sxy: 1}, 200],
+				[{sxy: 1.5}, 200], [{sxy: .5}, 400], [{sxy: 1}, 200],
+				[{sxy: 1.5}, 200], [{sxy: .5}, 400], [{sxy: 1}, 200],
+				[{sxy: 1.5}, 200], [{sxy: .5}, 400], [{sxy: 1}, 200],
+				[{sxy: 1.5}, 200], [{sxy: .5}, 400], [{sxy: 1}, 200]
+		)
+	}
+	p()
+}

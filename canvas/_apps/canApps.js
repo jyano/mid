@@ -1,3 +1,8 @@
+CAN3 = THREECANS = function () {
+	c1 = $.can('a', 800, 400)
+	c2 = $.can('b', 800, 400)
+	c3 = $.can('X', 800, 400)
+}
 CV1= FLOATCV = function () {
 	__C()
 	x.b('r', 'b', 50)

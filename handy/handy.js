@@ -1,3 +1,4 @@
+
 $.hr = function (c, h, w) {
 	var hr = $('<hr>')
 	//  if( N(c) ){  return $.hr('z', c, h )  }
@@ -205,4 +206,9 @@ $.header = function () {
 $.fn.$ = function (fn) {
 	return this.click(fn)
 }
- 
+$.A = function () {
+	var g = G(arguments)
+	g.e(function (el) {
+		$('body').A(el)
+	})
+}

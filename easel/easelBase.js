@@ -71,6 +71,7 @@ St = St$ = $S$ = cjs.S = __S = function () {
 	images = img = {}
 	loader = new cjs.LoadQueue(false);
 	h = $h(0, 0).drag().a2(st)
+	h.graphics.C('r', 'b', 20)
 	return st
 }
 

@@ -86,3 +86,7 @@ cjs.chalk = function (text, color) {
 	}
 	return new cjs.Text(text, "26px Arial", "white").XY(50, 50)
 }
+_$Tx = function (a, b, c, d, e, f) {
+	return new cjs.Text(a, b, c, d, e, f)
+}
+ 
