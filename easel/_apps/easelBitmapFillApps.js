@@ -1,91 +1,51 @@
-BMH8 = function () {
-	s = $St()
-	v = [[-100, 0], [0, -100], [100, 50]]
-	h = s.h(100, 300)
-	h.drag()
-	h.bmCir({
-		cirs: [{r: 150},
-			{x: 200, r: 150},
-			[300, 100, 100], [400, 100, 100]]
-	})
-	h2 = s.h(700, 300)
-	h2.drag()
-	h2.bV({
-		v: [
-			[[-100, 0], [0, -100], [100, 50]],
-			[[-200, 0], [-100, -100], [0, 50]],
-			[[0, 200], [0, -200], [400, -300], [400, 300]]]
-	})
-}//D
-//good:
-MXD = function () {
-	z()
-	st = $St()
-	m = $tMx(210, 230, .5, .5)
-	$.i('chicks', function (i) {
-		h = st.h(100, 100, '+').l(0)
-		gx = h.graphics
-		h.dr(0, 0, 200, 200)
-		gx.bf(i, null, m)
-		h.l(20).C('r', 20).dc(100, 100, 100)
-	})
-}
-M2D = CJSM2D = function () {
-	z()
-	m = $Mx()
-	$l(m)
-	$St().bm('me', function (bm) {
-		b = bm.XY(400, 200)
-		p = b.getConcatenatedDisplayProps();
-		$l(p)
-		cm = b.getConcatenatedMatrix()
-		$l(cm)
-	})
-}
-HBFHS = function () {
-	st = $St(1800, 500).t()
-	h = st.h(300, 100)
-	h.bf({
-		i: 'me',
-		hs: [100, 300, 500, 700, 900],
-		fn: function (x) {
-			h.dc(x, 30, 120).es()
-		}
-	})
-}
+v = [[-100, 0], [0, -100], [100, 50]]
+vs = [
+	[[-100, 0], [0, -100], [100, 50]],
+	[[-200, 0], [-100, -100], [0, 50]],
+	[[0, 200], [0, -200], [400, -300], [400, 300]]
+	]
+cirs = [{r: 150}, {x: 200, r: 150}, [300, 100, 100], [400, 100, 100]]
 HBF = function () {
-	$St().t().h(300, 300).bf('me', function (h) {
-		h.dc(300)
+	$St().h(300, 300).bf('me', function (h) {
+		h.dc(300).drag()
 	})
 }
-HBMCIR = function () {
-	st = $St().t()
-	st.h(300, 200).bmCir({
-		circs: [{r: 100}, {x: 200, y: 200}, {}]
+LDB = function () {
+	St()
+	$Ld('me', function (ld) {
+		st.h(300, 200, '+').bf(ld.i('me')).dc(100)
+		st.h(500, 100, '+').bf('me').dc(100)
 	})
 }
-//loader:
-BMCR = function () {
-	$St()._(function (st) {
-		h = st.h('+')
-		h.bC({
-			circs: [
-				{x: 200, y: 100, r: 150},
-				{r: 100}, {x: 300}
-			]
-		})
+SBS = function () {
+	$Ld(function (ld) {
+		St(1000, 500).h(810, 410, '+').l(8).bf(ld.get('chicks'), $Mx(1, 0, 0, 1, -800, -400)).rec(1600, 800)
+		ch = ld.get('chicks')
+		me = ld.get('me')
+		Ch(200, 200).rec(200, 300)
+		Ch(400, 250).rec(200, 300)
+		Ch(600, 250).rec(200, 300)
+		Ch(750, 350).rec(200, 300)
+		Ch(900, 250).rec(200, 300)
+	})
+	function Ch(x, y) {
+		var h = st.h(x, y).l(8)
+		h.graphics.bf(ch)
+		h.bs(me)
+		cjs.SL(h)
+		return h
+	}
+}
+TMX = function () {
+	$.i('chicks', function (img) {
+		St().h(100, 100, '+').sC('b', 50)
+				._bf(img, null, $tMx(210, 230, .5, .5))
+				.dc(100, 100, 100)
 	})
 }
-TXB = function () {
-	$St()._(function (st) {
-		h = st.h('+')
-		h._bfT(Q.i('me'), -100)
-		h.dr(0, 0, 500, 200).dr(100, 100, 500, 200).C('z').dr(0, 0, 40, 40)
-	})
-}
-BMFV = function () {
-	Q(function () {
-		__St()
+PFC = function () {
+	Q(function (ld) {
+		St()
 		im = Q.i('me')
 		$im = $(im).A()
 		h.bf(im)
@@ -117,21 +77,44 @@ BMFV = function () {
 		})
 	})
 }
-HBFF = function () {
-	st = $St().t()
-	Q('me', function () {
-		st.h(300, 200, '+').bf(Q.i('me')).dc(100)
-		st.h(500, 100, '+').bf('me').dc(100)
+HBC = function () {
+	St()
+	$Ld(function (ld) {
+		h = st.h('+')
+		h.bC({
+			circs: [
+				{x: 200, y: 100, r: 150},
+				{r: 100}, {x: 300}
+			]
+		})
 	})
 }
-SAND = function () {
-	Q(function () {
-		__St()
-		ch = Q.i('chicks')
-		me = Q.i('me')
-		Ch = function () {
-			return st.h('+').l(20).bf(ch).bs(me)
-		}
+BFO= BHS= function () {
+	
+	h = $St().h(300, 100, '+').bf({
+	
+		i: 'me',
+		hs: [100, 300, 500, 700, 900],
+		fn: function (x) {
+			h.dc(x, 30, 120).es()}  })
+	
+	
+}
+LBF = function () {
+	$Ld(function (ld) {
+		St().h('+')
+				.C('z').dr(0, 0, 40, 40)
+				.bf(ld.get('me'), -100).dr(0, 0, 500, 200).dr(100, 100, 500, 200)
+	})
+}
+BFS = function () {
+	St()
+	var Ch = function () {
+		return st.h('+').l(20).bf(ch).bs(me)
+	}
+	$Ld(function (ld) {
+		ch = ld.get('chicks')
+		me = ld.get('me')
 		Ch().rec(200, 200, 200, 300)
 		Ch().rec(400, 250, 200, 300)
 		Ch().rec(600, 250, 200, 300)
@@ -146,126 +129,23 @@ SAND = function () {
 		h.rec(900, 250, 200, 300)
 	})
 }
-SAN = function () {
-	$St(1000, 500)._(function (st) {
-		st.h(810, 410, '+').l(8).bf(Q.i('chicks'), $Mx(1, 0, 0, 1, -800, -400))
-				.rec(1600, 800)
-		ch = Q.i('chicks')
-		me = Q.i('me')
-		Ch = function (x, y) {
-			var h = st.h(x, y).l(8)
-			h.graphics.bf(ch)
-			h.bs(me)
-			cjs.SL(h)
-			return h
-		}
-		Ch(200, 200).rec(200, 300)
-		Ch(400, 250).rec(200, 300)
-		Ch(600, 250).rec(200, 300)
-		Ch(750, 350).rec(200, 300)
-		Ch(900, 250).rec(200, 300)
+BCS= function () {St()
+
+	h = st.h(100, 300).drag()
+	
+	h.bmCir({circs: cirs})
+
+	h2 = st.h(700, 300).drag()
+	
+	 h2.bmCir({ circs: vs })
+	
+}
+BMC = function () {
+	st = $St().t()
+	st.h(300, 200).bmCir({
+		circs: [{r: 100}, {x: 200, y: 200}, {}]
 	})
 }
- EASELPHYS = function () {
-	i = cjs.DisplayObject.prototype
-	i.vX = function (a) {
-		var g = G(arguments);
-		a = g[0]
-		if (g.p) {
-			this.vx = this.vx + a;
-			return this
-		}
-		else if (g.n) {
-			if (N(a)) {
-				this.vx = this.vx - a
-			}
-			else {
-				this.vx = this.vx * -1
-			}
-			return this
-		}
-		else if (U(g[0])) {
-			return this.vx
-		}
-		this.vx = a;
-		return this
-	}
-	i.vY = function (a) {
-		var g = G(arguments);
-		a = g[0]
-		if (g.p) {
-			this.vy = this.vy + a;
-			return this
-		}
-		else if (g.n) {
-			if (N(a)) {
-				this.vy = this.vy - a
-			}
-			else {
-				this.vy = this.vy * -1
-			}
-			return this
-		}
-		else if (U(g[0])) {
-			return this.vy
-		}
-		this.vy = a
-		return this
-	}
-	i.jX = function (a) {
-		var g = G(arguments);
-		a = g[0]
-		if (g.p) {
-			this.vx = this.vx + a;
-			return this
-		}
-		else if (g.n) {
-			if (N(a)) {
-				this.vx = this.vx - a
-			}
-			else {
-				this.vx = this.vx * -1
-			}
-			return this
-		}
-		else if (U(g[0])) {
-			return this.vx
-		}
-		this.vx = a;
-		return this
-	}
-	i.jY = function (a) {
-		var g = G(arguments);
-		a = g[0]
-		if (g.p) {
-			this.vy = this.vy + a;
-			return this
-		}
-		else if (g.n) {
-			if (N(a)) {
-				this.vy = this.vy - a
-			}
-			else {
-				this.vy = this.vy * -1
-			}
-			return this
-		}
-		else if (U(g[0])) {
-			return this.vy
-		}
-		this.vy = a
-		return this
-	}
-	i.move = function () {
-		return this.X(this.vx || 0, '+').Y(this.vy || 0, '+')
-	}
-	i.go = function () {
-		$t(this.move())
-	}
-	$St().bm('me', function (b) {
-		b.go(10, 10)
-		$.t(function () {
-			$l(b.inStage())
-		})
-	})
-}
+ 
+ 
+ 
