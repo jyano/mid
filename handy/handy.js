@@ -198,3 +198,11 @@ $.as = function () {
 	a.A()
 	return a
 }
+$.header = function () {
+	return $('<header>')
+}
+// *** move this: !!!!
+$.fn.$ = function (fn) {
+	return this.click(fn)
+}
+ 

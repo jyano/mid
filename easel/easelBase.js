@@ -1,3 +1,7 @@
+$.isCvId = $.iCI = function (id) {
+	return S(id) && $('#' + id).length
+}
+
 cjs = createjs
 z = function (fn) {
 	var g = G(arguments)
@@ -22,69 +26,58 @@ $.iI = function (i) {
 		return S($(i)[0].src)
 	}
 }
+ 
 
-_$St = function (cv) {
-	cv = cv || $.c('o', 800, 800)[0]
-	var st = new cjs.Stage(cv)
-	return st
-}
-$St = cjs.stg = cjs.stage = function (a, b, c, d, e) {
-	var stage //cjs.watchKeys()
+cjs.St=cjs.Stage
+
+$St =  cjs.stg = cjs.stage = function () {
+	var _$St = function (cv) {
+		var $StCv = function () {
+			var g = G(arguments), o, st
+			var _$StCv = function (cv) {
+				return new cjs.Stage($.c.apply($, arguments)[0])
+			}
+			var __$St = function (cv) {
+				return new cjs.Stage(cv)
+			}
+			st = A(g.f) ? __$St(g.f[0]) :
+					$.isCvId(g.f) ? __$St(g.f) :
+							O(g.f) ? __$St($(g.f)[0]) :
+									_$StCv.apply(null, g)
+			return st
+		}
+		//get by canvas ID.. if in arr (but this depped)
+//if you pass it a canvas OR a $canvas object
+//	stage = new cjs.Stage($(a)[0])
+		//create a new canvas
+//else {stage = new cjs.Stage($.c(a, b, c, d, e) [0])}
+		return cv ? $StCv.apply(null, arguments) :
+				new cjs.Stage($.c('o', 1000, 600)[0])
+	}
 	var g = G(arguments)
-	var cv, st
-	//get by canvas ID.. eh, a sloppy hack?? it ok
-//	if (A(a)) {stage = new cjs.Stage(a[0])}
-	if (A(g.f)) {
-	
-		g.f = g.f[0]
-	}
-	else if (O(g.f)) {
-		cv = $(g.f)[0]
-	}
-	if (S(g.f) && $('#' + g.f).length) {
-		cv = g.f
-	}
-	else {
-		cv = S(g.f) ?
-				$.c(g.f || 'p', g.s || 1200, g.t || 600, g[3], g[4])[0] :
-				$.c(g.f || 1200, g.s || 600, g.t, g[3])[0]
-	}
-	st = new cjs.Stage(cv)
-	//if you pass it a canvas OR a $canvas object
-//	else if (O(a)) {
-	//	stage = new cjs.Stage($(a)[0])
-///	} //create a new canvas
-	//else {stage = new cjs.Stage($.c(a, b, c, d, e) [0])}
+	var st = _$St.apply(null, arguments)
 	st.cv = st.c = st.can = $(st.canvas)
 	st.cv0 = st.cv[0]
 	st.xc = st.cv0.getContext('2d')
-	if (!g.n) {
-		st.can.A()
-	}
-	//if (g.p) {st.t() }//.t()
 	st.can = st.c = $(st.canvas)
-	if (g.p) {
-		SL(h)
-	}
-	if (g.m) {
-		st.b('me')
-	}
-	T.setFPS(24);
-	T.on("tick", st);
-	
-	h = $h(0, 0).a2(st)
+	st.t()
+	if (g.m) {st.b('me')}
+	return st
+}
+St = St$ = $S$ = cjs.S = __S = function () {
+	var g = G(arguments)
+	s = stage = st = $St.apply(null, arguments)
 	lib = {}
 	images = img = {}
 	loader = new cjs.LoadQueue(false);
-	return st.t()
-}
-St = cjs.S = __S = function (col) {var g = G(arguments)
-	s = stage =	st = $St(g[0] || 'p', 1200, 600)
-	//st =  new cjs.Stage($.cv(980, 640).A()[0]);
-	st.A()
+	h = $h(0, 0).drag().a2(st)
 	return st
-} //cjs.S = cjs.Stage
+}
 
+
+
+
+ 
 $Ct = cjs.container = cjs.ct = function (a) {
 	return new cjs.Container(a)
 }
@@ -104,7 +97,6 @@ $Pt = cjs.P = cjs.Pt = function (x, y) {
 	}
 	return new cjs.Point(x, y)
 }//=P=
-
 _$Bm=function(i){
 	return	new cjs.Bitmap(i)
 }

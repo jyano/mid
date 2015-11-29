@@ -21,288 +21,203 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="tween.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tween/tween.js">
+      <file leaf-file-name="examples.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/easel/_apps/examples.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="1" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="easelApps.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/easel/_apps/easelApps.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <caret line="510" column="1" selection-start-line="510" selection-start-column="1" selection-end-line="510" selection-end-column="1" />
               <folding>
-                <element signature="e#42#83#0" expanded="false" />
-                <element signature="e#724#740#0" expanded="false" />
-                <element signature="e#754#770#0" expanded="false" />
-                <element signature="e#785#808#0" expanded="false" />
-                <element signature="e#823#845#0" expanded="false" />
-                <element signature="e#860#882#0" expanded="false" />
-                <element signature="e#898#932#0" expanded="false" />
-                <element signature="e#946#978#0" expanded="false" />
-                <element signature="e#993#1014#0" expanded="false" />
-                <element signature="e#1029#1050#0" expanded="false" />
-                <element signature="e#1066#1098#0" expanded="false" />
-                <element signature="e#1112#1142#0" expanded="false" />
-                <element signature="e#1156#1179#0" expanded="false" />
-                <element signature="e#1193#1213#0" expanded="false" />
-                <element signature="e#1228#1248#0" expanded="false" />
-                <element signature="e#1263#1283#0" expanded="false" />
-                <element signature="e#1299#1329#0" expanded="false" />
-                <element signature="e#1344#1364#0" expanded="false" />
-                <element signature="e#1380#1410#0" expanded="false" />
-                <element signature="e#1424#1452#0" expanded="false" />
-                <element signature="e#1468#1492#0" expanded="false" />
-                <element signature="e#1508#1531#0" expanded="false" />
-                <element signature="e#1593#1609#0" expanded="false" />
-                <element signature="e#1623#1639#0" expanded="false" />
-                <element signature="e#1654#1677#0" expanded="false" />
-                <element signature="e#1692#1714#0" expanded="false" />
-                <element signature="e#1729#1751#0" expanded="false" />
-                <element signature="e#1767#1801#0" expanded="false" />
-                <element signature="e#1815#1847#0" expanded="false" />
-                <element signature="e#1862#1883#0" expanded="false" />
-                <element signature="e#1898#1919#0" expanded="false" />
-                <element signature="e#1935#1967#0" expanded="false" />
-                <element signature="e#1981#2011#0" expanded="false" />
-                <element signature="e#2025#2048#0" expanded="false" />
-                <element signature="e#2062#2082#0" expanded="false" />
-                <element signature="e#2097#2117#0" expanded="false" />
-                <element signature="e#2132#2152#0" expanded="false" />
-                <element signature="e#2168#2198#0" expanded="false" />
-                <element signature="e#2213#2233#0" expanded="false" />
-                <element signature="e#2249#2279#0" expanded="false" />
-                <element signature="e#2293#2321#0" expanded="false" />
-                <element signature="e#2337#2361#0" expanded="false" />
-                <element signature="e#2377#2400#0" expanded="false" />
-                <element signature="e#2460#2478#0" expanded="false" />
-                <element signature="e#2493#2511#0" expanded="false" />
-                <element signature="e#2527#2552#0" expanded="false" />
-                <element signature="e#2568#2592#0" expanded="false" />
-                <element signature="e#2608#2632#0" expanded="false" />
-                <element signature="e#2649#2685#0" expanded="false" />
-                <element signature="e#2700#2734#0" expanded="false" />
-                <element signature="e#2750#2773#0" expanded="false" />
-                <element signature="e#2789#2812#0" expanded="false" />
-                <element signature="e#2829#2863#0" expanded="false" />
-                <element signature="e#2878#2910#0" expanded="false" />
-                <element signature="e#2925#2950#0" expanded="false" />
-                <element signature="e#2965#2987#0" expanded="false" />
-                <element signature="e#3003#3025#0" expanded="false" />
-                <element signature="e#3041#3063#0" expanded="false" />
-                <element signature="e#3080#3112#0" expanded="false" />
-                <element signature="e#3128#3150#0" expanded="false" />
-                <element signature="e#3167#3199#0" expanded="false" />
-                <element signature="e#3214#3244#0" expanded="false" />
-                <element signature="e#3261#3287#0" expanded="false" />
-                <element signature="e#3304#3329#0" expanded="false" />
-                <element signature="e#3425#3462#0" expanded="false" />
-                <element signature="e#3647#4044#0" expanded="false" />
-                <element signature="e#3662#3736#0" expanded="false" />
-                <element signature="e#3779#3980#0" expanded="false" />
-                <element signature="e#3834#3900#0" expanded="false" />
-                <element signature="e#3910#3975#0" expanded="false" />
-                <element signature="e#3989#4040#0" expanded="false" />
-                <element signature="e#4119#4169#0" expanded="false" />
-                <element signature="e#4232#4471#0" expanded="false" />
-                <element signature="e#4248#4410#0" expanded="false" />
-                <element signature="e#4419#4467#0" expanded="false" />
-                <element signature="e#4532#4668#0" expanded="false" />
-                <element signature="e#4546#4596#0" expanded="false" />
-                <element signature="e#4614#4664#0" expanded="false" />
-                <element signature="e#4676#4728#0" expanded="false" />
-                <element signature="e#4843#4880#0" expanded="false" />
-                <element signature="e#5071#5473#0" expanded="false" />
-                <element signature="e#5086#5162#0" expanded="false" />
-                <element signature="e#5209#5409#0" expanded="false" />
-                <element signature="e#5269#5332#0" expanded="false" />
-                <element signature="e#5342#5404#0" expanded="false" />
-                <element signature="e#5418#5469#0" expanded="false" />
-                <element signature="e#5549#5599#0" expanded="false" />
-                <element signature="e#5668#5907#0" expanded="false" />
-                <element signature="e#5684#5846#0" expanded="false" />
-                <element signature="e#5855#5903#0" expanded="false" />
-                <element signature="e#5977#6113#0" expanded="false" />
-                <element signature="e#5991#6041#0" expanded="false" />
-                <element signature="e#6059#6109#0" expanded="false" />
-                <element signature="e#6121#6170#0" expanded="false" />
-                <element signature="e#6482#6879#0" expanded="false" />
-                <element signature="e#6497#6571#0" expanded="false" />
-                <element signature="e#6614#6815#0" expanded="false" />
-                <element signature="e#6669#6735#0" expanded="false" />
-                <element signature="e#6745#6810#0" expanded="false" />
-                <element signature="e#6824#6875#0" expanded="false" />
-                <element signature="e#6957#7007#0" expanded="false" />
-                <element signature="e#7070#7309#0" expanded="false" />
-                <element signature="e#7086#7248#0" expanded="false" />
-                <element signature="e#7257#7305#0" expanded="false" />
-                <element signature="e#7370#7506#0" expanded="false" />
-                <element signature="e#7384#7434#0" expanded="false" />
-                <element signature="e#7452#7502#0" expanded="false" />
-                <element signature="e#7514#7566#0" expanded="false" />
-                <element signature="e#8102#9668#0" expanded="false" />
+                <element signature="e#1913#1935#0" expanded="false" />
+                <element signature="e#1946#1975#0" expanded="false" />
+                <element signature="e#1986#2010#0" expanded="false" />
+                <element signature="e#2154#2194#0" expanded="false" />
+                <element signature="e#2391#2440#0" expanded="false" />
+                <element signature="e#3112#3117#0" expanded="false" />
+                <element signature="e#4267#4336#0" expanded="false" />
+                <element signature="e#4358#4618#0" expanded="false" />
+                <element signature="e#4626#4806#0" expanded="false" />
+                <element signature="e#10043#10063#0" expanded="false" />
+                <element signature="e#10130#10157#0" expanded="false" />
+                <element signature="e#10188#10213#0" expanded="false" />
+                <element signature="e#10220#12282#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tweenApps.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tween/_apps/tweenApps.js">
+      <file leaf-file-name="transformApps.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/easel/_apps/transformApps.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding>
-                <element signature="e#76#296#0" expanded="true" />
-                <element signature="e#111#292#0" expanded="true" />
-                <element signature="e#3169#3433#0" expanded="false" />
-                <element signature="e#3437#3501#0" expanded="false" />
-                <element signature="e#3860#4109#0" expanded="false" />
-                <element signature="e#4112#4176#0" expanded="false" />
-                <element signature="e#5305#5331#0" expanded="false" />
-                <element signature="e#6201#6209#0" expanded="false" />
+                <element signature="e#701#996#0" expanded="false" />
+                <element signature="e#1378#1810#0" expanded="false" />
+                <element signature="e#1498#1529#0" expanded="false" />
+                <element signature="e#1535#1629#0" expanded="false" />
+                <element signature="e#2502#2803#0" expanded="false" />
+                <element signature="e#3198#3642#0" expanded="false" />
+                <element signature="e#3321#3354#0" expanded="false" />
+                <element signature="e#3360#3457#0" expanded="false" />
+                <element signature="e#4337#5009#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="spriteSheet.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spriteSheet/spriteSheet.js">
+      <file leaf-file-name="alphaMaskReveal.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/easel/_apps/alphaMaskReveal.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="46" column="10" selection-start-line="45" selection-start-column="0" selection-end-line="46" selection-end-column="10" />
+              <caret line="160" column="1" selection-start-line="160" selection-start-column="1" selection-end-line="160" selection-end-column="1" />
               <folding>
-                <element signature="e#359#382#0" expanded="false" />
-                <element signature="e#759#785#0" expanded="false" />
-                <element signature="e#1317#1350#0" expanded="false" />
-                <element signature="e#1580#1623#0" expanded="false" />
-                <element signature="e#1875#3246#0" expanded="false" />
-                <element signature="e#3322#4358#0" expanded="false" />
-                <element signature="e#4434#5560#0" expanded="false" />
-                <element signature="e#5867#5883#0" expanded="false" />
+                <element signature="e#36#5148#0" expanded="true" />
+                <element signature="e#539#1344#0" expanded="true" />
+                <element signature="e#1380#1482#0" expanded="true" />
+                <element signature="e#1518#2047#0" expanded="true" />
+                <element signature="e#2081#2132#0" expanded="true" />
+                <element signature="e#2170#2554#0" expanded="true" />
+                <element signature="e#2577#5146#0" expanded="true" />
+                <element signature="e#3064#3887#0" expanded="true" />
+                <element signature="e#3925#4031#0" expanded="true" />
+                <element signature="e#4069#4615#0" expanded="true" />
+                <element signature="e#4651#4705#0" expanded="true" />
+                <element signature="e#4745#5143#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SSApps.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="distract.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/easel/_apps/distract.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+              <folding>
+                <element signature="e#43#120#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ctProtoBm.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/easel/_protos/ctProtoBm.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+              <folding>
+                <element signature="e#237#276#0" expanded="false" />
+                <element signature="e#294#315#0" expanded="false" />
+                <element signature="e#329#369#0" expanded="false" />
+                <element signature="e#446#467#0" expanded="false" />
+                <element signature="e#621#642#0" expanded="false" />
+                <element signature="e#654#672#0" expanded="false" />
+                <element signature="e#685#706#0" expanded="false" />
+                <element signature="e#1018#1035#0" expanded="false" />
+                <element signature="e#1234#1247#0" expanded="false" />
+                <element signature="e#1258#1273#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="easelShapeApps.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/easel/_apps/easelShapeApps.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.022522522">
+              <caret line="106" column="1" selection-start-line="106" selection-start-column="1" selection-end-line="106" selection-end-column="1" />
+              <folding>
+                <element signature="e#2578#2591#0" expanded="false" />
+                <element signature="e#2750#2791#0" expanded="false" />
+                <element signature="e#4990#5031#0" expanded="false" />
+                <element signature="e#11835#11858#0" expanded="false" />
+                <element signature="e#13415#13428#0" expanded="false" />
+                <element signature="e#13589#13630#0" expanded="false" />
+                <element signature="e#15832#15873#0" expanded="false" />
+                <element signature="e#19710#19724#0" expanded="false" />
+                <element signature="e#19857#19863#0" expanded="false" />
+                <element signature="e#21066#21080#0" expanded="false" />
+                <element signature="e#25051#25135#0" expanded="false" />
+                <element signature="e#26485#26502#0" expanded="false" />
+                <element signature="e#26515#26532#0" expanded="false" />
+                <element signature="e#26545#26562#0" expanded="false" />
+                <element signature="e#29415#29430#0" expanded="false" />
+                <element signature="e#29931#29993#0" expanded="false" />
+                <element signature="e#30209#30224#0" expanded="false" />
+                <element signature="e#31204#31223#0" expanded="false" />
+                <element signature="e#31490#31503#0" expanded="false" />
+                <element signature="e#31512#31525#0" expanded="false" />
+                <element signature="e#32066#32087#0" expanded="false" />
+                <element signature="e#33266#33385#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SSApps.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spriteSheet/_apps/SSApps.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.13243762">
-              <caret line="63" column="1" selection-start-line="63" selection-start-column="1" selection-end-line="63" selection-end-column="1" />
+            <state vertical-scroll-proportion="-9.6">
+              <caret line="352" column="1" selection-start-line="352" selection-start-column="1" selection-end-line="352" selection-end-column="1" />
               <folding>
-                <element signature="e#5299#5318#0" expanded="false" />
-                <element signature="e#5333#5352#0" expanded="false" />
-                <element signature="e#5367#5385#0" expanded="false" />
-                <element signature="e#5400#5418#0" expanded="false" />
-                <element signature="e#5448#5497#0" expanded="false" />
-                <element signature="e#5524#5574#0" expanded="false" />
-                <element signature="e#5600#5640#0" expanded="false" />
-                <element signature="e#5685#5873#0" expanded="false" />
-                <element signature="e#5908#6291#0" expanded="false" />
+                <element signature="e#57#86#0" expanded="false" />
+                <element signature="e#519#552#0" expanded="false" />
+                <element signature="e#575#608#0" expanded="false" />
+                <element signature="e#865#921#0" expanded="false" />
+                <element signature="e#1290#1309#0" expanded="false" />
+                <element signature="e#1344#1364#0" expanded="false" />
+                <element signature="e#1368#1427#0" expanded="false" />
+                <element signature="e#1547#1569#0" expanded="false" />
+                <element signature="e#7950#7969#0" expanded="false" />
+                <element signature="e#7984#8003#0" expanded="false" />
+                <element signature="e#8018#8036#0" expanded="false" />
+                <element signature="e#8051#8069#0" expanded="false" />
+                <element signature="e#8099#8148#0" expanded="false" />
+                <element signature="e#8175#8225#0" expanded="false" />
+                <element signature="e#8251#8291#0" expanded="false" />
+                <element signature="e#8336#8524#0" expanded="false" />
+                <element signature="e#8559#8942#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tweenData.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tween/_data/tweenData.js">
+      <file leaf-file-name="easelTextApps.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/easel/_apps/easelTextApps.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="17" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tweenProto.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tween/_protos/tweenProto.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+              <caret line="278" column="1" selection-start-line="278" selection-start-column="1" selection-end-line="278" selection-end-column="1" />
               <folding>
-                <element signature="e#25#35#0" expanded="false" />
-                <element signature="e#386#410#0" expanded="false" />
-                <element signature="e#426#451#0" expanded="false" />
-                <element signature="e#470#495#0" expanded="false" />
-                <element signature="e#522#550#0" expanded="false" />
-                <element signature="e#656#677#0" expanded="false" />
-                <element signature="e#738#765#0" expanded="false" />
-                <element signature="e#871#907#0" expanded="false" />
-                <element signature="e#969#1006#0" expanded="false" />
-                <element signature="e#1133#1156#0" expanded="false" />
-                <element signature="e#1294#1322#0" expanded="false" />
-                <element signature="e#1329#1356#0" expanded="false" />
-                <element signature="e#1373#14937#0" expanded="false" />
-                <element signature="e#15021#15073#0" expanded="false" />
-                <element signature="e#15085#15120#0" expanded="false" />
+                <element signature="n#!!block;n#write#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="displayObTween.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tween/_protos/displayObTween.js">
+      <file leaf-file-name="easelWorldApps.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/easel/_apps/easelWorldApps.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SSBuilderProto.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spriteSheet/_protos/SSBuilderProto.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+              <caret line="197" column="1" selection-start-line="197" selection-start-column="1" selection-end-line="197" selection-end-column="1" />
               <folding>
-                <element signature="e#83#107#0" expanded="false" />
-                <element signature="e#166#243#0" expanded="true" />
-                <element signature="e#180#207#0" expanded="false" />
-                <element signature="e#291#332#0" expanded="true" />
-                <element signature="e#352#388#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="spriteProto.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spriteSheet/_protos/spriteProto.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#180#573#0" expanded="false" />
-                <element signature="e#586#602#0" expanded="false" />
-                <element signature="e#609#634#0" expanded="false" />
-                <element signature="e#715#731#0" expanded="false" />
-                <element signature="e#738#763#0" expanded="false" />
-                <element signature="e#1110#1428#0" expanded="false" />
-                <element signature="e#1439#1468#0" expanded="false" />
-                <element signature="e#1586#1648#0" expanded="false" />
-                <element signature="e#1748#1788#0" expanded="false" />
-                <element signature="e#2051#2079#0" expanded="false" />
-                <element signature="e#2122#2163#0" expanded="false" />
-                <element signature="e#2174#2215#0" expanded="false" />
-                <element signature="e#2226#2267#0" expanded="false" />
-                <element signature="e#2278#2319#0" expanded="false" />
-                <element signature="e#2331#2357#0" expanded="false" />
-                <element signature="e#2871#2919#0" expanded="false" />
-                <element signature="e#3176#3213#0" expanded="false" />
-                <marker date="1448753711000" expanded="false" signature="3027:3082" placeholder="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SSProto.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spriteSheet/_protos/SSProto.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="72" column="52" selection-start-line="72" selection-start-column="52" selection-end-line="72" selection-end-column="52" />
-              <folding>
-                <element signature="e#659#687#0" expanded="false" />
-                <element signature="e#730#771#0" expanded="false" />
-                <element signature="e#782#823#0" expanded="false" />
-                <element signature="e#834#875#0" expanded="false" />
-                <element signature="e#886#927#0" expanded="false" />
-                <element signature="e#939#965#0" expanded="false" />
-                <element signature="e#1181#1476#0" expanded="false" />
+                <element signature="e#888#919#0" expanded="false" />
+                <element signature="e#936#953#0" expanded="false" />
+                <element signature="e#1452#1469#0" expanded="false" />
+                <element signature="e#1664#1693#0" expanded="false" />
+                <element signature="e#1708#1736#0" expanded="false" />
+                <element signature="e#2089#2122#0" expanded="false" />
+                <element signature="e#2139#2171#0" expanded="false" />
+                <element signature="n#!!block;n#box#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -313,6 +228,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -320,12 +236,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/jade/basic.jade" />
-        <option value="$PROJECT_DIR$/tween/_protos/tweenProto.js" />
-        <option value="$PROJECT_DIR$/tween/tween.js" />
-        <option value="$PROJECT_DIR$/tween/_apps/tweenApps.js" />
-        <option value="$PROJECT_DIR$/spriteSheet/spriteSheet.js" />
-        <option value="$PROJECT_DIR$/spriteSheet/_apps/SSApps.js" />
+        <option value="$PROJECT_DIR$/easel/_apps/distract.js" />
+        <option value="$PROJECT_DIR$/easel/_apps/alphaMaskReveal.js" />
+        <option value="$PROJECT_DIR$/easel/_apps/transformApps.js" />
+        <option value="$PROJECT_DIR$/easel/_apps/examples.js" />
+        <option value="$PROJECT_DIR$/easel/_apps/easelApps.js" />
+        <option value="$PROJECT_DIR$/easel/_apps/easelShapeApps.js" />
       </list>
     </option>
   </component>
@@ -337,9 +253,9 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="72" />
-    <option name="y" value="220" />
-    <option name="width" value="1537" />
+    <option name="x" value="132" />
+    <option name="y" value="89" />
+    <option name="width" value="1479" />
     <option name="height" value="1094" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -394,7 +310,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="spriteSheet" />
+              <option name="myItemId" value="easel" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -408,7 +324,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="spriteSheet" />
+              <option name="myItemId" value="easel" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -426,6 +342,7 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -465,14 +382,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="72" y="220" width="1537" height="1094" extended-state="0" />
+    <frame x="132" y="89" width="1479" height="1094" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924336" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41308793" sideWeight="0.49199417" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26278117" sideWeight="0.49199417" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17612137" sideWeight="0.86236936" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18312757" sideWeight="0.86236936" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22652885" sideWeight="0.13763066" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.027921407" sideWeight="0.5080058" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -520,204 +437,122 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tween/_protos/tweenProto.js">
+    <entry file="file://$PROJECT_DIR$/loader/loaderApps.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <caret line="247" column="19" selection-start-line="247" selection-start-column="19" selection-end-line="247" selection-end-column="19" />
           <folding>
-            <element signature="e#25#35#0" expanded="false" />
-            <element signature="e#386#410#0" expanded="false" />
-            <element signature="e#426#451#0" expanded="false" />
-            <element signature="e#470#495#0" expanded="false" />
-            <element signature="e#522#550#0" expanded="false" />
-            <element signature="e#656#677#0" expanded="false" />
-            <element signature="e#738#765#0" expanded="false" />
-            <element signature="e#871#907#0" expanded="false" />
-            <element signature="e#969#1006#0" expanded="false" />
-            <element signature="e#1133#1156#0" expanded="false" />
-            <element signature="e#1294#1322#0" expanded="false" />
-            <element signature="e#1329#1356#0" expanded="false" />
-            <element signature="e#1373#14937#0" expanded="false" />
-            <element signature="e#15021#15073#0" expanded="false" />
-            <element signature="e#15085#15120#0" expanded="false" />
+            <element signature="e#152#223#0" expanded="true" />
+            <element signature="e#199#220#0" expanded="true" />
+            <element signature="e#2751#2797#0" expanded="false" />
+            <element signature="e#2814#2922#0" expanded="false" />
+            <element signature="e#2829#2861#0" expanded="false" />
+            <element signature="e#2870#2903#0" expanded="false" />
+            <element signature="e#2943#2966#0" expanded="false" />
+            <element signature="e#3068#3114#0" expanded="false" />
+            <element signature="e#3131#3239#0" expanded="false" />
+            <element signature="e#3146#3178#0" expanded="false" />
+            <element signature="e#3187#3220#0" expanded="false" />
+            <element signature="e#3260#3283#0" expanded="false" />
+            <element signature="e#3384#3430#0" expanded="false" />
+            <element signature="e#3447#3555#0" expanded="false" />
+            <element signature="e#3462#3494#0" expanded="false" />
+            <element signature="e#3503#3536#0" expanded="false" />
+            <element signature="e#3576#3599#0" expanded="false" />
+            <element signature="e#3701#3747#0" expanded="false" />
+            <element signature="e#3764#3872#0" expanded="false" />
+            <element signature="e#3779#3811#0" expanded="false" />
+            <element signature="e#3820#3853#0" expanded="false" />
+            <element signature="e#3893#3916#0" expanded="false" />
+            <element signature="e#4169#4480#0" expanded="true" />
+            <element signature="e#4198#4477#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tween/tween.js">
+    <entry file="file://$PROJECT_DIR$/easel/_apps/transformApps.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding>
-            <element signature="e#42#83#0" expanded="false" />
-            <element signature="e#724#740#0" expanded="false" />
-            <element signature="e#754#770#0" expanded="false" />
-            <element signature="e#785#808#0" expanded="false" />
-            <element signature="e#823#845#0" expanded="false" />
-            <element signature="e#860#882#0" expanded="false" />
-            <element signature="e#898#932#0" expanded="false" />
-            <element signature="e#946#978#0" expanded="false" />
-            <element signature="e#993#1014#0" expanded="false" />
-            <element signature="e#1029#1050#0" expanded="false" />
-            <element signature="e#1066#1098#0" expanded="false" />
-            <element signature="e#1112#1142#0" expanded="false" />
-            <element signature="e#1156#1179#0" expanded="false" />
-            <element signature="e#1193#1213#0" expanded="false" />
-            <element signature="e#1228#1248#0" expanded="false" />
-            <element signature="e#1263#1283#0" expanded="false" />
-            <element signature="e#1299#1329#0" expanded="false" />
-            <element signature="e#1344#1364#0" expanded="false" />
-            <element signature="e#1380#1410#0" expanded="false" />
-            <element signature="e#1424#1452#0" expanded="false" />
-            <element signature="e#1468#1492#0" expanded="false" />
-            <element signature="e#1508#1531#0" expanded="false" />
-            <element signature="e#1593#1609#0" expanded="false" />
-            <element signature="e#1623#1639#0" expanded="false" />
-            <element signature="e#1654#1677#0" expanded="false" />
-            <element signature="e#1692#1714#0" expanded="false" />
-            <element signature="e#1729#1751#0" expanded="false" />
-            <element signature="e#1767#1801#0" expanded="false" />
-            <element signature="e#1815#1847#0" expanded="false" />
-            <element signature="e#1862#1883#0" expanded="false" />
-            <element signature="e#1898#1919#0" expanded="false" />
-            <element signature="e#1935#1967#0" expanded="false" />
-            <element signature="e#1981#2011#0" expanded="false" />
-            <element signature="e#2025#2048#0" expanded="false" />
-            <element signature="e#2062#2082#0" expanded="false" />
-            <element signature="e#2097#2117#0" expanded="false" />
-            <element signature="e#2132#2152#0" expanded="false" />
-            <element signature="e#2168#2198#0" expanded="false" />
-            <element signature="e#2213#2233#0" expanded="false" />
-            <element signature="e#2249#2279#0" expanded="false" />
-            <element signature="e#2293#2321#0" expanded="false" />
-            <element signature="e#2337#2361#0" expanded="false" />
-            <element signature="e#2377#2400#0" expanded="false" />
-            <element signature="e#2460#2478#0" expanded="false" />
-            <element signature="e#2493#2511#0" expanded="false" />
-            <element signature="e#2527#2552#0" expanded="false" />
-            <element signature="e#2568#2592#0" expanded="false" />
-            <element signature="e#2608#2632#0" expanded="false" />
-            <element signature="e#2649#2685#0" expanded="false" />
-            <element signature="e#2700#2734#0" expanded="false" />
-            <element signature="e#2750#2773#0" expanded="false" />
-            <element signature="e#2789#2812#0" expanded="false" />
-            <element signature="e#2829#2863#0" expanded="false" />
-            <element signature="e#2878#2910#0" expanded="false" />
-            <element signature="e#2925#2950#0" expanded="false" />
-            <element signature="e#2965#2987#0" expanded="false" />
-            <element signature="e#3003#3025#0" expanded="false" />
-            <element signature="e#3041#3063#0" expanded="false" />
-            <element signature="e#3080#3112#0" expanded="false" />
-            <element signature="e#3128#3150#0" expanded="false" />
-            <element signature="e#3167#3199#0" expanded="false" />
-            <element signature="e#3214#3244#0" expanded="false" />
-            <element signature="e#3261#3287#0" expanded="false" />
-            <element signature="e#3304#3329#0" expanded="false" />
-            <element signature="e#3425#3462#0" expanded="false" />
-            <element signature="e#3647#4044#0" expanded="false" />
-            <element signature="e#3662#3736#0" expanded="false" />
-            <element signature="e#3779#3980#0" expanded="false" />
-            <element signature="e#3834#3900#0" expanded="false" />
-            <element signature="e#3910#3975#0" expanded="false" />
-            <element signature="e#3989#4040#0" expanded="false" />
-            <element signature="e#4119#4169#0" expanded="false" />
-            <element signature="e#4232#4471#0" expanded="false" />
-            <element signature="e#4248#4410#0" expanded="false" />
-            <element signature="e#4419#4467#0" expanded="false" />
-            <element signature="e#4532#4668#0" expanded="false" />
-            <element signature="e#4546#4596#0" expanded="false" />
-            <element signature="e#4614#4664#0" expanded="false" />
-            <element signature="e#4676#4728#0" expanded="false" />
-            <element signature="e#4843#4880#0" expanded="false" />
-            <element signature="e#5071#5473#0" expanded="false" />
-            <element signature="e#5086#5162#0" expanded="false" />
-            <element signature="e#5209#5409#0" expanded="false" />
-            <element signature="e#5269#5332#0" expanded="false" />
-            <element signature="e#5342#5404#0" expanded="false" />
-            <element signature="e#5418#5469#0" expanded="false" />
-            <element signature="e#5549#5599#0" expanded="false" />
-            <element signature="e#5668#5907#0" expanded="false" />
-            <element signature="e#5684#5846#0" expanded="false" />
-            <element signature="e#5855#5903#0" expanded="false" />
-            <element signature="e#5977#6113#0" expanded="false" />
-            <element signature="e#5991#6041#0" expanded="false" />
-            <element signature="e#6059#6109#0" expanded="false" />
-            <element signature="e#6121#6170#0" expanded="false" />
-            <element signature="e#6482#6879#0" expanded="false" />
-            <element signature="e#6497#6571#0" expanded="false" />
-            <element signature="e#6614#6815#0" expanded="false" />
-            <element signature="e#6669#6735#0" expanded="false" />
-            <element signature="e#6745#6810#0" expanded="false" />
-            <element signature="e#6824#6875#0" expanded="false" />
-            <element signature="e#6957#7007#0" expanded="false" />
-            <element signature="e#7070#7309#0" expanded="false" />
-            <element signature="e#7086#7248#0" expanded="false" />
-            <element signature="e#7257#7305#0" expanded="false" />
-            <element signature="e#7370#7506#0" expanded="false" />
-            <element signature="e#7384#7434#0" expanded="false" />
-            <element signature="e#7452#7502#0" expanded="false" />
-            <element signature="e#7514#7566#0" expanded="false" />
-            <element signature="e#8102#9668#0" expanded="false" />
+            <element signature="e#701#996#0" expanded="false" />
+            <element signature="e#1378#1810#0" expanded="false" />
+            <element signature="e#1498#1529#0" expanded="false" />
+            <element signature="e#1535#1629#0" expanded="false" />
+            <element signature="e#2502#2803#0" expanded="false" />
+            <element signature="e#3198#3642#0" expanded="false" />
+            <element signature="e#3321#3354#0" expanded="false" />
+            <element signature="e#3360#3457#0" expanded="false" />
+            <element signature="e#4337#5009#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tween/_apps/tweenApps.js">
+    <entry file="file://$PROJECT_DIR$/easel/_apps/examples.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
-          <folding>
-            <element signature="e#76#296#0" expanded="true" />
-            <element signature="e#111#292#0" expanded="true" />
-            <element signature="e#3169#3433#0" expanded="false" />
-            <element signature="e#3437#3501#0" expanded="false" />
-            <element signature="e#3860#4109#0" expanded="false" />
-            <element signature="e#4112#4176#0" expanded="false" />
-            <element signature="e#5305#5331#0" expanded="false" />
-            <element signature="e#6201#6209#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spriteSheet/spriteSheet.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="10" selection-start-line="45" selection-start-column="0" selection-end-line="46" selection-end-column="10" />
-          <folding>
-            <element signature="e#359#382#0" expanded="false" />
-            <element signature="e#759#785#0" expanded="false" />
-            <element signature="e#1317#1350#0" expanded="false" />
-            <element signature="e#1580#1623#0" expanded="false" />
-            <element signature="e#1875#3246#0" expanded="false" />
-            <element signature="e#3322#4358#0" expanded="false" />
-            <element signature="e#4434#5560#0" expanded="false" />
-            <element signature="e#5867#5883#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tween/easing.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="3" selection-start-line="41" selection-start-column="3" selection-end-line="41" selection-end-column="3" />
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="1" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spriteSheet/_apps/SSApps.js">
+    <entry file="file://$PROJECT_DIR$/easel/_apps/promote.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13243762">
-          <caret line="63" column="1" selection-start-line="63" selection-start-column="1" selection-end-line="63" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="45" column="1" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/easel/_apps/easelApps.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="510" column="1" selection-start-line="510" selection-start-column="1" selection-end-line="510" selection-end-column="1" />
           <folding>
-            <element signature="e#5299#5318#0" expanded="false" />
-            <element signature="e#5333#5352#0" expanded="false" />
-            <element signature="e#5367#5385#0" expanded="false" />
-            <element signature="e#5400#5418#0" expanded="false" />
-            <element signature="e#5448#5497#0" expanded="false" />
-            <element signature="e#5524#5574#0" expanded="false" />
-            <element signature="e#5600#5640#0" expanded="false" />
-            <element signature="e#5685#5873#0" expanded="false" />
-            <element signature="e#5908#6291#0" expanded="false" />
+            <element signature="e#1913#1935#0" expanded="false" />
+            <element signature="e#1946#1975#0" expanded="false" />
+            <element signature="e#1986#2010#0" expanded="false" />
+            <element signature="e#2154#2194#0" expanded="false" />
+            <element signature="e#2391#2440#0" expanded="false" />
+            <element signature="e#3112#3117#0" expanded="false" />
+            <element signature="e#4267#4336#0" expanded="false" />
+            <element signature="e#4358#4618#0" expanded="false" />
+            <element signature="e#4626#4806#0" expanded="false" />
+            <element signature="e#10043#10063#0" expanded="false" />
+            <element signature="e#10130#10157#0" expanded="false" />
+            <element signature="e#10188#10213#0" expanded="false" />
+            <element signature="e#10220#12282#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/easel/_apps/easelShapeApps.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.022522522">
+          <caret line="106" column="1" selection-start-line="106" selection-start-column="1" selection-end-line="106" selection-end-column="1" />
+          <folding>
+            <element signature="e#2578#2591#0" expanded="false" />
+            <element signature="e#2750#2791#0" expanded="false" />
+            <element signature="e#4990#5031#0" expanded="false" />
+            <element signature="e#11835#11858#0" expanded="false" />
+            <element signature="e#13415#13428#0" expanded="false" />
+            <element signature="e#13589#13630#0" expanded="false" />
+            <element signature="e#15832#15873#0" expanded="false" />
+            <element signature="e#19710#19724#0" expanded="false" />
+            <element signature="e#19857#19863#0" expanded="false" />
+            <element signature="e#21066#21080#0" expanded="false" />
+            <element signature="e#25051#25135#0" expanded="false" />
+            <element signature="e#26485#26502#0" expanded="false" />
+            <element signature="e#26515#26532#0" expanded="false" />
+            <element signature="e#26545#26562#0" expanded="false" />
+            <element signature="e#29415#29430#0" expanded="false" />
+            <element signature="e#29931#29993#0" expanded="false" />
+            <element signature="e#30209#30224#0" expanded="false" />
+            <element signature="e#31204#31223#0" expanded="false" />
+            <element signature="e#31490#31503#0" expanded="false" />
+            <element signature="e#31512#31525#0" expanded="false" />
+            <element signature="e#32066#32087#0" expanded="false" />
+            <element signature="e#33266#33385#0" expanded="false" />
           </folding>
         </state>
       </provider>

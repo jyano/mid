@@ -36,6 +36,10 @@ cjs.rgb = cjs.Gx.rgb = cjs.Gx.getRGB
 $Gx =  function (a) {
 	return new cjs.Gx(a)
 }
+
+$GX = function (a) {
+	return new cjs.Gx(a).FS()
+}
 $Sh = function (gx) {return new cjs.Shape(gx)}
 cjs.shape = _$H = _$h =function (x, y, f, s, width, opt) {
 	if (cjs.iH(x)) {
@@ -79,15 +83,21 @@ $H = $h = function () {
 	}
 	return h
 }
+
 DWW=function(){
 	
+	gx = $Gx().f(cjs.rgb(255, 0, 0)).ss(10).s('white')
 	
-	gx = $Gx().ss(10).s('white').f(cjs.rgb(255, 0, 0))
-			.dc(0, 0, 100).dc(100, 0, 100)
-			.s('blue').f('green').dc(0, 300, 100)
+	gx.dc(0, 0, 100).dc(100, 0, 100)
+	
+	gx.s('blue').f('green').dc(0, 300, 100)
 	
 	_$St().A(  $Sh(gx).XY(300, 100)   ).u()
 }
+
+
+
+
 cjs.rect2 = function self(width, height, x, y, fc, sc) {
 	width = width || 100
 	height = height || width
@@ -267,41 +277,8 @@ cjs.HSL = function (a, b, c) {
 			HSL(M.r() * 360, 100, 50) :
 			cjs.Graphics.getHSL(a, b, c)
 }
-nip = function () {
-	x1 = 0
-	y1 = 0
-	r1 = 10
-	x2 = 0
-	y2 = 0
-	r2 = 100
-	var h = cjs.shape(10, 10).a2(s).drag().opacity(.8)
-	h.graphics.beginRadialGradientFill(['blue', "orange"], [0, 1],
-			x1, y1, r1, x2, y2, r2)
-			.dc(0, 0, 100)
-			.endFill()
-	return h
-}
-function cjsBalls() {
-	s.cannonBall = function (x, y) {
-		var s = this, h
-		h = s.h(x, y)
-		h.rf('a', 'z', 18).dc(18).ef()
-		return h
-	}
-	s.basketBall = function (x, y) {
-		var s = this
-		return this.h(x, y).rf('w', 'o', 18).dc(18).ef()
-	}
-	s.beachBall = function (x, y) {
-		var s = this
-		return s.h(x, y)
-				.rf('b', 'r', 18).dc(18).ef()
-	}
-	s.snowBall = function (x, y) {
-		var s = this
-		return s.h(x, y).rf('a', 'w', 18).dc(18).ef()
-	}
-}
+ 
+ 
 old = function () {
 	cjs.ball = function (z, fc, sc) {
 		var b = cjs.circle(0, 0, z, fc, sc)

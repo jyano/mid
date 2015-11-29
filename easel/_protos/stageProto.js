@@ -178,7 +178,7 @@ st.ab = st.abs = function (x, y) {
 	this.can.abs(x, y);
 	return this
 }
-s.tabs = function (x, y) {
+st.tabs = function (x, y) {
 	this.can.abs(x, y)
 	return this
 }
@@ -189,6 +189,17 @@ st.snap = function (f) {
 	sec(f)
 	return this
 }
+st.Sh = function () {
+	return $Sh.apply(null, arguments).a2(this)
+}
+st.Gx = function () {
+	return $Sh.apply(null, arguments).drag().a2(this).graphics
+}
+
+st.GX = function () {
+	return this.Gx().FS()
+}
+
 
 events=['drawend',
 'drawstart',

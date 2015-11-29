@@ -1,19 +1,16 @@
  
-TWEENPOS1 = function () {
+TWEENPOS1 = function () {_$St().t().bm('me', function (me) {st.bm('guy', function (guy) {
+	guy.XY(200)
 	
-	st = _$St().t()
-	
-	st.bm('me', function (bm) {
-	 
-		st.bm('guy', function (guy) {
-			guy.XY(200)
-			w0 = cjs.tween(guy, [{r: 3000}, 100000])
-			w = cjs.tween(bm, [{sx: 3}, 1000])
-			.wait(1000).pause(w0).then({sy: 3}, 4000)
-			.play(w0).then({sy: .3}, 4000)
-		})
-	})
-}
+	cjs.tween(me, [{sx: 3}, 1000]).wait(1000).pause(
+			w0 = cjs.tween(guy, [{r: 3000}, 100000]))
+			.then({sy: 3}, 4000).play(w0).then({sy: .3}, 4000)
+})})}
+
+
+
+
+
 
 
 
