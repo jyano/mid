@@ -15,111 +15,97 @@ $a.PO('/changeStatus', function (q, p) {
 		p.json(user.status)
 	})
 })
-$a.PO('/post',  function (q, p) {
+$a.PO('/post', function (q, p) {
 //create new post
 	$m.post.create($post(q), _json(p)
 })
-
-
- 
-$a.G('/posts',  function (q, p) {
+Po = Post = $m.posts
+$a.G('/posts', function (q, p) {
 //get all posts
-	$m.posts.find(_json(p))
+	Po.fi(_json(p))
 	// from most recent
 })
- 
-$a.G('/post',   function (q, p) {
+$a.G('/post', function (q, p) {
 
 //get User posts (by unsername)
-	
 	// from most recent
-	
-	$m.posts.find({un: q.un}, _json(p)) 
-
+	Po.fi({un: q.un}, _json(p))
 })
-
-
 $a.G('/userRecentPosts', function (q, p) {
 //User recent post(s?)
-	$m.posts.find({un: q.query.un}, // from most recent
+	Po.fi({un: q.query.un}, // from most recent
 			_json(p))
 })
-
-
-
 $a.G('/postsByTitle', function (q, p) {
 //rescent post(s?)
 	$m.posts.find(_title(q), _json(p))
 })
-
- 
-function more(){
-
 //create new post
-	$a.post('/pst', $w.user, function (req, res) {
-		models.post.create({
-					username: req.username,
-					title: req.body.title,
-					content: req.body.content,
-					dataURL: req.body.dataURL
-				},
-				function () {
-				})
-	})
+$a.PO('/pst', function (req, res) {
+	models.post.create({
+				username: req.username,
+				title: req.body.title,
+				content: req.body.content,
+				dataURL: req.body.dataURL
+			},
+			function () {
+			})
+})
 //get all posts
-	$a.get('/posts', $w.user, function (req, res) {
-		models.posts.find(function (err, posts) {
-			res.json(posts)
-		})  // from most recent
-	})
+$a.G('/posts', function (req, res) {
+	models.posts.find(function (err, posts) {
+		res.json(posts)
+	})  // from most recent
+})
 //get User posts (by unsername)
-	$a.get('/post', $w.user, function (req, res) {
-		models.posts.find({username: req.username},
-				function (err, posts) {
-					res.json(posts)
-				})  // from most recent
-	})
+$a.G('/post', function (req, res) {
+	models.posts.find({username: req.username},
+			function (err, posts) {
+				res.json(posts)
+			})  // from most recent
+})
 //User recent post(s?)
-	$a.get('/userRecentPosts', $w.user, function (req, res) {
-		models.posts.find({username: req.query.username}, // from most recent
-				function (err, posts) {
-					res.json(posts)
-				})
-	})
+$a.G('/userRecentPosts', function (req, res) {
+	models.posts.find({username: req.query.username}, // from most recent
+			function (err, posts) {
+				res.json(posts)
+			})
+})
 //rescent post(s?)
-	$a.get('/postsByTitle', $w.user, function (req, res) {
-		models.posts.find({title: req.query.title}, function (err, posts) {
-			res.json(posts)
+$a.G('/postsByTitle', function (req, res) {
+	models.posts.find({title: req.query.title}, function (err, posts) {
+		res.json(posts)
+	})
+})
+$a.g('/api/blogs', function (q, p) {
+	Blog.fi(function (z, docs) {
+		_.e(docs, function (item) {
+			$l('got request for _id: ' + item._id)
 		})
-	})}
-	
-	function blog(){
-		$a.g('/api/blogs', function (q, p) {
-			Blog.find(function (z, docs) {
-				docs.forEach(function (item) {
-					console.log('got request for _id: ' + item._id)
-				})
-				p.send(docs)
-			})
-		})
-		$a.post('/api/blogs', function (q, p) {
-			$l('recieved post request')
-			for (var key in q.body) {
-				console.log(key + ': ' + q.body[key])
-			}
-			var blog = new Blog(q.body)
-			blog.save(function (z, doc) {
-				p.send(doc)
-			})
-		})
-		$a.delete('/api/blogs/:id', function (q, p) {
-			Blog.remove({_id: q.params.id}, function (z, d) {
-				p.send({_id: q.params.id})
-			})
-		})
-		$a.put('/api/blogs/:id', function (q, p) {
-			Blog.update({_id: q.params.id}, q.body, function (z, doc) {
-				p.send({_id: q.params.id})
-			})
-		})
+		p.se(docs)
+	})
+})
+$a.po('/api/blogs', function (q, p) {
+	$l('recieved post request')
+	for (var key in q.bd) {
+		console.log(key + ': ' + q.body[key])
 	}
+	var blog = new Blog(q.bd)
+	blog.sv(function (z, doc) {
+		p.se(doc)
+	})
+})
+$a.del('/api/blogs/:id', function (q, p) {
+	Blog.rm({_id: q.pm.id}, function (z, d) {
+		p.send({_id: q.params.id})
+	})
+})
+$a.put('/api/blogs/:id', function (q, p) {
+	var ID = {_id: q.pm.id}
+	Blog.upd(ID, q.bd, function (z, doc) {
+				p.se(ID)
+			}
+	)
+})
+	 
+	

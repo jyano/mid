@@ -1,52 +1,35 @@
-$a.PO('/sendMail',   function (q, p) {
-	models.mail.create({
-				to: q.body.to,
-				from: q.un,
-				text: q.body.text
-			},
-			function (z, da) {
-				p.json(da)
-			}
-	)
-})
+ 
 $a.G('/gMsg', function (q, p, nx) {
 	var o = {}
 	o.map = function () {
-		emit(this.from, {
-			text: this.text,
-			datetime: this.datetime
-		})
+		emit(
+				this.from, {text: this.text, datetime: this.datetime}
+		)
 	}
+	
 	o.reduce = function (k, vals) {
 		var d
 		vals.forEach(function (v) {
-			if (!d) {
-				d = {datetime: v.datetime, text: v.text, from: k}
-			}
-			else if (v.datetime > d.datetime) {
-				d = {datetime: v.datetime, text: v.text, from: k}
-			}
+			if (!d) {d = $dtMl(  v.datetime,  v.text,  k)}
+			else if (v.datetime > d.datetime) {d = $dtMl(   v.datetime,   v.text, k)}
 		})
 		return d
 	}
-	models.mail.mapReduce(o,
-			function (z, reduction) {
-				p.json(
-						_.map(reduction, function (val) {
-							return val.value
-						}))
+	
+	Ml.mapReduce(o, function (z, reduction) {p.js(_.m(reduction, _val))
 			})
 })
+ 
 // get mail FROM User, TO a sp. user
 $a.G('/myMailFrom',  function (q, p, nx) {
-	models.mail.find({to: q.un, from: q.query.un},
+	Ml.fi({to: q.un, from: q.query.un},
 			function (z, da) {
 				p.json(da)
 			})
 })
 //get all mail TO ===or==== FROM user
 $a.G('/myMailWith',   function (q, p) {
-	models.mail.find(
+	Ml.fi(
 			{
 				$or: [
 					{to: q.un, from: q.query.un},
@@ -54,7 +37,7 @@ $a.G('/myMailWith',   function (q, p) {
 				]
 			},
 			function (z, da) {
-				p.send(da)
+				p.se(da)
 			})
 })
 $a.G('/sentMail',   function (q, p, nx) {
@@ -67,10 +50,13 @@ $a.G('/sentMail0',   function (q, p) {
 	var o = {};
 	o.query = {from: q.un}
 	o.map = function () {
-		emit(this.to, {
-			text: this.text, datetime: this.datetime, from: this.from
+		var o =this
+		
+		emit(o.to, {
+			text: o.text, datetime: o.datetime, from: o.from
 		})
 	}
+	
 	o.reduce = function (k, vals) {
 		var da
 		vals.forEach(function (val) {
@@ -92,14 +78,12 @@ $a.G('/sentMail0',   function (q, p) {
 		})
 		return da
 	}
-	models.mail.mapReduce(o, function (z, da) {//$l(r)
+	
+	Ml.mapReduce(o, function (z, da) {//$l(r)
 		// r.find().exec(     function(z,r){   p.j(r)  })
-		da = _.map(da,
-				function (v) {
-					return v.value
-				})
-		da.sort({datetime: 1})
-		p.json(da)
+		da = _.m(da, function (v) {return v.value})
+		da.so({datetime: 1})
+		p.js(da)
 	})
 })
   

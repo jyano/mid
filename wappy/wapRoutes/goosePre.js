@@ -39,17 +39,6 @@ $cre = cre = function (m, o, f) {
 }
 //it performs a find on a model, and returs results sorted by 'dt:-1'
 //date time from most recently stamped
-$recent = rec = function (model, criteria, func) { // **** making errors ******
-	func = F(func) ? func : function (err, data) {
-		func.j(data)
-	}
-	$m[model].find(criteria)
-			.sort({dt: -1})
-			.execFind(func)
-}
-$recent1 = rec1 = function (a, b, f) {
-	$m[a].findOne(b).sort({dt: -1}).execFind(f)
-}
 $f1 = f1 = function (m, o, f) {
 	if (!F(f)) {
 		f = function (err, data) {
@@ -140,17 +129,6 @@ cre = function (model, o, f) {
 }
 //it performs a find on a model, and returs results sorted by 'dt:-1'
 //date time from most recently stamped
-rec = function (model, criteria, func) { // **** making errors ******
-	func = F(func) ? func : function (err, data) {
-		func.j(data)
-	}
-	models[model].find(criteria)
-			.sort({dt: -1})
-			.execFind(func)
-}
-rec1 = function (a, b, f) {
-	models[a].findOne(b).sort({dt: -1}).execFind(f)
-}
 f1 = function (m, o, f) {
 	if (!F(f)) {
 		f = function (err, data) {
@@ -201,4 +179,314 @@ all = function (m, f) {
 //    qI=function(q){return  {u: q.I}}
 //pjd0=function(res){return function(err, data){res.json(data[0])}}
 //quc=function(q){return {u: q.u, c: q.b.c }}
-
+Ml = Mail = $m.mail
+$mail = function (to, from, txt) {
+	return {to: to, from: from, text: txt}
+}
+$post('/sendMail', function (q, p) {
+	Ml.cr($mail(q.b.to, q.un, q.b.text), _json(p))
+})
+$dtMl = function (datetime, text, from) {
+	return {datetime: datetime, text: text, from: from}
+}
+_val = function (val) {
+	return val.value
+}
+$a.G = $a.GET = function (url, fn) {
+	var $a = this
+	$a.get(url, $w.user, fn)
+}
+$a.PO = $a.POST = function (url, fn) {
+	this.po(url, $w.user, fn)
+}
+$a.DEL = function (url, fn) {
+	this.del(url, $w.user, fn)
+}
+_pFn = function (p, met) {
+	return function (z, da) {
+		p[met](da)
+	}
+}
+_json = function (p) {
+	return _pFn('json')
+}
+_send = function (p) {
+	return _pFn('send')
+}
+$find = function () {
+	var g = G(arguments)
+	$m[g.f].find.apply($m[g.f], g.r)
+}
+$findAll = function (m, fn) {
+	$find(m, {}, fn)
+}
+$findAllP = function (m, p) {
+	$findAll(m, _json(p))
+}
+_pm = function (q, pm) {
+	return q.params[pm]
+}
+_byUn = function (q) {
+	return {un: _pm(q, 'un')}
+}
+_findP = function (m, byOb) {
+	return function (q, p) {
+		$m[m].find(byOb, _json(p))
+	}
+}
+_fByUn = function (m) {
+	return function (q, p) {
+		$m[m].find(_byUn(q), _json(p))
+	}
+}
+$datURL = function (q) {
+	return {
+		uId: q.uId, dU: q.du
+	}
+}
+$cutout = function (q) {
+	return {
+		un: q.un,
+		d: q.body.d,
+		dats: q.body.dats,
+		data: q.body.d,
+		physicsData: q.body.dats
+	}
+}
+_back = function (p) {
+	p.redirect('back')
+}
+$mug = function (fn) {
+	$.get('/getMug', fn)
+}
+home = function () {
+	Y.render('HomePage')
+}
+guest = function () {
+	if (un == 'guest' || !un) {
+		return Y.render('GuestPage')  //renderGuestPage();
+	}  //usr=
+}
+appInit = function () {
+	$.getJSON('/loggedIn', function (un) {
+		$l('un: ' + un);
+		Y._userName = _un = un
+		notLoggedIn(un) ?
+				Y.render('GuestPage') : enterSite()
+		////////// guest(); getMug(); socks(); home()
+	})
+}
+getMug = function () {
+	$mug(function (mug) {
+		Y._userMug = _userMug = mug
+	})
+}
+enterSite = function () {
+	$mug(function (mug) {
+		Y._userMug = _userMug = mug
+	})
+	socks()
+	home()
+}
+socks = function () {
+	socket.emit('id', un)
+	socket.emit('joinRoom', _un)
+}
+goToGuestPage = function (p) {
+	p.send('guest')
+}
+notLoggedIn = function (un) {
+	return un == 'guest' || !un
+}
+isLoggedIn = function (q) {
+	return q.ss.un ? true : false
+}
+isAuthed = function (q) {
+	return q.loggedIn
+}
+unAuthed = function (q) {
+	return !isAuthed(q)
+}
+auth = function (q, p, n, successFn) {
+	unAuthed(q) ? goToGuestPage(p) : successFn(q, p, n)
+}
+loginSuccess = function (q, p, user) {
+	q.user = p.lc.user = user
+	q.un = p.lc.un = user.un
+	q.uId = p.lc.uId = user._id
+}
+$user = function (user) {
+	return {
+		id: user.id,
+		un: user.un,
+		mug: user.mug || 'no mug',
+		status: user.status || 'no status'
+	}
+}
+toUser = function (u) {
+	return {
+		id: u.id,
+		un: u.un, mug: u.mug || null,
+		status: u.status || 'no status'
+	}
+}
+$logOut = function (fn) {
+	$a.G('/logOut', function (q, p, n) {
+		$l('logging out')
+		fn(q, p, n)
+	})
+}
+User = $m.user
+_title = function (q) {
+	return {title: q.query.title}
+}
+$post = function (q) {
+	return {
+		un: q.un,
+		title: q.body.title,
+		content: q.body.content,
+		dataURL: q.body.dataURL
+	}
+}
+//files = pics 
+//cutouts  = images
+$picByUser = function (user, fn) {
+	$m.pic.find({u: user}, fn)
+}
+Cut = Cutout = $m.cutout
+$arr = function (fn) {
+	var arr = []
+	fn(arr)
+	return arr
+}
+$eachPush = function () {
+}
+Ur = User = $m.user
+Js = Json = function (p, da, fn) {
+	fn = fn || function (a) {
+		return a
+	}
+	if (da) {
+		p.json(fn(da))
+	}
+}
+$js = function (p, da) {
+	p.json(da)
+}
+p$ = $res = function (p) {
+	p.js = p.j = p.json
+	p.newUserSucc = function (q, ur) {
+		var p = p$(this)
+		// _.x(q.ss, {un: u.un,  loggedIn: true}).save(function () { p.json(u.un) })
+		//set session u=u.u (user name= user.username)
+		ss.un = user.un
+		//set session li=true (loggedIn=true)
+		ss.loggedIn = true
+		//save ss and send back a json obj of username -so a string?
+		//_.x(q.session, {un: u.un, loggedIn: true})
+		ss.sv(function () {
+			p.js(ur.un)
+		})
+	}
+	p.da = function (da, fn) {
+		fn = fn || function (a) {
+			return a
+		}
+		if (da) {
+			p.js(fn(da))
+		}
+	}
+	p.daFn = function (fn) {
+		var p = this
+		return function (z, da) {
+			p.da(da, fn)
+		}
+	}
+	return p
+}
+$get = function (url, fn) {
+	$a.g(url, qp(function (q, p, nx) {
+		fn(q, p, nx)
+	}, q, p, nx))
+}
+$post = function (url, fn) {
+	$a.po(url, qp(function (q, p, nx) {
+		fn(q, p, nx)
+	}, q, p, nx))
+}
+ss$ = $ss = function (ss) {
+	ss.sv = ss.save;
+	return ss
+}
+toUser = function (u) {
+	if (A(u)) {
+		return _.m(u, toUser)
+	}
+	return {
+		id: u.id,
+		un: u.username,
+		mug: u.mug || 'no mug',
+		status: u.status || 'no status'
+	}
+}
+q$ = function (q) {
+	q.auth = function () {
+		var q = this
+		q.loggedIn = isLoggedIn(q)
+		q.un = q.ss.un;
+		// =  p.lc.loggedIn
+		//q.un = q.un; p.lc.lI =q.lI = q.loggedIn
+		return q
+	}
+	q.un_ = function () {
+		return un_(this.pm.un)
+	}
+	q.pm = q.params
+	q.b = q.body
+	q.un = function () {
+		return {un: this.un}
+	}
+	q.parUr = q.parseUser = function (ur) {
+		var q = this
+		if (ur) {
+			q.user = p.lc.user = ur   //res.locals.U = req.U =
+			q.un = p.lc.un = ur.un//res.locals.u = req.u =
+			q.uId = p.lc.urId = ur._id //res.locals.I = req.I =
+		}
+	}
+	q.urs = q.users = function (fn) {
+		Ur.fi(q.b, fn)
+	} // q.users( wUrs )
+	return q
+}
+qp = qpn$ = function (fn, q, p, nx) {
+	q = q$(q)
+	q.ss = ss$(q.session)
+	p = p$(p)
+	nx = nx$(nx)
+	return function () {
+		fn(q, p, nx)
+	}
+}
+un_ = function (un) {
+	return {un: un}
+}
+nx$ = function (nx) {
+	nx.if = function (z) {
+		if (z) {
+			this(z)
+		}
+	}
+	return nx
+}
+Req = $m.req
+User = $m.user
+_toFr = function (to, fr) {
+	return {to: to, fr: fr}
+}
+$toFr = function (q) {
+	return __toFr(q.body.to, q.u)
+}
+Fl = $m.file
+_js = _json
+_se = _send

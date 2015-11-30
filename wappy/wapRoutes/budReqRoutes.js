@@ -1,8 +1,10 @@
-Req = $m.req
-User = $m.user
-_toFr = function (q) {
-	return {to: q.body.to, fr: q.u}
-}
+ 
+$a.PO('/sendRequest', function (q, p) {
+
+	Req.cr($toFr(q), p)
+})
+
+
 $a.PO('/acceptRequest',  function (q, p, n) {
 	(q.U.buds = q.U.buds || []).push(q.b.u)
 	f1('user', {u: q.b.u}, function (z, u) {
@@ -16,13 +18,6 @@ $a.PO('/acceptRequest',  function (q, p, n) {
 $a.G('/getRequests',   function (q, p, n) {
 	find('req', {to: q.u}, p)
 })
-
-
-$a.PO('/sendRequest', function (q, p) {
-	Req.create(_toFr(q), p)
-})
-
-
 
 
 $a.G('/buds',  function (q, p, nx) {

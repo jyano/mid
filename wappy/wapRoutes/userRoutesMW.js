@@ -1,102 +1,69 @@
-$a.g('/users', function (q, p) {
+ 
 
-/////////////. it gives me back {id, username, mug, status}
-	$m.user.find(q.body, function (z, users) {if (users) {
+$get('/un',  function (q, p) {
+	p.json( q.un )
+} ) //send json of 'my username'
+$get('/users',  function (q, p) {
+ // *** sends back all the users, but has to parse/filter them first // we only want an ob with THESE FOUR properties {id, username, mug, status} // (NOT all the actual properties on the ob instance)
+	Ur.fi( 	p.daFn(  toUser ) )
+} ) //p.da( toUser(da) )
+$get('/user/:un',  function (q, p) {
+	Ur.f1(q.un_(), p.daFn($user))
+	
+}) //	p.js(toUser(user))
+
+
+$post('/user', function (q, p, nx) {
+	
+	Ur.cr(q.b, function (z, u) {
+		if (z) { p.js('z'); nx(z) } 
 		
-		p.json(_.m(users, $user
-				/*
-				 function (u) {
-				 return {
-				 id: u.id, u: u.username, un: u.username, username: u.username,
-				 mug: u.mug || 'no mug', status: u.status || 'no status'
-				 }
-				 }
-				 */
-		  ))}})})
-$a.get('/user/:un', function (q, p) {
-	$m.user.findOne({un: q.params.un}, function (z, user) {
-		if (user) {
-			p.json($user(user))
-			//	p.json(toUser(user))
-		}
-	})
-})
-$a.G('/un', function (q, p) {
-	p.json(q.un)
-})
-$a.po('/user', function (q, p, n) {
-////////// for posting/creating a new user
-
-	$md.user.create(q.body, function (z, u) {
-		if (z) {
-			$l(z.code == 11000 ? '!!' : '!');
-			$d(z);
-			p.json('error');
-			n(z)
-		}
 		else {
-			_newUserSucc(q, p, user)
-			function _newUserSucc(q, p, user) {
-				
-				 
-				
-				
-				// _.x(q.ss, {un: u.un,  loggedIn: true}).save(function () { p.json(u.un) })
-				
-				
-				//set session u=u.u (user name= user.username)
-				q.ss.un = user.un
-				//set session li=true (loggedIn=true)
-				q.ss.loggedIn = true
-				//save session and send back a json obj of username -so a string? huh?
-				//_.extend(q.session, {username: u.username, loggedIn: true})
-				q.ss.save(function () {
-					p.json(user.un)
-				})
-			}
-		
+			p.newUserSucc(q, ur)
 		}
 	})
-	 
-})
-$a.del('/user', function (q, p) {
-////delete user  // does this('del') work like post or get (in terms of express)?
-	$m.user.remove(q.body, _json(p))
-})
-$w = $Mw = function (q, p, n) {
+	//$l(z.code == 11000 ? '!!' : '!');//$d(z);
+})//  for posting/creating a new user
+
+
+$a.de('/user', function (q, p) {
+	Ur.rm(q.b, _json(p))
+})////delete user  // does this('del') work like post or get (in terms of express)?
+
+
+$w = $Mw = function (q, p, nx) {
 // regular (pre-user) middleware
 	miniQP(q, p)
-	q.loggedIn = isLoggedIn(q) // =  p.lc.loggedIn
-	q.un = q.ss.un; //q.un = q.un; p.lc.lI =q.lI = q.loggedIn
-	n()
+	q.loggedIn = isLoggedIn(q) 
+	q.un = q.ss.un;
+	// =  p.lc.loggedIn
+	//q.un = q.un; p.lc.lI =q.lI = q.loggedIn
+	
+	nx()
+	
 }
-$Mw.user = function (q, p, nx) {
-	if (q.loggedIn) {
-		$l('.user middleware.. loggedIn?= ' + q.loggedIn)
-		//req.li ||//Midware.u =
-		$m.user.findOne({un: q.un}, function (z, user) {
-			if (z) {
-				next(z)
-			}
-			if (user) {
-				q.user = p.lc.user = user   //res.locals.U = req.U =
-				q.un = p.lc.un = user.un//res.locals.u = req.u =
-				q.uId = p.lc.urId = user._id //res.locals.I = req.I =
-			}
+
+ 
+
+$Mw.ur = $Mw.user =  qp(function (q, p, nx) {
+	if (q.lI || q.loggedIn ) {
+		Ur.f1(q.un(), function (z, ur) { // if (z) { nx(z) }
+			nx.if(z);
+			q.parUr(ur);
 			nx()
 		})
-	}
-	else {
-		$l('mw says NOT logged in :(')
-		p.send('guest');
-		return
-	}
+		
+		
+	}	//$l('.user mw.. loggedIn?= ' + q.loggedIn) //req.li ||//Midware.u =
+	
+	else { p.se('guest'); return } //$l('mw says NOT logged in :(')
 	//auth(q, p, next, function (q, p, nx) {
 	//	$md.user.findOne({un: q.un},
 	//			function (z, user) {if (z) {next(z)} else if (user) {loginSuccess(q, p, user)}
 	//				nx()})})
 	//
-}
+})
+
 // 'user' middleware:
 // what can it do?
 // it can see is someone is 'authed'
@@ -107,3 +74,5 @@ $Mw.user = function (q, p, nx) {
 // $m.image.findOne({relPath:mP},function(z,d){if(!d){$l('-m')}else{$l('+m');
 // p.l.M=q.M=mug;p.l.mp=q.mp=q.M.relPath;p.l.mid=q.mid=q.M._id}n()})
 // if(!u){q.s.u=null;q.s.save(function(){p.r('guest')})}
+
+ 
