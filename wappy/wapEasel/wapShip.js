@@ -12,7 +12,7 @@ SHIP = function () {
 		}
 		return d
 	}
-	ship = function (stage) {
+	ship = function (st) {
 		t = new cjs.Shape().XY(100).rY(20).vX(1).vY(1)
 		t.graphics.f('o').s('z').mt(0, 0).lt(0, 40).lt(80, 20).lt(0, 0)
 		kD('d', function () {
@@ -21,9 +21,9 @@ SHIP = function () {
 		kD('u', function () {
 			t.rt(6, '-')
 		})
-		if (stage) {
-			stage.A(t)
-			stage.on('stagemousedown', function (event) {
+		if (st) {
+			st.A(t)
+			st.on('stmousedown', function (event) {
 				e = event
 				t.vX((e.rawX - t.x) / 100, '+')
 				t.vY((e.rawY - t.y) / 100, '+')
@@ -43,32 +43,32 @@ SHIP = function () {
 	}
 	PL = 1;
 	aA = []
-	div = $.div('yellow').pad(10)
+	div = $.d('y').pad(10)
 	div.A(
 			$.h1('controls'),
-			b1 = $.button('start', function () {
+			b1 = $.bt('start', function () {
 				PL = 1;
 				b1.hd();
 				b2.sh()
 			}),
-			b2 = $.button('stop', function () {
+			b2 = $.bt('stop', function () {
 				PL = 0;
 				b2.hd();
 				b1.sh()
 			}).hide(),
-			$.button('sgun', function () {
+			$.bt('sgun', function () {
 				sgun(guy)
 			})
 	)
 	boot = $.boot()
-	stage = createjs.stage(800, 600).tick()
+	st = createjs.st(800, 600).tick()
 	boot.A(
 			div,
-			stage.canvas
+			st.canvas
 	)
-	guy = ship(stage)
+	guy = ship(st)
 	// kD('s',function(){ $l('bang')})
 	// _.times(100,function(){var a=ast();a.a();a.p()})
-	// stage.tick(function(){ if(PL){ _.each(aA,function(a){  a.u()  })}} )
+	// st.tick(function(){ if(PL){ _.each(aA,function(a){  a.u()  })}} )
 	sgun(guy)
 }

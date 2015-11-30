@@ -3,10 +3,14 @@ Pf = Profile = $m.profile
 
 //get your profile
 $a.PO('/getMyProfile',   function (q,p) {
+	
 	var un = q.b.un || 'a'
 	
 	Pf.f1({un: q.un}, _json(p)	)
+	
 })
+
+
 
 
 $a.PO('/getProfile', function (q,p) {
@@ -18,9 +22,19 @@ $a.PO('/getProfile', function (q,p) {
  
 
 //get someones profile
-$a.get('/profile/:un', function (q,p) {//$l('/profile/:un'); $l('req.params.un: ' + req.params.un)
-	Pf.f1({un:  q.pm.un}, _json(p))
+ 
+$get('/profile/:un', function (q,p) {//$l('/profile/:un'); $l('req.params.un: ' + req.params.un)
+	
+	p.f1($m.Profile, {un: q.pm.un} )
+	
+	
 })
+
+
+
+
+
+
 //update your profile
 $a.PO('/myprofile', function (q, p) {
 	Pf.f1(

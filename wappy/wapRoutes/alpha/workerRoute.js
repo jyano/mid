@@ -1,3 +1,4 @@
-$a.get('/wap/workerFile', function (req, res) {
-	res.send('/workerFile.js')
+
+$a.g('/wap/workerFile', function (q,p) {
+	p.send('/workerFile.js')
 })

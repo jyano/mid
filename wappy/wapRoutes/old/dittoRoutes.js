@@ -1,30 +1,30 @@
 //get your profile
-$a.post('/getMyProfile', $w.user, function (req, res) {
-	Profile.findOne({username: req.username},
-			function (err, data) {
-				res.json(data)
-			})
-})
+
+
+$a.PO('/getMyProfile',  function (q, p) {p.f1({un: q.un})})
+
+
+
+
+
 //update your profile
-$a.post('/myprofile', $w.user, function (req, res) {
-	Profile.findOne(
-			{username: req.username},
-			function (err, profile) {
-				if (!profile) {
-					req.body.username = req.username
-					Profile.create(
-							req.body, function () {
-								res.send('created!')
-							})
-				}
-				else {
-					Profile.update({username: req.username},
-							req.body, function () {
-								res.send('updated!')
-							})
-				}
-			})
+$a.PO('/myprofile',  function (q,p) {
+	Pf.f1({un: q.un}, function (z, pf) {
+				
+				
+		if (!pf) {
+			q.b.un = q.un
+			Pf.cr(q.b, function () {p.se('created!')})}
+		
+		else {Pf.upd({un: q.un}, q.b, function () {
+			p.se('updated!')})}})
+								
 })
+
+
+
+
+
 //get someones profile
 $a.get('/profile/:username', function (req, res) {
 	$l('/profile/:username')
@@ -33,6 +33,18 @@ $a.get('/profile/:username', function (req, res) {
 		res.json(profile)
 	})
 })
+
+
+
+
+
+
+
+
+
+
+
+
 $a.post('/getProfile', $w.user,
 		function (req, res) {
 			$l('getProfile')
@@ -46,40 +58,62 @@ $a.post('/getProfile', $w.user,
 						// res.json(profile)
 					})
 		})
-$a.post('/updateProfile',
-		$w.user, function (req, res) {
-			models.profile.findOneAndUpdate(
-					{username: req.body.username},
-					req.body.profile
-			)
-		})
-$a.post('/newProfile', $w.user,
-		function (req, res) {
-			Profile.create(
-					req.body.profile)
-		})
+		
+		
+		
+		
+		
+		
+		
+$a.PO('/newPf', function (q, p) {  Pf.cr(  q.b.pf  )   })
+
+
+		
+$a.PO('/updPf', function ( q, p) {
+	
+	var un = q.B.un
+	
+	var pf = q.B.pf
+	
+	
+	Pf.f1Upd({un: un}, pf)
+	
+	
+	
+})
+	
+			
+		
+		
+		
 //////
 ///
 ////
 ////
 //create new status
-$a.post('/status', $w.user, function (req, res) {
-	req.user.status = req.body.text
-	req.user.save(function () {
+$a.post('/status', $w.user, function ( q ) {
+ 
+	var ur = q.ur
+	
+	ur.status =  q.B.text
+	 
+	ur.sv(function () {
 		return 'saved!'
 	})
+	
+	
 })
  
+ 
+ 
+ 
 //send request from User to sp. user
-$a.post('/sendRequest', $w.user, function (req, res) {
-	models.req.create({
-				to: req.body.to,
-				fr: req.u
-			},
-			res
-	)
+$a.PO('/sendRequest',   function (q,p) {
+	$m.req.cr ({to: q.body.to, fr: q.u}, p)
 })
-$a.post('/acceptRequest', $w.user, function (q, p, n) {
+
+
+$a.PO('/acceptRequest',   function (q, p, n) {
 	(q.U.buds = q.U.buds || []).push(q.b.u)
 	f1('user', {u: q.b.u}, function (z, u) {
 		(u.buds || []).push(q.u)
@@ -87,17 +121,17 @@ $a.post('/acceptRequest', $w.user, function (q, p, n) {
 	})
 	q.U.save()
 })
-$a.get('/getRequests', $w.user, function (q, p, n) {
+$a.G('/getRequests',   function (q, p, n) {
 	find('req', {to: q.u}, p)
 })
-$a.get('/buds', $w.user, function (req, res, next) {
+$a.G('/buds', function (req, res, next) {
 	all('user', function (err, u) {
 		res.j(_.filter(u, function (u) {
 			return _.contains(req.U.buds, u.u)
 		}))
 	})
 })
-$a.post('/buds', $w.user, function (req, res) {
+$a.PO('/buds',   function (req, res) {
 	$m.user.findOne(req.body,
 			function (err, uu) {
 				$l(uu.u)

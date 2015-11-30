@@ -2,32 +2,32 @@ PROFILE=function(){
 
     $.boot(
 
-        $.h1('you got a profile?'),
+        $.h1('you got a pf?'),
 
-        $.div().id('content'),
+        $.d().id('content'),
 
        f = $.form().C('r').WH(400).A(
-            $.div().A(
-                $.label('about me'),
-                $.textarea().id('aboutMe')),
-            $.div().A(
-                $.label('i enjoy'),
-                $.input().id('iEnjoy')),
-            $.div().A(
-                $.label('i seek'),
-                $.input().id('iSeek')),
+            $.d().A(
+                $.lb('about me'),
+                $.ta().id('aboutMe')),
+            $.d().A(
+                $.lb('i enjoy'),
+                $.ip().id('iEnjoy')),
+            $.d().A(
+                $.lb('i seek'),
+                $.ip().id('iSeek')),
 
-           $.submit('save profile'),
-
-
+           $.sbm('save pf'),
 
 
-           $.button('undo', function(){
+
+
+           $.bt('undo', function(){
         if(p){
 
-            $('#aboutMe').val(p.aboutMe )
-            $('#iEnjoy').val(p.iEnjoy )
-            $('#iSeek').val(p.iSeek )
+            $('#aboutMe').v(p.aboutMe )
+            $('#iEnjoy').v(p.iEnjoy )
+            $('#iSeek').v(p.iSeek )
 
         }
 
@@ -35,40 +35,39 @@ PROFILE=function(){
 
 
 
-           $.button('clearr', function(){
-               $('input').val('')
-               $('#iEnjoy').val('')
-               $('#iSeek').val('' )
+           $.bt('clearr', function(){
+               $('input').v('')
+               $('#iEnjoy').v('')
+               $('#iSeek').v('' )
            })
 
        ))
 
-    $.post('/getMyProfile', function(profile){
-            p = profile
-
-            if(p){
-
-                $('#aboutMe').val(p.aboutMe )
-                $('#iEnjoy').val(p.iEnjoy )
-                $('#iSeek').val(p.iSeek )
+    $.po('/getMyProfile', function(pf){
+            
+            if(pf){
+                $('#aboutMe').v(pf.aboutMe )
+                $('#iEnjoy').v(pf.iEnjoy )
+                $('#iSeek').v(pf.iSeek )
 
             }
 
         })
 
-    $('form').submit(function(e){e.preventDefault()
+    $('form').sbm(function(e){$.pD(e)
+  
 
         var data = {
-            aboutMe: $('#aboutMe').val(),
-            iEnjoy: $('#iEnjoy').val(),
-            iSeek: $('#iSeek').val()
+            aboutMe: $('#aboutMe').v(),
+            iEnjoy: $('#iEnjoy').v(),
+            iSeek: $('#iSeek').v()
         }
 
-        $.post('/myprofile', data, function(){
+        $.po('/myPf', data, function(){
 
             $.post('/getMyProfile',
-                function(profile){
-                    p = profile})
+                function(pf){
+                    p = pf})
 
                     $l('form data submited..')
 
@@ -83,15 +82,16 @@ PROFILE=function(){
 
 
 
-$.profile = function(username, theDiv){  //=makeProfile = prof
-    // if(profile.aboutMe){div.A(answer('aboutMe', profile.aboutMe)) } if(profile.iEnjoy){div.A(answer('iEnjoy', profile.iEnjoy)) } if(profile.iSeek){div.A(answer('iSeek', profile.iSeek) )}
-    answer = function(question, answer){
-        return $.div().A(
-            $.h3(question),
-            $.h4(answer))}
-    username = username || 'a'
-
-    $.get('/profile/' + username,  function(data){
+$.pf= $.pf = function(un, theDiv){  //=makeProfile = prof
+    // if(pf.aboutMe){div.A(answer('aboutMe', pf.aboutMe)) } if(pf.iEnjoy){div.A(answer('iEnjoy', pf.iEnjoy)) } if(pf.iSeek){div.A(answer('iSeek', pf.iSeek) )}
+    answer = function(ques , answ){
+        return $.d().A(
+            $.h3(ques ),
+            $.h4(answ))}
+    un = un || 'a'
+	
+	
+    $.get('/pf/' + un,  function(data){
 
         d = data
 
@@ -124,17 +124,10 @@ $.profile = function(username, theDiv){  //=makeProfile = prof
 }
 
 
-
-
-
-
-
-showStatus =stat=function(user, theDiv){
-
-    withStatus(user,
-
-        function(status){
-            theDiv($.h3('STATUS: '+ status))
+ 
+showStatus =stat=function(ur, dv){
+	$wSts(ur, function(sts){
+            dv($.h3('STATUS: '+ sts))
         })
 
 }
@@ -145,21 +138,21 @@ STATUS=function(){
 
 
 
-    $.format()
+    $.fm()
 
 
     s1.A(
 
-        $.h1('status'),
+        $.h1('sts'),
 
-        $.input().id('statusInput'),
+        $.ip().id('stsInput'),
 
-        $.button('update', function(){
-            status = $('#statusInput').val()
+        $.bt('update', function(){
+            sts = $('#stsInput').v()
 
-            $.post('/status', {text: status}, function(){
+            $.post('/sts', {text: sts}, function(){
 
-                $l('status updated')
+                $l('sts updated')
             })
         })
 

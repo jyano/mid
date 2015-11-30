@@ -23,6 +23,7 @@ $a.PO('/newObj',   function (q, p, n) {
 				// })
 			})
 })
+
 $a.G('/objects',   function (q, p, n) {
 	MC.connect(mUrl,
 			function (z, db) {

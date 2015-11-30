@@ -1,4 +1,4 @@
-  
+
 $a.del('/pic', function (q, p) {
 	$l('remove a pic')//remove a pic
 	$md.pic.remove(q.body, function (z, d) {
@@ -102,3 +102,6 @@ $Mw.pic = $Mw.p = function (q, p, nx) {
 				nx()
 			})
 }
+$post('/myPics', function (q, p) {
+	Fl.fi({user: q.userId}, _js(p))
+})

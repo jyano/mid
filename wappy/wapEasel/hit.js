@@ -41,32 +41,44 @@ HIT = function () {
 		})
 	})
 }
-//beautiful demo i stole! :)
+randomHSL = function () {
+	return cjs.Graphics.getHSL(M.r() * 360, 100, 50)
+}
+
 HITCIRCLES = function () {
-	z()
-	stage = cjs.stage(1000).A().drag() // look no .tick() necesary!! look below :)
-	container = new createjs.Container()
-	stage.A(container.XY(150))
-	_.times(25, function () {
-		var shape = new createjs.Shape()
-		shape.graphics.f(randomHSL()).dc(0, 0, 30)
-		holder.A(shape.XY(randomLocation(), randomLocation()))
+	//beautiful demo i stole! :)
+
+	$St().drag() // look no .tick() necesary!! look below :)
+	
+	ct=  $Ct().a2(st).XY(150)
+	 
+	_.t(25, function () {
+		
+		var sh  = $Sh(), gx = sh.graphics
+		
+		gx.f(randomHSL()).dc(0, 0, 30)
+		
+		holder.A(sh.XY(randomLocation(), randomLocation()))
+	
 	})
-	cjs.Ticker.on("tick", tick)
+	
+	$t(tick)
+	
 	function randomLocation() {
-		return Math.random() * 300 - 150
+		return M.r() * 300 - 150
 	}
 	
-	function randomHSL() {
-		return cjs.Graphics.getHSL(Math.random() * 360, 100, 50)
-	}
-	
+
 	function tick(event) {
-		holder.rotation += 3
+		holder.rt( 3,'+')
+		
 		var numChildren = holder.getNumChildren()
-		_.each(holder.children, function (child) {
-			child.alpha = child.underMouse() ? 1 : 0.1
+		_.e(holder.children, function (ch) {
+			
+			ch.al( child.underMouse() ? 1 : 0.1 )
+			
 		})
+		
 		/*
 		 for(var i = 0; i < numChildren; i++){  //for each child
 		
@@ -77,7 +89,8 @@ HITCIRCLES = function () {
 		 child.alpha = 1}
 		 }
 		 */
-		stage.update(event)
+		 
+		st.u(event)
 	}
 }
 

@@ -13,31 +13,27 @@ $a.get('/messages', function (q, p, n) {
  })
  */
 	var topic = q.params['topic']
-	console.log(
-			topic
-	)
+//	console.log(topic)
 	$m['Message'].find({},
 			function (err, messages) {
 				if (err) {
-					console.log(err)
+					//console.log(err)
 				}
-				console.log(messages.length)
+				//console.log(messages.length)
 				p.j(messages)
 			})
 })
  
 
 $a.get('/topics/:topic', function (q, p, n) {
+
 	var topic = q.params['topic']
-	console.log(
-			topic
-	)
+	//console.log(topic)
 	$m['Message'].find({topic: topic},
 			function (err, messages) {
-				if (err) {
-					console.log(err)
+				if (err) {//console.log(err)
 				}
-				console.log(messages.length)
+				//console.log(messages.length)
 				p.j(messages)
 			})
 })
