@@ -116,6 +116,7 @@ BADBALL = function () {
 		}
 	})
 }//D+ needs PLAY
+
 CHICKBALLS = function () {
 	W(1200, 1200)._(function () {
 		_.t(14, function () {
@@ -124,6 +125,8 @@ CHICKBALLS = function () {
 		})
 	})
 }
+
+
 HAIRBALLS = function () {
 	W(400, 400)._(function () {
 		
