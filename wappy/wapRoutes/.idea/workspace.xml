@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e92317b3-7fdc-459d-9a0b-c3a295a5a5e1" name="Default" comment="" />
+    <ignored path="wapRoutes.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="wapRoutes" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="userRoutesMW.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/userRoutesMW.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#31#381#0" expanded="true" />
+                <element signature="e#1543#1705#0" expanded="true" />
+                <element signature="e#1737#2374#0" expanded="true" />
+                <element signature="e#1886#2116#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="statusPostsRoutes.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/statusPostsRoutes.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+              <folding>
+                <element signature="e#34#124#0" expanded="true" />
+                <element signature="e#82#121#0" expanded="true" />
+                <element signature="e#159#240#0" expanded="true" />
+                <element signature="e#215#237#0" expanded="true" />
+                <element signature="e#281#375#0" expanded="true" />
+                <element signature="e#346#372#0" expanded="true" />
+                <element signature="e#749#841#0" expanded="true" />
+                <element signature="e#884#942#0" expanded="true" />
+                <element signature="n#!!block;n#blog#0" expanded="true" />
+                <element signature="e#2020#2177#0" expanded="true" />
+                <element signature="e#2054#2172#0" expanded="true" />
+                <element signature="e#2089#2149#0" expanded="true" />
+                <element signature="e#2219#2417#0" expanded="true" />
+                <element signature="e#2390#2412#0" expanded="true" />
+                <element signature="e#2465#2560#0" expanded="true" />
+                <element signature="e#2518#2555#0" expanded="true" />
+                <element signature="e#2605#2710#0" expanded="true" />
+                <element signature="e#2668#2705#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="budReqRoutes.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/budReqRoutes.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cutoutRoutes.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cutoutRoutes.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#145#254#0" expanded="true" />
+                <element signature="e#447#486#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routesPre.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routesPre.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="169" column="1" selection-start-line="169" selection-start-column="1" selection-end-line="169" selection-end-column="1" />
+              <folding>
+                <element signature="e#1217#1274#0" expanded="false" />
+                <element signature="e#2277#2389#0" expanded="true" />
+                <element signature="e#2412#2506#0" expanded="true" />
+                <element signature="e#2531#2610#0" expanded="true" />
+                <element signature="e#2648#2682#0" expanded="true" />
+                <element signature="e#2704#2808#0" expanded="true" />
+                <element signature="e#2714#2806#0" expanded="true" />
+                <element signature="e#2878#2909#0" expanded="true" />
+                <element signature="e#2931#2969#0" expanded="true" />
+                <element signature="e#2994#2997#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="goosePre.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/goosePre.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.56632656">
+              <caret line="204" column="0" selection-start-line="204" selection-start-column="0" selection-end-line="204" selection-end-column="0" />
+              <folding>
+                <element signature="e#631#648#0" expanded="false" />
+                <element signature="e#1123#1176#0" expanded="false" />
+                <element signature="e#1496#1512#0" expanded="false" />
+                <element signature="e#1525#1542#0" expanded="false" />
+                <element signature="e#1696#1749#0" expanded="false" />
+                <element signature="e#1767#1778#0" expanded="false" />
+                <element signature="e#2387#2404#0" expanded="false" />
+                <element signature="e#2748#2765#0" expanded="false" />
+                <element signature="e#2796#2865#0" expanded="false" />
+                <element signature="e#3228#3281#0" expanded="false" />
+                <element signature="e#3568#3584#0" expanded="false" />
+                <element signature="e#3597#3614#0" expanded="false" />
+                <element signature="e#3753#3806#0" expanded="false" />
+                <element signature="e#3828#3839#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mugRoutes.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mugRoutes.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="59" column="2" selection-start-line="59" selection-start-column="2" selection-end-line="59" selection-end-column="2" />
+              <folding>
+                <element signature="e#36#107#0" expanded="true" />
+                <element signature="e#639#787#0" expanded="true" />
+                <element signature="e#710#784#0" expanded="true" />
+                <element signature="e#828#1033#0" expanded="true" />
+                <element signature="e#956#1030#0" expanded="true" />
+                <element signature="e#1063#1094#0" expanded="true" />
+                <element signature="e#1123#1269#0" expanded="true" />
+                <element signature="e#1240#1266#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profileRoutes.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/profileRoutes.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routesBase.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routesBase.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="41" column="2" selection-start-line="41" selection-start-column="2" selection-end-line="41" selection-end-column="2" />
+              <folding>
+                <element signature="e#173#200#0" expanded="false" />
+                <element signature="e#273#301#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mailRoutes.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mailRoutes.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+              <folding>
+                <element signature="e#400#460#0" expanded="false" />
+                <element signature="e#498#558#0" expanded="false" />
+                <element signature="e#1608#1713#0" expanded="false" />
+                <element signature="e#1754#1852#0" expanded="false" />
+                <element signature="e#1917#1924#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/statRoutes.js" />
+        <option value="$PROJECT_DIR$/postsRoutes.js" />
+        <option value="$PROJECT_DIR$/runRenWap.js" />
+        <option value="$PROJECT_DIR$/routesBase.js" />
+        <option value="$PROJECT_DIR$/routesPre.js" />
+        <option value="$PROJECT_DIR$/goosePre.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="NamedScopeManager">
+    <order />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="84" />
+    <option name="y" value="22" />
+    <option name="width" value="1592" />
+    <option name="height" value="1124" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wapRoutes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wapRoutes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wapRoutes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/old" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/later" />
+      <recent name="$PROJECT_DIR$/cutout" />
+      <recent name="$PROJECT_DIR$/blog" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="ToolWindowManager">
+    <frame x="84" y="22" width="1592" height="1124" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24188416" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24967149" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+    </layout-to-restore>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/statusPostsRoutes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+          <folding>
+            <element signature="e#34#124#0" expanded="true" />
+            <element signature="e#82#121#0" expanded="true" />
+            <element signature="e#159#240#0" expanded="true" />
+            <element signature="e#215#237#0" expanded="true" />
+            <element signature="e#281#375#0" expanded="true" />
+            <element signature="e#346#372#0" expanded="true" />
+            <element signature="e#749#841#0" expanded="true" />
+            <element signature="e#884#942#0" expanded="true" />
+            <element signature="n#!!block;n#blog#0" expanded="true" />
+            <element signature="e#2020#2177#0" expanded="true" />
+            <element signature="e#2054#2172#0" expanded="true" />
+            <element signature="e#2089#2149#0" expanded="true" />
+            <element signature="e#2219#2417#0" expanded="true" />
+            <element signature="e#2390#2412#0" expanded="true" />
+            <element signature="e#2465#2560#0" expanded="true" />
+            <element signature="e#2518#2555#0" expanded="true" />
+            <element signature="e#2605#2710#0" expanded="true" />
+            <element signature="e#2668#2705#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bookRoutesMW.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#25#1617#0" expanded="true" />
+            <element signature="n#!!block;n#N$#0" expanded="true" />
+            <element signature="n#!!block;n#bookByUser#0" expanded="true" />
+            <element signature="n#!!block;n#$findOneBook#0" expanded="true" />
+            <element signature="e#6943#7057#0" expanded="true" />
+            <element signature="e#6980#7054#0" expanded="true" />
+            <element signature="e#7106#7304#0" expanded="true" />
+            <element signature="e#7163#7301#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userRoutesMW.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#31#381#0" expanded="true" />
+            <element signature="e#1543#1705#0" expanded="true" />
+            <element signature="e#1737#2374#0" expanded="true" />
+            <element signature="e#1886#2116#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routesBase.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="2" selection-start-line="41" selection-start-column="2" selection-end-line="41" selection-end-column="2" />
+          <folding>
+            <element signature="e#173#200#0" expanded="false" />
+            <element signature="e#273#301#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routesPre.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="169" column="1" selection-start-line="169" selection-start-column="1" selection-end-line="169" selection-end-column="1" />
+          <folding>
+            <element signature="e#1217#1274#0" expanded="false" />
+            <element signature="e#2277#2389#0" expanded="true" />
+            <element signature="e#2412#2506#0" expanded="true" />
+            <element signature="e#2531#2610#0" expanded="true" />
+            <element signature="e#2648#2682#0" expanded="true" />
+            <element signature="e#2704#2808#0" expanded="true" />
+            <element signature="e#2714#2806#0" expanded="true" />
+            <element signature="e#2878#2909#0" expanded="true" />
+            <element signature="e#2931#2969#0" expanded="true" />
+            <element signature="e#2994#2997#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goosePre.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.56632656">
+          <caret line="204" column="0" selection-start-line="204" selection-start-column="0" selection-end-line="204" selection-end-column="0" />
+          <folding>
+            <element signature="e#631#648#0" expanded="false" />
+            <element signature="e#1123#1176#0" expanded="false" />
+            <element signature="e#1496#1512#0" expanded="false" />
+            <element signature="e#1525#1542#0" expanded="false" />
+            <element signature="e#1696#1749#0" expanded="false" />
+            <element signature="e#1767#1778#0" expanded="false" />
+            <element signature="e#2387#2404#0" expanded="false" />
+            <element signature="e#2748#2765#0" expanded="false" />
+            <element signature="e#2796#2865#0" expanded="false" />
+            <element signature="e#3228#3281#0" expanded="false" />
+            <element signature="e#3568#3584#0" expanded="false" />
+            <element signature="e#3597#3614#0" expanded="false" />
+            <element signature="e#3753#3806#0" expanded="false" />
+            <element signature="e#3828#3839#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

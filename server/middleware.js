@@ -17,41 +17,12 @@ limit:'50mb'
 $a.use($bP.json({limit:'50mb'}))
 
  
-$w = $Mw = function (q, p, n) {
-
-    q.ss = q.session; p.lc = p.locals
-    q.lI = q.loggedIn = p.lc.lI = p.lc.loggedIn = q.ss.username ? true : false
-    q.un = q.username = q.ss.username; n()
-
-}
-
-$Mw.user = function (q, p, n) {
-	$l('.user middleware.. loggedIn?= '+q.loggedIn)
-	
-	if (q.loggedIn) {
-        $md.user.findOne({
-            username: q.username}, function (z, u) {
-            if (z) {n(z)}
-            else if (u) {q.user = p.locals.user = u
-                
-                q.username = p.locals.username = u.username
-                
-                q.userId = p.locals.userId = u._id}; n() 
-                
-                })
-    }
-    else {
-		p.json('guest')
-    }
-
-}
-
-$a.use($Mw)
-old=function(){
-
+ 
+  
     MW.pamPr=function(q,p,n){l('lU');l(modl,'modl');p.l.p=q.p;p.l.pam=q.p['pam'];
         m[modl].findOne({name:q.pam},function(Z,doc){z(Z);if(!doc){l('!doc');q.l[modl]=q[modl]=null;n()}else{q.l[modl]=q[modl]=doc;}n();});n();}
-    MW.setPage=function(q,p,n){li('setPage'); page=q.path;if(q.s.cP==page){} else if (q.s.cP === undefined){cP= q.s.cP='root';} else {lP= q.s.lP= q.s.cP;cP= q.s.cP=page;  //p.l.cP = S.cP  ; p.l.lP = S.lP ;
+    
+MW.setPage=function(q,p,n){li('setPage'); page=q.path;if(q.s.cP==page){} else if (q.s.cP === undefined){cP= q.s.cP='root';} else {lP= q.s.lP= q.s.cP;cP= q.s.cP=page;  //p.l.cP = S.cP  ; p.l.lP = S.lP ;
         l('change recognized..');l(cP,'cP');l(lP,'lP');l(q.s.cP,'q.s.cP');l(q.s.lP,'q.s.lP');  }n();}
     sess = function(s){
         s.s = s.save
@@ -201,96 +172,31 @@ old=function(){
 
     }
 
-    Midware.Books =   Midware.B =function(req, res, next){
-
-        Book.find({
-
-                user: req.I
-            },
-
-            function(err,books){
-                if(err){next(err)};
-                if(!books){'no book!'}
-                res.locals.books = books
-                next()
-            })
-
-    }
-
-    Midware.book =  Midware.book =function(req, res,next){
-
-
-
-        models.book.findOne({
-
-                u: req.I,
-
-                title: req.p.t
-            },
-
-
-            function(err,book){ if(err){next(err)}
-
-                res.locals.book = book
-
-                if(req.params.n){
-
-                    var c = res.locals.n = book.c[n]
-                }
-
-                if(res.params.h){
-                    res.locals.h = c[n][h]
-                }
-
-                next()
-
-            })
-    }
-
-
+   
 
     $a.g('/render/:page', function (q, p) {p.render(q.params.page)})
-    function picsMw() {
-        $Mw.Pics = $Mw.P = function (q, p, n) {
-
-
-            $m.pic.find(
-                {u: q.I},
-
-
-                function (z, pics) {
-
-                    var array = []
-
-                    _.each(
-                        pics,
-
-                        function (pic) {
-                            array.push(
-                                _S(pic._id) + pic.e
-                            )  // $l(    )
-
-
-                        })
-
-                    p.locals.I = array
-                    n()
-                })
-        }
-        $Mw.pic = $Mw.p = function (q, p, n) {
-
-            $Md.pic.findById(q.params.p,
-
-                function (z, i) {
-                    if (z) {
-                        n(z)
-                    }
-                    p.locals.i = '/' + i._id
-                    q.i = i
-                    n()
-                })
-
-
-        }
-    }
+var Midware = function (req, res, next) {
+	
+	
+	
+	//   p.l  = p.locals
+	//  p.r  = p.render
+	// p.s  = p.send
+	//  p.j= p.json
+	//   p.d  = p.redirect
+	// q.b  = q.body
+	//q.f  = q.files
+	//   q.n  = q.flash
+	//   q.s  = q.session
+	//q.q= q.query
+	// q.p= function(a){return q.params[a]}
+	//q.pm= q.params
+	//q.p= q.params
+	//checks session to see if user is logged in
+	res.locals.loggedIn = req.loggedIn = (req.session.username) ? true : false   //=  res.locals.li=  req.li
+	req.username = req.session.username
+	// $l('MAIN middleware says req.username = ' + req.username)
+	next()
 }
+
+ 

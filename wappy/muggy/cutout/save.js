@@ -1,4 +1,6 @@
-n = 0
-o = {}
-f = function () {
+sv = function (x, func) {
+	$.post('/img', {
+		d: xx(C(x)).u(),
+		dats: x.dats
+	}, func)
 }

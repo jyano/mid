@@ -395,9 +395,6 @@ all=function(s,func){
         function(m){func(qq(m))})
 }
 
-
-
-
 //fetches JSON, and takes the 'n.pop' from list and passes those
 //in as messages?
 // on dblclick of .msg,// post its text to newMessage and run gMsgs?
@@ -416,9 +413,6 @@ getMessages = gMsgs=function rc(u,M){
         })}
 
 
-
-
-
 // get value from an input el OR two input els
 // if one, creates {c:?}
 // if two, creates {t:?,c:?}
@@ -429,17 +423,11 @@ dataValue=dV=function rc(title, content){
     if(title){data.t =data.title =data.topic=title.V()}
 
     return data}
-
-
- 
 joinSelf = function(){
 
     socket.emit( 'joinRoom',  _username )
 
 }
-
- 
-
 sendMessage =iMsg=function( toWho, message ){
 
 
@@ -450,15 +438,6 @@ sendMessage =iMsg=function( toWho, message ){
     socket.emit(  'sendMessage',  {  m: message,  t:toWho,  f:_username  }  )
 
 }
-
-
-
-
-
- 
-
-
-
 PrivateChatRoom  = function(roomName){
 
 
@@ -478,7 +457,6 @@ PrivateChatRoom  = function(roomName){
 
 
 }
- 
 $.dangMessage=function(msg){
 
 
@@ -511,8 +489,7 @@ $.$modalHeader=function(title){
         $.h4(title).K("modal-title").id("myModalLabel")
     )
 }
-
-    MOODAL=function(){z()
+MOODAL=function(){z()
 
         var header= $.$modalHeader('title')
 
