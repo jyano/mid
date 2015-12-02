@@ -1,14 +1,9 @@
-
-perfect(); needsFixin()
+  needsFixin()
 
 
 $Ms=function(ms){$.h1(ms)}
 
-
-function perfect(){
  
-}
-
 function needsFixin(){
         SHOWVW=NOROUTER = function () {$.x()
             V1 = $$V({
