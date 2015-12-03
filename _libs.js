@@ -41,7 +41,7 @@ graphics= [ 'gpc','clipper', 'canvas', 'canPath','gradients', 'cjs', 'create', '
 bone = ['bb','bbBase', 'eventProto','modelProto', 'collectionProto','viewProto',
  'bbColl', 'bbEvent', 'bbModel', 'bbRouter', 'bbHist', 'bbView',
 	'bbApps', 'bbAppWorks', 'bbClApps', 'bbTask', 'BfRoll', 
-	'direc', 'imgGal','notes','perfect','rtApps'
+	'direc', 'imgGal','notes','perfect','rtApps','bonePre'
 	
 	]
 

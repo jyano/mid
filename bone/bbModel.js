@@ -1,5 +1,7 @@
 Bb.M = Bb.Model;
-Bb.M.x = Bb.M.extend;
+ 
+Bb.M.x = Bb.M.extend
+md = Bb.Model.prototype;
 Bb.sEv(md)
 md.g = md.get;
 md.s = function (a, b, c) {
@@ -109,7 +111,6 @@ _M =  function (ob, a, b, c) {
 	ob = ob || {}
 	var g = G(arguments), Md;
 	Md = __M(ob, a, b, c)
-	
 	return function (ob, q) {
 		var md = new Md(ob || {})
 		if (q) {md.a2(q)}
@@ -121,15 +122,28 @@ $M = function (op, a, b, c) {
 	//if (U(op)) {return _$M()}
 	return _M(op, a, b, c)()
 }
-
+$Df = function (ob) {
+	return $M({df: ob})
+}
 M_ = $m = function (ob) {
-
 	var m = new Bb.Model(ob);
 	return m
 }
 
+md.j = function () {
+	return this.toJSON()
+}
+md.idAttribute = '_id'
 
-old = function () {
+md.V = function (Vw, ob) {
+	ob = ob || {}
+	ob.m = this
+	return Vw(ob)
+}
+md._V = function (ob) {
+	return this.V(_V(ob))
+}
+ 
 //md.o = function () {var g = G(arguments);this.on.apply(this, g)}
 	/*
 	 // escape   has     unset    clear – parse  pa P – clone  cl– toJSON
@@ -142,8 +156,8 @@ old = function () {
 //Note=Bb.M.e({initialize:function(){},author:function(){},coordinates:function(){},canEdit:function(ac){return true}})
 //PrivNote=Note.extend({canEdit:function(ac){return ac.owns(this)}})
 //Note2=Bb.M.e({set:function(atts,opts){Bb.M.prototype.set.apply(this,arguments)}})
-}
-function toAlrt() {
+ 
+ 
 	M$ = function (ob) {
 		alert('M$')
 		ob = O(ob) ? ob : {}
@@ -228,6 +242,5 @@ function toAlrt() {
 			return o
 		}
 	}
-}
-
+ 
  

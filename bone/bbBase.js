@@ -1,18 +1,6 @@
-Ap = {M: {}, C: {}, V: {}, T: {}}
-_.ex= $ext= ext=function(o){
-    o.e = o.extend
-    return o
-    // https://coderwall.com/p/xj81ua/a-better-way-of-extending-backbone-models-and-views
-}
-
-
-$Ms = function (ms) {
-	return $.d().fS(80).C($r()).col($r()).A(ms)
-};
-
-Bb =bb= Backbone
-Bb.U=Bb.Utility
-Bb.S=Bb.Sync
+Bb = bb = Backbone
+Bb.U = Bb.Utility
+Bb.S = Bb.Sync
 Bb.x = Bb.e = function (ob) {
 	ob = ob || {}
 	var Ev = Bb.E.extend(ob)
@@ -20,7 +8,6 @@ Bb.x = Bb.e = function (ob) {
 		return new Ev(a, b, c, d)
 	}
 }
-
 Bb.E = Bb.Ev = Bb.Events;
 Bb.E.x = Bb.E.extend
 Bb.E.b = Bb.E.bind;
@@ -105,15 +92,69 @@ Eve = function () {
 	return e
 }
 
- 
-rtr=ro = rt = Bb.Router.prototype;
-md = Bb.Model.prototype;
+rtr = ro = rt = Bb.Router.prototype;
+
 vw = Bb.View.prototype;
 cl = Bb.Collection.prototype
  
- 
-	//V$ = Bb.View
-	//M$$ = Cl$ = Bb.Collection
-	//M$ = Bb.Model
-	//E$ = Bb.Events
-	//R$ = Bb.Router
+function tpcsIndexHtml() {
+	$('body').A($('<div>').K('container').A(
+			$('<h1>').html('Blog App ' + Math.random()),
+			$table = $('<table>').K('table')
+	))
+	$thead = $('<thead>').A(
+			$('<tr>').A(
+					$('<th>').html('AuthoR'),
+					$('<th>').html('Title'), $('<th>').html('Url'), $('<th>').html('action')),
+			$('<tr>').A(
+					$('<td>').A($('<input>').K('form-control author-input')),
+					$('<td>').A($('<input>').K('form-control title-input')),
+					$('<td>').A($('<input>').K('form-control url-input')),
+					$('<td>').A($('<button>').html('Add').K('btn btn-primary add-blog'))))
+	$table.A(
+			$thead,
+			$tbody = $('<tbody>').K('blogs-list'))
+	$('.add-blog').on('click', function () {
+		blogs.create({
+			author: $('.author-input').v_(),
+			title: $('.title-input').v_(),
+			url: $('.url-input').v_()
+		})
+	})
+}
+function loadScripts() {
+	$l('tcps:loadScripts')
+//$('body').A(  $('<script src="/us.js">') ) //$('body').A(  $('<script src="/string.js">') )
+	$.j('/us.js');
+	$.j('/string.js')
+	$.j('/both.js') //$.j('/jq.js') //$.j('/jqSer.js')
+	$.j('/bs.js');
+	$.j('/frontOb.js');
+	$.j('/handy.js')
+	$.j('/sty.js');
+	$.j('/rules.js')
+	$.j('/flex.js');
+	$.j('/bb.js');
+	$.j('/bbCore.js')
+	$.j('/bbLs.js')
+}
+$RoApp = function (name, fn) {
+	startRtr = function (name) {
+		Bb.h.start({
+			pushState: true,
+			root: "/mvc/" + name + "/"
+		})
+	}
+	$Fn(name, function () {
+		Ap = {M: {}, V: {}, C: {}}
+		$l('name: ' + (name = _.tU(name)))
+		$rtHeader(name)
+		d = $.dI('ct').fS(40)
+		fn();
+		startRtr(name)
+	})
+}
+$rR = function (ob) {
+	return _$r({r: ob})
+}
+Ap = {M: {}, C: {}, V: {}, T: {}}
