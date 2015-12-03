@@ -17,7 +17,7 @@ dirs = [
 	'box',
 	'world',
 	'spriteSheet', 'tween',
-	'loader','graphics', '../art', 'bone', 'boneApps',  
+	'loader','graphics', '../art', 'bone', 'boneApps',  'bbBlog', 'bbColl', 'bbRouter', 'bbServer'
 ]
 web()
 
@@ -38,10 +38,10 @@ sty = ['superJQuerySty', 'rules', 'cssApps', 'flexApps']
 graphics= [ 'gpc','clipper', 'canvas', 'canPath','gradients', 'cjs', 'create', 'loader', 'canLoad', 'ticker' ]
 
  
-bone = ['bb','bbBase', 'eventProto','modelProto', 'collectionProto','viewProto',
- 'bbColl', 'bbEvent', 'bbModel', 'bbRouter', 'bbHist', 'bbView',
-	'bbApps', 'bbAppWorks', 'bbClApps', 'bbTask', 'BfRoll', 
-	'direc', 'imgGal','notes','perfect','rtApps','bonePre'
+bone = ['bb','bbBase', 'bbApps','template','USESC$AvailAndSweet',
+	'bbCollApps', 'book', 'items', 
+	  'sort', 'tweet',
+	'bbRouter', 'routePams' ,'rtApps' 
 	
 	]
 

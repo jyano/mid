@@ -17,67 +17,6 @@ FETCH = EVTSAVE = function () {
 			return '/dn/' + this.id || ''
 		}
 	})
-	bc = bostonCream = Don({n: 'Bos', cream: 1})
-	bc.s({sprink: 1}).S()  //save
-	bc = bostonCream = Don({n: 'Bos', cream: 1})
-	bc.s({sprink: 1}).S()  //save
-	Dons = $Cl({m: Don, url: "/dn"})
-	dons = Dons()
-	Dons = $Cl({m: Don, url: "/dn"})
-	dons = Dons()
-	dons.fetch() //f F
-	dons.at(0)  // a -> gets donuts by index.
-	dons.get(0) // g   -> gets donuts by id.
-	dons.each(function (d) { // e
-		$l(d.get("name"))
-	})
-	dons.select(function (d) {//sl
-		return d.get("name").length > 2
-	})// Select donuts with names longer than 2
-	dons.map(function (d) {//m
-		return d.get("name")
-	})
-	dons.fetch() //f F
-	dons.at(0)  // a -> gets donuts by index.
-	dons.get(0) // g   -> gets donuts by id.
-	dons.each(function (d) { // e
-		$l(d.get("name"))
-	})
-	dons.select(function (d) {//sl
-		return d.get("name").length > 2
-	})// Select donuts with names longer than 2
-	dons.map(function (d) {//m
-		return d.get("name")
-	})
-	Shop = $m({
-		i: function () {
-			this.dons = Dons()
-			this.dons.url = 'shops/' + this.id + "/dn"
-		}, df: {n: "z"}
-	})
-	Shop.oA(function (dn) { //on ? alert added?
-		alert("added " + dn.g('n'))
-	})
-	Shop = $m({
-		i: function () {
-			this.dons = Dons()
-			this.dons.url = 'shops/' + this.id + "/dn"
-		}, df: {n: "z"}
-	})
-	Shop.oA(function (dn) { //on ? alert added?
-		alert("added " + dn.g('n'))
-	})
-	lem = Shop.dons.A({
-		n: "Lem"
-	})
-	lem = Shop.dons.A({
-		n: "Lem"
-	})
-}
-FETCH = EVTSAVE = function () {
-	m = bb.M.x({
-		n: 'j'
-	})
 	Don = $M({
 		//defaults
 		d: {n: null, sprink: 0, cream: 0},
@@ -114,8 +53,64 @@ FETCH = EVTSAVE = function () {
 	lem = Shop.dons.A({
 		n: "Lem"
 	})
-	//////
+	bc = bostonCream = Don({n: 'Bos', cream: 1})
+	bc.s({sprink: 1}).S()  //save
+	bc = bostonCream = Don({n: 'Bos', cream: 1})
+	bc.s({sprink: 1}).S()  //save
+	Dons = $Cl({m: Don, url: "/dn"})
+	dons = Dons()
+	Dons = $Cl({m: Don, url: "/dn"})
+	dons = Dons()
+	dons.fetch() //f F
+	dons.at(0)  // a -> gets donuts by index.
+	dons.get(0) // g   -> gets donuts by id.
+	dons.each(function (d) { // e
+		$l(d.get("name"))
+	})
+	dons.select(function (d) {//sl
+		return d.get("name").length > 2
+	})// Select donuts with names longer than 2
+	dons.map(function (d) {//m
+		return d.get("name")
+	})
+	dons.fetch() //f F
+	dons.at(0)  // a -> gets donuts by index.
+	dons.get(0) // g   -> gets donuts by id.
+	dons.each(function (d) { // e
+		$l(d.get("name"))
+	})
+	dons.select(function (d) {//sl
+		return d.get("name").length > 2
+	})// Select donuts with names longer than 2
+	dons.map(function (d) {//m
+		return d.get("name")
+	})
+	Shop = $m({
+		i: function () {
+			this.dons = Dons()
+			this.dons.url = 'shops/' + this.id + "/dn"
+		}, df: {n: "z"}
+	})
+	Shop.oA(function (dn) { //on ? alert added?
+		alert("added " + dn.g('n'))
+	})
+	Shop = $m({
+		i: function () {
+			this.dons = Dons()
+			this.dons.url = 'shops/' + this.id + "/dn"
+		}, df: {n: "z"}
+	})
+	Shop.oA(function (dn) { //on ? alert added?
+		alert("added " + dn.g('n'))
+	})
+	lem = Shop.dons.A({
+		n: "Lem"
+	})
+	lem = Shop.dons.A({
+		n: "Lem"
+	})
 }
+ 
 FETCH = EVTSAVE = function () {
 	m = Bb.M.e({n: 'j'})
 	Don = Bb.M.e({
@@ -151,48 +146,7 @@ FETCH = EVTSAVE = function () {
 	})
 	ev.tr("fun:had")  //it'll alert "wee!"
 }
-FETCH = EVTSAVE = function () {
-	m = Bb.M.x({
-		n: 'j'
-	})
-	Don = $M({
-		//defaults
-		d: {n: null, sprink: 0, cream: 0},
-		//u? url?
-		u: function () {
-			return '/dn/' + this.id || ''
-		}
-	})
-	bc = bostonCream = Don({n: 'Bos', cream: 1})
-	bc.s({sprink: 1}).S()  //save
-	Dons = $Cl({m: Don, url: "/dn"})
-	dons = Dons()
-	dons.fetch() //f F
-	dons.at(0)  // a -> gets donuts by index.
-	dons.get(0) // g   -> gets donuts by id.
-	dons.each(function (d) { // e
-		$l(d.get("name"))
-	})
-	dons.select(function (d) {//sl
-		return d.get("name").length > 2
-	})// Select donuts with names longer than 2
-	dons.map(function (d) {//m
-		return d.get("name")
-	})
-	Shop = $m({
-		i: function () {
-			this.dons = Dons()
-			this.dons.url = 'shops/' + this.id + "/dn"
-		}, df: {n: "z"}
-	})
-	Shop.oA(function (dn) { //on ? alert added?
-		alert("added " + dn.g('n'))
-	})
-	lem = Shop.dons.A({
-		n: "Lem"
-	})
-	//////
-}
+ 
 OBJECT = function () {
 	$.fm()
 	s1.A('your objects', $.br(2), t = $.ip(),
@@ -218,14 +172,32 @@ OBJECT = function () {
 						$.P('newObj', {t: tt.V()})
 					}))
 		}))
+		s1.A('your objects', $.br(2), t = $.ip(),
+				$.bt('new object', function () {
+					$.P('newObj',
+							{t: t.V()})
+				}))
+		
+		_.e(o.i, function (i) {
+			s1.A(h3(i))
+		})
+	})
+
+	$.eG('objs', function (o) {
+		s1.A($.h2(o.t).$(function () {
+			s2.E($.h1(o.t), tt = $.ip(),
+					$.bt('new sub-object', function () {
+						$.P('newObj', {t: tt.V()})
+					}))
+		}))
 		_.e(o.i, function (i) {
 			s1.A(h3(i))
 		})
 	})
 }
- 
 
-MOD = function () {
+
+MOD = DONUT=function () {
 	m = bbM({n: 'j'})
 	m = bbM({n: 'j'})
 	Donut = bbM({
