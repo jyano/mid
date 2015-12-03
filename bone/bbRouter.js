@@ -107,8 +107,7 @@ $R=function(ob){
 	}
 	return rt
  }
- $r = function(ob){
- 
+ _$r = function(ob){
 	 var rt = $R(ob)
 	 rt._()
 	 return rt

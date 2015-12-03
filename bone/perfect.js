@@ -1,247 +1,118 @@
-BB1 = PERFECT =MDGET = function () { 
-	
-	//Model = $M();
-	
-	model = $M()({name: 'jay'});
-	
-	$.h3('p: ' + model.g('name'))
-}
-
-
-BB2=EXTEV = function () { 
-	o = _.x({}, Bb.E)
-
-	o.on('yo', function () {
-		$.sp(G(arguments)).fS(50)
-	})
-
-	o.trigger('yo', 'a', 'b', 'c')
-}
-BB3 =VIEW = function () { 
-	Vw = $$V({
-	
-			el: q = $.dA('g', 400, 400, 200, 200),
-		
-		r: function () {
-		
-			var vw = this
-			
-			vw.A($.ul().fS(40).A('hello'))
-			_.in(function () {vw.r()})
-		},
-		
-		
-		i: function () {this.r()}
-	
-	})
-	
-	
-	
-	Vw2 = $$V({
-		r: function () {
-			this.A(
-					$.ul(['hello']).fZ(30)
-			)
-		},
-		
-		i: function () {this.r()}
-	})
-	
-	
-	Vw()
-	
-	$.bt('orange', function () {
-		
-		Vw2({
-		
-			el: d2 = $.d('O', 500, 500)
-		})
-	})
-}
-BB4 =DEFAULT = function () { 
-	
-	Md = $$M({
-		defaults: {n: 'j', a: 20, o: 'p'}
-	})
-	
-	Vw = $$V({
+BB1 = DEFAULT = function () {
+	_V({
 		t: 'li',
 		r: function () {
-		
 			this.$el.A('n: ' + this.g('n'))
 		},
-		
 		i: function () {
-		
 			this.$el.fS(149).C('r').col('b').A()
-			
 			this.r()
 		}
-	})
-	
-	vw = Vw({
-
-		m: md = Md()
-
-	})
-
-}
-BB5 =EVENTS = EVS = function () { 
-	q = $.d('r', 200).A($.h1('hello'), 
-	bt = $.bt('-------'))
-	
-	Vw = $$V({
-		el: q, r: function () {
-			$.C($r())
-		},
-	
-			events: {
-			'click button': function () {
-				bt.C($r())
-			},
-			'dblclick': 'r',
-			'mouseover': function () {
-				q.C($r())
-			}
-		}
-	})
-	Vw()
-}
-BB6 =CHG=ONCHANGE = function () {
-	Md = $$M()
-	
-	Vw = $$V({
-		
-		//rend
-		r: function () {
-			return this.h(this.g('rx'))
-		},
-		
-		//init
-		initialize: function () {
-			var vw = this;
-			vw.r();//render
-			
-			//on change
-			vw.oC(function () {
-				vw.r()//render
-			})
-		}
-		
-	})
-	
-	$.x('x', 'bbv');
-	
-	$('body').fS(30)
-	
-	
-	ip = $.ip()
-	
-
-	 
-	Vw({
-		el: div = $.dA('o', 300, 400).XY(200, 200),
-		model: model = Md({rx: 'antibiotic'})
-	})
-	
-	$.bt('submit input val', function () {
-		model.s('rx', ip.v())
+	})({
+		m: $M({defaults: {n: 'j', a: 20, o: 'p'}})
 	})
 }
-BB7 =PEP=PEOPOP = function () {
-	//$.x('x', 'bb view people')
-	peep = [{n: 'a', a: 11}, {n: 'b', a: 46}, {n: 'c', a: 13}]
-	
-	Vw = $$V({
-		
-		t: 'ul',//TAG
-	
-			r: function () {
-			
+BB2 = PEP = PEOPOP = function () {
+	Vw = _V({
+		t: 'ul',
+		ren: function () {
 			var vw = this, q = vw.$el.E();
-				
-				_.e(vw.collection, function (p) {
-				
-					var li = $.li([p.n + '(' + p.a + ')'])
-					
-					q.A(li)
-				})
-			
+			_.e(vw.collection, function (p) {
+				var li = $.li([p.n + '(' + p.a + ')'])
+				q.A(li)
+			})
 			return this
 		},
-		
 		i: function () {
-			
 			this.$el.C('y')
 		}
 	})
-	
-	vw = Vw({  cl: peep //COLLECTION
-	})  // alpha! <- vw= $.ulV({ i:function(){  },  r:function(){ } })({cl: peep})
-	
-	$.A(
-	
-			vw.r().el
-	)
-	
+	vw = Vw({
+		cl: peep
+	}) // alpha! <- vw= $.ulV({ i:function(){  },  r:function(){ } })({cl: peep})
+	$.A(vw.ren().el)
 	_.in(function () {
 		peep.pop();
-		vw.r()//RENDER
+		vw.ren()
 	})
 }
-
-BB8 =DIVADD = function () {
-	 
-	
+BB3 = DIVADD = function () {
 	q = $.dI('d1', 'r', 500, 500)
-	
-	Vw = $$V({
-		r: function () {
-			q.A(
-					$.ul(['hello']))
+	Vw = _V({
+		ren: function () {
+			q.A($.ul(['hello']))
 		},
-		
-		
-		initialize: function () {
+		i: function () {
+			this.ren()
+		}
+	})
+	_.t(3, function () {
+		Vw()
+	})// alpha! <-  q.V({r: function () { }, i: function () {  }})()
+}
+BB4 = PERFECT = MDGET = function () {
+	$.h3('p: ' +  M_({name: 'jay'}).g('name'))
+}
+BB5 = VIEW = function () {
+	$V({
+		el: q = $.dA('g', 400, 400, 200, 200),
+		r: function () {
+			var vw = this
+			vw.A($.ul().fS(40).A('hello'))
+			_.in(function () {
+				vw.r()
+			})
+		},
+		i: function () {
 			this.r()
 		}
-		
 	})
 	
+	Vw = _V({
+		r: function () {
+			this.A($.ul(['hello']).fZ(30))
+		},
+		i: function () {
+			this.r()
+		}
+	})
 	
-	
-	_.t(3, function () {
-	
-		Vw()
-	
-	}) // alpha! <-  q.V({r: function () { }, i: function () {  }})()
-
-
-
+	$.bt('orange', function () {
+		Vw({el: d2 = $.d('O', 500, 500)})
+	})
 }
-BB9 =CLONADD = function () {//$.x().h1('backcl');
-	
+BB6 = CHG = ONCHANGE = function () {
+	$('body').fS(30).A(ip = $.ip())
+	md = M_({rx: 'antibiotic'})
+	_V({
+		ren: function () {
+			return this.h(this.g('rx'))
+		},
+		initialize: function () {
+			var vw = this;
+			this.ren()
+			this.model.on('change', function () {
+				vw.ren()
+			})
+		}
+	})({
+		el: $.dA('o', 300, 400).XY(200, 200),
+		model: md
+	})
+	$.bt('submit input val', function () {
+		md.set('rx', ip.v())
+	})
+}
+BB7 = CLONADD = function () {//$.x().h1('backcl');
 	$.i('chicks').A()
-
 	Cl = $$C({})
-	
 	cl = Cl().oA(function (s) {
-	
 		$l("new!!!!!! " + s.g('n'))
-	
 	}).A([{n: 'g1'}, {n: 'g2'}])
-
-	
-	
-	
 }
-
-BB10 =MDVW = function () {  
-
-	
-	Md = $$M({d: {n: 'j', a: 20, o: 'p'}})
-
-	Vw = $$V({
+BB8 = MDVW = function () {
+	md = $M({d: {n: 'j', a: 20, o: 'p'}})
+	md._V({
 		t: 'li',
 		_: 'some-per', k: 'per',
 		r: function () {
@@ -251,32 +122,15 @@ BB10 =MDVW = function () {
 			this.r()
 		}
 	})
-
-
-	md = Md()
-
-	md.V = function (Vw, ob) {
-		ob = ob || {}
-		ob.m = this
-		return Vw(ob)
-	}
-
-	md.V(Vw)
-
-
 	_.in(2, function () {
 		$.C('R');
 		$l('- - --- - - - - ');
 		md.l();
-		$Ms(JSON.stringify(md.j()))
+		$l(JSON.stringify(md.j()))
 	})
-
-
 }
-BB11 =BACKVALL = function () {
-	 
-	$l('backvall')
-	Md = $$M({
+BB9 = BACKVALL = function () {
+	Md = _M({
 		defaults: {lame: true},
 		validate: function (at) {
 			$l('in validate')
@@ -311,16 +165,12 @@ BB11 =BACKVALL = function () {
 		md.s({n: 'rigo'}, {validate: true})
 	})
 }
-BB12 =CLLEN = function () {
- 
-	$Ms('CLLEN')
-	Td = $$M({df: {tt: '', completed: false}});
-	Md = $$M({
+BB10 = CLLEN = function () {
+	Td = _M({df: {tt: '', completed: false}});
+	Md = _M({
 		d: {tt: '', completed: false}
 	})
-	Cl = $$C({
-		md: Md
-	})
+	Cl = $$C({md: Md})
 	cl = Cl([Td({tt: 'Read', id: 2})]);
 	$Ms('len 1?: ' + cl.length)
 	TdsCl = $$C({md: Td})
@@ -336,12 +186,10 @@ BB12 =CLLEN = function () {
 	tds.rm(c);
 	$Ms('len 0?: ' + tds.length)
 }
-
-
-BB13 =BBRECS = BBSAMP = function () {//$.x('b', 'bbsampp', '+')
+BB11 = BBRECS = BBSAMP = function () {//$.x('b', 'bbsampp', '+')
 	d = $.d()
-	Rec = $$M()
-	RecV = $$V({
+	Rec = _M()
+	RecV = _V({
 		k: 'rec', e: {'click': 'move'},
 		move: function () {
 			this.q.css('left',
@@ -374,10 +222,9 @@ BB13 =BBRECS = BBSAMP = function () {//$.x('b', 'bbsampp', '+')
 		RecV({model: md}).rr().$el.a2(d)
 	})
 }
-BB14 =CHANGECOL = function () {
- 
+BB12 = CHANGECOL = function () {
 	d = $.dA(400, 400, 300, 200)
-	Md = $$M({
+	Md = _M({
 		promptColor: function () {
 			this.s({
 				co: prompt('color:')
@@ -394,77 +241,53 @@ BB14 =CHANGECOL = function () {
 		sb.promptColor()
 	})
 }
-BB15 =NNN = PER0 = function () {
- 
+BB13 = NNN = PER0 = function () {
+
 	
-	Per = $$M({d: {n: 'j', a: 20, o: 'p'}})
-	
-	PerV = $$V({
+	pV = _V({
 		t: 'li', k: 'per',
-		
-		r: function () {
-		
-			this.$el.A('n').A()
-		},
-		
+		r: function () {this.$el.A('n').A()},
 		i: function () {this.r()}
-		
-	})
+	})({
 	
-	pV = PerV({
-		m: p = Per()
-		
+		m: $M({d: {n: 'j', a: 20, o: 'p'}}) 
 	})
 	
 	_.ev(.5, function () {
-	
 		pV.r()
-	
 	})
-
 }
-BB16 =TKZ = function () {
-	$$$('TKZ');
+BB14 = TKZ = function () {
+ 
 	App = {Models: {}, Views: {}, Collections: {}}
-
-	App.Models.Task = Backbone.Model.extend({})
-
-	App.Views.Task = Backbone.View.extend({
+	App.Models.Task = Bb.M.x({})
+	App.Views.Task = Bb.V.x({
 		tagName: 'li',
 		events: { //'click':' showAlert',
 			'click .edit': 'editTask'
 		},
-		
-		
-		showAlert: function () { alert('you clicked me')  },
-		
+		showAlert: function () {
+			alert('you clicked me')
+		},
 		editTask: function () {//alert('you are edititing the task')
 			newTaskTitle = prompt('what would you like to change the text to?', this.model.get('title'))
 			this.model.set('title', newTaskTitle)
 		},
-		
-		
 		render: function () {
 			this.$el.html(
 					this.model.get('title')
 			)
 			return this
 		}
-	
-		
 	})
-
-	App.Collections.Tasks = Backbone.Collection.extend({model: App.Models.Task})
-
-	App.Views.Tasks = Backbone.View.extend({
+	App.Collections.Tasks = Bb.C.x({model: App.Models.Task})
+	App.Views.Tasks = Bb.V.x({
 		initialize: function () {
 			var view = this
 			this.collection.on('all', function () {
 				view.render()
 			})
 		},
-		
-		
 		tagName: 'ol',
 		render: function () {
 			this.$el.E()
@@ -476,40 +299,50 @@ BB16 =TKZ = function () {
 			this.$el.append(taskView.render().el)
 		}
 	})
-	
 	tasksCollection = tasks = new App.Collections.Tasks(
-	
 			[
 				{title: 'game', prior: 3},
 				{title: 'store', prior: 5},
 				{title: 'haha', prior: 3}
 			]
-		
 	)
-	
-	
-	tasksView = new App.Views.Tasks({collection: tasksCollection})
-	
+	tasksView = new App.Views.Tasks({
+		collection: tasksCollection
+		
+	})
 	tasksView.render()
-	
 	$.A(tasksView.el)
-	
-	
 	$.bt('add', function () {
 		tasksCollection.add([
-			
 			{title: 'yooo', prior: 4}
-			
 		])
-
-	}).button()
+	}) 
+}
+BB15 = EVENTS = EVS = function () {
+	q = $.d('r', 200).A(
+			$.h1('hello'),
+			bt = $.bt('-------')
+	)
 	
-	
-	
-	
+	$V({
+		el: q,
+		ren: function () {
+			$.C($r())
+		},
+		events: {
+			'click button': function () {
+				bt.C($r())
+			},
+			'dblclick': 'ren',
+			'mouseover': function () {
+				q.C($r())
+			}
+		}
+	})
 }
 
-function imgGal(){
+
+function imgGal() {
 	_vw = function (o) {
 		o = o || {}
 		if (F(o.i)) {
@@ -1065,4 +898,21 @@ function imgGal(){
 			}
 		}
 	}
+}
+function _pre(){
+	BB0 = EXTEV = function () {
+		o = _.x({}, Bb.E)
+		o.on('yo', function () {
+			$.sp(G(arguments)).fS(50)
+		})
+		o.trigger('yo', 'a', 'b', 'c')
+	}}
+peep = [{n: 'a', a: 11}, {n: 'b', a: 46}, {n: 'c', a: 13}]
+md.V = function (Vw, ob) {
+	ob = ob || {}
+	ob.m = this
+	return Vw(ob)
+}
+md._V = function (ob) {
+	return this.V(_V(ob))
 }

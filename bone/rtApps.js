@@ -1,44 +1,52 @@
-$autoV = function (fn) {
-	return Bb.V.x({
-		initialize: function () {
-			this.render()
+RT1 = function () {
+	$bd('font-size', 30).dI('ct')
+	$r({
+		r: {
+			'': 'pg1', pg1: 'pg1',
+			pg2: $VW$('pg2', 'pg1', 'pg1')
 		},
-		render: fn
+		pg1: $VW$('pg1', 'pg2', 'pg2')
 	})
+	RT1OLD = NOPUSHSTATE = VID0 = WORKS = function () {
+		$bd('font-size', 30)
+				.dI('ct')
+		$r({
+			r: {
+				'': 'pg1',
+				'pg1': 'pg1',
+				'pg2': 'pg2'
+			},
+			pg1: $VW$('view 1: want to know your NPI NUMBER??', 'Its at view 2. go ->', 'pg2'),
+			pg2: $VW$('vw 2: nada', 'what was the question again?', 'pg1')
+		})
+	}
+	function $VW$(lbTx, aTx, href) {
+		return function () {
+			$autoV = function (fn) {
+				return Bb.V.x({
+					initialize: function () {
+						this.render()
+					},
+					render: fn
+				})
+			}
+			return new (($autoV(function () {
+				this.$el.html($.__d(
+						$.lb(lbTx),
+						$.a(aTx, '#' + href)
+				).oh())
+			})))({
+				el: $('#ct')
+			})
+		}
+	}
 }
 $rR = function (ob) {
 	return $r({r: ob})
 }
 
-RT1 = NOPUSHSTATE = VID0 = WORKS = function () {$bd('font-size', 30)
-		.dI('ct')
-		
-	
-	$r({
-		r: {'': 'pg1',
-		 'pg1': 'pg1', 
-		 'pg2': 'pg2'},
-		 
-		pg1: $VW$('view 1: want to know your NPI NUMBER??', 'Its at view 2. go ->', 'pg2'),
-		pg2:  $VW$('vw 2: nada', 'what was the question again?', 'pg1')
-		
-	}) 
-	
-}
 
-function $VW$(lbTx, aTx, href) {
-	var Vw = $autoV(function () {
-		this.$el.html($dLbAOh(lbTx, aTx, href))
-		function $dLbAOh(lbTx, aTx, href) {
-			return $.__d($.lb(lbTx), $.a(aTx, '#' + href)).oh()
-		}
-	})
-	return function () {
-		return new Vw({el: $('#ct')})
-	}
-}
-
-
+ 
 RT2 = ROUTEE1 = function () {$l('RT2')
 	n= 0
 	rtr = $R({
@@ -50,7 +58,6 @@ RT2 = ROUTEE1 = function () {$l('RT2')
 			$.h1().A('EDUCATION').A()
 		}
 	})
-	
 	$.bt('d', function(){rtr.N('e')})
 	$.bt('e', function (){rtr.N('e')})
 	Bb.h.s()

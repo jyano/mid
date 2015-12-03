@@ -262,7 +262,7 @@ $v = function (ob) {
 //
 Bb.V= Bb.View; Bb.V.x=Bb.V.extend; vw = Bb.View.prototype; Bb.sEv(vw)
  
-_$$V= function(ob){ob = ob || {}
+  _$$V= function(ob){ob = ob || {}
  ob.id = D(ob.id) ? ob.id : ob.x || ob._ || ob['#']
  ob.tagName = ob.tagName || ob.tn || ob.t
  ob.className = ob.className || ob.k //if (ob.k) {ob.className = ob.k}
@@ -297,7 +297,8 @@ _$$V= function(ob){ob = ob || {}
 
  return Bb.V.x( ob )
 }
-$$V=function(ob){
+
+_V = $$V=function(ob){
 
  var Vw =  _$$V(ob||{})
 
@@ -316,7 +317,12 @@ $$V=function(ob){
   return vw
  }
 }
-$V=function(ob, a,b,c){return $$V(ob,a,b,c)()}
+
+ $V=function(ob, a,b,c){return _V(ob,a,b,c)()}
+
+
+
+
 $.uV=$.ulV=function(ob){
  ob=ob||{};ob.t = 'ul'; return $V(ob)
 } // make a bbV with t:ul

@@ -17,7 +17,7 @@ md.s = function (a, b, c) {
 	md.set(a, b, c)
 	return md
 }
-md.S = md.sv = md.save
+md.sv = md.S = md.save
 md.at = function () {return this.attributes}
 md.hC = function (at) {
 	var md = this, g = G(arguments), o
@@ -32,12 +32,7 @@ md.hC = function (at) {
 	return this.hasChanged(at)
 }
 md.a2 = function (a) {
-	$l('me.a2')
-	return this
-	if (!this.q) {
-		alert('me.a2 !q');
-		return this
-	}
+	if (!this.q) {return this}
 	return this.q.a2(a)
 }
 md.jS = md.tS = function () {
@@ -57,7 +52,7 @@ md.l1 = md.lT1 = md.lTo1 = function (a, b, c, d) {
 md.l2 = md.lT = md.lTo = function (a, b, c, d) {
 	return this.listenTo(a, b, c, d)
 }
-_$$M = function (ob) {
+__M =  function (ob) {
 	ob = ob || {} // o= g.F_? {fn: g.f, ob: g.s} : {ob: g.f, fn: g.s} //o=o||{}
 	ob.initialize = ob.initialize || ob.i || function () {
 	}
@@ -97,7 +92,6 @@ _$$M = function (ob) {
 			_.b(ob._i, this)(op)
 		}
 	}
-	
 	ob.className = ob.className || ob.k
 	ob.defaults = ob.defaults || ob.df || ob.d
 	ob.events = ob.events || ob.ev || ob.e
@@ -110,32 +104,31 @@ _$$M = function (ob) {
 	ob.validate = ob.validate || ob.v
 	return Bb.M.x(ob || {})
 }
-_$M = $$M = function (ob, a, b, c) {
+
+_M =  function (ob, a, b, c) {
 	ob = ob || {}
 	var g = G(arguments), Md;
-	Md = _$$M(ob, a, b, c)
+	Md = __M(ob, a, b, c)
+	
 	return function (ob, q) {
-		var md
-		ob = ob || {}
-		ob.collection = ob.collection || ob.cl || ob.c
-		ob.model = ob.model || ob.md || ob.m
-		md = new Md(ob)
-		if (q) {
-			md.a2(q)
-		}
+		var md = new Md(ob || {})
+		if (q) {md.a2(q)}
 		return md
 	}
 }
+
 $M = function (op, a, b, c) {
-	if (U(op)) {
-		return _$M()
-	}
-	return $$M(op, a, b, c)()
+	//if (U(op)) {return _$M()}
+	return _M(op, a, b, c)()
 }
-$m = function (ob) {
+
+M_ = $m = function (ob) {
+
 	var m = new Bb.Model(ob);
 	return m
 }
+
+
 old = function () {
 //md.o = function () {var g = G(arguments);this.on.apply(this, g)}
 	/*
