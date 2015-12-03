@@ -298,11 +298,11 @@ Bb.V= Bb.View; Bb.V.x=Bb.V.extend; vw = Bb.View.prototype; Bb.sEv(vw)
  return Bb.V.x( ob )
 }
 
-_V = $$V=function(ob){
+_V = $$V=function(ob, ob2){
 
  var Vw =  _$$V(ob||{})
 
- return function(ob,q){
+ var fn = function(ob,q){
 
   ob=ob||{}
   ob.model=ob.model||ob.md||ob.m
@@ -316,6 +316,8 @@ _V = $$V=function(ob){
   if(q){ alert('see $$V'); vw.a2(q ) }
   return vw
  }
+	
+ return ob2? fn(ob): fn
 }
 
  $V=function(ob, a,b,c){return _V(ob,a,b,c)()}

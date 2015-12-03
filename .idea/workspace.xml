@@ -117,28 +117,27 @@
       <file leaf-file-name="perfect.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bone/perfect.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.04255319">
-              <caret line="51" column="1" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.31914893">
+              <caret line="242" column="7" selection-start-line="242" selection-start-column="7" selection-end-line="242" selection-end-column="7" />
               <folding>
-                <element signature="e#2476#2499#0" expanded="false" />
-                <element signature="e#2523#2562#0" expanded="false" />
-                <element signature="e#6538#6565#0" expanded="false" />
-                <element signature="e#6577#6594#0" expanded="false" />
-                <element signature="e#14082#14111#0" expanded="false" />
-                <element signature="e#14124#14143#0" expanded="false" />
-                <element signature="e#14245#14268#0" expanded="false" />
-                <element signature="e#14286#14307#0" expanded="false" />
-                <element signature="e#14395#14450#0" expanded="false" />
-                <element signature="e#14468#14487#0" expanded="false" />
-                <element signature="e#14575#14630#0" expanded="false" />
-                <element signature="e#14648#14667#0" expanded="false" />
-                <element signature="e#16308#16389#0" expanded="false" />
-                <element signature="e#16346#16382#0" expanded="false" />
-                <element signature="e#16523#16601#0" expanded="false" />
-                <element signature="e#16559#16594#0" expanded="false" />
-                <element signature="e#16866#16895#0" expanded="false" />
-                <element signature="n#!!block;n#_pre#0" expanded="true" />
-                <element signature="e#18564#18682#0" expanded="true" />
+                <element signature="e#2465#2488#0" expanded="false" />
+                <element signature="e#2512#2551#0" expanded="false" />
+                <element signature="e#6555#6582#0" expanded="false" />
+                <element signature="e#6594#6611#0" expanded="false" />
+                <element signature="e#14099#14128#0" expanded="false" />
+                <element signature="e#14141#14160#0" expanded="false" />
+                <element signature="e#14262#14285#0" expanded="false" />
+                <element signature="e#14303#14324#0" expanded="false" />
+                <element signature="e#14412#14467#0" expanded="false" />
+                <element signature="e#14485#14504#0" expanded="false" />
+                <element signature="e#14592#14647#0" expanded="false" />
+                <element signature="e#14665#14684#0" expanded="false" />
+                <element signature="e#16325#16406#0" expanded="false" />
+                <element signature="e#16363#16399#0" expanded="false" />
+                <element signature="e#16540#16618#0" expanded="false" />
+                <element signature="e#16576#16611#0" expanded="false" />
+                <element signature="e#16883#16912#0" expanded="false" />
+                <element signature="e#18901#18925#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -148,7 +147,7 @@
         <entry file="file://$PROJECT_DIR$/bone/bbView.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="320" column="43" selection-start-line="320" selection-start-column="43" selection-end-line="320" selection-end-column="43" />
+              <caret line="318" column="4" selection-start-line="318" selection-start-column="4" selection-end-line="318" selection-end-column="4" />
               <folding>
                 <element signature="e#101#132#0" expanded="false" />
                 <element signature="e#183#219#0" expanded="false" />
@@ -185,15 +184,16 @@
                 <element signature="e#5056#5209#0" expanded="false" />
                 <element signature="e#5388#5778#0" expanded="false" />
                 <element signature="e#5514#5562#0" expanded="false" />
-                <element signature="e#8862#8910#0" expanded="false" />
-                <element signature="e#9130#9484#0" expanded="false" />
-                <element signature="e#9665#9713#0" expanded="false" />
-                <element signature="e#9822#9870#0" expanded="false" />
-                <element signature="e#9980#10028#0" expanded="false" />
-                <element signature="e#10791#10839#0" expanded="false" />
-                <element signature="e#11035#11440#0" expanded="false" />
-                <element signature="e#11482#11513#0" expanded="false" />
-                <element signature="e#11583#11614#0" expanded="false" />
+                <element signature="e#5883#6111#0" expanded="true" />
+                <element signature="e#8895#8943#0" expanded="false" />
+                <element signature="e#9163#9517#0" expanded="false" />
+                <element signature="e#9698#9746#0" expanded="false" />
+                <element signature="e#9855#9903#0" expanded="false" />
+                <element signature="e#10013#10061#0" expanded="false" />
+                <element signature="e#10824#10872#0" expanded="false" />
+                <element signature="e#11068#11473#0" expanded="false" />
+                <element signature="e#11515#11546#0" expanded="false" />
+                <element signature="e#11616#11647#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -321,9 +321,9 @@
       <list>
         <option value="$PROJECT_DIR$/a.js" />
         <option value="$PROJECT_DIR$/bone/rtApps.js" />
-        <option value="$PROJECT_DIR$/bone/bbView.js" />
         <option value="$PROJECT_DIR$/bone/bbModel.js" />
         <option value="$PROJECT_DIR$/bone/bbRouter.js" />
+        <option value="$PROJECT_DIR$/bone/bbView.js" />
         <option value="$PROJECT_DIR$/bone/perfect.js" />
       </list>
     </option>
@@ -502,59 +502,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bone/bbView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="320" column="43" selection-start-line="320" selection-start-column="43" selection-end-line="320" selection-end-column="43" />
-          <folding>
-            <element signature="e#101#132#0" expanded="false" />
-            <element signature="e#183#219#0" expanded="false" />
-            <element signature="e#484#500#0" expanded="false" />
-            <element signature="e#510#528#0" expanded="false" />
-            <element signature="e#821#847#0" expanded="false" />
-            <element signature="e#949#1042#0" expanded="false" />
-            <element signature="e#995#1028#0" expanded="false" />
-            <element signature="e#1060#1093#0" expanded="false" />
-            <element signature="e#1146#1185#0" expanded="false" />
-            <element signature="e#1295#1316#0" expanded="false" />
-            <element signature="e#1336#1355#0" expanded="false" />
-            <element signature="e#1411#1430#0" expanded="false" />
-            <element signature="e#1603#1634#0" expanded="false" />
-            <element signature="e#1685#1721#0" expanded="false" />
-            <element signature="e#1984#2000#0" expanded="false" />
-            <element signature="e#2010#2028#0" expanded="false" />
-            <element signature="e#2089#2107#0" expanded="false" />
-            <element signature="e#2341#2367#0" expanded="false" />
-            <element signature="e#2469#2562#0" expanded="false" />
-            <element signature="e#2515#2548#0" expanded="false" />
-            <element signature="e#2580#2613#0" expanded="false" />
-            <element signature="e#2666#2705#0" expanded="false" />
-            <element signature="e#2815#2836#0" expanded="false" />
-            <element signature="e#2856#2875#0" expanded="false" />
-            <element signature="e#2931#2950#0" expanded="false" />
-            <element signature="e#3049#3076#0" expanded="false" />
-            <element signature="e#3385#3538#0" expanded="false" />
-            <element signature="e#3717#4121#0" expanded="false" />
-            <element signature="e#3839#3887#0" expanded="false" />
-            <element signature="e#4031#4064#0" expanded="false" />
-            <element signature="e#4083#4114#0" expanded="false" />
-            <element signature="e#4413#4451#0" expanded="false" />
-            <element signature="e#5056#5209#0" expanded="false" />
-            <element signature="e#5388#5778#0" expanded="false" />
-            <element signature="e#5514#5562#0" expanded="false" />
-            <element signature="e#8862#8910#0" expanded="false" />
-            <element signature="e#9130#9484#0" expanded="false" />
-            <element signature="e#9665#9713#0" expanded="false" />
-            <element signature="e#9822#9870#0" expanded="false" />
-            <element signature="e#9980#10028#0" expanded="false" />
-            <element signature="e#10791#10839#0" expanded="false" />
-            <element signature="e#11035#11440#0" expanded="false" />
-            <element signature="e#11482#11513#0" expanded="false" />
-            <element signature="e#11583#11614#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bone/bbModel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -654,30 +601,83 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bone/bbView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="318" column="4" selection-start-line="318" selection-start-column="4" selection-end-line="318" selection-end-column="4" />
+          <folding>
+            <element signature="e#101#132#0" expanded="false" />
+            <element signature="e#183#219#0" expanded="false" />
+            <element signature="e#484#500#0" expanded="false" />
+            <element signature="e#510#528#0" expanded="false" />
+            <element signature="e#821#847#0" expanded="false" />
+            <element signature="e#949#1042#0" expanded="false" />
+            <element signature="e#995#1028#0" expanded="false" />
+            <element signature="e#1060#1093#0" expanded="false" />
+            <element signature="e#1146#1185#0" expanded="false" />
+            <element signature="e#1295#1316#0" expanded="false" />
+            <element signature="e#1336#1355#0" expanded="false" />
+            <element signature="e#1411#1430#0" expanded="false" />
+            <element signature="e#1603#1634#0" expanded="false" />
+            <element signature="e#1685#1721#0" expanded="false" />
+            <element signature="e#1984#2000#0" expanded="false" />
+            <element signature="e#2010#2028#0" expanded="false" />
+            <element signature="e#2089#2107#0" expanded="false" />
+            <element signature="e#2341#2367#0" expanded="false" />
+            <element signature="e#2469#2562#0" expanded="false" />
+            <element signature="e#2515#2548#0" expanded="false" />
+            <element signature="e#2580#2613#0" expanded="false" />
+            <element signature="e#2666#2705#0" expanded="false" />
+            <element signature="e#2815#2836#0" expanded="false" />
+            <element signature="e#2856#2875#0" expanded="false" />
+            <element signature="e#2931#2950#0" expanded="false" />
+            <element signature="e#3049#3076#0" expanded="false" />
+            <element signature="e#3385#3538#0" expanded="false" />
+            <element signature="e#3717#4121#0" expanded="false" />
+            <element signature="e#3839#3887#0" expanded="false" />
+            <element signature="e#4031#4064#0" expanded="false" />
+            <element signature="e#4083#4114#0" expanded="false" />
+            <element signature="e#4413#4451#0" expanded="false" />
+            <element signature="e#5056#5209#0" expanded="false" />
+            <element signature="e#5388#5778#0" expanded="false" />
+            <element signature="e#5514#5562#0" expanded="false" />
+            <element signature="e#5883#6111#0" expanded="true" />
+            <element signature="e#8895#8943#0" expanded="false" />
+            <element signature="e#9163#9517#0" expanded="false" />
+            <element signature="e#9698#9746#0" expanded="false" />
+            <element signature="e#9855#9903#0" expanded="false" />
+            <element signature="e#10013#10061#0" expanded="false" />
+            <element signature="e#10824#10872#0" expanded="false" />
+            <element signature="e#11068#11473#0" expanded="false" />
+            <element signature="e#11515#11546#0" expanded="false" />
+            <element signature="e#11616#11647#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bone/perfect.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.04255319">
-          <caret line="51" column="1" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.31914893">
+          <caret line="242" column="7" selection-start-line="242" selection-start-column="7" selection-end-line="242" selection-end-column="7" />
           <folding>
-            <element signature="e#2476#2499#0" expanded="false" />
-            <element signature="e#2523#2562#0" expanded="false" />
-            <element signature="e#6538#6565#0" expanded="false" />
-            <element signature="e#6577#6594#0" expanded="false" />
-            <element signature="e#14082#14111#0" expanded="false" />
-            <element signature="e#14124#14143#0" expanded="false" />
-            <element signature="e#14245#14268#0" expanded="false" />
-            <element signature="e#14286#14307#0" expanded="false" />
-            <element signature="e#14395#14450#0" expanded="false" />
-            <element signature="e#14468#14487#0" expanded="false" />
-            <element signature="e#14575#14630#0" expanded="false" />
-            <element signature="e#14648#14667#0" expanded="false" />
-            <element signature="e#16308#16389#0" expanded="false" />
-            <element signature="e#16346#16382#0" expanded="false" />
-            <element signature="e#16523#16601#0" expanded="false" />
-            <element signature="e#16559#16594#0" expanded="false" />
-            <element signature="e#16866#16895#0" expanded="false" />
-            <element signature="n#!!block;n#_pre#0" expanded="true" />
-            <element signature="e#18564#18682#0" expanded="true" />
+            <element signature="e#2465#2488#0" expanded="false" />
+            <element signature="e#2512#2551#0" expanded="false" />
+            <element signature="e#6555#6582#0" expanded="false" />
+            <element signature="e#6594#6611#0" expanded="false" />
+            <element signature="e#14099#14128#0" expanded="false" />
+            <element signature="e#14141#14160#0" expanded="false" />
+            <element signature="e#14262#14285#0" expanded="false" />
+            <element signature="e#14303#14324#0" expanded="false" />
+            <element signature="e#14412#14467#0" expanded="false" />
+            <element signature="e#14485#14504#0" expanded="false" />
+            <element signature="e#14592#14647#0" expanded="false" />
+            <element signature="e#14665#14684#0" expanded="false" />
+            <element signature="e#16325#16406#0" expanded="false" />
+            <element signature="e#16363#16399#0" expanded="false" />
+            <element signature="e#16540#16618#0" expanded="false" />
+            <element signature="e#16576#16611#0" expanded="false" />
+            <element signature="e#16883#16912#0" expanded="false" />
+            <element signature="e#18901#18925#0" expanded="true" />
           </folding>
         </state>
       </provider>

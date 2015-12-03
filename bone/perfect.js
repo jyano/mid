@@ -1,42 +1,39 @@
-BB1 = DEFAULT = function () {
+BB1 = DFM  = function () {
 	_V({
 		t: 'li',
-		r: function () {
-			this.$el.A('n: ' + this.g('n'))
+		
+		ren: function () {
+			this.$el.A('n: '+this.g('n'))
 		},
+		
 		i: function () {
 			this.$el.fS(149).C('r').col('b').A()
-			this.r()
-		}
+			this.ren()}
 	})({
-		m: $M({defaults: {n: 'j', a: 20, o: 'p'}})
+	
+		m: $Df({n: 'j'})
 	})
 }
-BB2 = PEP = PEOPOP = function () {
-	Vw = _V({
+BB2 = BBC = PEOPOP = function () {
+	 
+	
+	vw = _V({
 		t: 'ul',
 		ren: function () {
 			var vw = this, q = vw.$el.E();
 			_.e(vw.collection, function (p) {
 				var li = $.li([p.n + '(' + p.a + ')'])
-				q.A(li)
-			})
-			return this
-		},
-		i: function () {
-			this.$el.C('y')
-		}
-	})
-	vw = Vw({
-		cl: peep
-	}) // alpha! <- vw= $.ulV({ i:function(){  },  r:function(){ } })({cl: peep})
+				q.A(li)})
+			return this},
+		i: function () {this.$el.C('y')}
+	})({cl: peep}) // alpha! <- vw= $.ulV({ i:function(){  },  r:function(){ } })({cl: peep})
 	$.A(vw.ren().el)
 	_.in(function () {
 		peep.pop();
 		vw.ren()
 	})
 }
-BB3 = DIVADD = function () {
+BB3 = BVR=  VWR = DIVADD = function () {
 	q = $.dI('d1', 'r', 500, 500)
 	Vw = _V({
 		ren: function () {
@@ -46,14 +43,15 @@ BB3 = DIVADD = function () {
 			this.ren()
 		}
 	})
+	
 	_.t(3, function () {
 		Vw()
 	})// alpha! <-  q.V({r: function () { }, i: function () {  }})()
 }
-BB4 = PERFECT = MDGET = function () {
+BB4 =  MDG = function () {
 	$.h3('p: ' +  M_({name: 'jay'}).g('name'))
 }
-BB5 = VIEW = function () {
+BB5 = VEL= VIEW = function () {
 	$V({
 		el: q = $.dA('g', 400, 400, 200, 200),
 		r: function () {
@@ -78,10 +76,11 @@ BB5 = VIEW = function () {
 	})
 	
 	$.bt('orange', function () {
-		Vw({el: d2 = $.d('O', 500, 500)})
+		Vw({
+			el: d2 = $.d('O', 500, 500)})
 	})
 }
-BB6 = CHG = ONCHANGE = function () {
+BB6 = MCH= CHG = ONCHANGE = function () {
 	$('body').fS(30).A(ip = $.ip())
 	md = M_({rx: 'antibiotic'})
 	_V({
@@ -103,14 +102,14 @@ BB6 = CHG = ONCHANGE = function () {
 		md.set('rx', ip.v())
 	})
 }
-BB7 = CLONADD = function () {//$.x().h1('backcl');
+BB7 = CLA =CLONADD = function () {//$.x().h1('backcl');
 	$.i('chicks').A()
 	Cl = $$C({})
 	cl = Cl().oA(function (s) {
 		$l("new!!!!!! " + s.g('n'))
 	}).A([{n: 'g1'}, {n: 'g2'}])
 }
-BB8 = MDVW = function () {
+BB8 = MDV = MVW= BMV= function () {
 	md = $M({d: {n: 'j', a: 20, o: 'p'}})
 	md._V({
 		t: 'li',
@@ -129,7 +128,7 @@ BB8 = MDVW = function () {
 		$l(JSON.stringify(md.j()))
 	})
 }
-BB9 = BACKVALL = function () {
+BB9 = BVD =  MVD=   function () {
 	Md = _M({
 		defaults: {lame: true},
 		validate: function (at) {
@@ -165,7 +164,7 @@ BB9 = BACKVALL = function () {
 		md.s({n: 'rigo'}, {validate: true})
 	})
 }
-BB10 = CLLEN = function () {
+BB10 = CRM = CLLEN = function () {
 	Td = _M({df: {tt: '', completed: false}});
 	Md = _M({
 		d: {tt: '', completed: false}
@@ -186,7 +185,7 @@ BB10 = CLLEN = function () {
 	tds.rm(c);
 	$Ms('len 0?: ' + tds.length)
 }
-BB11 = BBRECS = BBSAMP = function () {//$.x('b', 'bbsampp', '+')
+BB11 =BRV =  BBRECS = BBSAMP = function () {//$.x('b', 'bbsampp', '+')
 	d = $.d()
 	Rec = _M()
 	RecV = _V({
@@ -222,7 +221,7 @@ BB11 = BBRECS = BBSAMP = function () {//$.x('b', 'bbsampp', '+')
 		RecV({model: md}).rr().$el.a2(d)
 	})
 }
-BB12 = CHANGECOL = function () {
+BB12 = CHC= CHANGECOL = function () {
 	d = $.dA(400, 400, 300, 200)
 	Md = _M({
 		promptColor: function () {
@@ -241,7 +240,7 @@ BB12 = CHANGECOL = function () {
 		sb.promptColor()
 	})
 }
-BB13 = NNN = PER0 = function () {
+BB13 = PVR = PER = function () {
 
 	
 	pV = _V({
@@ -257,7 +256,7 @@ BB13 = NNN = PER0 = function () {
 		pV.r()
 	})
 }
-BB14 = TKZ = function () {
+BB14 = BCA=  TKZ = function () {
  
 	App = {Models: {}, Views: {}, Collections: {}}
 	App.Models.Task = Bb.M.x({})
@@ -318,11 +317,12 @@ BB14 = TKZ = function () {
 		])
 	}) 
 }
-BB15 = EVENTS = EVS = function () {
+BB15 = VME =EVENTS = EVS = function () {
 	q = $.d('r', 200).A(
 			$.h1('hello'),
 			bt = $.bt('-------')
 	)
+	
 	
 	$V({
 		el: q,
@@ -340,7 +340,6 @@ BB15 = EVENTS = EVS = function () {
 		}
 	})
 }
-
 
 function imgGal() {
 	_vw = function (o) {
@@ -915,4 +914,7 @@ md.V = function (Vw, ob) {
 }
 md._V = function (ob) {
 	return this.V(_V(ob))
+}
+$Df = function (ob) {
+	return $M({df: ob})
 }
