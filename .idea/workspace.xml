@@ -21,79 +21,68 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="a.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/a.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.037037">
-              <caret line="187" column="0" selection-start-line="187" selection-start-column="0" selection-end-line="187" selection-end-column="0" />
-              <folding>
-                <element signature="e#389#527#0" expanded="false" />
-                <element signature="e#981#1075#0" expanded="false" />
-                <element signature="e#1083#1113#0" expanded="false" />
-                <element signature="e#1185#1293#0" expanded="false" />
-                <element signature="e#1301#1327#0" expanded="false" />
-                <element signature="e#1397#1489#0" expanded="false" />
-                <element signature="e#1497#1523#0" expanded="false" />
-                <element signature="e#1851#1867#0" expanded="false" />
-                <element signature="e#1877#1900#0" expanded="false" />
-                <element signature="e#2996#3074#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_libs.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/_libs.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.061664954">
-              <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-              <folding>
-                <element signature="e#434#578#0" expanded="true" />
-                <element signature="e#590#783#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="init.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/init.js">
+        <entry file="file://$PROJECT_DIR$/init.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
-              <folding />
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding>
+                <element signature="e#107#111#0" expanded="true" />
+                <element signature="e#141#145#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gee.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/both/gee.js">
+      <file leaf-file-name="requestOb.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/misc/requestOb.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#23#47#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="responseOb.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/misc/responseOb.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#37#107#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routesBase.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/misc/routesBase.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.27749228">
+              <caret line="159" column="0" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_staticServer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_staticServer.js">
+      <file leaf-file-name="flexApps.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/sty/flexApps.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="33" selection-end-column="1" />
-              <folding>
-                <element signature="e#90#393#0" expanded="true" />
-                <element signature="e#410#651#0" expanded="true" />
-                <marker date="1449104304000" expanded="true" signature="35:655" placeholder="{...}" />
-              </folding>
+              <caret line="208" column="0" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="jsMixins.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jsMixins.js">
+        <entry file="file://$PROJECT_DIR$/misc/jsMixins.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="36" column="67" selection-start-line="36" selection-start-column="67" selection-end-line="37" selection-end-column="106" />
+              <caret line="52" column="13" selection-start-line="38" selection-start-column="5" selection-end-line="52" selection-end-column="13" />
               <folding>
                 <element signature="e#429#486#0" expanded="true" />
               </folding>
@@ -209,12 +198,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/routes/dirs.js" />
-        <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/_staticServer.js" />
         <option value="$PROJECT_DIR$/wappy/init.js" />
+        <option value="$PROJECT_DIR$/init.js" />
         <option value="$PROJECT_DIR$/a.js" />
         <option value="$PROJECT_DIR$/_libs.js" />
+        <option value="$PROJECT_DIR$/misc/routesBase.js" />
       </list>
     </option>
   </component>
@@ -228,7 +217,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="121" />
     <option name="y" value="22" />
-    <option name="width" value="1543" />
+    <option name="width" value="1396" />
     <option name="height" value="1119" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -272,20 +261,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forty" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forty" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -308,11 +283,11 @@
       <recent name="$PROJECT_DIR$/context" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/web/superJQuery" />
+      <recent name="$PROJECT_DIR$/misc" />
       <recent name="$PROJECT_DIR$/web" />
+      <recent name="$PROJECT_DIR$/server" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/web/sty" />
-      <recent name="$PROJECT_DIR$/web/handy" />
+      <recent name="$PROJECT_DIR$/web/superJQuery" />
     </key>
   </component>
   <component name="RunManager">
@@ -337,13 +312,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="121" y="22" width="1543" height="1119" extended-state="0" />
+    <frame x="121" y="22" width="1396" height="1119" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.0" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27463862" sideWeight="0.86236936" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.304" sideWeight="0.86236936" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22652885" sideWeight="0.13763066" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.027921407" sideWeight="0.5080058" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -392,46 +367,73 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/_staticServer.js">
+    <entry file="file://$PROJECT_DIR$/web/superJQuery/superWebApps.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="33" selection-end-column="1" />
+          <caret line="246" column="7" selection-start-line="246" selection-start-column="7" selection-end-line="246" selection-end-column="7" />
           <folding>
-            <element signature="e#90#393#0" expanded="true" />
-            <element signature="e#410#651#0" expanded="true" />
-            <marker date="1449104304000" expanded="true" signature="35:655" placeholder="{...}" />
+            <element signature="e#52#105#0" expanded="false" />
+            <element signature="e#505#522#0" expanded="false" />
+            <element signature="e#938#978#0" expanded="false" />
+            <element signature="e#1516#1534#0" expanded="false" />
+            <element signature="e#2054#2301#0" expanded="false" />
+            <element signature="e#2725#2813#0" expanded="false" />
+            <element signature="e#3415#3417#0" expanded="false" />
+            <element signature="e#4026#4069#0" expanded="false" />
+            <element signature="e#4091#4132#0" expanded="false" />
+            <element signature="e#4158#4522#0" expanded="false" />
+            <element signature="e#4273#4371#0" expanded="false" />
+            <element signature="e#4397#4455#0" expanded="false" />
+            <element signature="e#4598#5291#0" expanded="false" />
+            <element signature="e#5581#5917#0" expanded="false" />
+            <element signature="e#6522#6593#0" expanded="false" />
+            <element signature="e#7161#7265#0" expanded="false" />
+            <element signature="e#7308#7433#0" expanded="false" />
+            <element signature="e#8682#8746#0" expanded="false" />
+            <element signature="e#10894#11458#0" expanded="false" />
+            <element signature="e#12515#12576#0" expanded="false" />
+            <element signature="e#13203#13629#0" expanded="false" />
+            <element signature="e#13734#13866#0" expanded="false" />
+            <element signature="e#14112#14171#0" expanded="false" />
+            <element signature="e#15105#16291#0" expanded="false" />
+            <element signature="e#16369#16422#0" expanded="false" />
+            <element signature="e#16844#16861#0" expanded="false" />
+            <element signature="e#17308#17348#0" expanded="false" />
+            <element signature="e#17908#17926#0" expanded="false" />
+            <element signature="e#18514#18761#0" expanded="false" />
+            <element signature="e#19219#19307#0" expanded="false" />
+            <element signature="e#19927#19929#0" expanded="false" />
+            <element signature="e#20291#20984#0" expanded="false" />
+            <element signature="e#21572#22830#0" expanded="false" />
+            <element signature="e#23188#23231#0" expanded="false" />
+            <element signature="e#23253#23294#0" expanded="false" />
+            <element signature="e#23320#23762#0" expanded="false" />
+            <element signature="e#23464#23574#0" expanded="false" />
+            <element signature="e#23604#23670#0" expanded="false" />
+            <element signature="e#24756#24820#0" expanded="false" />
+            <element signature="e#25460#25495#0" expanded="false" />
+            <element signature="e#25513#25546#0" expanded="false" />
+            <element signature="e#25568#25953#0" expanded="false" />
+            <element signature="e#25695#25793#0" expanded="false" />
+            <element signature="e#25819#25877#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="1" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/both/superJs.js">
+    <entry file="file://$PROJECT_DIR$/misc/requestOb.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/init.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
-          <folding />
+          <folding>
+            <element signature="e#23#47#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/a.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.037037">
-          <caret line="187" column="0" selection-start-line="187" selection-start-column="0" selection-end-line="187" selection-end-column="0" />
+        <state vertical-scroll-proportion="-22.037037">
+          <caret line="192" column="0" selection-start-line="192" selection-start-column="0" selection-end-line="192" selection-end-column="0" />
           <folding>
             <element signature="e#389#527#0" expanded="false" />
             <element signature="e#981#1075#0" expanded="false" />
@@ -442,18 +444,38 @@
             <element signature="e#1497#1523#0" expanded="false" />
             <element signature="e#1851#1867#0" expanded="false" />
             <element signature="e#1877#1900#0" expanded="false" />
-            <element signature="e#2996#3074#0" expanded="true" />
+            <element signature="e#3105#3296#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/misc/responseOb.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#37#107#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/misc/routesBase.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27749228">
+          <caret line="159" column="0" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_libs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.061664954">
-          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding>
-            <element signature="e#434#578#0" expanded="true" />
-            <element signature="e#590#783#0" expanded="true" />
+            <element signature="n#!!block;n#web#0" expanded="true" />
+            <element signature="e#451#601#0" expanded="true" />
+            <element signature="e#612#809#0" expanded="true" />
+            <element signature="e#1015#1215#0" expanded="true" />
           </folding>
         </state>
       </provider>

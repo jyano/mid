@@ -175,15 +175,21 @@ $a.g('/j', function(q,p){
 	p.send('<h1>hi</h1>bye' + scripts)
 
 })
- 
-
-
 $a.g('/w', function (q, p) {
 	  
 
 	p.send('<h1>hi</h1>bye' + $Js(both, superJQ, handy, sty, 'init') )
 	
 })
+
+$a.g('/a/:app', function (q, p) {
+	app = q.params.app.toUpperCase()
+	$l('app: ' + app)
+	html = '<h1>hi</h1>bye' + $Js(both, superJQ, handy, sty)
+	html += '<script>$l("app:  ' +app +'"); '+app+'()</script>'
+	p.send( html )
+})
+
 
 
 
