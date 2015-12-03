@@ -1,6 +1,62 @@
 Bb.M = Bb.Model;
 Bb.M.x = Bb.M.extend;
 Bb.sEv(md)
+md.g = md.get;
+md.s = function (a, b, c) {
+	var md = this
+	if (O(a) && O(b)) {
+		if (b.v) {
+			b.validate = b.v ? true : false
+		}
+	}
+	if (S(a) && O(c)) {
+		if (c.v) {
+			c.validate = c.v ? true : false
+		}
+	}
+	md.set(a, b, c)
+	return md
+}
+md.S = md.sv = md.save
+md.at = function () {return this.attributes}
+md.hC = function (at) {
+	var md = this, g = G(arguments), o
+	o = g.F ? {fn: g.f} : F(g.s) ?
+	{at: g.f, fn: g.s} : {}
+	if (o.fn) {
+		if (md.hC(o.at)) {
+			o.fn()
+		}
+		return this
+	}
+	return this.hasChanged(at)
+}
+md.a2 = function (a) {
+	$l('me.a2')
+	return this
+	if (!this.q) {
+		alert('me.a2 !q');
+		return this
+	}
+	return this.q.a2(a)
+}
+md.jS = md.tS = function () {
+	return _.jS(this.J())
+}
+md.j = md.J = md.tJ = md.toJSON
+md.$l = md.lJ = function () {
+	return $l(this.jS())
+}
+md.l = function () {
+	$l(JSON.stringify(this.toJSON()))
+	return this
+}
+md.l1 = md.lT1 = md.lTo1 = function (a, b, c, d) {
+	return this.listenToOnce(a, b, c, d)
+}
+md.l2 = md.lT = md.lTo = function (a, b, c, d) {
+	return this.listenTo(a, b, c, d)
+}
 _$$M = function (ob) {
 	ob = ob || {} // o= g.F_? {fn: g.f, ob: g.s} : {ob: g.f, fn: g.s} //o=o||{}
 	ob.initialize = ob.initialize || ob.i || function () {
@@ -54,7 +110,7 @@ _$$M = function (ob) {
 	ob.validate = ob.validate || ob.v
 	return Bb.M.x(ob || {})
 }
-$$M = function (ob, a, b, c) {
+_$M = $$M = function (ob, a, b, c) {
 	ob = ob || {}
 	var g = G(arguments), Md;
 	Md = _$$M(ob, a, b, c)
@@ -71,139 +127,114 @@ $$M = function (ob, a, b, c) {
 	}
 }
 $M = function (op, a, b, c) {
+	if (U(op)) {
+		return _$M()
+	}
 	return $$M(op, a, b, c)()
 }
 $m = function (ob) {
 	var m = new Bb.Model(ob);
 	return m
 }
-
-  
-    old = function () {
+old = function () {
 //md.o = function () {var g = G(arguments);this.on.apply(this, g)}
-
-
-        /*
-         // escape   has     unset    clear – parse  pa P – clone  cl– toJSON
-         – url     u – urlRoot  uR– sync   sy fetch  F  – save  S – destroy
-         – validate    vl – validationError  vE – isValid   iV
-         – attributes– changed  – isNew iN – hasChanged  hC  – previous p
-         – previousAttributes  pA – changedAttributes cA
-         */
-
+	/*
+	 // escape   has     unset    clear – parse  pa P – clone  cl– toJSON
+	 – url     u – urlRoot  uR– sync   sy fetch  F  – save  S – destroy
+	 – validate    vl – validationError  vE – isValid   iV
+	 – attributes– changed  – isNew iN – hasChanged  hC  – previous p
+	 – previousAttributes  pA – changedAttributes cA
+	 */
 //Bb._M=function(ob){return  Bb.M.extend(ob)}
-
 //Note=Bb.M.e({initialize:function(){},author:function(){},coordinates:function(){},canEdit:function(ac){return true}})
 //PrivNote=Note.extend({canEdit:function(ac){return ac.owns(this)}})
 //Note2=Bb.M.e({set:function(atts,opts){Bb.M.prototype.set.apply(this,arguments)}})
+}
+function toAlrt() {
+	M$ = function (ob) {
+		alert('M$')
+		ob = O(ob) ? ob : {}
+		var Md, md
+		Md = Bb._M(ob)
+		md = new Md(ob)
+		return md
+	}
+	toMdOb = function (a) {
+		alert('toMdOb')
+		a = O(a) ? a : {}
+		if (a.i) {
+			a.initialize = _v(a.i)
+		}
+		if (a.I) {
+			a.initialize = _v(a.I)
+		}
+		if (a.d) {
+			a.defaults = a.d
+		}
+		if (a.D) {
+			a.defaults = a.D
+		}
+		if (a.v) {
+			a.validate = a.v
+		}
+		if (a.V) {
+			a.validate = a.V
+		}
+		a.idAttribute = '_id'
+		return a
+	}
+	sMd = function (m) {
+		alert('sMd')
+		m.at = m.attributes
+		m.s = function (a, b, c) {
+			if (O(a) && O(b)) {
+				if (b.v) {
+					b.validate = b.v ? true : false
+				}
+			}
+			if (S(a) && O(c)) {
+				if (c.v) {
+					c.validate = c.v ? true : false
+				}
+			}
+			return m.set(a, b, c)
+		}
+		m.g = m.get
+		m.j = m.toJSON
+		m.o = m.on
+		Bb.sEv(m)
+		return m
+	}
+	bbM = function (a) {
+		alert('bbM')
+		a = ob(a)
+		if (a.i) {
+			a.initialize = _v(a.i)
+		}
+		if (a.I) {
+			a.initialize = _v(a.I)
+		}
+		if (a.d) {
+			a.defaults = a.d
+		}
+		if (a.D) {
+			a.defaults = a.D
+		}
+		if (a.v) {
+			a.validate = a.v
+		}
+		if (a.V) {
+			a.validate = a.V
+		}
+		a.idAttribute = "_id"
+		var m = Backbone.Model.extend(a)
+		sMd(m)
+		return function (a) {
+			var o = new m(a)
+			sMd(o)
+			return o
+		}
+	}
+}
 
-    }
-    function toAlrt() {
-        M$ = function (ob) {
-            alert('M$')
-            ob = O(ob) ? ob : {}
-            var Md, md
-            Md = Bb._M(ob)
-            md = new Md(ob)
-            return md
-
-        }
-
-
-        toMdOb = function (a) {
-            alert('toMdOb')
-            a = O(a) ? a : {}
-            if (a.i) {
-                a.initialize = _v(a.i)
-            }
-            if (a.I) {
-                a.initialize = _v(a.I)
-            }
-            if (a.d) {
-                a.defaults = a.d
-            }
-            if (a.D) {
-                a.defaults = a.D
-            }
-            if (a.v) {
-                a.validate = a.v
-            }
-            if (a.V) {
-                a.validate = a.V
-            }
-            a.idAttribute = '_id'
-            return a
-        }
-        sMd = function (m) {
-            alert('sMd')
-            m.at = m.attributes
-            m.s = function (a, b, c) {
-
-                if (O(a) && O(b)) {
-                    if (b.v) {
-                        b.validate = b.v ? true : false
-                    }
-                }
-
-
-                if (S(a) && O(c)) {
-                    if (c.v) {
-                        c.validate = c.v ? true : false
-                    }
-                }
-
-                return m.set(a, b, c)
-
-            }
-            m.g = m.get
-            m.j = m.toJSON
-            m.o = m.on
-            Bb.sEv(m)
-            return m
-        }
-        bbM = function (a) {
-            alert('bbM')
-            a = ob(a)
-
-            if (a.i) {
-                a.initialize = _v(a.i)
-            }
-            if (a.I) {
-                a.initialize = _v(a.I)
-            }
-
-            if (a.d) {
-                a.defaults = a.d
-            }
-            if (a.D) {
-                a.defaults = a.D
-            }
-
-            if (a.v) {
-                a.validate = a.v
-            }
-            if (a.V) {
-                a.validate = a.V
-            }
-
-            a.idAttribute = "_id"
-
-            var m = Backbone.Model.extend(a)
-
-            sMd(m)
-
-            return function (a) {
-                var o = new m(a)
-
-                sMd(o)
-
-                return o
-            }
-        }
-
-
-    }
  
-
-
-

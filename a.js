@@ -189,10 +189,21 @@ $a.g('/a/:app', function (q, p) {
 	html += '<script>$l("app:  ' +app +'"); '+app+'()</script>'
 	p.send( html )
 })
-
-
-
-
+$a.g('/g/:app', function (q, p) {
+	app = q.params.app.toUpperCase()
+	$l('app: ' + app)
+	html = '<h1>hi</h1>bye' + $Js(both, superJQ, handy, sty, graphics)
+	html += '<script>$l("app:  ' + app + '"); ' + app + '()</script>'
+	
+	p.send(html)
+})
+$a.g('/b/:app', function (q, p) {
+	app = q.params.app.toUpperCase()
+	$l('app: ' + app)
+	html = 'bye' + $Js(both, superJQ, handy, sty, graphics, bone)
+	html += '<script>$l("app:  ' + app + '"); ' + app + '()</script>'
+	p.send(html)
+})
 //$hS = $h.createServer($a)
 httpServer = http.createServer($a)
 httpServer.listen(80, function () {

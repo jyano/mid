@@ -1,38 +1,30 @@
 Ap = {M: {}, C: {}, V: {}, T: {}}
-_.ex= $ext= ext=function ext(o){
+_.ex= $ext= ext=function(o){
     o.e = o.extend
     return o
     // https://coderwall.com/p/xj81ua/a-better-way-of-extending-backbone-models-and-views
 }
+
+
 $Ms = function (ms) {
 	return $.d().fS(80).C($r()).col($r()).A(ms)
 };
 
-Bb = Backbone
+Bb =bb= Backbone
 Bb.U=Bb.Utility
 Bb.S=Bb.Sync
-Bb = Backbone;
-Bb.U = Bb.Utility;
-Bb.S = Bb.Sync;
-function alpha(){
-V$ = Bb.View
-M$$ = Cl$ = Bb.Collection
-M$ = Bb.Model
-E$ = Bb.Events
-R$ = Bb.Router
+Bb.x = Bb.e = function (ob) {
+	ob = ob || {}
+	var Ev = Bb.E.extend(ob)
+	return function (a, b, c, d) {
+		return new Ev(a, b, c, d)
+	}
 }
- 
-ro = rt = Bb.Router.prototype;
-md = Bb.Model.prototype;
-vw = Bb.View.prototype;
-cl = Bb.Collection.prototype
-vw = Bb.View.prototype
-rt = Bb.Router.prototype
-cl = Bb.Collection.prototype
-md = Bb.Model.prototype;
-cl = Bb.Collection.prototype;
-md = Bb.Model.prototype
 
+Bb.E = Bb.Ev = Bb.Events;
+Bb.E.x = Bb.E.extend
+Bb.E.b = Bb.E.bind;
+Bb.E.tr = Bb.E.trg = Bb.E.trigger
 Bb.sEv = function (md) {
 	md.b = md.bind
 	md.O = md.o$ = md.oAl = function (fn) {
@@ -106,18 +98,22 @@ Bb.sEv = function (md) {
 	}
 	return md
 };
-Bb.E = Bb.Ev = Bb.Events;
-Bb.E.x = Bb.E.extend
-Bb.E.b = Bb.E.bind;
-Bb.E.tr = Bb.E.trg = Bb.E.trigger
-routerHist()
-modelCollView()
-function routerHist() {
- 
- 
-}
-function modelCollView(){ 
-   
+Eve = function () {
+	var e = _({}).extend(Backbone.Events)
+	e.o = e.bind
+	e.e = e.trigger
+	return e
 }
 
  
+rtr=ro = rt = Bb.Router.prototype;
+md = Bb.Model.prototype;
+vw = Bb.View.prototype;
+cl = Bb.Collection.prototype
+ 
+ 
+	//V$ = Bb.View
+	//M$$ = Cl$ = Bb.Collection
+	//M$ = Bb.Model
+	//E$ = Bb.Events
+	//R$ = Bb.Router

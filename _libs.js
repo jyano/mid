@@ -17,7 +17,7 @@ dirs = [
 	'box',
 	'world',
 	'spriteSheet', 'tween',
-	'loader'
+	'loader','graphics', '../art', 'bone', 'boneApps',  
 ]
 web()
 
@@ -35,14 +35,17 @@ superJQ = ['jq', 'jQueryPlus', 'frontOb', 'defs', 'superJQuery',
 sty = ['superJQuerySty', 'rules', 'cssApps', 'flexApps']
 }
 
-clipper = ['gpcas', 'gpcasTwo', 'gpcasThree', 'polyMath']
+graphics= [ 'gpc','clipper', 'canvas', 'canPath','gradients', 'cjs', 'create', 'loader', 'canLoad', 'ticker' ]
 
+ 
+bone = ['bb','bbBase', 'eventProto','modelProto', 'collectionProto','viewProto',
+ 'bbColl', 'bbEvent', 'bbModel', 'bbRouter', 'bbHist', 'bbView',
+	'bbApps', 'bbAppWorks', 'bbClApps', 'bbTask', 'BfRoll', 
+	'direc', 'imgGal','notes','perfect','rtApps'
+	
+	]
 
-canvas = ['superContext2D', 'cxGpc', 'cxApps', 'superCanvas', 'canApps']
-
-
-create = ['cjs', 'cjsMC', 'create', 'cjsLQ', 'easel', 'paths',
-	'easelShape', 'bitmapFill', 'tween', 'sprite', 'movie', 'anims',
+anim = [ 'cjsMC',  'tween', 'sprite', 'movie', 'anims',
 	'createApps', 'queueApps', 'cjsAnimApps', 'mcApps',
 	'matrixApps', 'easelGpc'
 ]
