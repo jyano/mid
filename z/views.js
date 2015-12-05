@@ -1,37 +1,4 @@
-TweetView = _V({
-
-	events: {
-		'click .edit': function (ev) {
-			ev.preventDefault()
-			this.$('.sts').at('contenteditable', true).focus()
-		},
-		'click .delete': function (ev) {
-			ev.preventDefault()
-			tweets.remove(this.model)
-		},
-		'blur .sts': 'close'
-	},
-	close: function () {
-		var sts = this.$('.sts').text()
-		this.model.set('sts', sts)
-		this.$('.sts').removeAttr('contenteditable')
-	},
-	model: Tweet(),
-	tagName: 'div',
-	ren: function () {
-	
-		this.$el.empty().A(
-		
-				$.sp(this.model.get('un')).K('un'), ': ',
-				$.sp(this.model.get('sts')).K('sts'),
-				$.a('[edit]').K('details'),		
-				$.a('[edit]').K('edit'),
-				$.a('[delete]').K('delete')
-		)
-		
-		return this
-	}
-})
+ 
 
  
 TdVw = Bb.V.x({

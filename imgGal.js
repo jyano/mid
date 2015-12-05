@@ -67,4 +67,4 @@ function imgGal() {
 	
 	
 }
- 
+ //STARTS 420 ...'i got this little img app..'

@@ -49,7 +49,7 @@ graphics= [ 'gpc','clipper', 'canvas', 'canPath','gradients', 'cjs', 'create', '
  
 bone = ['bb','bbBase', 'bbApps','template','USESC$AvailAndSweet',
 	'bbCollApps', 'book', 'items', 
-	  'sort', 'tweet',
+	  'sort', 'tweetPre', 'tweet',
 	'bbRouter', 'routePams' ,'rtApps'
 	
 	]

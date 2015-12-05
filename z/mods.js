@@ -1,4 +1,4 @@
-Tweet = _M({df: {un: 'fred', sts: 'sleeping'}})
+ 
 Note = _M({
 	defaults: function () {
 		return {

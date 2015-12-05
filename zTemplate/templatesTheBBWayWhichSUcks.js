@@ -406,4 +406,52 @@ TMP = function () {
 			this.r()
 		}
 	})({m: Per = $M({d: {n: 'j', a: 20, o: 'p'}})()})
-} 
+}
+NOWAY = PLV = function () {
+	Per = _M({//name, age, occ
+		d: {n: 'a', a: 20, o: 'p'}
+	})
+	p0 = Per()
+	p1 = Per({n: 'b'})
+	p2 = Per({n: 'c'})
+	PerV = $V({
+		t: 'li',
+		x: 'some-per',  // id
+		i: function () {
+			this.r()
+		}, //??
+		r: function () {
+			this.$el.A('fasdfsfasd')
+			this.$el.A(
+					this.tp(
+							this.model
+					)
+			)
+		},
+		k: 'per',   // className
+		tp: tp = _.tp('fo real? <%= n %> (<%= a %>) - <%= o %>'),
+	})
+	return
+	pV = PerV({m: p0})
+	PepC = $Cl({m: Per})
+	pC = PepC()
+	pC.add([p0, p1, p2])
+	PepV = $V({
+		cl: PepC,
+		el: ul = $.ul(),
+		r: function () {
+			ul = this.$el.E()
+			this.J(function (md) {
+				PerV({m: md}, ul)
+			})
+		}
+	})
+	pCV = PepV({cl: pC})
+	$.in(.2, function () {
+		pCV.r()
+	}, '*')
+	$.in(.4, function () {
+		pCV.r()
+	}, '*')
+}
+ 

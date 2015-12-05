@@ -1,97 +1,3 @@
-J=JSON
- $w = window
-
-$s = localStorage
-L = function (k, v0) {
-	if (D(v0)) {
-		$ls.s(k, v0)
-	}
-	var fn = function (v) {
-		if (U(v)) {
-			return $ls.g(k)
-		}
-		$ls.s(k, v)
-		return fn
-	}
-	return fn
-}
-L.g = function (k) {
-	return $s.getItem(k)
-}
-L.s = function (k, v) {
-	$s.setItem(k, v)
-	return L
-}
-L.r = L.rm = function (k) {
-	var vOld = $s.getItem(k)
-	$s.removeItem(k)
-	return vOld
-}
-L.l = L.L = function () {
-	return $s.length
-}
-L.clr = L.x = function () {
-	$s.clear()
-	return L
-}
-lR = function (a) {
-	var i = $s.getItem(a)
-	$s.removeItem(a)
-	return i
-}
-lS = function (a, b) {
-	$s.setItem(a, b);
-	return $s
-}
-lG = function (a) {
-	return $s.getItem(a)
-}
-lL = function () {
-	return $s.length
-}
-lX = function () {
-	$s.clear();
-	return $s
-}
-rl = function () {
-	$w.location = $w.location
-}
-rL = function () {
-	location.reload(true)
-}
-LCS = function () {
-	$.x('r', 'localStorage')
-	$ls.s('food', 'zebra')
-	//  j = $ls('jason'); j('eats')
-	// j = $ls('jason')('eats')
-	j = $ls('jason', 'eats')
-	$.h1('i didnt know that jason ' +
-	j() + ' ' + $ls.g('food') + '!')
-}
-saveFromLocStor = function () {
-	i = ta().id('input')
-	i.q.value = localStorage
-			.getItem('myText') || ''
-	i.o('u', function () {
-		localStorage.setItem('mytext',
-				i.value)
-	}, false)
-}
-readDatFromOtherPageLoc = function () {
-	//put windows side by side and watch one update the other
-	i = qi('input')
-	I(function () {
-		i.q.value = localStorage.getItem('myText') || ''
-	}, 50)
-}
-saveFromSesStor = function () {
-	i = ta().id('input')
-	i.q.value = sessionStorage.getItem('myText') || ''
-	i.o('u', function () {
-		sessionStorage
-				.setItem('mytext', i.value)
-	}, false)
-}
 JQLS1 = function () {
 	$.x('o', 'jqls')
 	$.d([$.h3('Pending')
@@ -122,106 +28,81 @@ JQLS1 = function () {
 		$.bt('Clear Data').K('btn btn-primary'),
 		$.d(['Drag Here to Delete']).id('delete-div')
 	]).K('task-list')
-	// {
-	// width:250; // float:left;
-	// mar:0;
-	// background-color:gray;
-	// min-height:240;
-	// border-radius:10;
-	// padding-bottom:15;
-	// }
-	$CSS({
-		'.task-list': {
-			w: '250px', float: 'left',
-			mar: '0px', C: 'gray', 'min-height': '240px',
-			'border-radius': '10px', 'padding-bottom': '15px'
+	$CSS(JQLScss) //<style type="text/css"> h3{text-align:center;  }</style>
+	$l($('head').oh())
+	El = function (o) {
+		var q
+		if (q = $(codes[o.code])) {
+			wrapper = $.dI('task-' + o.id).K('td-task').at('data', o.id)
+			wrapper.A(
+					$.d(o.tt).K('task-header'),
+					$.d(o.date).K('task-date'),
+					$.d(o.desc).K('task-desc')
+			).a2(q)
+		}
+	}
+	addItem = function (dat) {
+		ips = $('#td-form :input')
+		if (ips.length != 4) {
+			return
+		}
+		if (!tt) {
+			return $l("Title empty!")
+		}
+		El(dat[id = _.gT()] = {
+			id: id,
+			code: "1",
+			tt: ips[0].value, date: ips[2].value, desc: ips[1].value
+		})
+		ips[0].value = ips[1].value = ips[2].value = ''
+		$ls.s('tdData', _.jS(dat))
+	}
+	rmEl = function (o) {
+		$('#task-' + o.id).rm()
+	}
+	exEl = El({
+		code: "1", id: "123",
+		tt: "My Uber Important Task", date: "5/2/2014",
+		desc: "I have to do a lot of steps to implement this task!"
+	})
+	wrapper.dgb({
+		start: function () {
+			$('#delete-div').show()
 		},
-		h3: {'text-align': 'center'},
-		'.task-list input, .task-list textarea': {w: '240px', mar: '1px 5px'},
-		'.task-list input': {h: '30px'},
-		'.task-list input[type="button"]': {w: '100px', mar: '5px'},
-		'.td-task': {'border-radius': '5px', C: 'g', w: '230px', mar: '5px', pad: '5px'},
-		'.td-task > .task-header': {'font-weight': 'bold'},
-		'.td-task >.task-date': {'font-size': 'small', 'font-style': 'italic'},
-		'.td-task > .task-desc': {'font-size': 'smaller'},
-		'#delete-div': {
-			C: 'b', bor: '3px dotted #000', mar: '10px', h: '75px',
-			'line-height': '75px', 'text-align': 'center'
+		stop: function () {
+			$('#delete-div').hide()
 		}
 	})
-	//<style type="text/css"> h3{text-align:center;  }</style>
-	$l($('head').oh())
-	/*
-	 codes = { "1" : "#pending",  "2" : "#inProgress",  "3" : "#completed"}
-	
-	 El=function(o){var q
-	 if(q=$(codes[o.code])){
-	
-	 wrapper= $.dI('task-'+o.id).K('td-task').at('data', o.id)
-	
-	
-	 wrapper.A(
-	 $.d(o.tt).K('task-header'),
-	 $.d(o.date).K('task-date'),
-	 $.d(o.desc).K('task-desc')
-	 ).a2(q)}
-	
-	 }
-	
-	 addItem = function(dat){
-	 ips = $('#td-form :input')
-	 if(ips.length!=4){return}
-	 if(!tt){return $l("Title empty!")}
-	 El(dat[id=_.gT()]={ id:id,
-	 code: "1",
-	 tt: ips[0].value, date:ips[2].value,  desc:ips[1].value})
-	 ips[0].value= ips[1].value= ips[2].value = ''
-	 $ls.s('tdData', _.jS(dat))}
-	
-	 rmEl = function(o){ $('#task-'+o.id).rm() }
-	
-	
-	
-	
-	 exEl = El({code: "1",  id: "123",
-	 tt: "My Uber Important Task", date: "5/2/2014",
-	 desc: "I have to do a lot of steps to implement this task!"})
-	
-	
-	
-	 wrapper.dgb({
-	 start: function() {  $(  '#delete-div').show()},
-	 stop: function() {  $(   '#delete-div').hide()}})
-	
-	 $ls.s("tdData",_.jS(data=_.jP($ls.g("tdData"))))
-	
-	 $('.td-task').dgg()
-	 $.each(codes, function(k,v){$(v).dpb({//on drop !!!
-	 drop: function(ev, ui) {
-	 el = ui.helper
-	 css_id = el.attr("id")
-	 id= css_id.replace(ops.taskId,'')
-	 ob = data[  id   ]
-	 rmEl(  ob   )
-	 ob.code = k
-	 El(ob)
-	 data[id] = ob
-	 $ls.s("tdData", _.jS(data))
-	 $('#delete-div').hide()}})})
-	
-	
-	 $('#delete-div').dpb({
-	 drop: function(ev, ui) {
-	 el = ui.helper
-	 css_id = el.attr('id')
-	 id = css_id.replace(op.taskId, '')
-	 o = data[id]
-	 rmEl(o )
-	 delete data[id]
-	 $ls.s("tdData", _.jS(data))
-	 $('#delete-div').hide() }})
-	
-	 */
+	$ls.s("tdData", _.jS(data = _.jP($ls.g("tdData"))))
+	$('.td-task').dgg()
+	$.each(codes, function (k, v) {
+		$(v).dpb({//on drop !!!
+			drop: function (ev, ui) {
+				el = ui.helper
+				css_id = el.attr("id")
+				id = css_id.replace(ops.taskId, '')
+				ob = data[id]
+				rmEl(ob)
+				ob.code = k
+				El(ob)
+				data[id] = ob
+				$ls.s("tdData", _.jS(data))
+				$('#delete-div').hide()
+			}
+		})
+	})
+	$('#delete-div').dpb({
+		drop: function (ev, ui) {
+			el = ui.helper
+			css_id = el.attr('id')
+			id = css_id.replace(op.taskId, '')
+			o = data[id]
+			rmEl(o)
+			delete data[id]
+			$ls.s("tdData", _.jS(data))
+			$('#delete-div').hide()
+		}
+	})
 	data = _.jP($ls.g("tdData")) || {}
 	codes = {"1": "#pending", "2": "#inProgress", "3": "#completed"}
 	options = {}
@@ -335,15 +216,6 @@ JQLS1 = function () {
 		}
 	})
 }
-dfx = {
-	tdTask: "td-task",
-	tdHeader: "task-header",
-	tdDate: "task-date", tdDesc: "task-desc",
-	taskId: "task-", formId: "td-form",
-	dataAttribute: "data",
-	delDiv: 'delete-div'
-}
-// http://www.sitepoint.com/building-list-jquery-local-storage/
 JQLS = function () {
 	$.x('o', 'jqls')
 	$.d([$.h3('Pending')
@@ -510,45 +382,3 @@ JQLS = function () {
 		}
 	})
 }
-ssS = sessionStorage
-sR = function (a) {
-	var i = ssS.getItem(a)
-	ssS.removeItem(a)
-	return i
-}
-sS = function (a, b) {
-	ssS.setItem(a, b);
-	return ssS
-}
-sG = function (a) {
-	return ssS.getItem(a)
-}
-sL = function () {
-	return ssS.length
-}
-sX = function () {
-	ssS.clear();
-	return ssS
-}
-loc = $w.location
-loc.h = loc.href
-loc.hn = loc.hostname
-loc.ha = loc.hashn
-loc.H = loc.host
-loc.p = loc.port
-loc.pn = loc.pathname
-loc.P = loc.protocol
-loc.s = loc.search
-loc.rl = loc.reload
-loc.H = loc.host
-loc.rp = loc.replace
-loc.a = loc.assign
-hst = $w.history
-hst.b = hst.back
-hst.f = hst.forward
-hst.g = hst.go
-hst.l = hst.length
-nvg = navigator
-nvg.o = nvg.onLine
-J.p = J.parse
-J.s = J.stringify

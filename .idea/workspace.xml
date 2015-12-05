@@ -21,141 +21,70 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="colls.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zMVC/colls.js">
+      <file leaf-file-name="localStore.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/localStore.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.9259257">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.6589359">
+              <caret line="309" column="1" selection-start-line="309" selection-start-column="1" selection-end-line="309" selection-end-column="1" />
               <folding>
-                <element signature="e#16#50#0" expanded="true" />
-                <element signature="e#72#154#0" expanded="true" />
-                <element signature="e#169#548#0" expanded="true" />
-                <element signature="e#253#318#0" expanded="true" />
-                <element signature="e#286#314#0" expanded="true" />
-                <element signature="e#344#390#0" expanded="true" />
-                <element signature="e#416#490#0" expanded="true" />
-                <element signature="e#519#546#0" expanded="true" />
+                <element signature="e#433#471#0" expanded="false" />
+                <element signature="e#1691#1746#0" expanded="false" />
+                <element signature="e#1800#1988#0" expanded="false" />
+                <element signature="e#1994#2015#0" expanded="false" />
+                <element signature="e#2041#2106#0" expanded="false" />
+                <element signature="e#2998#3076#0" expanded="false" />
+                <element signature="e#3290#3368#0" expanded="false" />
+                <element signature="e#4006#4080#0" expanded="false" />
+                <element signature="e#4178#4252#0" expanded="false" />
+                <element signature="e#4712#4768#0" expanded="false" />
+                <element signature="e#5150#5314#0" expanded="false" />
+                <element signature="e#5578#5665#0" expanded="false" />
+                <element signature="e#5618#5659#0" expanded="false" />
+                <element signature="e#6092#6160#0" expanded="false" />
+                <element signature="e#6119#6154#0" expanded="false" />
+                <element signature="e#6373#6423#0" expanded="false" />
+                <element signature="e#6940#7281#0" expanded="false" />
+                <element signature="e#6946#7276#0" expanded="false" />
+                <element signature="e#7296#7458#0" expanded="false" />
+                <element signature="e#7472#7706#0" expanded="false" />
+                <element signature="e#7510#7648#0" expanded="false" />
+                <element signature="e#7546#7599#0" expanded="false" />
+                <element signature="e#7605#7642#0" expanded="false" />
+                <element signature="e#7666#7701#0" expanded="false" />
+                <element signature="e#7712#8022#0" expanded="false" />
+                <element signature="e#7857#7916#0" expanded="false" />
+                <element signature="e#7922#7965#0" expanded="false" />
+                <element signature="e#8026#8058#0" expanded="false" />
+                <element signature="e#8443#8473#0" expanded="false" />
+                <element signature="e#8500#8546#0" expanded="false" />
+                <element signature="e#8764#8929#0" expanded="true" />
+                <element signature="e#8809#8856#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zMVC/views.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.111111">
-              <caret line="150" column="16" selection-start-line="150" selection-start-column="16" selection-end-line="150" selection-end-column="16" />
-              <folding>
-                <element signature="e#707#1626#0" expanded="true" />
-                <element signature="e#1076#1221#0" expanded="true" />
-                <element signature="e#1248#1274#0" expanded="true" />
-                <element signature="e#1425#1444#0" expanded="false" />
-                <element signature="e#1452#1503#0" expanded="false" />
-                <element signature="e#1562#1583#0" expanded="false" />
-                <element signature="e#2335#2447#0" expanded="false" />
-                <element signature="e#2455#2495#0" expanded="false" />
-                <element signature="e#2515#2541#0" expanded="false" />
-                <element signature="e#2549#2589#0" expanded="false" />
-                <element signature="e#2803#2818#0" expanded="false" />
-                <element signature="e#2839#2854#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tweet.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tweet.js">
+      <file leaf-file-name="bbTemplateLostMethods.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bbTemplateLostMethods.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+              <caret line="138" column="5" selection-start-line="138" selection-start-column="5" selection-end-line="138" selection-end-column="5" />
               <folding>
-                <element signature="e#216#403#0" expanded="true" />
-                <element signature="e#522#911#0" expanded="true" />
-                <element signature="e#552#715#0" expanded="true" />
-                <element signature="e#626#645#0" expanded="true" />
-                <element signature="e#691#710#0" expanded="true" />
-                <element signature="e#758#908#0" expanded="true" />
-                <element signature="e#827#890#0" expanded="true" />
-                <element signature="e#852#874#0" expanded="true" />
-                <element signature="e#948#973#0" expanded="true" />
+                <element signature="e#1101#1122#0" expanded="false" />
+                <element signature="e#1164#1190#0" expanded="false" />
+                <element signature="e#1623#1654#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_libs.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/_libs.js">
+      <file leaf-file-name="webHistory.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/front/webHistory.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="60" column="64" selection-start-line="60" selection-start-column="64" selection-end-line="60" selection-end-column="64" />
+              <caret line="62" column="2" selection-start-line="62" selection-start-column="2" selection-end-line="62" selection-end-column="2" />
               <folding>
-                <element signature="e#7#481#0" expanded="true" />
-                <element signature="n#!!block;n#web#0" expanded="true" />
-                <element signature="e#1143#1294#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="todoos.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/todoos.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#28#116#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bbTemplate.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bbTemplate.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.26666668">
-              <caret line="86" column="10" selection-start-line="86" selection-start-column="10" selection-end-line="86" selection-end-column="10" />
-              <folding>
-                <element signature="e#387#617#0" expanded="true" />
-                <element signature="e#620#625#0" expanded="false" />
-                <element signature="e#874#903#0" expanded="false" />
-                <element signature="e#1226#1275#0" expanded="true" />
-                <element signature="e#1401#1418#0" expanded="true" />
-                <element signature="e#1442#1534#0" expanded="true" />
-                <element signature="e#1732#1865#0" expanded="true" />
-                <element signature="e#1782#1862#0" expanded="true" />
-                <element signature="e#1958#1972#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="templatesTheBBWayWhichSUcks.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zTemplate/templatesTheBBWayWhichSUcks.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="408" column="2" selection-start-line="408" selection-start-column="2" selection-end-line="408" selection-end-column="2" />
-              <folding>
-                <element signature="e#355#415#0" expanded="false" />
-                <element signature="e#630#682#0" expanded="false" />
-                <element signature="e#817#877#0" expanded="false" />
-                <element signature="e#1257#1537#0" expanded="true" />
-                <element signature="e#3264#3383#0" expanded="false" />
-                <element signature="e#7982#8262#0" expanded="true" />
-                <element signature="e#7999#8212#0" expanded="true" />
-                <element signature="e#8105#8154#0" expanded="true" />
-                <element signature="e#8173#8209#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="buckyHTML5LocalStorage.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/buckyHTML5LocalStorage.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="26" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
-              <folding>
-                <marker date="1449277648000" expanded="true" signature="26:235" placeholder="{...}" />
+                <element signature="e#213#236#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -165,23 +94,55 @@
         <entry file="file://$PROJECT_DIR$/z/cssObs.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="38" column="15" selection-start-line="38" selection-start-column="15" selection-end-line="38" selection-end-column="15" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zMVC/views.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="1" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mods.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zMVC/mods.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="1" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
               <folding>
-                <element signature="e#9#92#0" expanded="true" />
-                <element signature="e#719#905#0" expanded="true" />
+                <element signature="e#333#374#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bootData.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/z/bootData.js">
+      <file leaf-file-name="colls.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zMVC/colls.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+              <caret line="0" column="1" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tweetServer.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tweetServer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
               <folding>
-                <element signature="e#10#838#0" expanded="true" />
-                <element signature="e#848#984#0" expanded="true" />
+                <element signature="e#84#567#0" expanded="true" />
+                <element signature="e#160#260#0" expanded="false" />
+                <element signature="e#390#446#0" expanded="false" />
+                <element signature="e#926#971#0" expanded="false" />
+                <element signature="e#1041#1053#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -201,12 +162,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/_libs.js" />
-        <option value="$PROJECT_DIR$/zMVC/colls.js" />
-        <option value="$PROJECT_DIR$/tweet.js" />
-        <option value="$PROJECT_DIR$/zMVC/views.js" />
-        <option value="$PROJECT_DIR$/zTemplate/templatesTheBBWayWhichSUcks.js" />
-        <option value="$PROJECT_DIR$/bbTemplate.js" />
+        <option value="$PROJECT_DIR$/localStorage/oldLS/bbLS1.js" />
+        <option value="$PROJECT_DIR$/localStorage/moreLS.js" />
+        <option value="$PROJECT_DIR$/front/webHistory.js" />
+        <option value="$PROJECT_DIR$/bbTemplateLostMethods.js" />
+        <option value="$PROJECT_DIR$/localStore.js" />
+        <option value="$PROJECT_DIR$/z/bbLocalStorePlugin.js" />
       </list>
     </option>
   </component>
@@ -218,10 +179,10 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="30" />
-    <option name="y" value="53" />
-    <option name="width" value="1214" />
-    <option name="height" value="1084" />
+    <option name="x" value="114" />
+    <option name="y" value="22" />
+    <option name="width" value="1167" />
+    <option name="height" value="1101" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -274,49 +235,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="zTemplate" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forty" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forty" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zMVC" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forty" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forty" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="z" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forty" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forty" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -343,11 +262,11 @@
       <recent name="$PROJECT_DIR$/poly" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/front" />
+      <recent name="$PROJECT_DIR$/bone" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/zTemplate" />
       <recent name="$PROJECT_DIR$/zMVC" />
-      <recent name="$PROJECT_DIR$/z" />
-      <recent name="$PROJECT_DIR$/bone" />
     </key>
   </component>
   <component name="RunManager">
@@ -372,16 +291,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="30" y="53" width="1214" height="1084" extended-state="0" />
+    <frame x="114" y="22" width="1167" height="1101" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.0" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12215321" sideWeight="0.47694886" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22583927" sideWeight="0.47033158" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27074602" sideWeight="0.86236936" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28184992" sideWeight="0.86236936" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22652885" sideWeight="0.13763066" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12215321" sideWeight="0.52305114" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22583927" sideWeight="0.5296684" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -427,104 +346,73 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/zMVC/colls.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.9259257">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="e#16#50#0" expanded="true" />
-            <element signature="e#72#154#0" expanded="true" />
-            <element signature="e#169#548#0" expanded="true" />
-            <element signature="e#253#318#0" expanded="true" />
-            <element signature="e#286#314#0" expanded="true" />
-            <element signature="e#344#390#0" expanded="true" />
-            <element signature="e#416#490#0" expanded="true" />
-            <element signature="e#519#546#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/z/thoughts.js">
+    <entry file="file://$PROJECT_DIR$/front/webHistory.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="62" column="2" selection-start-line="62" selection-start-column="2" selection-end-line="62" selection-end-column="2" />
           <folding>
-            <element signature="e#23#123#0" expanded="true" />
+            <element signature="e#213#236#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tweet.js">
+    <entry file="file://$PROJECT_DIR$/bbTemplateLostMethods.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <caret line="138" column="5" selection-start-line="138" selection-start-column="5" selection-end-line="138" selection-end-column="5" />
           <folding>
-            <element signature="e#216#403#0" expanded="true" />
-            <element signature="e#522#911#0" expanded="true" />
-            <element signature="e#552#715#0" expanded="true" />
-            <element signature="e#626#645#0" expanded="true" />
-            <element signature="e#691#710#0" expanded="true" />
-            <element signature="e#758#908#0" expanded="true" />
-            <element signature="e#827#890#0" expanded="true" />
-            <element signature="e#852#874#0" expanded="true" />
-            <element signature="e#948#973#0" expanded="true" />
+            <element signature="e#1101#1122#0" expanded="false" />
+            <element signature="e#1164#1190#0" expanded="false" />
+            <element signature="e#1623#1654#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zMVC/views.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.111111">
-          <caret line="150" column="16" selection-start-line="150" selection-start-column="16" selection-end-line="150" selection-end-column="16" />
-          <folding>
-            <element signature="e#707#1626#0" expanded="true" />
-            <element signature="e#1076#1221#0" expanded="true" />
-            <element signature="e#1248#1274#0" expanded="true" />
-            <element signature="e#1425#1444#0" expanded="false" />
-            <element signature="e#1452#1503#0" expanded="false" />
-            <element signature="e#1562#1583#0" expanded="false" />
-            <element signature="e#2335#2447#0" expanded="false" />
-            <element signature="e#2455#2495#0" expanded="false" />
-            <element signature="e#2515#2541#0" expanded="false" />
-            <element signature="e#2549#2589#0" expanded="false" />
-            <element signature="e#2803#2818#0" expanded="false" />
-            <element signature="e#2839#2854#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zTemplate/templatesTheBBWayWhichSUcks.js">
+    <entry file="file://$PROJECT_DIR$/bone/LATER/bbAppsLater/_bbApps.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="408" column="2" selection-start-line="408" selection-start-column="2" selection-end-line="408" selection-end-column="2" />
-          <folding>
-            <element signature="e#355#415#0" expanded="false" />
-            <element signature="e#630#682#0" expanded="false" />
-            <element signature="e#817#877#0" expanded="false" />
-            <element signature="e#1257#1537#0" expanded="true" />
-            <element signature="e#3264#3383#0" expanded="false" />
-            <element signature="e#7982#8262#0" expanded="true" />
-            <element signature="e#7999#8212#0" expanded="true" />
-            <element signature="e#8105#8154#0" expanded="true" />
-            <element signature="e#8173#8209#0" expanded="true" />
-          </folding>
+          <caret line="7191" column="1" selection-start-line="7191" selection-start-column="1" selection-end-line="7191" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bbTemplate.js">
+    <entry file="file://$PROJECT_DIR$/localStore.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26666668">
-          <caret line="86" column="10" selection-start-line="86" selection-start-column="10" selection-end-line="86" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.6589359">
+          <caret line="309" column="1" selection-start-line="309" selection-start-column="1" selection-end-line="309" selection-end-column="1" />
           <folding>
-            <element signature="e#387#617#0" expanded="true" />
-            <element signature="e#620#625#0" expanded="false" />
-            <element signature="e#874#903#0" expanded="false" />
-            <element signature="e#1226#1275#0" expanded="true" />
-            <element signature="e#1401#1418#0" expanded="true" />
-            <element signature="e#1442#1534#0" expanded="true" />
-            <element signature="e#1732#1865#0" expanded="true" />
-            <element signature="e#1782#1862#0" expanded="true" />
-            <element signature="e#1958#1972#0" expanded="true" />
+            <element signature="e#433#471#0" expanded="false" />
+            <element signature="e#1691#1746#0" expanded="false" />
+            <element signature="e#1800#1988#0" expanded="false" />
+            <element signature="e#1994#2015#0" expanded="false" />
+            <element signature="e#2041#2106#0" expanded="false" />
+            <element signature="e#2998#3076#0" expanded="false" />
+            <element signature="e#3290#3368#0" expanded="false" />
+            <element signature="e#4006#4080#0" expanded="false" />
+            <element signature="e#4178#4252#0" expanded="false" />
+            <element signature="e#4712#4768#0" expanded="false" />
+            <element signature="e#5150#5314#0" expanded="false" />
+            <element signature="e#5578#5665#0" expanded="false" />
+            <element signature="e#5618#5659#0" expanded="false" />
+            <element signature="e#6092#6160#0" expanded="false" />
+            <element signature="e#6119#6154#0" expanded="false" />
+            <element signature="e#6373#6423#0" expanded="false" />
+            <element signature="e#6940#7281#0" expanded="false" />
+            <element signature="e#6946#7276#0" expanded="false" />
+            <element signature="e#7296#7458#0" expanded="false" />
+            <element signature="e#7472#7706#0" expanded="false" />
+            <element signature="e#7510#7648#0" expanded="false" />
+            <element signature="e#7546#7599#0" expanded="false" />
+            <element signature="e#7605#7642#0" expanded="false" />
+            <element signature="e#7666#7701#0" expanded="false" />
+            <element signature="e#7712#8022#0" expanded="false" />
+            <element signature="e#7857#7916#0" expanded="false" />
+            <element signature="e#7922#7965#0" expanded="false" />
+            <element signature="e#8026#8058#0" expanded="false" />
+            <element signature="e#8443#8473#0" expanded="false" />
+            <element signature="e#8500#8546#0" expanded="false" />
+            <element signature="e#8764#8929#0" expanded="true" />
+            <element signature="e#8809#8856#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -1,7 +1,4 @@
-TweetsList = _C({
-	url: '/tweets',
-	model: Tweet
-})
+ 
 NoteCollection = _C({
 	//model: Note,
 	//localStorage: new Bb.LocalStorage("choose-some-identifier")

@@ -1,22 +1,25 @@
 FETCH = EVTSAVE = function () {
-	m = Bb.M.e({n: 'j'})
-	Don = Bb.M.e({
+	m = _M({n: 'j'})
+	Don = _M({
 		d: {n: null, sprink: 0, cream: 0},
 		u: function () {
 			return this.id ? '/dn/' + this.id : '/dn'
 		}
 	})
-	bc = bostonCream = Don.o({n: 'Bos', cream: 1})
+	
+	
+	bc = bostonCream = Don({n: 'Bos', cream: 1})
 	bc.s({sprink: 1}).S() //save
-	Dons = Bb.C.e({m: Don, url: "/dn"})
-	dons = Dons.o()
+	Dons = _C({m: Don, url: "/dn"})
+	dons = Dons()
+	
 	dons.fetch()
 	// donuts.at(0); -> gets donuts by index.
 	// donuts.get(0); -> gets donuts by id.
 	// donuts.each(function(d){$l(d.get("name"))})
 	// donuts.select(function(d){return d.get("name").length>2})// Select donuts with names longer than 2
 	// donuts.map(function(d){return d.get("name")})
-	Shop = Bb.M.e({
+	Shop = _M({
 		i: function () {
 			this.dons = Dons()
 			this.dons.url = 'shops/' + this.id + "/dn"
@@ -145,10 +148,11 @@ FETCH = EVTSAVE = DONUTS = function () {
 		n: "Lem"
 	})
 }
+
 MOD = DONUT = function () {
-	m = bbM({n: 'j'})
-	m = bbM({n: 'j'})
-	Donut = bbM({
+	m = _M({n: 'j'})
+	m = _M({n: 'j'})
+	Donut = _M({
 		d: {
 			n: null,
 			sparkles: false,
@@ -159,7 +163,7 @@ MOD = DONUT = function () {
 			return t.id ? '/donuts/' + t.id : '/donuts'
 		}
 	})
-	Donut = bbM({
+	Donut = _M({
 		d: {
 			n: null,
 			sparkles: false,

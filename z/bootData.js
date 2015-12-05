@@ -16,4 +16,42 @@ bksArr = [
 	{title: 'under the knee', author: 'p .qu rstly'}
 ]
 BBVTdArr = [{t: 'a.com', h: 'a.com'}, {t: 'b.com', h: 'b.com'}, {t: 'c.com', h: 'c.com'}]
+codes = {"1": "#pending", "2": "#inProgress", "3": "#completed"}
+J = JSON
+J.p = J.parse
+J.s = J.stringify
+$w = window
+_lS = localStorage
+dfx = {
+	tdTask: "td-task",
+	tdHeader: "task-header",
+	tdDate: "task-date", tdDesc: "task-desc",
+	taskId: "task-", formId: "td-form",
+	dataAttribute: "data",
+	delDiv: 'delete-div'
+}
+$.fn.foc = $.fn.focus
+$.pD = function (ev) {
+	ev.preventDefault()
+	return ev
+}
+$.fn.ed = function (ed) {
+	if (U(ed)) {
+		return this.attr('contenteditable')
+	}
+	this.attr('contenteditable', ed ? true : false)
+	return this
+}
+$.fn.rmAt = $.fn.removeAttr
+$.fn.edFoc = function () {
+	return this.ed(1).foc()
+}
+$.fn.nm = $.fn.name = function (name) {
+	return name ? this.at('name', name) : this.at('name')
+}
+$.fn.idNm = function (id, nm) {
+	this.id(id)
+	this.nm(nm || id)
+	return this
+}
  

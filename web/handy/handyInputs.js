@@ -569,6 +569,12 @@ function form() {
 		return f
 	}
 }
- 
- 
- 
+$.v = function (id) {
+	return $('#' + id).val()
+}
+$.V = function (id) {
+	var $el = $('#' + id)
+	var val = $el.val()
+	$el.val('')
+	return val
+}

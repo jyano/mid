@@ -576,11 +576,13 @@ function backg() {
     }
 }
 function text() {
-    $.fn.T = function () {
+    $.fn.T = function ( ) {
         var g = G(arguments)
-        this.text.apply(this, g)
+        if(g.u){return this.text()}
+        this.text(g.f)
         return this
     }
+    
     $.fn.fZ = $.fn.fS = $.fn.fontSize = function (z) {
         this.css('font-size', z)
         return this
