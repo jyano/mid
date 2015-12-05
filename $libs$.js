@@ -1,6 +1,6 @@
 dirs = ['', '_deps',  'front', 'front/_deps', 'front/superWeb',  'front/easel',
 	
-	'bbAvail', 'bbRoll','bbTweet', 
+	'bbAvail', 'bbRoll','bbTweet', 'apps',
 		
 	'../art']
 
@@ -9,9 +9,16 @@ dirs = ['', '_deps',  'front', 'front/_deps', 'front/superWeb',  'front/easel',
 superWeb = [
 
 	// foreign dependencies
-	'us','string','moment', 'jq', 'bb', 'gpc','cjs',
-		//superWeb 
-	'both', 'frontOb', 'superJQuery', 'handy',  'rules', 'clipper', 'superCanvas','create',
+	'us','string','moment', 'jq', 'bb', 'gpc','cjs', 'both',
+	///////////////////////////////////////////////////////////////
+	//superWeb 
+	//////////////////////////////////////////////////////////////
+	
+	
+	'frontOb', 'superJQuery', 'handy', 'rules', 'webApps',
+	'clipper', 'superCanvas','create', 'canApps', 'createApps',
+		
+
 		//backbone
 	'bbPre', 'bbBase', 'bbLocalStorage',
 		
