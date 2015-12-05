@@ -1,5 +1,5 @@
 console.log('......\n...\n.\n\n\n');
-require('./superNode/serverBoth/$serverBoth$');
+require('./superNode/_deps/$serverBoth$');
 $l(' - final - forty - \n');
 require('./superNode/$superNode$')
 $Js = function(arr){
@@ -135,11 +135,8 @@ $a.g('/www/:a?/:p?', function (q, p) {
 		pam: q.params.p
 	})
 })
-
 //require('./_staticServer')(__dirname)
- 
-require('./superNode/$libs$')
-
+require('./$libs$')
 dirN = __dirname
 _.e(dirs, function (dir) {
 		$a.use($e.static(dirN + '/' + dir))
