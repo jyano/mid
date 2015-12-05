@@ -1,13 +1,5 @@
-Bb = bb = Backbone
-Bb.U = Bb.Utility
-Bb.S = Bb.Sync
-Bb.x = Bb.e = function (ob) {
-	ob = ob || {}
-	var Ev = Bb.E.extend(ob)
-	return function (a, b, c, d) {
-		return new Ev(a, b, c, d)
-	}
-}
+$L('events','model','router','history')
+function events(){
 Bb.E = Bb.Ev = Bb.Events;
 Bb.E.x = Bb.E.extend
 Bb.E.b = Bb.E.bind;
@@ -91,116 +83,11 @@ Eve = function () {
 	e.e = e.trigger
 	return e
 }
-rtr = ro = rt = Bb.Router.prototype;
-vw = Bb.View.prototype;
-cl = Bb.Collection.prototype
- 
-function loadScripts() {
-	$l('tcps:loadScripts')
-//$('body').A(  $('<script src="/us.js">') ) //$('body').A(  $('<script src="/string.js">') )
-	$.j('/us.js');
-	$.j('/string.js')
-	$.j('/both.js') //$.j('/jq.js') //$.j('/jqSer.js')
-	$.j('/bs.js');
-	$.j('/frontOb.js');
-	$.j('/handy.js')
-	$.j('/sty.js');
-	$.j('/rules.js')
-	$.j('/flex.js');
-	$.j('/bb.js');
-	$.j('/bbCore.js')
-	$.j('/bbLs.js')
 }
-$RoApp = function (name, fn) {
-	startRtr = function (name) {
-		Bb.h.start({
-			pushState: true,
-			root: "/mvc/" + name + "/"
-		})
-	}
-	$Fn(name, function () {
-		Ap = {M: {}, V: {}, C: {}}
-		$l('name: ' + (name = _.tU(name)))
-		$rtHeader(name)
-		d = $.dI('ct').fS(40)
-		fn();
-		startRtr(name)
-	})
+function model(){
+$M$ = function (ob) {
+	return Bb.M.x(ob)
 }
-$rR = function (ob) {
-	return _$r({r: ob})
-}
-Ap = {M: {}, C: {}, V: {}, T: {}}
-Bb.M = Bb.Model;
-Bb.M.x = Bb.M.extend
-md = Bb.Model.prototype;
-Bb.sEv(md)
-md.g = md.get;
-md.s = function (a, b, c) {
-	var md = this
-	if (O(a) && O(b)) {
-		if (b.v) {
-			b.validate = b.v ? true : false
-		}
-	}
-	if (S(a) && O(c)) {
-		if (c.v) {
-			c.validate = c.v ? true : false
-		}
-	}
-	md.set(a, b, c)
-	return md
-}
-md.sv = md.S = md.save
-md.at = function () {
-	return this.attributes
-}
-md.hC = function (at) {
-	var md = this, g = G(arguments), o
-	o = g.F ? {fn: g.f} : F(g.s) ?
-	{at: g.f, fn: g.s} : {}
-	if (o.fn) {
-		if (md.hC(o.at)) {
-			o.fn()
-		}
-		return this
-	}
-	return this.hasChanged(at)
-}
-md.a2 = function (a) {
-	if (!this.q) {
-		return this
-	}
-	return this.q.a2(a)
-}
-md.jS = md.tS = function () {
-	return _.jS(this.J())
-}
-md.j = md.J = md.tJ = md.toJSON
-md.$l = md.lJ = function () {
-	return $l(this.jS())
-}
-md.l = function () {
-	$l(JSON.stringify(this.toJSON()))
-	return this
-}
-md.l1 = md.lT1 = md.lTo1 = function (a, b, c, d) {
-	return this.listenToOnce(a, b, c, d)
-}
-md.l2 = md.lT = md.lTo = function (a, b, c, d) {
-	return this.listenTo(a, b, c, d)
-}
-$M$= function(ob){return Bb.M.x(ob)}
-$V$ = function (ob) {
-	return Bb.V.x(ob)
-}
-$R$ = function (ob) {
-	return Bb.R.x(ob)
-}
-$C$ = function (ob) {
-	return Bb.C.x(ob)
-}
-
 __M = function (ob) {
 	ob = ob || {} // o= g.F_? {fn: g.f, ob: g.s} : {ob: g.f, fn: g.s} //o=o||{}
 	ob.initialize = ob.initialize || ob.i || function () {
@@ -276,18 +163,6 @@ $Df = function (ob) {
 M_ = $m = function (ob) {
 	var m = new Bb.Model(ob);
 	return m
-}
-md.j = function () {
-	return this.toJSON()
-}
-md.idAttribute = '_id'
-md.V = function (Vw, ob) {
-	ob = ob || {}
-	ob.m = this
-	return Vw(ob)
-}
-md._V = function (ob) {
-	return this.V(_V(ob))
 }
 M$ = function (ob) {
 	alert('M$')
@@ -373,25 +248,13 @@ bbM = function (a) {
 		return o
 	}
 }
-//md.o = function () {var g = G(arguments);this.on.apply(this, g)}
-/*
- // escape   has     unset    clear – parse  pa P – clone  cl– toJSON
- – url     u – urlRoot  uR– sync   sy fetch  F  – save  S – destroy
- – validate    vl – validationError  vE – isValid   iV
- – attributes– changed  – isNew iN – hasChanged  hC  – previous p
- – previousAttributes  pA – changedAttributes cA
- */
-//Bb._M=function(ob){return  Bb.M.extend(ob)}
-//Note=Bb.M.e({initialize:function(){},author:function(){},coordinates:function(){},canEdit:function(ac){return true}})
-//PrivNote=Note.extend({canEdit:function(ac){return ac.owns(this)}})
-//Note2=Bb.M.e({set:function(atts,opts){Bb.M.prototype.set.apply(this,arguments)}})
-Bb.C = Bb.Collection;
-Bb.C.x = Bb.C.extend;
-cl = Bb.Collection.prototype;
-Bb.sEv(cl)
-cl.g = cl.get
-cl.s = function (a, b, c) {
-	var cl = this
+Bb.M = Bb.Model;
+Bb.M.x = Bb.M.extend
+md = Bb.Model.prototype;
+Bb.sEv(md)
+md.g = md.get;
+md.s = function (a, b, c) {
+	var md = this
 	if (O(a) && O(b)) {
 		if (b.v) {
 			b.validate = b.v ? true : false
@@ -399,397 +262,89 @@ cl.s = function (a, b, c) {
 	}
 	if (S(a) && O(c)) {
 		if (c.v) {
-			c.validate = c.v ?
-					true : false
+			c.validate = c.v ? true : false
 		}
 	}
-	cl.set(a, b, c)
-	return cl
+	md.set(a, b, c)
+	return md
 }
-cl.A = cl.a = function () {
-	var cl = this,
-			g = G(arguments), ar
-	this.add(g.A ? g.f : g);
-	return this
+md.sv = md.S = md.save
+md.at = function () {
+	return this.attributes
 }
-cl.rm = cl.r = cl.remove
-cl.cr = cl.create
-cl.fe = cl.fetch
-cl.att = cl.atr = cl.attributes
-cl.b = cl.bind
-cl.tJ = cl.j = cl.toJSON
-cl.lJ = cl.l = function () {
-	$l(this.toJSON());
-	return this
-}
-cl.ls2 = cl.l2 = function (a, b, c, d) {
-	return this.listenTo(a, b, c, d)
-}
-cl.ls1 = cl.l1 = function (a, b, c, d) {
-	return this.listenToOnce(a, b, c, d)
-}
-cl.fl = cl.filter
-cl.wo = cl.without
-cl.la = cl.last
-cl.V = function (Vw, ob) {
-	ob = ob || {}
-	ob.m = this
-	return Vw(ob)
-}
-//cl.o= function(){var g=G(arguments); this.on.apply(this, g) }
-cl.tr = function (a, b) {
-	this.trigger(a, b);
-	return this
-}
-cl.oRm = function (a, b, c) {
-	return this.on('remove', a, b, c)
-}   // "remove" (model, collection, options) — when a model is rcl from a collection.
-cl.oX = cl.oD = function (fn) {
-	return this.on('destroy', fn)
-} // "destroy" (model, collection, options) — when a model is destroyed.
-cl.oR = cl.oRs = function (fn) {
-	return this.on('reset', fn)
-}  // "reset" (collection, options) — when the collection's entire contents have been replaced.
-cl.oSo = function (a, b, c) {
-	return this.o('sort', a, b, c)
-}    // "sort" (collection, options) — when the collection has been re-sorted.
-cl.oC = cl.oCh = function (n, fn) {
-	if (U(fn)) {
-		return this.on('change', n)
-	}
-	return this.on('change:' + n, fn)
-} // "change" (model, options)  — when a model's attributes have changed. // "change:[attribute]" (model, value, options)  — when a specific attribute has been updated.
-cl.oQ = cl.Rq = function (mdCl, fn) {
-	return this.on('request', fn)
-}      // on start of md|cl SERVER request function passed(md_or_cl,  xhr, op)
-cl.oS = cl.oSy = function (a, b, c) {
-	return this.o('sync', a, b, c)
-} // "sync" (model_or_collection, resp, options) — when a model or collection has been successfully synced with the server.
-cl.oZ = cl.oE = cl.oEr = function (a, b, c) {
-	return this.o('error', a, b, c)
-} //"error" (model_or_collection, resp, options) — when model's or collection's request to remote server has failed.
-cl.oIv = function (a, b, c) {
-	return this.on('invalid', a, b, c)
-}  //"invalid" (model, error, options) — when a model's validation fails on the client.
-cl.o$ = cl.oAl = function (fn) {
-	return this.on('all', fn)
-}   //passes event name as 1st ag
-cl.oA = function (fn) {
-	fn = fn || function (m) {
-		m.at = m.attributes
-		m.s = function (a, b, c) {
-			if (O(a) && O(b)) {
-				if (b.v) {
-					b.validate = b.v ? true : false
-				}
-			}
-			if (S(a) && O(c)) {
-				if (c.v) {
-					c.validate = c.v ? true : false
-				}
-			}
-			return m.set(a, b, c)
+md.hC = function (at) {
+	var md = this, g = G(arguments), o
+	o = g.F ? {fn: g.f} : F(g.s) ?
+	{at: g.f, fn: g.s} : {}
+	if (o.fn) {
+		if (md.hC(o.at)) {
+			o.fn()
 		}
-		m.g = m.get
-		m.j = m.toJSON
-		m.o = m.on
-		E$(m)
-		a.A(m)
-	}
-	return this.on('add', fn)
-} // "add" (model, collection, options) — when a model is added to a collection.
-cl.j = function () {
-	return this.toJSON()
-}
-_C = function (ob) {
-	_$$C = function (ob) {
-		ob = ob || {}
-		//var g=G(arguments), o= g.F_? {fn: g.f, ob: g.s} : {ob: g.f, fn: g.s}; o=o||{}
-		if (!F(ob.initialize) && F(ob.i)) {
-			ob.initialize = ob.i
-		}
-		if (!O(ob.collection) && (O(ob.cl) || O(ob.c))) {
-			ob.collection = ob.cl || ob.c
-		}
-		if (!O(ob.model) && (O(ob.md) || O(ob.m))) {
-			ob.model = ob.md || ob.m
-		}
-		//ob.model= ob.model || ob.md || ob.m
-		//if(ob.m){ob.model= ob.m}
-		ob.defaults = ob.defaults || ob.df || ob.d
-		ob.id = D(ob.id) ? ob.id : ob.x
-		ob.idAttribute = ob.idAttribute || ob._id
-		ob.events = ob.events || ob.ev || ob.e
-		ob.validate = ob.validate || ob.v
-		function more() {
-			if (ob.fn) {
-				ob.i = ob.fn
-			}
-			ob.initialize = ob.initialize || ob.i
-			ob._i = ob.initialize
-			ob.id = D(ob.id) ? ob.id : ob.x
-			ob.className = ob.className || ob.k
-			ob.tagName = ob.tagName || ob.tn || ob.t
-			ob.defaults = ob.defaults || ob.df || ob.d
-			ob.events = ob.events || ob.ev || ob.e
-			ob.render = ob.render || ob.rr || ob.r
-			ob.tagName = ob.tagName || ob.tn || ob.t
-			ob.collection = ob.collection || ob.cl || ob.c
-			// ob.render= ob.render || ob.rr || ob.r
-			ob.render = ob.render || ob.rn
-		}
-		
-		return Bb.C.x(ob || {})
-	}
-	var Cl = _$$C(ob)
-	return function (ob, b, c, d) {
-		ob = ob || {}
-		var cl
-		ob.collection = ob.collection || ob.cl || ob.c
-		ob.model = ob.model || ob.md || ob.m
-		cl = new Cl(ob, b, c, d) //if(q){cl.a2(q)}
-		cl.q = cl.$el
-		cl.a2 = function (a) {
-			return cl.q.a2(a)
-		}
-		cl.g = function (a) {
-			if (a) {
-				return cl.model.get(a)
-			}
-		}
-		/*
-		 cl.A=function(ob){
-		
-		 var g=G(arguments)
-		 if(S(ob)){ob = cl.g(ob)}
-		 if(ob){this.$el.A(ob)}
-		 if(U(ob) || g.p){ this.$el.A() }
-		 return this.$el
-		 }
-		 //_.b(ob._i,cl) (op)
-		 */
-		return cl
-	}
-} // = $$C 
-$C = $Cl = function (ob, a, b, c) {
-	return _C(ob, a, b, c)()
-}
-C_ = function (ob) {
-	return _C()(ob)
-	C$Alt = function (a) {
-		var b, c
-// $.ext(Bb.Collection)
-		//if(U(a)){var c=new Bb.Collection; return sCl(c)}
-		a = O(a) ? a : {}
-		if (a.m) {
-			a.model = a.m
-		}
-		c = Bb.C.x(a)
-		return function (o) {
-			o = O(o) ? o : {}
-			//if(o.m){o.model= o.m}
-			b = new c(o)
-			return b
-		}
-	}
-	C$Alpha = function (a) {
-		var b, c
-// $.ext(Bb.Collection)
-		//if(U(a)){var c=new Backbone.Collection; return sCl(c)}
-		a = O(a) ? a : {}
-		if (a.m) {
-			a.model = a.m
-		}
-		c = Backbone.Collection.extend(a)
-		return function (o) {
-			o = O(o) ? o : {}
-			//if(o.m){o.model= o.m}
-			b = new c(o)
-			o.o = o.on
-			E$(o)
-			return b
-		}
-	}
-} //C$ =
-$c = $cl = function (ob) {
-	var m = new Bb.Collection(ob);
-	return m
-}
-C$ = function (a) {
-	var b, c
-// $.ext(bb.Collection)
-	//if(U(a)){var c=new bb.Collection; return sCl(c)}
-	a = O(a) ? a : {}
-	if (a.m) {
-		a.model = a.m
-	}
-	c = bb.Collection.extend(a)
-	return function (o) {
-		o = O(o) ? o : {}
-		//if(o.m){o.model= o.m}
-		b = new c(o)
-		o.o = o.on
-		E$(o)
-		return b
-	}
-}
-Bb.V = Bb.View;
-Bb.V.x = Bb.V.extend;
-vw = Bb.View.prototype;
-Bb.sEv(vw)
-vw.A = function (ob) {
-	var g = G(arguments)
-	if (S(ob)) {
-		ob = this.g(ob)
-	}
-	if (ob) {
-		this.$el.A(ob)
-	}
-	if (U(ob) || g.p) {
-		this.$el.A()
-	}
-	return this
-}
-vw.a2 = function (a) {
-	if (this.$el && this.$el.a2) {
-		return this.$el.a2(a)
-	}
-}
-vw.g = function (m) {
-	if (this.model) {
-		return this.model.get(m)
-	}
-	else if (this.collection && this.collection.get) {
-		return this.collection.get(m)
-	}
-}
-vw.s = function (a, b) {
-	this.model.set(a, b);
-	return this
-}
-vw.E = function () {
-	this.$el.E();
-	return this
-}
-vw.cl = vw.eCl = vw.e = function (fn) {
-	var cl = (this.collection || this.cl)
-	if (U(fn)) {
-		return cl
-	}
-	if (cl) {
-		_.e(cl, fn)
-	}
-	return this
-}
-vw.eAlt = function (a, b) {
-	var cl = this.collection || this.cl;
-	cl.each(a, b)
-	return this
-}
-vw.ECl = function (fn, cl) {
-	this.E();
-	if (cl) {
-		_.e(cl, fn)
 		return this
 	}
-	return this.eCl(fn)
+	return this.hasChanged(at)
 }
-vw.eM = function (fn) {
-	_.e(this.model, fn);
-	return this
-}
-vw.h = function (a) {
-	if (U(a)) {
-		return this.$el.h()
+md.a2 = function (a) {
+	if (!this.q) {
+		return this
 	}
-	this.$el.h(a);
+	return this.q.a2(a)
+}
+md.jS = md.tS = function () {
+	return _.jS(this.J())
+}
+md.j = md.J = md.tJ = md.toJSON
+md.$l = md.lJ = function () {
+	return $l(this.jS())
+}
+md.l = function () {
+	$l(JSON.stringify(this.toJSON()))
 	return this
-}//=vw.H
-vw.j = function (fn) {
-	var vw = this, j
-	if (this.collection) {
-		j = this.collection.toJSON()
-		if (F(fn)) {
-			_.e(j, fn);
-			return vw
+}
+md.l1 = md.lT1 = md.lTo1 = function (a, b, c, d) {
+	return this.listenToOnce(a, b, c, d)
+}
+md.l2 = md.lT = md.lTo = function (a, b, c, d) {
+	return this.listenTo(a, b, c, d)
+}
+md.j = function () {
+	return this.toJSON()
+}
+md.idAttribute = '_id'
+	md.V = function (Vw, ob) {
+		ob = ob || {}
+		ob.m = this
+		return Vw(ob)
+	}
+	md._V = function (ob) {
+		return this.V(_V(ob))
+	}
+}
+function router(){
+	rtr = ro = rt = Bb.Router.prototype;
+	$R$ = function (ob) {
+		return Bb.R.x(ob)
+	}
+	$RoApp = function (name, fn) {
+		startRtr = function (name) {
+			Bb.h.start({
+				pushState: true,
+				root: "/mvc/" + name + "/"
+			})
 		}
-		return j
+		$Fn(name, function () {
+			Ap = {M: {}, V: {}, C: {}}
+			$l('name: ' + (name = _.tU(name)))
+			$rtHeader(name)
+			d = $.dI('ct').fS(40)
+			fn();
+			startRtr(name)
+		})
 	}
-	if (this.model) {
-		return this.model.toJSON()
+	$rR = function (ob) {
+		return _$r({r: ob})
 	}
-}
-vw.oC = function () {
-	if (!this.model) {
-		return false
-	}
-	this.model.oC.apply(this.model, arguments)
-	return this
-}
-vw.C$ = function (s) {
-	this.$el.C$(s);
-	return this
-}
-vw.ds = function () {
-	if (this.model) {
-		this.model.destroy()
-	}
-}
-V__ = function (ob) {
-	ob = ob || {}
-	ob.id = D(ob.id) ? ob.id :
-	ob.x || ob._ || ob['#']
-	ob.model = ob.model || ob.md || ob.m
-	ob.collection = ob.collection || ob.cl || ob.c
-	ob.tagName = ob.tagName || ob.tn || ob.t
-	ob.className = ob.className || ob.k //if (ob.k) {ob.className = ob.k}
-	ob.defaults = ob.defaults || ob.df || ob.d
-	//ob.render = ob.render ||ob.R|| ob.rn || ob.rr || ob
-	ob.events = ob.events || ob.E || ob.ev || ob.e // || {$: function () {}}//; EVob = {$: 'click', $$: 'dblclick', v: 'mouseover'}; _.e(ob.events, function (v, k) {if (EVob[k]) {ob.events[EVob[k]] = v}})
-	//ob.el = ob.el || ob.q
-	//if (ob.q) {ob.el = q}
-	if (F(ob.i)) {
-		ob.initialize = ob.i
-	}
-	return ob
-}
-__V = function (ob) {
-	return Bb.V.x(V__(ob))
-}
-_V = function (ob, ob2) {
-	var Vw = __V(ob)
-	V__(ob2)
-	var fn = function (ob, q) {
-		var vw = new Vw(ob);
-		vw.md = vw.model;
-		vw.cl = vw.collection
-		vw.q = vw.$el
-		if (q) {
-			alert('see $$V');
-			vw.a2(q)
-		}
-		return vw
-	}
-	return ob2 ? fn(ob) : fn
-}
-$V = function (ob, a, b, c) {
-	return _V(ob, a, b, c)()
-}
-V_ = $v = function (ob) {
-	return new Bb.View(ob);
-}
-$.uV = $.ulV = function (ob) {
-	ob = ob || {};
-	ob.t = 'ul';
-	return $V(ob)
-} // make a bbV with t:ul
-$.fn.V = function (ob) {
-	ob = ob || {};
-	ob.el = this;
-	return $V(ob)
-}
-peep = [{n: 'a', a: 11}, {n: 'b', a: 46}, {n: 'c', a: 13}]
-Bb.R = Bb.Router;
+	Bb.R = Bb.Router;
 Bb.R.x = Bb.R.extend
 rtr.n = function (url, op) {
 	this.navigate(url, op);
@@ -866,199 +421,54 @@ _$r = function (ob) {
 	rt._()
 	return rt
 }
+}
+function history(){
 Bb.h = Bb.history
 Bb.h.tr = Bb.h.trigger
 Bb.h.s = Bb.h.start
 Bb.H = Bb.History
-
-function events(){
-	Events = Bb.Events = {}
-	Events.trigger = function (n) {
-		var Ev = this
-		if (!Ev._events) {
-			return Ev
-		}
-		var len = M.max(0, _.z(arguments) - 1), args = Array(len)
-		for (var i = 0; i < len; i++) {
-			args[i] = arguments[i + 1]
-		}
-		eventsApi(triggerApi, Ev._events, n, void 0, args)
-		return Ev
-	}
-	Events.on = function (name, callback, context) {
-		return internalOn(this, name, callback, context);
-	}
-	Events.l2 = Events.listenTo = function (obj, name, callback) {
-		if (!obj) return this;
-		var id = obj._listenId || (obj._listenId = _.uI('l'));
-		var listeningTo = this._listeningTo || (this._listeningTo = {});
-		var listening = listeningTo[id];
-		if (!listening) {
-			var thisId = this._listenId || (this._listenId = _.uI('l'));
-			listening = listeningTo[id] = {obj: obj, objId: id, id: thisId, listeningTo: listeningTo, count: 0};
-		}
-		internalOn(obj, name, callback, this, listening);
-		return this;
-	}
-	Events.off = function (name, callback, context) {
-		if (!this._events) return this;
-		this._events = eventsApi(offApi, this._events, name, callback, {
-			context: context,
-			listeners: this._listeners
-		});
-		return this;
-	}
-	Events.stopListening = function (obj, name, callback) {
-		var listeningTo = this._listeningTo;
-		if (!listeningTo) return this;
-		var ids = obj ? [obj._listenId] : _.k(listeningTo);
-		for (var i = 0; i < ids.length; i++) {
-			var listening = listeningTo[ids[i]];
-			if (!listening) break;
-			listening.obj.off(name, callback, this);
-		}
-		if (_.iE(listeningTo)) this._listeningTo = void 0;
-		return this;
-	}
-	Events.once = function (name, callback, context) {
-		var events = eventsApi(onceMap, {}, name, callback, _.b(this.off, this));
-		return this.on(events, void 0, context);
-	}
-	Events.l1 = Events.l21 = Events.listenToOnce = function (obj, name, callback) {
-		var events = eventsApi(onceMap, {}, name, callback, _.b(this.stopListening, this, obj));
-		return this.listenTo(obj, events);
-	};
-	Events.bind = Events.on;
-	Events.unbind = Events.off;
-	_.x(Bb, Events)
-	function eventsApi(iteratee, events, name, callback, opts) {
-		var i = 0, names
-		if (name && typeof name === 'object') {
-			if (callback !== void 0 && 'context' in opts && opts.context === void 0) {
-				opts.context = callback
-			}
-			for (names = _.k(name); i < names.length; i++) {
-				events = eventsApi(iteratee, events, names[i], name[names[i]], opts)
-			}
-		}
-		else if (name && eventSplitter.test(name)) {
-			for (names = name.split(eventSplitter); i < names.length; i++) {
-				events = iteratee(events, names[i], callback, opts)
-			}
-		}
-		else {
-			events = iteratee(events, name, callback, opts)
-		}
-		return events
-	}
-	
-	function internalOn(obj, name, callback, context, listening) {
-		obj._events = eventsApi(onApi, obj._events || {}, name, callback, {
-			context: context,
-			ctx: obj,
-			listening: listening
-		})
-		if (listening) {
-			var listeners = obj._listeners || (obj._listeners = {});
-			listeners[listening.id] = listening;
-		}
-		return obj
-	}
-	
-	function onApi(events, name, callback, op) {
-		if (callback) {
-			var handlers = events[name] || (events[name] = []);
-			var context = op.context, ctx = op.ctx, listening = op.listening;
-			if (listening) listening.count++;
-			handlers.push({callback: callback, context: context, ctx: context || ctx, listening: listening});
-		}
-		return events;
-	};
-	function offApi(events, name, callback, op) {
-		if (!events) return;
-		var i = 0, listening;
-		var context = op.context, listeners = op.listeners;
-		if (!name && !callback && !context) {
-			var ids = _.k(listeners);
-			for (; i < ids.length; i++) {
-				listening = listeners[ids[i]];
-				delete listeners[listening.id];
-				delete listening.listeningTo[listening.objId];
-			}
-			return;
-		}
-		var names = name ? [name] : _.k(events);
-		for (; i < names.length; i++) {
-			name = names[i];
-			var handlers = events[name];
-			if (!handlers) break;
-			var remaining = [];
-			for (var j = 0; j < handlers.length; j++) {
-				var handler = handlers[j];
-				if (
-						callback && callback !== handler.callback &&
-						callback !== handler.callback._callback ||
-						context && context !== handler.context
-				) {
-					remaining.push(handler);
-				} else {
-					listening = handler.listening;
-					if (listening && --listening.count === 0) {
-						delete listeners[listening.id];
-						delete listening.listeningTo[listening.objId];
-					}
-				}
-			}
-			if (remaining.length) {
-				events[name] = remaining;
-			} else {
-				delete events[name];
-			}
-		}
-		if (_.z(events)) return events;
-	}
-	
-	function onceMap(map, name, callback, offer) {
-		if (callback) {
-			var once = map[name] = _.o(function () {
-				offer(name, once);
-				callback.apply(this, arguments);
-			});
-			once._callback = callback;
-		}
-		return map;
-	}
-	
-	function triggerApi(objEvents, name, cb, args) {
-		if (objEvents) {
-			var events = objEvents[name];
-			var allEvents = objEvents.all;
-			if (events && allEvents) allEvents = allEvents.slice();
-			if (events) triggerEvents(events, args);
-			if (allEvents) triggerEvents(allEvents, [name].concat(args));
-		}
-		return objEvents;
-	}
-	
-	function triggerEvents(events, args) {
-		var ev, i = -1, l = events.length,
-				a1 = args[0], a2 = args[1], a3 = args[2];
-		switch (args.length) {
-			case 0:
-				while (++i < l) (ev = events[i]).callback.call(ev.ctx);
-				return;
-			case 1:
-				while (++i < l) (ev = events[i]).callback.call(ev.ctx, a1);
-				return;
-			case 2:
-				while (++i < l) (ev = events[i]).callback.call(ev.ctx, a1, a2);
-				return;
-			case 3:
-				while (++i < l) (ev = events[i]).callback.call(ev.ctx, a1, a2, a3);
-				return;
-			default:
-				while (++i < l) (ev = events[i]).callback.apply(ev.ctx, args);
-				return;
+}
+Ap = {M: {}, C: {}, V: {}, T: {}}
+peep = [{n: 'a', a: 11}, {n: 'b', a: 46}, {n: 'c', a: 13}]
+function old() {
+//md.o = function () {var g = G(arguments);this.on.apply(this, g)}
+	/*
+	 // escape   has     unset    clear – parse  pa P – clone  cl– toJSON
+	 – url     u – urlRoot  uR– sync   sy fetch  F  – save  S – destroy
+	 – validate    vl – validationError  vE – isValid   iV
+	 – attributes– changed  – isNew iN – hasChanged  hC  – previous p
+	 – previousAttributes  pA – changedAttributes cA
+	 */
+//Bb._M=function(ob){return  Bb.M.extend(ob)}
+//Note=Bb.M.e({initialize:function(){},author:function(){},coordinates:function(){},canEdit:function(ac){return true}})
+//PrivNote=Note.extend({canEdit:function(ac){return ac.owns(this)}})
+//Note2=Bb.M.e({set:function(atts,opts){Bb.M.prototype.set.apply(this,arguments)}})
+}
+function loadScripts() {
+	$l('tcps:loadScripts')
+//$('body').A(  $('<script src="/us.js">') ) //$('body').A(  $('<script src="/string.js">') )
+	$.j('/us.js');
+	$.j('/string.js')
+	$.j('/both.js') //$.j('/jq.js') //$.j('/jqSer.js')
+	$.j('/bs.js');
+	$.j('/frontOb.js');
+	$.j('/handy.js')
+	$.j('/sty.js');
+	$.j('/rules.js')
+	$.j('/flex.js');
+	$.j('/bb.js');
+	$.j('/bbCore.js')
+	$.j('/bbLs.js')
+}
+function _pre(){
+	Bb = bb = Backbone
+	Bb.U = Bb.Utility
+	Bb.S = Bb.Sync
+	Bb.x = Bb.e = function (ob) {
+		ob = ob || {}
+		var Ev = Bb.E.extend(ob)
+		return function (a, b, c, d) {
+			return new Ev(a, b, c, d)
 		}
 	}
 }

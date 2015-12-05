@@ -301,6 +301,8 @@ AVAIL = function () {
 
 	$.dI('availsDiv')
 }
+
+
 function boneSetup() {
 
 	Ap.M.Avail = $$M({urlRoot: '/avail'})
@@ -1727,7 +1729,8 @@ function boneSetup() {
 					})
 				}
 			})
-		}}
+		}
+	}
 		
 		
 		

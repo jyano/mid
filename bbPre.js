@@ -1942,3 +1942,33 @@ function data(){
 }
 data()
 z=function(){$('body').E()}
+$.tK = function (k, toAdd) {
+	var g = G(arguments),
+			t = $.t()
+	t.K(k)
+	if (A(toAdd)) {
+		_.e(toAdd, function (q) {
+			t.A(q)
+		})
+	}
+	return t
+}
+$l = function (a) {
+	console.log.apply(console, arguments);
+	return a
+}
+$.fn.v = $.fn.val
+$.fn.v_ = function () {
+	var val = this.val();
+	this.val('');
+	return val
+}
+$.fn.A = $.fn.append;
+$.fn.K = $.fn.addClass
+Bb.Model.prototype.j = function () {
+	return this.toJSON()
+}
+Bb.Collection.prototype.j = function () {
+	return this.toJSON()
+}
+Bb.M.prototype.idAttribute = '_id'

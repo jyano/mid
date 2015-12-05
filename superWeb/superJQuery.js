@@ -678,7 +678,6 @@ function events(){
 		}
 	}
 }
- 
 function alpha() {
 	//$.fn.sz=function(sz){return this.at('size',sz)}
 	$.fn.fCt = function (str) {
