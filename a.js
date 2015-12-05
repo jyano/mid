@@ -1,7 +1,7 @@
 console.log('......\n...\n.\n\n\n');
 require('./server/serverBoth');
 $l(' - final - forty - \n');
-require('./superNode')
+require('./server/superNode')
  
 $Js = function(arr){
  
@@ -121,19 +121,21 @@ $e.rt = $e.r = $e.R = $e.rtr = $Rtr = function (fn, ob) {
 	return rtr
 }
 $a = $e();
-require('./_superApp')
+require('./app/_superApp')
 $a.s({
 	port: process.env.PORT || 4000,
 	'view engine': 'jade',
 	views: __dirname + '/jade/'
 })
 
-require('./_mong')
-require('./_connectMW')
+require('./app/_mong')
+require('./app/_connectMW')
 
  
 $a.g('/render/:page', function (q, p) {p.render(q.params.page)})
-$a.use(require('./_$Mw'))
+$a.use(require('./app/_$Mw'))
+
+require('./tweetServer')
 $a.g('/', function (q, p) {
 	p.send('it worked jason..')
 })
@@ -147,7 +149,7 @@ $a.g('/www/:a?/:p?', function (q, p) {
 
 //require('./_staticServer')(__dirname)
  
-require('./_libs')
+require('./app/_libs')
 
 dirN = __dirname 
  
@@ -200,7 +202,7 @@ $a.g('/g/:app', function (q, p) {
 $a.g('/b/:app', function (q, p) {
 	app = q.params.app.toUpperCase()
 	$l('app: ' + app)
-	html = '-' + $Js(both, superJQ, handy, sty, graphics, bone)
+	html = '-' + $Js(both, superJQ, handy, sty, graphics, bone, boneLS)
 	html += '<script>$l("app:  ' + app + '"); ' + app + '()</script>'
 	p.send(html)
 })
@@ -214,5 +216,5 @@ httpServer.listen(80, function () {
 
 
 
-//require('./_serverSockets')
+//require('./app/_serverSockets')
   

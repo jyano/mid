@@ -170,12 +170,31 @@ $.nv = function () {
 	return $('<nav>')
 }
 $.sc = $.sct = function (a) {
+var g=G(arguments)
 	var sc = $('<section>')
-	if (a) {
+	
+	if(g.A){
+		_.e(g,function(el){sc.A(el)})
+	}
+	
+	else if (a) {
 		sc.id(a)
 	}
+	
+	sc.A()
 	return sc
 }
+$.scI =   function () {
+	var g = G(arguments)
+	var sc = $.sc()
+	sc.id(g.f)
+	if (A(g.s)) {
+		_.e(g.s, function (el) {
+			sc.A(el)
+		})}
+	return sc
+}
+
 $.ac = function () {//$.H=$.arg=
 	var g = G(arguments), art = $('<article>')
 	g.e(function (q) {
@@ -284,6 +303,42 @@ $.j = $.js = function (js) {
 	$('body').A($.scr(js))
 }
 //_.ex = $ext = ext = function (o) {o.e = o.extend;return o}	// https://coderwall.com/p/xj81ua/a-better-way-of-extending-backbone-models-and-views
- 
- 
- 
+$Fn = function (name, fn) {
+	window[name] = fn;
+	return fn
+}
+$dA = function () {
+	var d = $.d()
+	d.A.apply(d, arguments)
+	return d
+}
+$spA = function () {
+	var sp = $.sp().fS(75).col('r')
+	sp.A.apply(sp, arguments)
+	return sp
+}
+$spA2 = function () {
+	var sp = $.sp().fS(100).col('x').C('o')
+	sp.A.apply(sp, arguments)
+	return sp
+}
+$.__d = function () {
+	var d = $('<div>')
+	_.e(arguments, function (ch) {
+		d.A(ch)
+	})
+	return d
+}
+$bd = function () {
+	var g = G(arguments),
+			bd = $('body')
+	if (g.f) {
+		bd.css.apply(bd, g)
+	}
+	return bd
+}
+$.fn.dI = function () {
+	return this.A(
+			$.dI.apply($, arguments)
+	)
+}

@@ -91,12 +91,9 @@ Eve = function () {
 	e.e = e.trigger
 	return e
 }
-
 rtr = ro = rt = Bb.Router.prototype;
-
 vw = Bb.View.prototype;
 cl = Bb.Collection.prototype
- 
 function tpcsIndexHtml() {
 	$('body').A($('<div>').K('container').A(
 			$('<h1>').html('Blog App ' + Math.random()),
@@ -587,7 +584,7 @@ _C = function (ob) {
 		return cl
 	}
 } // = $$C 
-$C =$Cl= function (ob, a, b, c) {
+$C = $Cl = function (ob, a, b, c) {
 	return _C(ob, a, b, c)()
 }
 C_ = function (ob) {
@@ -627,7 +624,7 @@ C_ = function (ob) {
 		}
 	}
 } //C$ =
-$c =$cl= function (ob) {
+$c = $cl = function (ob) {
 	var m = new Bb.Collection(ob);
 	return m
 }
@@ -805,3 +802,84 @@ $.fn.V = function (ob) {
 	return $V(ob)
 }
 peep = [{n: 'a', a: 11}, {n: 'b', a: 46}, {n: 'c', a: 13}]
+Bb.R = Bb.Router;
+Bb.R.x = Bb.R.extend
+rtr.n = function (url, op) {
+	this.navigate(url, op);
+	return this
+}
+rtr.N = function (url) {//normal navigate,
+// but i change the default
+// to auto trigger the route fn
+	return this.n(url, {trigger: true})
+}
+rtr.rt = function (rt, fn) {
+	var rtr = this
+	if (O(rt)) {
+		_.e(rt, function (v, k) {
+			rtr.rt(k, v)
+		})
+	}
+	else {
+		this.on('route:' + rt, fn)
+	}
+	return this
+}  // rtr.A = ro.oR =
+rtr.rp = function (url, op) {
+	return this._n(url, _.x({replace: true},
+			G(arguments).n ? {trigger: true} : {}))
+}//navigate: replace
+_R = function (ob) {//metaClass
+	ob = ob || {}
+	if (ob.i) {
+		ob.initialize = ob.i
+	}
+	if (ob.$) {
+		ob.initialize = function () {
+			Bb.h.start({pushState: true})
+			if (F(ob.$)) {
+				ob.$()
+			}
+		}
+	}
+	if (ob.x) {
+		ob.index = ob.x
+	}
+	if (ob.h) {
+		ob.home = ob.h
+	}
+	ob.routes = ob.R ? ob.R : ob.routes || ob.rt || ob.r || {}
+	ob.routes[''] = ob.routes[''] || 'index'
+	ob.routes = _.x({'': '_'}, ob.routes)
+	ob.routes['*other'] = 'd'
+	ob = _.x({
+		_: function () {
+			$l('INDEX ( _ ) ')
+		},
+		d: function (other) {
+			$l('DEFAULT(d): "' + other + '"')
+		}
+	}, ob)
+	return Bb.R.x(ob)
+	//return function (a, b, c, d) {return new Rt(a, b, c, d)}
+} //metaClass.. no need for 'new' //= $$R
+$R = function (ob) {
+	var Rt = _R(ob)
+	var rt = new Rt()
+	rt._ = function () {
+		Bb.history.start()
+	}
+	rt.$ = function () {
+		Bb.history.start({pushState: true})
+	}
+	return rt
+}
+_$r = function (ob) {
+	var rt = $R(ob)
+	rt._()
+	return rt
+}
+Bb.h = Bb.history
+Bb.h.tr = Bb.h.trigger
+Bb.h.s = Bb.h.start
+Bb.H = Bb.History
