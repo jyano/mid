@@ -1,5 +1,4 @@
 BABY = function () {
-	 
 	
 	$d(m = new Bb.M({}))
 }

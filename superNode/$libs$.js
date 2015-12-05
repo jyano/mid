@@ -9,11 +9,9 @@ dirs = ['', '_deps', 'superWeb', 'superWeb/_deps',
 superWeb = [
 
 	// foreign dependencies
-	'us','string','moment', 'jq', 'bb',
-		
+	'us','string','moment', 'jq', 'bb', 'gpc','cjs',
 		//superWeb 
-	'both', 'frontOb', 'superJQuery', 'handy',  'rules',
-	
+	'both', 'frontOb', 'superJQuery', 'handy',  'rules', 'clipper', 'superCanvas','create',
 		//backbone
 	'bbPre', 'bbBase', 'bbLocalStorage',
 		
