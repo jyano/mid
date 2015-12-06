@@ -1,3 +1,4 @@
+mc = cjs.MovieClip.prototype
 cjs.Mc = function (a, b, c, d) {
     var mc = new cjs.MovieClip(a, b, c, d)
     return mc
@@ -90,7 +91,7 @@ function newOld() {
 		return c
 	}
 }
-mc = cjs.MovieClip.prototype
+ 
 mc.play = mc.p = function (a, b) {
 	if (this.setPaused) {
 		this.setPaused(false)

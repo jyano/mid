@@ -1,5 +1,4 @@
-bitmapFillAoos()
-function bitmapFIllApps() {
+ 
 	v = [[-100, 0], [0, -100], [100, 50]]
 	vs = [
 		[[-100, 0], [0, -100], [100, 50]],
@@ -124,4 +123,4 @@ function bitmapFIllApps() {
 		h2 = st.h(700, 300).drag()
 		h2.bmCir({circs: vs})
 	}
-}
+ 

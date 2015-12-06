@@ -1,9 +1,16 @@
 $L('sCss', 'backg', 'color', 'boxDims', 'text', 'placement', 'flex')
+
+
 $.sty=function(h){
-	var styleTag=$('<style>').at({type:'text/css'});
+	var styleTag=$('<style>')
+			.at({type:'text/css'});
+	
 	styleTag.h(h)
+	
 	return styleTag
 }
+
+
 $rule=function(sel,decs,rulesOb){
 	var str
 	var SelOb={

@@ -2,34 +2,8 @@ console.log('......\n...\n.\n\n\n');
 require('./superNode/_deps/$serverBoth$');
 $l(' - final - forty - \n');
 require('./superNode/$superNode$')
-$Js = function(arr){
  
-	var $jsA = function (jsArr) {
-	
-		var $js = function () {
-			var str = ''
-			_.each(arguments, function (src) {
-				str += '<script src="/' + src + '.js"></script>'
-			})
-			return str
-		}
-		
-		return $js.apply($js, jsArr)
-	}
-	
-	
-	if (A(arr)){
-		var scripts = ''
-		
-		_.e(arguments, function (arr) {
-			arr = A(arr)? arr : [arr]
-			scripts += $jsA(arr)
-		})
-		
-		return scripts
-	}
-	return $jsA(arguments)
-}
+
 $e = require('express')
 $e.stc = $e.st = $e.static
 $e.rt = $e.r = $e.R = $e.rtr = $Rtr = function (fn, ob) {
@@ -120,10 +94,12 @@ $a.s({
 	'view engine': 'jade',
 	views: __dirname + '/jade/'
 })
+
 require('./superNode/mongoose/$mong$')
 require('./superNode/express/midware/$connectMW$')
-$a.g('/render/:page', function (q, p) {p.render(q.params.page)})
+//$a.g('/render/:page', function (q, p) {p.render(q.params.page)})
 $a.use(require('./superNode/express/midware/$$Mw$'))
+
 require('./superNode/$tweetServer$')
 $a.g('/', function (q, p) {
 	p.send('it worked jason..')
@@ -136,15 +112,12 @@ $a.g('/www/:a?/:p?', function (q, p) {
 	})
 })
 //require('./_staticServer')(__dirname)
+
+ 
+ 
 require('./$libs$')
-dirN = __dirname
-_.e(dirs, function (dir) {
-		$a.use($e.static(dirN + '/' + dir))
-		$a.use($e.static(dirN + '/' + dir + '/_deps'))
-		$a.use($e.static(dirN + '/' + dir + '/_apps'))
-		$a.use($e.static(dirN + '/' + dir + '/_protos'))
-		$a.use($e.static(dirN + '/' + dir + '/_data'))
-})
+ 
+function past(){
 $a.get('/', function (q, p) {
 	p.send(' / / /// ')
 })
@@ -186,15 +159,15 @@ $a.g('/b/:app', function (q, p) {
 	html += '<script>$l("app:  ' + app + '"); ' + app + '()</script>'
 	p.send(html)
 })
+}
+
 //$hS = $h.createServer($a)
 httpServer = http.createServer($a)
 httpServer.listen(80, function () {
 	
 	$l('server listening on port 80')
 })
-
-
-
+ 
 //require('./app/_serverSockets')
   function moreOld(){
 	  srv = function () {
@@ -278,3 +251,4 @@ httpServer.listen(80, function () {
 		  })
 	  }
   }
+ 

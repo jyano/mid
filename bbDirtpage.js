@@ -1,5 +1,5 @@
  
-DIRTPAGESRV = function () {
+DPS =DIRTPAGESRV = function () {
 
 	var newMsBox, newTopic, newMs, searchBox
 	MsM = _M()
@@ -169,7 +169,7 @@ DIRTPAGESRV = function () {
 	
 	
 }
-DIRTPAGE = function () {
+DPS1=DIRTPAGESRV1 = function () {
 	$.x()
 	var newMsBox, newTopic, newMs, searchBox
 	MsM = $$M({})
@@ -237,7 +237,7 @@ DIRTPAGE = function () {
 		})
 	}
 }
-DIRTPAGE = function () {
+DPS2=DIRTPAGESRV0 = function () {
 	$.x()
 	var newMsBox, newTopic, newMs, searchBox
 	MsM = Bb.M.e({})

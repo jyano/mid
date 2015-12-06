@@ -157,3 +157,18 @@ $.fn.V = function (ob) {
 $V$ = function (ob) {
 	return Bb.V.x(ob)
 }
+$.fn.V = function (ob) {
+	ob = ob || {};
+	ob.el = this;
+	return $V(ob)
+}
+_vw = function (o) {
+	o = o || {}
+	if (F(o.i)) {
+		o.initialize = o.i
+	}
+	if (o.q) {
+		o.el = q
+	}
+	return o
+}

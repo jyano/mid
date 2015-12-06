@@ -1,7 +1,6 @@
 cl = Bb.Collection.prototype
 Bb.C = Bb.Collection;
 Bb.C.x = Bb.C.extend;
- 
 Bb.sEv(cl)
 cl.g = cl.get
 cl.s = function (a, b, c) {
@@ -45,6 +44,8 @@ cl.ls1 = cl.l1 = function (a, b, c, d) {
 cl.fl = cl.filter
 cl.wo = cl.without
 cl.la = cl.last
+clEvents()
+function clEvents(){
 cl.V = function (Vw, ob) {
 	ob = ob || {}
 	ob.m = this
@@ -114,7 +115,7 @@ cl.oA = function (fn) {
 } // "add" (model, collection, options) — when a model is added to a collection.
 cl.j = function () {
 	return this.toJSON()
-}
+}}
 _C = function (ob) {
 	_$$C = function (ob) {
 		ob = ob || {}

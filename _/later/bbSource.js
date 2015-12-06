@@ -1,130 +1,187 @@
-function scripts() {
-	$.scr = function (js) {
-		var script = $('<script>')
-		script.attr('src', js);
-		return script
+function eventsApi(iteratee, events, name, callback, opts) {
+	var i = 0, names
+	if (name && typeof name === 'object') {
+		if (callback !== void 0 && 'context' in opts && opts.context === void 0) {
+			opts.context = callback
+		}
+		for (names = _.k(name); i < names.length; i++) {
+			events = eventsApi(iteratee, events, names[i], name[names[i]], opts)
+		}
 	}
-	$.j = $.js = function (js) {
-		$('body').A($.scr(js))
+	else if (name && eventSplitter.test(name)) {
+		for (names = name.split(eventSplitter); i < names.length; i++) {
+			events = iteratee(events, names[i], callback, opts)
+		}
 	}
-	$(function () {
-//$('body').A(  $('<script src="/us.js">') )
-//$('body').A(  $('<script src="/string.js">') )
-		$.j('/us.js')
-		$.j('/string.js')
-		$.j('/both.js')
-		//$.j('/jq.js')
-		//$.j('/jqSer.js')
-		$.j('/bs.js')
-		$.j('/frontOb.js')
-		$.j('/handy.js')
-		$.j('/sty.js')
-		$.j('/rules.js')
-		$.j('/flex.js')
-		$.j('/bb.js')
-		$.j('/bbCore.js')
-		$.j('/bbLs.js')
-		arr = [
-			"us", 'string', 'both', 'jq', 'jqSer', 'bs', 'frontOb', 'handy', 'sty',
-			'rules', 'flex', 'flexApps', 'boot', 'bb', 'bbCore', 'bbLs', 'bbTemplate',
-			'bbApps', 'avail', 'bbLsApps', 'BfRoll', 'blog'
-		]
+	else {
+		events = iteratee(events, name, callback, opts)
+	}
+	return events
+}
+function internalOn(obj, name, callback, context, listening) {
+	obj._events = eventsApi(onApi, obj._events || {}, name, callback, {
+		context: context,
+		ctx: obj,
+		listening: listening
 	})
-}
-J = JSON
-J.p = J.parse
-J.s = J.stringify
-$w = window
-_lS = localStorage
-dfx = {
-	tdTask: "td-task",
-	tdHeader: "task-header",
-	tdDate: "task-date", tdDesc: "task-desc",
-	taskId: "task-", formId: "td-form",
-	dataAttribute: "data",
-	delDiv: 'delete-div'
-}
-$.fn.foc = $.fn.focus
-$.pD = function (ev) {
-	ev.preventDefault()
-	return ev
-}
-$.fn.ed = function (ed) {
-	if (U(ed)) {
-		return this.attr('contenteditable')
+	if (listening) {
+		var listeners = obj._listeners || (obj._listeners = {});
+		listeners[listening.id] = listening;
 	}
-	this.attr('contenteditable', ed ? true : false)
-	return this
+	return obj
 }
-$.fn.rmAt = $.fn.removeAttr
-$.fn.edFoc = function () {
-	return this.ed(1).foc()
-}
-$.fn.nm = $.fn.name = function (name) {
-	return name ? this.at('name', name) : this.at('name')
-}
-$.fn.idNm = function (id, nm) {
-	this.id(id)
-	this.nm(nm || id)
-	return this
-}
-M$ = function (ob) {
-	ob = O(ob) ? ob : {}
-	var Md, md
-	Md = bb._M(ob)
-	md = new Md(ob)
-	return md
-}
- 
-_vw = function (o) {
-	o = o || {}
-	if (F(o.i)) {
-		o.initialize = o.i
+function onApi(events, name, callback, op) {
+	if (callback) {
+		var handlers = events[name] || (events[name] = []);
+		var context = op.context, ctx = op.ctx, listening = op.listening;
+		if (listening) listening.count++;
+		handlers.push({callback: callback, context: context, ctx: context || ctx, listening: listening});
 	}
-	if (o.q) {
-		o.el = q
+	return events;
+};
+function offApi(events, name, callback, op) {
+	if (!events) return;
+	var i = 0, listening;
+	var context = op.context, listeners = op.listeners;
+	if (!name && !callback && !context) {
+		var ids = _.k(listeners);
+		for (; i < ids.length; i++) {
+			listening = listeners[ids[i]];
+			delete listeners[listening.id];
+			delete listening.listeningTo[listening.objId];
+		}
+		return;
 	}
-	return o
+	var names = name ? [name] : _.k(events);
+	for (; i < names.length; i++) {
+		name = names[i];
+		var handlers = events[name];
+		if (!handlers) break;
+		var remaining = [];
+		for (var j = 0; j < handlers.length; j++) {
+			var handler = handlers[j];
+			if (
+					callback && callback !== handler.callback &&
+					callback !== handler.callback._callback ||
+					context && context !== handler.context
+			) {
+				remaining.push(handler);
+			} else {
+				listening = handler.listening;
+				if (listening && --listening.count === 0) {
+					delete listeners[listening.id];
+					delete listening.listeningTo[listening.objId];
+				}
+			}
+		}
+		if (remaining.length) {
+			events[name] = remaining;
+		} else {
+			delete events[name];
+		}
+	}
+	if (_.z(events)) return events;
 }
-$MS = function (ms, cHeader, cBody) {
-	z()
-	var m = $Ms(ms)
-	if (S(cHeader)) {
-		m.C(cHeader)
+function onceMap(map, name, callback, offer) {
+	if (callback) {
+		var once = map[name] = _.o(function () {
+			offer(name, once);
+			callback.apply(this, arguments);
+		});
+		once._callback = callback;
 	}
-	if (S(cBody)) {
-		$.C(cBody)
-	}
-	return $
+	return map;
 }
-$.ipI = function (id, arr) {
-	var q = $.ip().id(id)
-	if (A(arr)) {
-		_.e(arr, function (qq) {
-			q.A(qq)
-		})
+function triggerApi(objEvents, name, cb, args) {
+	if (objEvents) {
+		var events = objEvents[name];
+		var allEvents = objEvents.all;
+		if (events && allEvents) allEvents = allEvents.slice();
+		if (events) triggerEvents(events, args);
+		if (allEvents) triggerEvents(allEvents, [name].concat(args));
 	}
-	else if (arr) {
-		q.A(arr)
-	}
-	return q
+	return objEvents;
 }
-$.ulI = function (id, arr) {
-	var q = $.ul().id(id)
-	if (A(arr)) {
-		_.e(arr, function (qq) {
-			q.A(qq)
-		})
+function triggerEvents(events, args) {
+	var ev, i = -1, l = events.length,
+			a1 = args[0], a2 = args[1], a3 = args[2];
+	switch (args.length) {
+		case 0:
+			while (++i < l) (ev = events[i]).callback.call(ev.ctx);
+			return;
+		case 1:
+			while (++i < l) (ev = events[i]).callback.call(ev.ctx, a1);
+			return;
+		case 2:
+			while (++i < l) (ev = events[i]).callback.call(ev.ctx, a1, a2);
+			return;
+		case 3:
+			while (++i < l) (ev = events[i]).callback.call(ev.ctx, a1, a2, a3);
+			return;
+		default:
+			while (++i < l) (ev = events[i]).callback.apply(ev.ctx, args);
+			return;
 	}
-	else if (arr) {
-		q.A(arr)
+}
+Events = Bb.Events = {}
+Events.trigger = function (n) {
+	var Ev = this
+	if (!Ev._events) {
+		return Ev
 	}
-	return q
+	var len = M.max(0, _.z(arguments) - 1), args = Array(len)
+	for (var i = 0; i < len; i++) {
+		args[i] = arguments[i + 1]
+	}
+	eventsApi(triggerApi, Ev._events, n, void 0, args)
+	return Ev
 }
-show = function (a) {
-	a = a || 'welcome'
-	$b().H('')(h1(a))
+Events.on = function (name, callback, context) {
+	return internalOn(this, name, callback, context);
 }
+Events.l2 = Events.listenTo = function (obj, name, callback) {
+	if (!obj) return this;
+	var id = obj._listenId || (obj._listenId = _.uI('l'));
+	var listeningTo = this._listeningTo || (this._listeningTo = {});
+	var listening = listeningTo[id];
+	if (!listening) {
+		var thisId = this._listenId || (this._listenId = _.uI('l'));
+		listening = listeningTo[id] = {obj: obj, objId: id, id: thisId, listeningTo: listeningTo, count: 0};
+	}
+	internalOn(obj, name, callback, this, listening);
+	return this;
+}
+Events.off = function (name, callback, context) {
+	if (!this._events) return this;
+	this._events = eventsApi(offApi, this._events, name, callback, {
+		context: context,
+		listeners: this._listeners
+	});
+	return this;
+}
+Events.stopListening = function (obj, name, callback) {
+	var listeningTo = this._listeningTo;
+	if (!listeningTo) return this;
+	var ids = obj ? [obj._listenId] : _.k(listeningTo);
+	for (var i = 0; i < ids.length; i++) {
+		var listening = listeningTo[ids[i]];
+		if (!listening) break;
+		listening.obj.off(name, callback, this);
+	}
+	if (_.iE(listeningTo)) this._listeningTo = void 0;
+	return this;
+}
+Events.once = function (name, callback, context) {
+	var events = eventsApi(onceMap, {}, name, callback, _.b(this.off, this));
+	return this.on(events, void 0, context);
+}
+Events.l1 = Events.l21 = Events.listenToOnce = function (obj, name, callback) {
+	var events = eventsApi(onceMap, {}, name, callback, _.b(this.stopListening, this, obj));
+	return this.listenTo(obj, events);
+};
+Events.bind = Events.on;
+Events.unbind = Events.off;
+_.x(Bb, Events)
 function sourceIthink() {
 	function routeHist() {
 		Router = Bb.Router = function (op) {
@@ -1839,136 +1896,3 @@ function sourceIthink() {
 	}
 	Model.extend = Collection.extend = Router.extend = View.extend = History.extend = extend;
 }
-function data(){
-	dirData = [
-		{ID: '1', fN: 'jason', lN: 'sad', par: 'mom', p: '239-2394', e: 'fasfsd@sd.com'},
-		{ID: '2', fN: 'frank', lN: 'fad', par: 'sfad', p: '239-2394', e: 'fas@sd.com'},
-		{ID: '3', fN: 'fred', lN: 'fuckman', par: 'dad', p: '239-2394', e: 'fadss@sd.com'},
-		{ID: '4', fN: 'rigo', lN: 'sadman', par: '', p: '239-2394', e: 'fas@sd.com'},
-		{ID: '5', fN: 'jan', lN: 'fsmanad', par: 'mom', p: '239-2394', e: 'fas@sd.com'},
-		{ID: '6', fN: 'paul', lN: 'fsamand', par: 'dad', p: '239-2394', e: 'fas@sd.com'},
-		{ID: '7', fN: 'steve', lN: 'fsmanad', par: 'mom', p: '239-2394', e: 'rfas@sd.com'},
-		{ID: '8', fN: 'scott', lN: 'manfsad', par: 'sfad', p: '239-2394', e: 'afas@sd.com'},
-		{ID: '9', fN: 'chad', lN: 'fsadman', par: '', p: '239-2394', e: 'afas@sd.com'},
-		{ID: '10', fN: 'greg', lN: 'fsadman', par: '', p: '239-2394', e: 'jas@sd.com'}
-	]
-	bksArr = [
-		{title: 'yaba daba', author: 'wanda'},
-		{title: 'clawface', author: 'deez nuts'},
-		{title: 'under the knee', author: 'p .qu rstly'}
-	]
-	BBVTdArr = [{t: 'a.com', h: 'a.com'}, {t: 'b.com', h: 'b.com'}, {t: 'c.com', h: 'c.com'}]
-	codes = {"1": "#pending", "2": "#inProgress", "3": "#completed"}
-	red = {C: 'r'}
-	black = {c: 'z'}
-	displayNone = {display: 'none'}
-	body = {C: 'z', c: 'w'}
-	divWrapper = {
-		display: 'flex',
-		'flex-direction': 'column',
-		'align-items': 'center'
-	}
-	divTools = {
-		display: 'flex',
-		'flex-direction': 'column',
-		'align-items': 'center'
-	}
-	username = {'font-size': 20, 'text-decoration': 'underline'}
-	rightBox = {
-		float: 'left', width: '250px',
-		'margin-left': '20px', border: '3px solid blue'
-	}
-	leftBox = {
-		float: 'left', padding: '20px', border: '3px solid red'
-	}
-	aFilter = {
-		C: 'b',
-		c: 'y',
-		P: '5px 10px',
-		M: '5px',
-		'border-radius': '3px',
-		'text-decoration': 'none'
-	}
-	aFilterHelper = {
-		C: 'y',
-		c: 'b',
-		P: '5px 10px',
-		M: '5px',
-		'border-radius': '3px',
-		'text-decoration': 'none'
-	}
-	bucCSS = {$leftbox: leftBox, $rightbox: rightBox}
-	twtCss = {_un: username, _sts: {}}
-	CssOb = {
-		body: body,
-		'.details': displayNone,
-		'.active': red,
-		'a.filter': aFilter,
-		'a.filter:hover': aFilterHelper,
-		'div#wrapper': divWrapper,
-		'div.tools': divTools,
-		'input#searchBox': black
-	}
-	JQLScss = {
-		// {
-		// width:250; // float:left;
-		// mar:0;
-		// background-color:gray;
-		// min-height:240;
-		// border-radius:10;
-		// padding-bottom:15;
-		// }
-		'.task-list': {
-			w: '250px', float: 'left',
-			mar: '0px', C: 'gray', 'min-height': '240px',
-			'border-radius': '10px', 'padding-bottom': '15px'
-		},
-		h3: {'text-align': 'center'},
-		'.task-list input, .task-list textarea': {w: '240px', mar: '1px 5px'},
-		'.task-list input': {h: '30px'},
-		'.task-list input[type="button"]': {w: '100px', mar: '5px'},
-		'.td-task': {'border-radius': '5px', C: 'g', w: '230px', mar: '5px', pad: '5px'},
-		'.td-task > .task-header': {'font-weight': 'bold'},
-		'.td-task >.task-date': {'font-size': 'small', 'font-style': 'italic'},
-		'.td-task > .task-desc': {'font-size': 'smaller'},
-		'#delete-div': {
-			C: 'b', bor: '3px dotted #000', mar: '10px', h: '75px',
-			'line-height': '75px', 'text-align': 'center'
-		}
-	}
-	Quiz0 = function (title) {
-		this.title = title
-	}
-}
-data()
-z=function(){$('body').E()}
-$.tK = function (k, toAdd) {
-	var g = G(arguments),
-			t = $.t()
-	t.K(k)
-	if (A(toAdd)) {
-		_.e(toAdd, function (q) {
-			t.A(q)
-		})
-	}
-	return t
-}
-$l = function (a) {
-	console.log.apply(console, arguments);
-	return a
-}
-$.fn.v = $.fn.val
-$.fn.v_ = function () {
-	var val = this.val();
-	this.val('');
-	return val
-}
-$.fn.A = $.fn.append;
-$.fn.K = $.fn.addClass
-Bb.Model.prototype.j = function () {
-	return this.toJSON()
-}
-Bb.Collection.prototype.j = function () {
-	return this.toJSON()
-}
-Bb.M.prototype.idAttribute = '_id'

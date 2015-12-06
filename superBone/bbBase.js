@@ -1,90 +1,89 @@
-$L('events','model','router','history')
-function events(){
-Bb.E = Bb.Ev = Bb.Events;
-Bb.E.x = Bb.E.extend
-Bb.E.b = Bb.E.bind;
-Bb.E.tr = Bb.E.trg = Bb.E.trigger
-Bb.sEv = function (md) {
-	md.b = md.bind
-	md.O = md.o$ = md.oAl = function (fn) {
-		return this.on('all', fn)
-	}//passes event name as 1st ag
-	md.oZ = md.oE = md.oEr = function (a, b, c) {
-		return this.on('error', a, b, c)
-	} //"error" (model_or_collection, resp, options)
+$L('events', 'model', 'router', 'history')
+function events() {
+	Bb.E = Bb.Ev = Bb.Events;
+	Bb.E.x = Bb.E.extend
+	Bb.E.b = Bb.E.bind;
+	Bb.E.tr = Bb.E.trg = Bb.E.trigger
+	Bb.sEv = function (md) {
+		md.b = md.bind
+		md.O = md.o$ = md.oAl = function (fn) {
+			return this.on('all', fn)
+		}//passes event name as 1st ag
+		md.oZ = md.oE = md.oEr = function (a, b, c) {
+			return this.on('error', a, b, c)
+		} //"error" (model_or_collection, resp, options)
 // — when model's or collection's request to remote server has failed.
-	md.oA = function (fn) {
-		return this.on('add', fn || function (m) {
-			m.at = m.attributes
-			$l('E$???????????? (in md.oA')//E$(m) // a.A(m)
-		})
-	}//when a md is "added" to cl (model, collection, options)
-	md.oC = md.oCh = function (n, fn) {
-		var g = G(arguments), o
-		o = g.F ? {fn: g.f} : {at: g.f, fn: g.s}
-		// "change" (model, options)    "change:[attribute]" (model, value, options)
-		return g.at ?
-				this.on('change:' + o.at, o.fn) :
-				this.on('change', o.fn)
-	}//=md.$
-	md.oRm = function (a, b, c) {
-		return this.on('remove', a, b, c)
-	}// "remove" (md, cl, ops)  — when md rmd from a collection.//=md.oH=md.o_
-	md.oR = md.oRt = function (n, f) {
-		var o = this
-		//"route:[name]" (params)
-		// — Fired by the router when a specific route is matched.
-		// "route" (route, params)
-		// — Fired by the router when any route has been matched.
-		//"route" (router, route, params)
-		// — Fired by history when any route has been matched.
-		if (U(f)) {
-			return o.on('route', n)
+		md.oA = function (fn) {
+			return this.on('add', fn || function (m) {
+				m.at = m.attributes
+				$l('E$???????????? (in md.oA')//E$(m) // a.A(m)
+			})
+		}//when a md is "added" to cl (model, collection, options)
+		md.oC = md.oCh = function (n, fn) {
+			var g = G(arguments), o
+			o = g.F ? {fn: g.f} : {at: g.f, fn: g.s}
+			// "change" (model, options)    "change:[attribute]" (model, value, options)
+			return g.at ?
+					this.on('change:' + o.at, o.fn) :
+					this.on('change', o.fn)
+		}//=md.$
+		md.oRm = function (a, b, c) {
+			return this.on('remove', a, b, c)
+		}// "remove" (md, cl, ops)  — when md rmd from a collection.//=md.oH=md.o_
+		md.oR = md.oRt = function (n, f) {
+			var o = this
+			//"route:[name]" (params)
+			// — Fired by the router when a specific route is matched.
+			// "route" (route, params)
+			// — Fired by the router when any route has been matched.
+			//"route" (router, route, params)
+			// — Fired by history when any route has been matched.
+			if (U(f)) {
+				return o.on('route', n)
+			}
+			return o.on('route:' + n, f)
 		}
-		return o.on('route:' + n, f)
-	}
-	md.oI = md.oIv = function (a, b, c) {
-		//"invalid" (model, error, options)
-		// — when a model's validation fails on the client.
-		return this.on('invalid', a, b, c)
-	}
-	md.oSo = function (a, b, c) {
-		// "sort" (collection, options) — when the collection has been re-sorted.
-		return this.on('sort', a, b, c)
-	}
-	md.oD = md.oDs = function (a, b, c) {
-		// "destroy" (model, collection, options)
-		// — when a model is destroyed.
-		return this.on('destroy', a, b, c)
-	}//=md.oX
-	md.oS = md.oSy = function (a, b, c) {
-		// "sync" (model_or_collection, resp, options)
-		// — when a model or collection has been successfully synced with the server.
-		return this.on('sync', a, b, c)
-	}
-	md.oQ = md.oRq = function (a, b, c) {
-		return this.on('request', a, b, c)
-	}// "request" (model_or_collection, xhr, options)
+		md.oI = md.oIv = function (a, b, c) {
+			//"invalid" (model, error, options)
+			// — when a model's validation fails on the client.
+			return this.on('invalid', a, b, c)
+		}
+		md.oSo = function (a, b, c) {
+			// "sort" (collection, options) — when the collection has been re-sorted.
+			return this.on('sort', a, b, c)
+		}
+		md.oD = md.oDs = function (a, b, c) {
+			// "destroy" (model, collection, options)
+			// — when a model is destroyed.
+			return this.on('destroy', a, b, c)
+		}//=md.oX
+		md.oS = md.oSy = function (a, b, c) {
+			// "sync" (model_or_collection, resp, options)
+			// — when a model or collection has been successfully synced with the server.
+			return this.on('sync', a, b, c)
+		}
+		md.oQ = md.oRq = function (a, b, c) {
+			return this.on('request', a, b, c)
+		}// "request" (model_or_collection, xhr, options)
 // — when a model or collection has started a request to the server.
-	md.oRs = function (fn, a, b, c) {
-		// "reset" (collection, options)
-		// — when the collection's entire contents have been replaced.
-		return this.on('reset', fn, a, b, c)
+		md.oRs = function (fn, a, b, c) {
+			// "reset" (collection, options)
+			// — when the collection's entire contents have been replaced.
+			return this.on('reset', fn, a, b, c)
+		}
+		md.tr = function (a, b) {
+			this.trigger(a, b);
+			return this
+		}
+		return md
+	};
+	Eve = function () {
+		var e = _({}).extend(Backbone.Events)
+		e.o = e.bind
+		e.e = e.trigger
+		return e
 	}
-	md.tr = function (a, b) {
-		this.trigger(a, b);
-		return this
-	}
-	return md
-};
-Eve = function () {
-	var e = _({}).extend(Backbone.Events)
-	e.o = e.bind
-	e.e = e.trigger
-	return e
 }
-}
-function model(){
 $M$ = function (ob) {
 	return Bb.M.x(ob)
 }
@@ -143,15 +142,22 @@ __M = function (ob) {
 }
 _M = function (ob, a, b, c) {
 	ob = ob || {}
-	var g = G(arguments), Md;
-	Md = __M(ob, a, b, c)
-	return function (ob, q) {
+	var g = G(arguments)
+	var Md = __M(ob, a, b, c)
+	var fn = function (ob, q) {
 		var md = new Md(ob || {})
 		if (q) {
 			md.a2(q)
 		}
 		return md
 	}
+	fn.M = fn.md = fn.Md = Md
+	fn.C = function (ob) {
+		return _C(
+				_.x({model: Md}, ob || {})
+		)
+	}
+	return fn
 }
 $M = function (op, a, b, c) {
 	//if (U(op)) {return _$M()}
@@ -311,16 +317,16 @@ md.j = function () {
 	return this.toJSON()
 }
 md.idAttribute = '_id'
-	md.V = function (Vw, ob) {
-		ob = ob || {}
-		ob.m = this
-		return Vw(ob)
-	}
-	md._V = function (ob) {
-		return this.V(_V(ob))
-	}
+md.V = function (Vw, ob) {
+	ob = ob || {}
+	ob.model
+	ob.m = ob.md = ob.m = this
+	return Vw(ob)
 }
-function router(){
+md._V = function (ob) {
+	return this.V(_V(ob))
+}
+function router() {
 	rtr = ro = rt = Bb.Router.prototype;
 	$R$ = function (ob) {
 		return Bb.R.x(ob)
@@ -345,88 +351,88 @@ function router(){
 		return _$r({r: ob})
 	}
 	Bb.R = Bb.Router;
-Bb.R.x = Bb.R.extend
-rtr.n = function (url, op) {
-	this.navigate(url, op);
-	return this
-}
-rtr.N = function (url) {//normal navigate,
+	Bb.R.x = Bb.R.extend
+	rtr.n = function (url, op) {
+		this.navigate(url, op);
+		return this
+	}
+	rtr.N = function (url) {//normal navigate,
 // but i change the default
 // to auto trigger the route fn
-	return this.n(url, {trigger: true})
-}
-rtr.rt = function (rt, fn) {
-	var rtr = this
-	if (O(rt)) {
-		_.e(rt, function (v, k) {
-			rtr.rt(k, v)
-		})
+		return this.n(url, {trigger: true})
 	}
-	else {
-		this.on('route:' + rt, fn)
-	}
-	return this
-}  // rtr.A = ro.oR =
-rtr.rp = function (url, op) {
-	return this._n(url, _.x({replace: true},
-			G(arguments).n ? {trigger: true} : {}))
-}//navigate: replace
-_R = function (ob) {//metaClass
-	ob = ob || {}
-	if (ob.i) {
-		ob.initialize = ob.i
-	}
-	if (ob.$) {
-		ob.initialize = function () {
-			Bb.h.start({pushState: true})
-			if (F(ob.$)) {
-				ob.$()
+	rtr.rt = function (rt, fn) {
+		var rtr = this
+		if (O(rt)) {
+			_.e(rt, function (v, k) {
+				rtr.rt(k, v)
+			})
+		}
+		else {
+			this.on('route:' + rt, fn)
+		}
+		return this
+	}  // rtr.A = ro.oR =
+	rtr.rp = function (url, op) {
+		return this._n(url, _.x({replace: true},
+				G(arguments).n ? {trigger: true} : {}))
+	}//navigate: replace
+	_R = function (ob) {//metaClass
+		ob = ob || {}
+		if (ob.i) {
+			ob.initialize = ob.i
+		}
+		if (ob.$) {
+			ob.initialize = function () {
+				Bb.h.start({pushState: true})
+				if (F(ob.$)) {
+					ob.$()
+				}
 			}
 		}
-	}
-	if (ob.x) {
-		ob.index = ob.x
-	}
-	if (ob.h) {
-		ob.home = ob.h
-	}
-	ob.routes = ob.R ? ob.R : ob.routes || ob.rt || ob.r || {}
-	ob.routes[''] = ob.routes[''] || 'index'
-	ob.routes = _.x({'': '_'}, ob.routes)
-	ob.routes['*other'] = 'd'
-	ob = _.x({
-		_: function () {
-			$l('INDEX ( _ ) ')
-		},
-		d: function (other) {
-			$l('DEFAULT(d): "' + other + '"')
+		if (ob.x) {
+			ob.index = ob.x
 		}
-	}, ob)
-	return Bb.R.x(ob)
-	//return function (a, b, c, d) {return new Rt(a, b, c, d)}
-} //metaClass.. no need for 'new' //= $$R
-$R = function (ob) {
-	var Rt = _R(ob)
-	var rt = new Rt()
-	rt._ = function () {
-		Bb.history.start()
+		if (ob.h) {
+			ob.home = ob.h
+		}
+		ob.routes = ob.R ? ob.R : ob.routes || ob.rt || ob.r || {}
+		ob.routes[''] = ob.routes[''] || 'index'
+		ob.routes = _.x({'': '_'}, ob.routes)
+		ob.routes['*other'] = 'd'
+		ob = _.x({
+			_: function () {
+				$l('INDEX ( _ ) ')
+			},
+			d: function (other) {
+				$l('DEFAULT(d): "' + other + '"')
+			}
+		}, ob)
+		return Bb.R.x(ob)
+		//return function (a, b, c, d) {return new Rt(a, b, c, d)}
+	} //metaClass.. no need for 'new' //= $$R
+	$R = function (ob) {
+		var Rt = _R(ob)
+		var rt = new Rt()
+		rt._ = function () {
+			Bb.history.start()
+		}
+		rt.$ = function () {
+			Bb.history.start({pushState: true})
+		}
+		return rt
 	}
-	rt.$ = function () {
-		Bb.history.start({pushState: true})
+	_$r = function (ob) {
+		var rt = $R(ob)
+		rt._()
+		return rt
 	}
-	return rt
 }
-_$r = function (ob) {
-	var rt = $R(ob)
-	rt._()
-	return rt
-}
-}
-function history(){
-Bb.h = Bb.history
-Bb.h.tr = Bb.h.trigger
-Bb.h.s = Bb.h.start
-Bb.H = Bb.History
+function history() {
+	Bb.h = Bb.history
+	Bb.h.tr = Bb.h.trigger
+	Bb.h.s = Bb.h.start
+	Bb.H = Bb.History
 }
 Ap = {M: {}, C: {}, V: {}, T: {}}
 peep = [{n: 'a', a: 11}, {n: 'b', a: 46}, {n: 'c', a: 13}]
@@ -460,7 +466,7 @@ function loadScripts() {
 	$.j('/bbCore.js')
 	$.j('/bbLs.js')
 }
-function _pre(){
+function _pre() {
 	Bb = bb = Backbone
 	Bb.U = Bb.Utility
 	Bb.S = Bb.Sync
@@ -472,3 +478,10 @@ function _pre(){
 		}
 	}
 }
+Bb.Model.prototype.j = function () {
+	return this.toJSON()
+}
+Bb.Collection.prototype.j = function () {
+	return this.toJSON()
+}
+Bb.M.prototype.idAttribute = '_id'

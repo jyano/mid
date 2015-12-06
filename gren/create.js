@@ -1,3 +1,5 @@
+ 
+
 __St = function () {
 	st = $St(2000, 1000);
 	h = st.h()//.drag()
@@ -54,7 +56,8 @@ $.iI = function (i) {
  
 
 cjs.St=cjs.Stage
-easelText()
+ 
+
 $St =  cjs.stg = cjs.stage = function () {
 	var _$St = function (cv) {
 		var $StCv = function () {
@@ -1312,6 +1315,7 @@ function easelCanvasContext() {
 		return this
 	}
 }
+function KEYCONTROLSOB(){
 ob.keyControls = function (num) {
 	var args = G(arguments),
 			that = this
@@ -1332,4 +1336,4 @@ ob.keyControls = function (num) {
 		})
 	}
 }
-  
+}

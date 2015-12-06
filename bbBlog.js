@@ -1,4 +1,3 @@
- 
 BLOG = BLOGROLL = function () {
 	//https://www.youtube.com/watch?v=a-ijUKVIJSw
 	
@@ -142,5 +141,7 @@ BLOG = BLOGROLL = function () {
 	
 	// tp$$ = tps = blogs = new Blogs()
 	// tp__ = tpsV = blogsView = new BlogsView({collection: blogs})
+	Blog = Bb.M.x({defaults: {author: '', title: '', url: ''}})
+	Blogs = Bb.C.x({model: Blog, url: 'http://localhost/api/blogs'})
 }
  
