@@ -21,7 +21,7 @@ Libs.Box = ['bx', 'sep', 'preBox',
 	'bush']
 /////
 Apps = {}
-Apps.Web = ['webApps', 'jQueryApps', 'handyApps', 'rulesApps',
+Apps.Web = ['webApps', 'jQueryApps', 'jQAnimApps', 'handyApps', 'rulesApps','flexApps',
 	'canApps', 'canDrawApps', 'ctxApps', 'clipperApps', 'serverApps']
 Apps.Gren = ['loaderCreateApps', 'loaderCanApps', 'graphicsDrawApps',
 	'easelPolyApps', 'easelGradApps', 'easelDrawApps', 'easelColorApps',

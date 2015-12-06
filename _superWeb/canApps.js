@@ -1,3 +1,16 @@
+CV0=TXCAN = function () {
+	z();
+	c = $.c('o', 500, 500);
+	//c.save().lineWidth(30).setStrokeColor('r').lineTo([[100,100],[150,110]]).stroke().restore().lineTo([[200,100],[200,600]]).stroke()
+	// c.roundRect(100,50,100,100,50).stroke()//.fill()
+	//c.line(10,10,50,500).stroke()
+	c.line([
+		[[100, 100], [200, 200], [140, 900]]
+		// ,  [[150,150],[250,250], [20,300]]
+	]).stroke();
+	//c.line([100,100],[200,200],[150,150],[250,250] ).stroke()
+	//c.line( [350,50],[25,25],  [450,10],[20,550]).stroke()
+}
 CAN3 = THREECANS = function () {
 	c1 = $.can('a', 800, 400)
 	c2 = $.can('b', 800, 400)
