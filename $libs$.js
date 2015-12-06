@@ -5,12 +5,12 @@ Dirs.Apps = ['_superWeb', '_bone', '_gren', '_grenAnim']
 FrontDeps = ['_polyVerts', 'us', 'string', 'moment', 'jq', 'bb', 'gpc', 'cjs', 'cjsMC', 'both', 'frontOb']
 ///////////
 Libs = {}
-Libs.SuperWeb = ['superJQuery', 'handy', 'rules', 'clipper', 'superCanvas', 'context2d']
+Libs.SuperWeb = ['superJQuery', 'handy', 'rules', 'clipper', 'superCanvas', 'context2d','canClipper']
 Libs.Gren = ['easelPre', 'create', 'displayOb', 'easelDraw', 'easelProtos', 'graphicsDraw', 'movie', 'spriteSheet', 'tween']
 Libs.Bone = ['bbPre', 'bbBase',
 	'bbRouter', 'bbServer', 'bbTweet', 'bbViews', 'qT_superTemplate', 'rainyDay',
 	'bbLocalStorage', 'bbItemsNotesTaskTodos', 'bbImgGal', 'bbDirtpage',
-	'bbAvail', 'bbBlog', 'bbBook', 'bbBookView', 'bbBreakfastRoll', 'bbColls', 'bbDirectoryAdmin',
+	'bbAvail', 'bbBlogRoll', 'bbBook', 'bbBookView', 'bbBreakfastRoll', 'bbColls', 'bbDirectoryAdmin',
 ]
 Libs.Box = ['bx', 'sep', 'preBox',
 	'worldCreation', 'basicBods',

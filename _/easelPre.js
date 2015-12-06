@@ -2,24 +2,7 @@
 AO = function (a) {
 	return A(a) && O(a[0])
 }
-vs1 = [
-	[61, 68],
-	[145, 122],
-	[186, 94],
-	[224, 135],
-	[204, 211],
-	[105, 200],
-	[141, 163],
-	[48, 139],
-	[74, 117]
-];
-vs2 = [
-	[131, 84],
-	[224, 110],
-	[174, 180],
-	[120, 136],
-	[60, 167],
-];
+ 
 oDef = function (o) {
 	o = o || {}
 	o.x = N(o.x, 0)
@@ -31,3 +14,13 @@ oDef = function (o) {
 	o.h = N(o.h, 50)
 	return o
 }
+events = ['drawend',
+	'drawstart',
+	'mouseenter',
+	'mouseleave',
+	'stagemousedown',
+	'stagemousemove',
+	'stagemouseup',
+	'tickend',
+	'tickstart'
+]	

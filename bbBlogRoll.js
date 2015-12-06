@@ -1,7 +1,6 @@
 BLOG = BLOGROLL = function () {
 	//https://www.youtube.com/watch?v=a-ijUKVIJSw
 	
-	
 	container = $('<div>').K('container')
 	$('body').A(container.A(
 			$('<h1>').html('Blog App ' + Math.random()),
@@ -16,11 +15,9 @@ BLOG = BLOGROLL = function () {
 					$('<td>').A($('<input>').K('form-control title-input')),
 					$('<td>').A($('<input>').K('form-control url-input')),
 					$('<td>').A($('<button>').html('Add').K('btn btn-primary add-blog'))))
-	$table.A(
-			$thead,
-			$tbody = $('<tbody>').K('blogs-list')
-	)
-	
+	$table.A($thead,
+			$tbody = $('<tbody>').K('blogs-list'))
+			
 	$('.add-blog').on('click', function () {
 		blogs.create({
 			author: $('.author-input').v_(),

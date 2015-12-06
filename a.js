@@ -101,6 +101,8 @@ require('./superNode/express/midware/$connectMW$')
 $a.use(require('./superNode/express/midware/$$Mw$'))
 
 require('./superNode/$tweetServer$')
+require('./superNode/$blogRoll$')
+
 $a.g('/', function (q, p) {
 	p.send('it worked jason..')
 })
