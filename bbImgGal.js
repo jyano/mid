@@ -1,8 +1,6 @@
- 
- //https://www.youtube.com/watch?v=VERQEr-bVTs
+//https://www.youtube.com/watch?v=VERQEr-bVTs
  //Backbone.js with Derick Bailey - April 2013
 //talks marionette at 1 HOUR EXACTLY
-
  GAL = IMGGALLERY = function () {
  
 	$Ms('Image Gallery')
@@ -11,12 +9,10 @@
 	$.a('video', 'https://www.youtube.com/watch?v=VERQEr-bVTs')
 
 }
-
 function addEdit() {
 }
 function imgLs() {
 }
- 
 function imgGal() {
 	ImgGal = {
 		init: function (o) {
@@ -69,3 +65,4 @@ function imgGal() {
 	
 }
  //STARTS 420 ...'i got this little img app..'
+ 

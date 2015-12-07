@@ -1,17 +1,38 @@
 Dirs = {}
-Dirs.Libs = ['../art', '', '_', 'superWeb', 'gren', 'superBone']
-Dirs.Apps = ['_superWeb', '_bone', '_gren', '_grenAnim']
-////////////
-FrontDeps = ['_polyVerts', 'us', 'string', 'moment', 'jq', 'bb', 'gpc', 'cjs', 'cjsMC', 'both', 'frontOb']
-///////////
-Libs = {}
-Libs.SuperWeb = ['superJQuery', 'handy', 'rules', 'clipper', 'superCanvas', 'context2d','canClipper']
-Libs.Gren = ['easelPre', 'create', 'displayOb', 'easelDraw', 'easelProtos', 'graphicsDraw', 'movie', 'spriteSheet', 'tween']
-Libs.Bone = ['bbPre', 'bbBase',
-	'bbRouter', 'bbServer', 'bbTweet', 'bbViews', 'qT_superTemplate', 'rainyDay',
-	'bbLocalStorage', 'bbItemsNotesTaskTodos', 'bbImgGal', 'bbDirtpage',
-	'bbAvail', 'bbBlogRoll', 'bbBook', 'bbBookView', 'bbBreakfastRoll', 'bbColls', 'bbDirectoryAdmin',
+Dirs.Libs = ['../art', '', '_', '_/_',   'web', 'handy', 'cret','cret/cretAnim',
+  'bone','can', 'clip' , 'z',
+  'store'
+  ]
+Dirs.Apps = ['_/_web', '_/_can', '_/_bone', '_/_cret', '_/_cretAnim' ,'_/cretGames']
+Dirs.Data = ['_/_/animData',
+	'_/_/both', '_/_/data', '_/_/deps'
+
 ]
+////////////
+FrontDeps = [ 'us', 'string', 'moment', 'jq', 'bb', 'gpc', 'cjs', 'cjsMC',
+ 'both', 'superBoth', 'ooo', 'bbAppsData','cssData','easelData',
+'polyData','gunnerMC','gunnertron',//'meSprite',
+'SSData']
+///////////
+
+Libs = {}
+Libs.SuperWeb = ['oO', 'dfDefs','web', 'superWeb', 'webAnim', 'webSty', 'webRules', 'webFlex',
+	'handy', 'handyInputs','handyJQ', 'handyLists','handyUI','ipsum','ll','scrip','superHandy', 
+	'clip', 'superClip',
+	'can','canDraw', 'superCan', 
+	'ctx', 'ctxDraw', 'superCtx', 'canClip', 'localStorage']
+Libs.Cret = [
+'cret', 'superCret', 'dob','superDob' ,
+	'easelDraw', 'easelProtos','easelText','easelMatrix','easelFilters',
+ 'graphicsDraw', 'movie', 'spriteSheet', 'tween']
+Libs.Bone = [ 
+	'bone',
+	'bbRouter',   'bbTweet', 'bbViews', 'qT_superTemplate', 
+	'bbLocalStorage', 'bbImgGal', 'bbDirtpage',
+	  'bbBlogRoll',  'bbBookView', 'bbBreakfastRoll', 'bbColls', 'bbDirectoryAdmin', 
+	'superBone',
+]
+
 Libs.Box = ['bx', 'sep', 'preBox',
 	'worldCreation', 'basicBods',
 	'box', 'boxDebug', 'boxBool', 'boxMouse',
@@ -23,15 +44,16 @@ Libs.Box = ['bx', 'sep', 'preBox',
 Apps = {}
 Apps.Web = ['webApps', 'jQueryApps', 'jQAnimApps', 'handyApps', 'rulesApps','flexApps',
 	'canApps', 'canDrawApps', 'ctxApps', 'clipperApps', 'serverApps']
-Apps.Gren = ['loaderCreateApps', 'loaderCanApps', 'graphicsDrawApps',
+Apps.Cret = ['loaderCreateApps', 'loaderCanApps', 'graphicsDrawApps',
 	'easelPolyApps', 'easelGradApps', 'easelDrawApps', 'easelColorApps',
 	'createApps', 'bitmapFillApps', 'createExamples']
-Apps.GrenAnim = [
+Apps.CretAnim = [
 	'animApps', 'flashAnimApps',
 	'mcApps', 'movieApps', 'spriteApps', 'SSApps', 'tweenApps'
 ]
 Apps.Bone = [
-	'bbApps', 'bbCollApps', '', 'bbCollTemplateApps', 'bbRouterApps', 'bbSyncApps', 'bbViewTemplateApps'
+	'bbAppsBasic', 'bbApps', 'bbAppsMore',
+	 'bbCollApps',   'bbCollTemplateApps', 'bbRouterApps', 'bbSyncApps', 'bbViewTemplateApps'
 ]
 $static = function (dirName) {
 	$a.use($e.static(__dirname + '/' + dirName))
@@ -43,7 +65,7 @@ $statics = function (dirs) {
 		})
 	})
 }
-$statics([Dirs.Libs, Dirs.Apps])
+$statics([Dirs.Libs, Dirs.Apps, Dirs.Data])
 $jsA = function (jsArr) {
 	var $js = function () {
 		var str = ''
@@ -65,8 +87,9 @@ $Js = function (arr) {
 	}
 	return $jsA(arguments)
 }
-msg = ' - - - - - --  -- - - - - -- - - - - --  -- - - - - -- - - - - --  - - - - - -- - - - - - --  -- - - - - -- - - - - --  -- - - - - -- - - - - --  -- - - - - -- - - - - --  -- - - - - -- - - - - --  -- - - - - -- - - - - --  -- - - - - -- - - - - --  -- - - - - -- - - - - --  -- - - - - -- - - - - --  -- - - - - - -- - - - - -- - - - - --  -- - - - - -- - - - - --  -- - - - - -- - - - - --  -- - - - - --- - - - - -- - - - - --  -- - - - - -- - - - - --  -- - - - - -'
-
+msg = ' - - - - - --  -- - - - - -- - - - - --  -- - - - - -- - - - - --  - - - - - -- - - - - - --  -- - - - - -- - - - - -- ' +
+' -- - - - - -- - - - - --  -- - - - - -- - - - - --  -- - - - - -- - - - - --  -- - - - - -- - - - - --  -- - - - - -- - - - - ' +
+'--  -- - - - - -- - - - - --  -- - - - - -- - - - - --  -- - - - - - -- - - - - -- - - - - --  -- - - - - -- - - - - --  -- - - - -'  
 $a.g('/z/:app', function (q, p) {
 	$l('z')
 	app = q.params.app.toUpperCase();  
@@ -74,13 +97,11 @@ $a.g('/z/:app', function (q, p) {
 	
 
 	log ='<script>console.log("'+msg  +'");</script>'
-	var html = log + $Js(FrontDeps, Libs.SuperWeb, Libs.Gren, Libs.Bone,
-					Apps.Web, Apps.Gren, Apps.GrenAnim, Apps.Bone)
+	var html = log + $Js(FrontDeps, Libs.SuperWeb, Libs.Cret, Libs.Bone,
+					Apps.Web, Apps.Cret, Apps.CretAnim, Apps.Bone)
 	
 	html += '<script> $(function(){$l("app:  ' + app + '"); ' + app + '()})</script>'
 	
 	//$l('here is the html..\n\n'+ html)
 	p.send(html)
 })
-  
-  

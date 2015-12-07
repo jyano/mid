@@ -1,39 +1,4 @@
-dirData = [
-	{ID: '1', fN: 'jason', lN: 'sad', par: 'mom', p: '239-2394', e: 'fasfsd@sd.com'},
-	{ID: '2', fN: 'frank', lN: 'fad', par: 'sfad', p: '239-2394', e: 'fas@sd.com'},
-	{ID: '3', fN: 'fred', lN: 'fuckman', par: 'dad', p: '239-2394', e: 'fadss@sd.com'},
-	{ID: '4', fN: 'rigo', lN: 'sadman', par: '', p: '239-2394', e: 'fas@sd.com'},
-	{ID: '5', fN: 'jan', lN: 'fsmanad', par: 'mom', p: '239-2394', e: 'fas@sd.com'},
-	{ID: '6', fN: 'paul', lN: 'fsamand', par: 'dad', p: '239-2394', e: 'fas@sd.com'},
-	{ID: '7', fN: 'steve', lN: 'fsmanad', par: 'mom', p: '239-2394', e: 'rfas@sd.com'},
-	{ID: '8', fN: 'scott', lN: 'manfsad', par: 'sfad', p: '239-2394', e: 'afas@sd.com'},
-	{ID: '9', fN: 'chad', lN: 'fsadman', par: '', p: '239-2394', e: 'afas@sd.com'},
-	{ID: '10', fN: 'greg', lN: 'fsadman', par: '', p: '239-2394', e: 'jas@sd.com'}
-]
-CssOb = {
-	'.details': {
-		display: 'none'
-	},
-	'.active': {
-		C: 'r'
-	},
-	body: {
-		C: 'z', c: 'w'
-	},
-	'a.filter': {C: 'b', c: 'y', P: '5px 10px', M: '5px', 'border-radius': '3px', 'text-decoration': 'none'},
-	'a.filter:hover': {C: 'y', c: 'b', P: '5px 10px', M: '5px', 'border-radius': '3px', 'text-decoration': 'none'},
-	'div#wrapper': {
-		display: 'flex',
-		'flex-direction': 'column',
-		'align-items': 'center'
-	},
-	'div.tools': {
-		display: 'flex',
-		'flex-direction': 'column',
-		'align-items': 'center'
-	},
-	'input#searchBox': {c: 'z'}
-}
+ 
  
 DIRECATMIN19 = function () {
 	$CSS(CssOb);
@@ -48,24 +13,26 @@ DIRECATMIN19 = function () {
 		$.ulI('listing', [])
 	])
 	app = {m: {}, v: {}, r: {}, c: {}}
-	
-	app.m.Person = Bb.Model.extend({
+	app.m.Person = M$({
 		defaults: {ID: '', fN: '', lN: '', par: '', p: '', e: ''},
 		initialize: function () {
 			this.set('type', this.get('par') ? 'student' : 'parent')
 		}
 	})
-	app.c.People = Bb.C.x({
+	
+	app.c.People = C$({
 		model: app.m.Person,
 		comparator: function (per) {
 			return per.get('lN')
 		}
 	})
+	
 	app.i = function () {
 		direc = new app.v.People(dirData)
 		rtr = new app.r.Rtr()
 		// Bb.h.start()
 	}
+	
 	app.r.Rtr = Bb.R.x({
 		routes: {
 			'filter/:type': 'urlFilter'
