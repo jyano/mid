@@ -115,7 +115,7 @@ require('./$libs$')
 //$hS = $h.createServer($a)
 httpServer = http.createServer($a)
 httpServer.listen(80, function () {
-	
 	$l('server listening on port 80')
 })
-//require('./app/_serverSockets') 
+
+require('./ket/$serverSockets$') 

@@ -43,7 +43,7 @@ BLOG = BLOGROLL = function () {html()
 						, $.bt('Ca').none().K('ca-blog')//.K('btn btn-danger')
 				)]
 		},
-		 tagName: 'tr,
+		 tagName: 'tr',
 		ren: function () {
 			var vw = this
 			var adultSelf = vw.md.tJ()

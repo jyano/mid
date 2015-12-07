@@ -33,7 +33,6 @@ function QTexample() {
 			return [$.li().A(ob.me), $.li().A(ob.me)]
 		}
 	}
-	
 	e = qT($tp.lii, {me: 'jason'}).a()
 }
 //QT:

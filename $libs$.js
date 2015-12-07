@@ -1,12 +1,11 @@
 Dirs = {}
-Dirs.Libs = ['../art', '', '_', '_/_',   'web', 'handy', 'cret','cret/cretAnim',
+Dirs.Libs = ['../art', '', '_', '_/_',   'web', 'handy','der', 'cre','cre/creAnim',
   'bone','can', 'clip' , 'z',
-  'store'
+  'store','ket'
   ]
-Dirs.Apps = ['_/_web', '_/_can', '_/_bone', '_/_cret', '_/_cretAnim' ,'_/cretGames']
+Dirs.Apps = ['_/_web', '_/_can', '_/_bone', '_/_cre', '_/_creAnim' ,'_/creGames']
 Dirs.Data = ['_/_/animData',
 	'_/_/both', '_/_/data', '_/_/deps'
-
 ]
 ////////////
 FrontDeps = [ 'us', 'string', 'moment', 'jq', 'bb', 'gpc', 'cjs', 'cjsMC',
@@ -22,7 +21,7 @@ Libs.SuperWeb = ['oO', 'dfDefs','web', 'superWeb', 'webAnim', 'webSty', 'webRule
 	'can','canDraw', 'superCan', 
 	'ctx', 'ctxDraw', 'superCtx', 'canClip', 'localStorage']
 Libs.Cret = [
-'cret', 'superCret', 'dob','superDob' ,
+'cre', 'superCret', 'dob','superDob' ,
 	'easelDraw', 'easelProtos','easelText','easelMatrix','easelFilters',
  'graphicsDraw', 'movie', 'spriteSheet', 'tween']
 Libs.Bone = [ 
@@ -30,7 +29,7 @@ Libs.Bone = [
 	'bbRouter',   'bbTweet', 'bbViews', 'qT_superTemplate', 
 	'bbLocalStorage', 'bbImgGal', 'bbDirtpage',
 	  'bbBlogRoll',  'bbBookView', 'bbBreakfastRoll', 'bbColls', 'bbDirectoryAdmin', 
-	'superBone',
+	'superBone', 'smitha'
 ]
 
 Libs.Box = ['bx', 'sep', 'preBox',
@@ -39,7 +38,8 @@ Libs.Box = ['bx', 'sep', 'preBox',
 	'boxShapes', 'polyShape', 'vector', 'worldQuery',
 	'boxBodDef', 'boxBods', 'boxFxts', 'boxKlass',
 	'ray', 'geo', 'geoDif', 'geoMeet',
-	'bush']
+	'bush','box'
+]
 /////
 Apps = {}
 Apps.Web = ['webApps', 'jQueryApps', 'jQAnimApps', 'handyApps', 'rulesApps','flexApps',
@@ -55,6 +55,7 @@ Apps.Bone = [
 	'bbAppsBasic', 'bbApps', 'bbAppsMore',
 	 'bbCollApps',   'bbCollTemplateApps', 'bbRouterApps', 'bbSyncApps', 'bbViewTemplateApps'
 ]
+
 $static = function (dirName) {
 	$a.use($e.static(__dirname + '/' + dirName))
 }
@@ -97,8 +98,14 @@ $a.g('/z/:app', function (q, p) {
 	
 
 	log ='<script>console.log("'+msg  +'");</script>'
-	var html = log + $Js(FrontDeps, Libs.SuperWeb, Libs.Cret, Libs.Bone,
-					Apps.Web, Apps.Cret, Apps.CretAnim, Apps.Bone)
+	var html = log + $Js(
+	
+					FrontDeps,
+					 Libs.SuperWeb,
+					  Libs.Cret,
+					  Libs.Bone, Libs.Box,
+					Apps.Web, Apps.Cret, Apps.CretAnim, Apps.Bone
+					)
 	
 	html += '<script> $(function(){$l("app:  ' + app + '"); ' + app + '()})</script>'
 	

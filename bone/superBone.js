@@ -77,15 +77,18 @@ function boneQuery(){
 	} // make a bb view with t:ul
 }
 function queryBone(){
-	$.fn.V = function (ob) {
+
+	$.fn.$V = function (ob) {
 		ob = ob || {};
 		ob.el = this;
 		return $V(ob)
-	}
+	}//$.fn.V
+	
 	$.fn.C$ = function () {
 		return this.C($r())
 	}
 }
+
 QVR = function () {
 	q = $.dI('d1', 'r', 500, 500)
 	Vw = _V({

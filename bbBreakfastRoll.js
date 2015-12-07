@@ -1,31 +1,31 @@
- 
 Storage = function (name) {
 	return $C({
 		localStorage: new Bb.LocalStorage(name)
 	})
 }
 $tp = window['$tp'] || {}
-
 ROLL = function () {
 	bbLocStorPLUG()
-	store = Storage('recipes')
+	store = $store('rcs')
 	RecipeM = _M()
 	RecipesC = _C({})
+	
+	
 	Form = _V({
-		tagName: 'form',
-		initialize: function () {
-			$l('form init')
-			this.ren()
-		},//$l(' Form')
+		tag: 'form',
+		__: function () {this.ren()},
 		ren: function () {
 			this.$el.E(
 					$.ip().val('name').id('name'),
-					$.ip().val('ingredients').id('ingredients'), $.bt('submit'),
+					$.ip().val('ingredients')
+							.id('ingredients'),
+							 $.bt('submit'),
 					$.bt('ok')
 			)
 			return this
 		}
 	})
+	
 	Index = _V({
 		tp: function (ob) {
 			var html = $.sp()
@@ -66,18 +66,16 @@ ROLL = function () {
 	})
 	Bb.h.start()
 }
-
 $indexRoute = function ($el, fn, add) {
 	return $R({
-		routes: {'': '_'},
-		_: function (ev) {
+		rts: {'': '_'},
+		_: function (ev) {$l('router: ix page')
 			$($el).E()
-			$l('router says: "_" (index page)')
 			fn(ev)
-			$l('router says: "_" (index page) FIN')
-		}
-	})
-}
+		}})}
+
+
+
 $index = function ($el, arr) {
 	var fn = function () {
 		if (A(arr)) {
@@ -89,22 +87,22 @@ $index = function ($el, arr) {
 	var Router = $indexRoute($el, fn)
 	return Router
 }
+
 ROLL = JUSTENDINGAT53_59 = function () {
 	bbLocStorPLUG()
-	 
 	Recipe = _M()
 	Recipes = _C({
 		localStorage: store = $store('recipes')
 	})
-	
 	Index_ = _V({
-		_: function () {var vw=this 
+		_: function () {
+			var vw = this
 			var rcs = vw.rcs = store
 			rcs.on('all', vw.ren, vw)
 			rcs.fet()
 		},
-		
-		ren: function () {var vw=this
+		ren: function () {
+			var vw = this
 			vw.$el.E($.d([
 						$.h1().A('there are ' + _.z(store) + ' recipes'),
 						$.d().K('recipes').A('.. recipes will go here')
@@ -125,40 +123,39 @@ ROLL = JUSTENDINGAT53_59 = function () {
 			return vw
 		}
 	})
-	
 	Form = _V({
 		tag: 'form',
 		_: function () {
-			var vw=this
+			var vw = this
 			vw.recs = Recs()
 			vw.recs.on('all', vw.ren, vw)
 			vw.recs.fet()
 		},
 		ev: {'mit': 'mit'},
-		mit: function (ev) {$.pD(ev)
-			Rec.create({name:this.$('#name').V(),
-						 name: this.$('#ing').V()}, function(){})
+		mit: function (ev) {
+			$.pD(ev)
+			Rec.create({
+				name: this.$('#name').V(),
+				name: this.$('#ing').V()
+			}, function () {
+			})
 		},
-		
-		ren: function () {var vw=this
-			
-			var $d = $.d().C($r()).css({padding: 10, margin: 10})
+		ren: function () {
+			var vw = this
+			var $d = $.d().C(
+					$r()
+			).css({padding: 10, margin: 10})
 			vw.$el.E($d)
 			$d.A(
 					'name: ', $.ip().pH('name').id('name'),
-					' ingredients : ', $.ip().pH('ingredients').id('ingredients')
-			)
+					' ingredients : ', $.ip().pH('ingredients').id('ingredients'))
 			$('<button type="submit">').A('mit').a2($d)
 			$.hr().a2($d)
-			return vw
-		}
-	})
+			return vw}})
 	
 	$.d().id('#breakfast-rolls').css({padding: 20, margin: 20}).C('o').A('loading .... .... ..')
 	Router = $R({
-		initialize: function () {
-			$l('router init')
-		},
+		initialize: function () {$l('router init')},
 		routes: {'': '_'},
 		_: function (ev) {
 			$l('router index')
@@ -168,7 +165,6 @@ ROLL = JUSTENDINGAT53_59 = function () {
 	})
 	Bb.h.start()
 }
-
 function rollSolvedFromGithub() {
 	//https://github.com/ngauthier/intro-to-backbone-js/blob/master/app/demo/solved.html
 	store = new Store("recipes")
@@ -197,7 +193,6 @@ function rollSolvedFromGithub() {
 			return this.recipes.length;
 		}
 	})
-	
 	Recipe = V$({
 		className: 'well',
 		template: template('recipe'),
@@ -218,7 +213,7 @@ function rollSolvedFromGithub() {
 			this.md.destroy();
 		}
 	})
-	Form = V$({
+	Form = $V({
 		tagName: 'form',
 		className: 'form-horizontal',
 		template: template('form'),
@@ -238,19 +233,15 @@ function rollSolvedFromGithub() {
 			this.ren();
 		}
 	})
-	
-	
 	boot = function (ct) {
-		 
-		$R({_: function (ops) {this.el = ops.el},
-			rts: {"": "index"},
-			index: function () {
-				this.$el.E(
-				  (new Index() ).ren().el)}}
-		)({el: $(ct)})
-			Bb.h.start();
+		$R({rts: {"": "ix"},
+			_: function (ops) {this.el = ops.el},
+			ix: function () {this.$el.E( Index_().ren().el ) }
+		})
+		({el: $(ct)})
+		
+		Bb.h.start();
 	}
-	
 	SOLVED = function () {
 		
 		/*

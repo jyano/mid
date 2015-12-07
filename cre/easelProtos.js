@@ -1,4 +1,3 @@
- 
 st = cjs.Stage.prototype
 st.N = st.next = function (next) {
 	if (U(next)) {
@@ -108,20 +107,6 @@ st.H = function (a) {
 	this.canvas.height = a
 	return this
 }
-st.W = function (a) {
-	if (U(a)) {
-		return this.canvas.width
-	}
-	this.canvas.width = a;
-	return this
-}
-st.H = function (a) {
-	if (U(a)) {
-		return this.canvas.height
-	}
-	this.canvas.height = a;
-	return this
-}
 st.WH = function (w, h) {
 	var st = this;
 	if (U(w)) {
@@ -141,34 +126,6 @@ st.hW = function () {
 }
 st.hH = function () {
 	return this.H() / 2
-}
-st.W = function (a) {
-	if (U(a)) {
-		return this.canvas.width
-	}
-	this.canvas.width = a
-	return this
-}
-st.H = function (a) {
-	if (U(a)) {
-		return this.canvas.height
-	}
-	this.canvas.height = a
-	return this
-}
-st.W = function (a) {
-	if (U(a)) {
-		return this.canvas.width
-	}
-	this.canvas.width = a
-	return this
-}
-st.H = function (a) {
-	if (U(a)) {
-		return this.canvas.height
-	}
-	this.canvas.height = a
-	return this
 }
 st.ab = st.abs = function (x, y) {
 	this.can.abs(x, y);
@@ -434,7 +391,7 @@ function containerProto() {
 		this.swapChildrenAt.apply(this, arguments)
 		return this
 	}
-	ct_ch = function () {
+	ct._ch = function () {
 		return this.children
 	}
 	ct.sCI = ct.sChIx = function () {
@@ -551,12 +508,6 @@ function containerProto() {
 		this.autoClear = false;
 		return this
 	}
-	ct.h = function () {
-		var ct = this,
-				h = $H.apply($H, arguments)
-		ct.A(h)
-		return h
-	}
 	ct.cir = function () {
 		var h = this.h()
 		return h.cir.apply(h, arguments)
@@ -574,9 +525,15 @@ function containerProto() {
 		h.dc(o.x, o.y, o.r)
 		return h
 	}
+	ct.circle = function (x, y, rad, color) {
+		this.A(
+				cjs.circle(x, y, rad, color)
+		)
+		return this
+	}
 	ct.h = function () {
-		var ct = this,
-				h = $H.apply($H, arguments)
+		var ct = this
+		var h = $H.apply($H, arguments)
 		ct.A(h)
 		return h
 	}
@@ -631,41 +588,6 @@ function containerProto() {
 			ct.drag()
 		}
 		return ct2
-	}
-	ct.cir = function () {
-		var ct = this, g = G(arguments),
-				h = this.h(), o
-		o = g.O ? g.f :
-				N(g.s) ? {x: g.f, y: g.s, r: g.t, c: g[3]} :
-				{r: g.f, c: g.s}
-		o.y = N(o.y, 0);
-		o.x = N(o.x, 0)
-		o.r = N(o.r, 50)
-		h.c(o.c)
-		h.dc(o.x, o.y, o.r)
-		return h
-	}
-	ct.cir = function () {
-		var h = this.h()
-		return h.cir.apply(h, arguments)
-	}
-	ct.circle = function (x, y, rad, color) {
-		this.A(
-				cjs.circle(x, y, rad, color)
-		)
-		return this
-	}
-	ct.circle = function (x, y, rad, color) {
-		this.A(
-				cjs.circle(x, y, rad, color)
-		)
-		return this
-	}
-	ct.circle = function (x, y, rad, color) {
-		this.A(
-				cjs.circle(x, y, rad, color)
-		)
-		return this
 	}
 	ct.shape = function () {
 		return cjs.shape.apply(cjs, arguments).a2(this)
@@ -855,11 +777,6 @@ function containerProto() {
 		this.A(text)
 		return text
 	}
-	ct.text = function (text, font, color, x, y) {
-		var text = new cjs.Text(text, font, color).XY(x, y)
-		this.A(text)
-		return this
-	}
 	ct.chalk = function () {
 		var ct = this, g = G(arguments),
 				h = 0
@@ -879,14 +796,6 @@ function containerProto() {
 		})
 		return text
 	}
-	ct.chalk = function () {
-		var ct = this, g = G(arguments),
-				h = 0
-		g.e(function (t) {
-			ct.T(t, 26, 'w', 475, h += 35)
-		})
-		return this
-	}
 	ct.pen = function self(arg) {
 		var that = this
 		if (O(self.text)) {
@@ -904,36 +813,12 @@ function containerProto() {
 		)
 		return this
 	}
-	ct.backgroundImage = function (image) {
-		var that = this
-		this.bm(image, function (b) {
-					that.setChildIndex(b, 0)
-				}
-		)
-		return this
-	}
-	ct.backgroundImage = function (image) {
-		var that = this
-		this.bm(image, function (b) {
-					that.setChildIndex(b, 0)
-				}
-		)
-		return this
-	}
 	ct.bgI = ct.bg = function (i) {
 		var ct = this
 		ct.bm(i, function (b) {
 			ct.ch(b, 0)
 		})
 		return ct
-	}
-	ct.backgroundColor = function (c) {
-		$(this.canvas).C(c)
-		return this
-	}
-	ct.backgroundColor = function (c) {
-		$(this.canvas).C(c)
-		return this
 	}
 	ct.backgroundColor = function (c) {
 		$(this.canvas).C(c)
@@ -1071,26 +956,6 @@ function write() {
 		dot.N('dot')
 		return this
 	}
-	p.squareDot = function (color, x, y) {
-		var squareDot, tween
-		if (!S(color)) {
-			y = x;
-			x = color;
-			color = 'orange'
-		}
-		if (O(x)) {
-			y = x.y;
-			x = x.x
-		}
-		x = N(x) ? x : 300
-		y = N(y) ? y : 300
-		__squareDot = squareDot = cjs.rect(20, 20, oO('c', color))//.opacity(.4)
-		this.A(squareDot.XY(x, y)//.drag()
-		)
-		//tween = dot.tweenLoop([{sxy:1.3},100],[{sxy:1},100]).toggle()
-		// dot.$$(function(){tween.toggle()})
-		return this
-	}
 	p.dot = function (color, x, y) {
 		var that = this,
 				dot,
@@ -1150,26 +1015,6 @@ function write() {
 		//tween = dot.tweenLoop([{sxy:1.3},100],[{sxy:1},100]).toggle()
 		// dot.$$(function(){tween.toggle()})
 		return this
-	}
-	p.chalk = function () {
-		var height = 50,
-				that = this,
-				text
-		_.each(arguments, function (arg) {
-			text = cjs.chalk(arg).Y(height).X(50 - that.X())
-			height += 40
-			that.A(text)
-		})
-		return text
-	}
-	p.pen = function self(arg) {
-		var that = this
-		if (O(self.text)) {
-			self.text.remove()
-		}
-		self.text = cjs.chalk(arg).Y(50).X(50 - that.X())
-		that.A(self.text)
-		return self.text
 	}
 	p.chalk = function () {
 		var height = 50,
@@ -1260,258 +1105,7 @@ function mouse() {
 		return this
 	}
 }
-function tran() {
-	cjs.rtSh = cjs.rotateShake = function (bm) {
-		$Tw([bm, 'l'], {r: 0}, [{r: 1}, 1], [{r: -1}, 1])
-	}
-	cjs.scSh = cjs.scaleShake = function (bm) {
-		$Tw([bm, 'l'], {sxy: 1}, [{sxy: .95}, 1], [{sxy: 1.05}, 1])
-	}
-	cjs.bindScale = SC = function (b, b2) {
-		var g = G(arguments), b = g[0], b2 = g[1],
-				d = oE('d'), pm = oE('pm'), b2 = b2 || b,
-				cp = function (n) {
-					return n < .2 ? .2 : n > 2 ? 2 : n
-				}
-		return b.on(d,
-				function (e) {
-					var X = e.rawX, Y = e.rawY,
-							sx = b2.scaleX,
-							sy = b2.scaleY
-					b.on(pm,
-							function (e) {
-								if (g.n) {
-									b2.sXY(cp(sx + (
-											(e.rawX - X) / 200)),
-											cp(sy - ((e.rawX - X) / 200))
-									)
-								}
-								else if (g.p) {
-									cXY(b2, sx + ((e.rawX - X) / 50), sy - ((e.rawY - Y) / 50))
-									cXY(b2, sy - ((e.rawY - Y) / 50)), sx + ((e.rawX - X) / 50)
-								}
-								else {
-									b2.sXY(sx - ((e.rawX - X) / 50), sy - ((e.rawY - Y) / 50))
-								}
-							})
-				}
-		)
-	}
-	cjs.bindSkew = SK = function (b) {
-		var g = G(arguments), b = g[0], b2 = g[1], d = oE('d'), pm = oE('pm'), b2 = b2 || b
-		return b.on(d,
-				function (e) {
-					var X = e.rawX, Y = e.rawY
-					b.on(pm, function (e) {
-						b2.kXY(
-								(e.rawY - Y) * .5, (e.rawX - X) * .5
-						)
-					})
-				})
-	}
-	cjs.bindTransform = TR = function TR(b, b2, m) {
-		var g = G(arguments),
-				b = g[0],
-				b2 = g[1],
-				b2 = b2 || b, m = g[2] || 'SL'
-		if (m == 'SL') {
-			cjs.bindSlide(b, b2);
-			m = 'SC'
-		}
-		else if (m == 'SC') {
-			cjs.bindScale(b, b2);
-			m = 'RT'
-		}
-		else if (m == 'RT') {
-			cjs.bindRotate(b, b2);
-			m = 'SL'
-		}
-		return b.on('pressup', function (e) {
-			b.removeAllEventListeners();
-			TR(b, b2, m)
-		})
-	}
-	cjs.KK = cjs.bindSlideAndRotate = KK = function (b, b2) {
-		var g = G(arguments), b = g[0], b2 = g[1] || b
-		cjs.SL(b);
-		cjs.RT(b, b2)
-		if (g.p) {
-			b.rgc('+')
-		}
-		if (g.N) {
-			//    reggy(b,b2)
-		}
-	}
-	cjs.RK = cjs.bindRotateThenSkew = RK = function (b, b2, m) {
-		var g = G(arguments), b = g[0], b2 = g[1],
-				d = oE('d'),
-				pm = oE('pm'),
-				b2 = b2 || b,
-				m = g[2] || 'RT'
-		//if(g.p){var s=St('y',1000)
-		//    _t(b||5,function(i){s.a().bm(
-		//        function(bm){bm.xy(i*50);TR(bm)})});return s}
-		if (m == 'RT') {
-			RT(b, b2);
-			m = 'SK'
-		}
-		else if (m == 'SK') {
-			SK(b, b2);
-			m = 'RT'
-		}
-		return b.on(oE('pu'),
-				function (e) {
-					Do(b).O();
-					RK(b, b2, m)
-				})
-	}
-	cjs.bindSlideAndRotate = KK = function (b, b2) {
-		var g = G(arguments), b = g[0],
-				b2 = g[1] || b
-		cjs.bindSlide(b);
-		cjs.bindRotate(b, b2)
-		if (g.p) {
-			b.rgc('+')
-		}
-		if (g.N) {
-			//    reggy(b,b2)
-		}
-	}
-	cjs.bindRotateThenSkew = RK = function (b, b2, m) {
-		var g = G(arguments), b = g[0], b2 = g[1],
-				d = oE('d'),
-				pm = oE('pm'),
-				b2 = b2 || b,
-				m = g[2] || 'RT'
-		//if(g.p){var s=St('y',1000)
-		//    _t(b||5,function(i){s.a().bm(
-		//        function(bm){bm.xy(i*50);TR(bm)})});return s}
-		if (m == 'RT') {
-			RT(b, b2);
-			m = 'SK'
-		}
-		else if (m == 'SK') {
-			SK(b, b2);
-			m = 'RT'
-		}
-		return b.on(oE('pu'),
-				function (e) {
-					Do(b).O();
-					RK(b, b2, m)
-				})
-	}
-	cjs.KK = cjs.bindSlideAndRotate = KK = function (b, b2) {
-		var g = G(arguments), b = g[0], b2 = g[1] || b
-		cjs.SL(b);
-		cjs.RT(b, b2)
-		if (g.p) {
-			b.rgc('+')
-		}
-		if (g.N) {
-			//    reggy(b,b2)
-		}
-	}
-	cjs.RK = cjs.bindRotateThenSkew = RK = function (b, b2, m) {
-		var g = G(arguments), b = g[0], b2 = g[1],
-				d = oE('d'),
-				pm = oE('pm'),
-				b2 = b2 || b,
-				m = g[2] || 'RT'
-		//if(g.p){var s=St('y',1000)
-		//    _t(b||5,function(i){s.a().bm(
-		//        function(bm){bm.xy(i*50);TR(bm)})});return s}
-		if (m == 'RT') {
-			RT(b, b2);
-			m = 'SK'
-		}
-		else if (m == 'SK') {
-			SK(b, b2);
-			m = 'RT'
-		}
-		return b.on(oE('pu'),
-				function (e) {
-					Do(b).O();
-					RK(b, b2, m)
-				})
-	}
-	cjs.KK = cjs.bindSlideAndRotate = function (b, b2) {
-		var g = G(arguments), b = g[0],
-				b2 = g[1] || b
-		cjs.bindSlide(b);
-		cjs.bindRotate(b, b2)
-		if (g.p) {
-			b.rgc('+')
-		}
-		if (g.N) {
-			//    reggy(b,b2)
-		}
-	}
-	cjs.RK = cjs.bindRotateThenSkew = function (b, b2, m) {
-		var g = G(arguments), b = g[0], b2 = g[1],
-				d = oE('d'),
-				pm = oE('pm'),
-				b2 = b2 || b,
-				m = g[2] || 'RT'
-		//if(g.p){var s=St('y',1000)
-		//    _t(b||5,function(i){s.a().bm(
-		//        function(bm){bm.xy(i*50);TR(bm)})});return s}
-		if (m == 'RT') {
-			RT(b, b2);
-			m = 'SK'
-		}
-		else if (m == 'SK') {
-			SK(b, b2);
-			m = 'RT'
-		}
-		return b.on(oE('pu'),
-				function (e) {
-					Do(b).O();
-					RK(b, b2, m)
-				})
-	}
-	cjs.KK = cjs.bindSlideAndRotate = function (b, b2) {
-		var g = G(arguments), b = g[0],
-				b2 = g[1] || b
-		cjs.bindSlide(b);
-		cjs.bindRotate(b, b2)
-		if (g.p) {
-			b.rgc('+')
-		}
-		if (g.N) {
-			//    reggy(b,b2)
-		}
-	}
-	cjs.RK = cjs.bindRotateThenSkew = function (b, b2, m) {
-		var g = G(arguments), b = g[0], b2 = g[1],
-				d = oE('d'),
-				pm = oE('pm'),
-				b2 = b2 || b,
-				m = g[2] || 'RT'
-		//if(g.p){var s=St('y',1000)
-		//    _t(b||5,function(i){s.a().bm(
-		//        function(bm){bm.xy(i*50);TR(bm)})});return s}
-		if (m == 'RT') {
-			RT(b, b2);
-			m = 'SK'
-		}
-		else if (m == 'SK') {
-			SK(b, b2);
-			m = 'RT'
-		}
-		return b.on(oE('pu'),
-				function (e) {
-					Do(b).O();
-					RK(b, b2, m)
-				})
-	}
-	cjs.rtSh = cjs.rotateShake = function (bm) {
-		$Tw([bm, 'l'], {r: 0}, [{r: 1}, 1], [{r: -1}, 1])
-	}
-	cjs.scSh = cjs.scaleShake = function (bm) {
-		$Tw([bm, 'l'], {sxy: 1}, [{sxy: .95}, 1], [{sxy: 1.05}, 1])
-	}
-}
+ 
 containerProto()
 write()
 mouse()
-tran()
