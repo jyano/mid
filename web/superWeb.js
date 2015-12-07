@@ -55,15 +55,7 @@ $al = function (er) {
 	alert(er)
 	return false
 }
-$q = function (e) {
-	if (!O(e)) {
-		return false
-	}
-	if (e.target) {
-		e = e.target
-	}
-	return $(e)
-}
+ 
 $.fn.fCt = function (str) {
 	return this.fi(":contains(" + str + ")")
 }

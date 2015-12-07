@@ -1,290 +1,265 @@
-BLOG = BLOGROLL = function () {html()
-	Bb.Model.prototype.idAttribute = '_id'
-	Blog = Bb.M.x({defaults: {author: '', title: '', url: ''}})
-	Blogs = Bb.C.x({
-		model: Blog,
-		url: '/api/blogs'
-	})
-	viewOb = {model: new Blog, tagName: 'tr'}
-	viewOb.genCh = viewOb.generateChildren = function (ob) {
-		ob = ob || {};
-		var authorIp = $.sp(ob.author).K('author')
-		var titleIp = $.sp(ob.title).K('title')
-		var urlIp = $.sp(ob.url).K('url')
-		return [
-			$('<td>').A(authorIp),
-			$('<td>').A(titleIp),
-			$('<td>').A(urlIp),
-			$('<td>').A(
-					$.bt('Edit', function () {
-					}).K('btn btn-warning edit-blog'),
-					$.bt('Delete', function () {
-					}).K('btn btn-danger delete-blog'),
-					//FROM VIDEO 3
-					$.bt('Update', function () {
-					}).K('btn btn-success update-blog')
-							.css('display', 'none'),
-					//FROM VIDEO 3
-					$.bt('Cancel', function () {
-					}).K('btn btn-danger cancel')
-							.css('display', 'none')
-			)]
-	}
-	viewOb.render = viewOb.ren = function () {
-		var vw = this
-		var adultSelf = vw.model.toJSON()
-		var children = vw.genCh(adultSelf)
-		_.e(children, function (childEl) {
-			childEl.a2(vw.$el)
-		 
+Bb.M.prototype.idAttribute = '_id'
+function html() {
+	$h1 = $.h1('Yano Blog App ' + M.r())
+	$ctDiv = $.dK('ct').A($h1)
+	$table = $.t().a2($ctDiv)//.K('table')
+	$thead = $('<thead>').a2($table)
+	$thTr = $.tr().a2($thead).A(
+			$.th('AuthoR'), $.th('Title'),
+			$.th('Url'), $.th('action'))
+	$tbody = $('<tbody>').a2($table).K('blogs-list')
+	$tr = $.tr().a2($thead)
+	$.ip().a2($.td().a2($tr)).K('form-control user-ip')
+	$.ip().a2($.td().a2($tr)).K('form-control title-ip')
+	$.ip().a2($.td().a2($tr)).K('form-control url-ip')
+	$.bt('Add', function () {
+		blogs.create({
+			user: $('.user-ip').V(),
+			title: $('.title-ip').V(),
+			url: $('.url-ip').V()
 		})
-		return vw
-	}
-	viewOb.events = {
-		'click .edit-blog': 'edit',
-		'click .update-blog': 'update',
-		'click .cancel': 'cancel',
-		'click .delete-blog': 'delete'
-	}
-	_BlogView = Bb.V.x(viewOb)
-	BlogView = _BlogView.extend({
-		edit: function () {
-			var vw = this
-			$l('edit button clicked!')
-			vw.$('.edit-blog').hide()
-			vw.$('.delete-blog').hide()
-			vw.$('.update-blog').show()
-			vw.$('.cancel').show()
-			var author = this.$('.author').html()
-			var title = this.$('.title').html()
-			var url = this.$('.url').html()
-			this.$('.author').E().A(
-					$.ip().K("form-control author-update").val(author))
-			this.$('.title').E().A(
-					$.ip().K("form-control title-update").val(title))
-			this.$('.url').E().A(
-					$.ip().K("form-control url-update").val(url))
-			// use .h( or .H( instead of E().A(
+	}).a2($.td().a2($tr))//K('btn btn-primary add-blog')
+}
+$.fn.none = function () {
+	return this.css('display', 'none')
+}
+BLOG = BLOGROLL = function () {html()
+	Blog = Bb.M.x({df: {user: '', title: '', url: ''}})
+	Blogs = Bb.C.x({md: Blog, url: '/api/blogs'})
+	Blog_ = V$({
+		model: new Blog, 
+		genCh: viewOb.generateChildren = function (ob) {
+			ob = ob || {};
+			var userIp = $.sp(ob.user).K('user')
+			var titleIp = $.sp(ob.title).K('title')
+			var urlIp = $.sp(ob.url).K('url')
+			return [
+				$.td(userIp),
+				$.td(titleIp),
+				$.td(urlIp), $.td().A(
+						$.bt('Ed').K('ed-blog')//.K('btn btn-warning')
+						, $.bt('De').K('de-blog')//.K('btn btn-danger')
+						, $.bt('Up').none().K('up-blog')//.K('btn btn-success')
+						, $.bt('Ca').none().K('ca-blog')//.K('btn btn-danger')
+				)]
 		},
-		update: function () {
-			this.model.set('author', $('.author-update').v())
-			this.model.set('title', $('.title-update').v())
-			this.model.set('url', $('.url-update').v())
-			this.model.save(null, {
-				success: function () {
-					$l('success updated!')
+		 tagName: 'tr,
+		ren: function () {
+			var vw = this
+			var adultSelf = vw.md.tJ()
+			var ch = vw.genCh(adultSelf)
+			_.e(ch, function (el) {
+				el.a2(vw.$el)
+			})
+			return vw
+		},
+		events: {'click .ed': 'ed', 'click .up': 'ud', 'click .ca': 'ca', 'click .de': 'de'},
+		ed: function () {
+			var vw = this;
+			switchBts()
+			vw.$('.user').E($.ip().K("user-up")//.K("form-control")
+					.val(vw.$('.user').h()))
+			vw.$('.title').E($.ip().K("title-up")//.K("form-control")
+					.val(vw.$('.title').h()))
+			vw.$('.url').E($.ip().K("url-up")//.K("form-control")
+					.val(vw.$('.url').h()))
+			function switchBts() {
+				vw.$('.ed').hd()
+				vw.$('.de').hd()
+				vw.$('.up').sh()
+				vw.$('.ca').sh()
+			}
+		},
+		ud: function () {
+			var md = this.model
+			md.set('user', $('.user-up').v())
+			md.set('title', $('.title-up').v())
+			md.set('url', $('.url-up').v())
+			md.sv(null, {
+				suc: function () {
+					$l('suc up!')
 				}
 			})
 		},
-		cancel: function () {
-			blogsView.ren()
+		ca: function () {
+			blogs_.ren()
 		},
-		delete: function () {
-			this.model.destroy()
+		de: function () {
+			this.md.des()
 		}
 	})
-	BlogsView = Bb.V.x({
-		collection: blogs = tp$$ = tps = new Blogs(),
+	
+	Blogs_ = V$({
+		cl: blogs = tp$$ = tps = new Blogs(),
 		el: '.blogs-list',
-		initialize: function () {
-			var vw = this, cl = vw.collection
-			vw.collection.on('add', this.ren, this)
-		vw.collection.on('change', function () {
+		_: function () {
+			var vw = this
+			var cl = vw.collection
+			
+			cl.oA(this.ren, this)
+			cl.oCh(function () {
 				setTimeout(function () {
 					vw.ren()
 				}, 30)
 			}, vw)
-		
-		vw.collection.on('remove', this.ren, this)
-			vw.collection.fetch({
+			cl.oRm(this.ren, this)
+			cl.fet({
 				success: function (docs) {
-					$l('success')
 					if (docs) {
-						$l('there are doc')
-						$l(docs)
-						_.each(docs.toJSON(), function (item) {
-							$l('got blog with _id: ' + item._id)
+						_.e(docs.tJ(), function (doc) {
+							$l('blog _id: ' + doc._id)
 						})
 					}
-				},
-				error: function () {
-					$l('failed to get blogs!')
-				}
+				}//, err: function () {$l('failed to get blogs!')}
 			})
 		},
-		
 		ren: function () {
 			var vw = this
-			vw.$el.html('')
-			vw.collection.each(function (blog) {
-				var blogView = new BlogView({model: blog})
-				vw.$el.A(blogView.ren().el)
-			})
-			return this
-		}
-	})
-	tp__ = tpsV = blogsView = new BlogsView({})
-	Bb.M.prototype.idAttribute = '_id'
+			vw.$el.E()
+			vw.cl.e(function (blog) {
+				vw.$el.A((new Blog_({
+							model: blog
+						})).ren().el)})
+			return vw}})
+	
+	
+	blogs_ = new Blogs_
 }
-function html() {
-	$h1 = $('<h1>').html('Yano Blog App ' + M.r())
-	$ctDiv = $('<div>').K('container')
-			.A($h1).A()
-	$table = $('<table>').K('table').a2($ctDiv)
-	$thead = $('<thead>').a2($table)
-	$thTr = $('<tr>').a2($thead)
-	$thTr.A(
-			$('<th>').html('AuthoR'),
-			$('<th>').html('Title'),
-			$('<th>').html('Url'),
-			$('<th>').html('action'))
-	$tbody = $('<tbody>').K('blogs-list').a2($table)
-	$tr = $('<tr>').a2($thead)
-	$.ip().K('form-control author-input').a2($('<td>').a2($tr))
-	$.ip().K('form-control title-input').a2($('<td>').a2($tr))
-	$.ip().K('form-control url-input').a2($('<td>').a2($tr))
-	$bt = $.bt('Add', function () {
-		blogs.create({
-			author: $('.author-input').val(),
-			title: $('.title-input').val(),
-			url: $('.url-input').val()
-		})
-	})
-	$bt.K('btn btn-primary add-blog').a2($('<td>').a2($tr))
-}
-function about(){
+
+
+function about() {
 //  meb
-BLOGVID2WORKS = function () {
-	html();
-	Blog = Bb.M.x({defaults: {author: '', title: '', url: ''}})
-	Blogs = Bb.C.x({
-		model: Blog,
-		url: 'http://localhost/$blogRoll$'
-	})
-	viewOb = {model: new Blog, tagName: 'tr'}
-	viewOb.genCh = viewOb.generateChildren = function (ob) {
-		ob = ob || {};
-		var authorIp = $.sp(ob.author).K('author')
-		var titleIp = $.sp(ob.title).K('title')
-		var urlIp = $.sp(ob.url).K('url')
-		return [
-			$('<td>').A(authorIp),
-			$('<td>').A(titleIp),
-			$('<td>').A(urlIp),
-			$('<td>').A(
-					$.bt('Edit', function () {
-					}).K('btn btn-warning edit-blog'),
-					$.bt('Delete', function () {
-					}).K('btn btn-danger delete-blog'),
-					//FROM VIDEO 3
-					$.bt('Update', function () {
-					}).K('btn btn-success update-blog')
-							.css('display', 'none'),
-					//FROM VIDEO 3
-					$.bt('Cancel', function () {
-					}).K('btn btn-danger cancel')
-							.css('display', 'none')
-			)]
-	}
-	viewOb.render = viewOb.ren = function () {
-		var vw = this
-		var adultSelf = vw.model.toJSON()
-		var children = vw.genCh(adultSelf)
-		_.e(children, function (childEl) {
-			childEl.a2(vw.$el)
+	BLOGVID2WORKS = function () {
+		html();
+		Blog = Bb.M.x({defaults: {user: '', title: '', url: ''}})
+		Blogs = Bb.C.x({
+			model: Blog,
+			url: 'http://localhost/$blogRoll$'
 		})
-		return vw
-	}
-	viewOb.events = {
-		'click .edit-blog': 'edit',
-		'click .update-blog': 'update',
-		'click .cancel': 'cancel',
-		'click .delete-blog': 'delete'
-	}
-	_BlogView = Bb.V.x(viewOb)
-	BlogView = _BlogView.extend({
-		edit: function () {
-			var vw = this
-			$l('edit button clicked!')
-			vw.$('.edit-blog').hide()
-			vw.$('.delete-blog').hide()
-			vw.$('.update-blog').show()
-			vw.$('.cancel').show()
-			var author = this.$('.author').html()
-			var title = this.$('.title').html()
-			var url = this.$('.url').html()
-			this.$('.author').E().A(
-					$.ip().K("form-control author-update").val(author))
-			this.$('.title').E().A(
-					$.ip().K("form-control title-update").val(title))
-			this.$('.url').E().A(
-					$.ip().K("form-control url-update").val(url))
-			// use .h( or .H( instead of E().A(
-		},
-		update: function () {
-			this.model.set('author', $('.author-update').v())
-			this.model.set('title', $('.title-update').v())
-			this.model.set('url', $('.url-update').v())
-			this.model.save(null, {
-				success: function () {
-					$l('success updated!')
-				}
-			})
-		},
-		cancel: function () {
-			blogsView.ren()
-		},
-		delete: function () {
-			this.model.destroy()
+		viewOb = {model: new Blog, tagName: 'tr'}
+		viewOb.genCh = viewOb.generateChildren = function (ob) {
+			ob = ob || {};
+			var userIp = $.sp(ob.user).K('user')
+			var titleIp = $.sp(ob.title).K('title')
+			var urlIp = $.sp(ob.url).K('url')
+			return [
+				$('<td>').A(userIp),
+				$('<td>').A(titleIp),
+				$('<td>').A(urlIp),
+				$('<td>').A(
+						$.bt('Edit', function () {
+						}).K('btn btn-warning edit-blog'),
+						$.bt('Delete', function () {
+						}).K('btn btn-danger delete-blog'),
+						//FROM VIDEO 3
+						$.bt('Update', function () {
+						}).K('btn btn-success update-blog')
+								.css('display', 'none'),
+						//FROM VIDEO 3
+						$.bt('Cancel', function () {
+						}).K('btn btn-danger cancel')
+								.css('display', 'none')
+				)]
 		}
-	})
-	BlogsView = Bb.V.x({
-		collection: blogs = tp$$ = tps = new Blogs(),
-		el: '.blogs-list',
-		initialize: function () {
-			var vw = this, cl = vw.collection
-			this.collection.on('add', this.ren, this)
-			this.collection.on('change', function () {
-				setTimeout(function () {
-					vw.ren()
-				}, 30)
-			}, vw)
-			this.collection.on('remove', this.ren, this)
-			/*	this.collection.fetch({
-			 success: function (docs) {
-			 if (docs) {
-			 $l('there are doc')
-			 $l(docs)
-			 _.each(docs.toJSON(), function (item) {
-			 $l('got blog with _id: ' + item._id)
-			 })
-			 }
-			 },
-			 error: function () {
-			 $l('failed to get blogs!')
-			 }
-			 })*/
-		},
-		ren: function () {
+		viewOb.render = viewOb.ren = function () {
 			var vw = this
-			vw.$el.html('')
-			vw.collection.each(function (blog) {
-				var blogView = new BlogView({model: blog})
-				vw.$el.A(blogView.ren().el)
+			var adultSelf = vw.model.toJSON()
+			var children = vw.genCh(adultSelf)
+			_.e(children, function (childEl) {
+				childEl.a2(vw.$el)
 			})
-			return this
+			return vw
 		}
-	})
-	tp__ = tpsV = blogsView = new BlogsView({})
-	Bb.M.prototype.idAttribute = '_id'
-}
+		viewOb.events = {
+			'click .edit-blog': 'edit',
+			'click .update-blog': 'update',
+			'click .cancel': 'cancel',
+			'click .delete-blog': 'delete'
+		}
+		_BlogView = Bb.V.x(viewOb)
+		BlogView = _BlogView.extend({
+			edit: function () {
+				var vw = this
+				$l('edit button clicked!')
+				vw.$('.edit-blog').hide()
+				vw.$('.delete-blog').hide()
+				vw.$('.update-blog').show()
+				vw.$('.cancel').show()
+				var user = this.$('.user').html()
+				var title = this.$('.title').html()
+				var url = this.$('.url').html()
+				this.$('.user').E().A(
+						$.ip().K("form-control user-update").val(user))
+				this.$('.title').E().A(
+						$.ip().K("form-control title-update").val(title))
+				this.$('.url').E().A(
+						$.ip().K("form-control url-update").val(url))
+				// use .h( or .H( instead of E().A(
+			},
+			update: function () {
+				this.model.set('user', $('.user-update').v())
+				this.model.set('title', $('.title-update').v())
+				this.model.set('url', $('.url-update').v())
+				this.model.save(null, {
+					success: function () {
+						$l('success updated!')
+					}
+				})
+			},
+			cancel: function () {
+				blogsView.ren()
+			},
+			delete: function () {
+				this.model.destroy()
+			}
+		})
+		BlogsView = Bb.V.x({
+			collection: blogs = tp$$ = tps = new Blogs(),
+			el: '.blogs-list',
+			initialize: function () {
+				var vw = this, cl = vw.collection
+				this.collection.on('add', this.ren, this)
+				this.collection.on('change', function () {
+					setTimeout(function () {
+						vw.ren()
+					}, 30)
+				}, vw)
+				this.collection.on('remove', this.ren, this)
+				/*	this.collection.fetch({
+				 success: function (docs) {
+				 if (docs) {
+				 $l('there are doc')
+				 $l(docs)
+				 _.each(docs.toJSON(), function (item) {
+				 $l('got blog with _id: ' + item._id)
+				 })
+				 }
+				 },
+				 error: function () {
+				 $l('failed to get blogs!')
+				 }
+				 })*/
+			},
+			ren: function () {
+				var vw = this
+				vw.$el.html('')
+				vw.collection.each(function (blog) {
+					var blogView = new BlogView({model: blog})
+					vw.$el.A(blogView.ren().el)
+				})
+				return this
+			}
+		})
+		tp__ = tpsV = blogsView = new BlogsView({})
+		Bb.M.prototype.idAttribute = '_id'
+	}
 //https://www.youtube.com/watch?v=a-ijUKVIJSw
 //VIDEO ONE
 // start 7:00
 // div .container wraps all
 //----- h1 in div
 //------ add a table
-//--thead ---tr ---th's title author url action
+//--thead ---tr ---th's title user url action
 //--tbod? (in vid2)
 //each 'blogRoll' is a tr
 //inject trs into tbody

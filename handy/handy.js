@@ -1,3 +1,6 @@
+//jElly
+//jEl
+
 $L('divs', 'image', 'canvas','text')
 $.hr = function (c, h, w) {
 	var hr = $('<hr>')

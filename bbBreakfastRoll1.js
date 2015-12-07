@@ -91,21 +91,19 @@ $index = function ($el, arr) {
 }
 ROLL = JUSTENDINGAT53_59 = function () {
 	bbLocStorPLUG()
-	 
+	store = Storage('recipes')
 	Recipe = _M()
-	Recipes = _C({
-		localStorage: store = $store('recipes')
-	})
-	
-	Index_ = _V({
-		_: function () {var vw=this 
-			var rcs = vw.rcs = store
-			rcs.on('all', vw.ren, vw)
-			rcs.fet()
+	Recipes = _C({localStorage: store})
+	Index = _V({
+		initialize: function () {
+			$l('index  init..')
+			this.recipes = store
+			this.recipes.on('all', this.ren, this)
+			//	this.recipes.fetch()
 		},
-		
-		ren: function () {var vw=this
-			vw.$el.E($.d([
+		ren: function () {
+			this.$el.E(
+					$.d([
 						$.h1().A('there are ' + _.z(store) + ' recipes'),
 						$.d().K('recipes').A('.. recipes will go here')
 					]).C('g')
@@ -113,47 +111,47 @@ ROLL = JUSTENDINGAT53_59 = function () {
 					//	$.p().A($.a('"intro" anchor')),
 					//	$.d().id('ct').C('b').A('.. #ct (the container) ..')
 			)
-			var f = Form_().ren().$el
-			var rcs = vw.$('.rcs')
-			recipes.A(f.el)
+			var form = Form()
+			form.ren()
+			var recipes = this.$('.recipes')
+			recipes.A('adding to .recpies..')
+			recipes.A(form.el)
+			recipes.A('added to .recpies..')
 			// pass the view itself this time..
 			// $indexEl = this.tp({num: _.z(store)})//$tp[this.tp](this)
 			//	this.$el.A($indexEl)
 			//	var form = Form().ren()
 			//this.$('.recipes').A(form.el)
 			//$('#root').A(form.el)
-			return vw
+			return this
 		}
 	})
-	
 	Form = _V({
-		tag: 'form',
-		_: function () {
-			var vw=this
-			vw.recs = Recs()
-			vw.recs.on('all', vw.ren, vw)
-			vw.recs.fet()
+		tagName: 'form',
+		initialize: function () {
+			$l('form init')
+			this.recipes = Recipes()
+			this.recipes.on('all', this.render, this)
+			this.recipes.fetch()
 		},
-		ev: {'mit': 'mit'},
-		mit: function (ev) {$.pD(ev)
-			Rec.create({name:this.$('#name').V(),
-						 name: this.$('#ing').V()}, function(){})
+		events: {
+			'submit': 'submit'
 		},
-		
-		ren: function () {var vw=this
-			
-			var $d = $.d().C($r()).css({padding: 10, margin: 10})
-			vw.$el.E($d)
-			$d.A(
-					'name: ', $.ip().pH('name').id('name'),
-					' ingredients : ', $.ip().pH('ingredients').id('ingredients')
-			)
-			$('<button type="submit">').A('mit').a2($d)
-			$.hr().a2($d)
-			return vw
+		submit: function (ev) {
+			$l('form submit!')
+			$.pD(ev)
+			$l(this.$('#name').v())
+		},
+		ren: function () {
+			this.$el.E($.d([
+				'name: ', $.ip().placeholder('name').id('name'),
+				' ingredients : ', $.ip().placeholder('ingredients').id('ingredients'),
+				$('<button type="submit">').A('submit'),
+				$.hr()
+			]).C($r()).css({padding: 10, margin: 10}))
+			return this
 		}
 	})
-	
 	$.d().id('#breakfast-rolls').css({padding: 20, margin: 20}).C('o').A('loading .... .... ..')
 	Router = $R({
 		initialize: function () {
@@ -168,57 +166,55 @@ ROLL = JUSTENDINGAT53_59 = function () {
 	})
 	Bb.h.start()
 }
-
 function rollSolvedFromGithub() {
 	//https://github.com/ngauthier/intro-to-backbone-js/blob/master/app/demo/solved.html
 	store = new Store("recipes")
 	////
-	Recipe = M$({});
-	Recipes = C$({localStorage: store})
-	Index = V$({
+	Recipe = Bb.M.x({});
+	Recipes = Bb.C.x({localStorage: store})
+	Index = Bb.V.x({
 		template: template('index'),
 		initialize: function () {
-			this.rcs = new Rcs();
-			this.rcs.on('all', this.ren, this);
-			this.rcs.fetch();
+			this.recipes = new Recipes();
+			this.recipes.on('all', this.ren, this);
+			this.recipes.fetch();
 		},
 		ren: function () {
-			this.$el.h(this.template(this));
-			this.rcs.e(this.addRc, this);
-			var form = new Form({cl: this.rcs});
-			this.$el.A(form.ren().el);
+			this.$el.html(this.template(this));
+			this.recipes.each(this.addRecipe, this);
+			var form = new Form({collection: this.recipes});
+			this.$el.append(form.ren().el);
 			return this;
 		},
 		addRecipe: function (recipe) {
-			var view = new Rc({model: rc});
-			this.$('.rcs').A(view.ren().el);
+			var view = new Recipe({model: recipe});
+			this.$('.recipes').append(view.ren().el);
 		},
 		count: function () {
 			return this.recipes.length;
 		}
 	})
-	
-	Recipe = V$({
+	Recipe = Bb.V.x({
 		className: 'well',
 		template: template('recipe'),
 		events: {
 			'click button': 'delete'
 		},
 		ren: function () {
-			this.$el.h(this.template(this));
+			this.$el.html(this.template(this));
 			return this;
 		},
 		name: function () {
-			return this.md.g('name');
+			return this.model.get('name');
 		},
 		ingredients: function () {
-			return this.md.g('ings');
+			return this.model.get('ingredients');
 		},
 		delete: function () {
-			this.md.destroy();
+			this.model.destroy();
 		}
 	})
-	Form = V$({
+	Form = Bb.V.x({
 		tagName: 'form',
 		className: 'form-horizontal',
 		template: template('form'),
@@ -231,26 +227,30 @@ function rollSolvedFromGithub() {
 		},
 		add: function (event) {
 			event.preventDefault();
-			this.cl.create({
+			this.collection.create({
 				name: this.$('#name').val(),
-				ingredients: this.$('#ings').val()
+				ingredients: this.$('#ingredients').val()
 			})
 			this.ren();
 		}
-	})
-	
-	
-	boot = function (ct) {
-		 
-		$R({_: function (ops) {this.el = ops.el},
-			rts: {"": "index"},
+	});
+	boot = function (container) {
+		Router = Bb.R.x({
+			initialize: function (options) {
+				this.el = options.el
+			},
+			routes: {
+				"": "index"
+			},
 			index: function () {
-				this.$el.E(
-				  (new Index() ).ren().el)}}
-		)({el: $(ct)})
-			Bb.h.start();
+				var index = new Index();
+				this.el.empty();
+				this.el.append(index.ren().el);
+			}
+		})
+		var router = new Router({el: $(container)})
+		Bb.history.start();
 	}
-	
 	SOLVED = function () {
 		
 		/*

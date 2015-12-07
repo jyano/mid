@@ -1,7 +1,17 @@
 $L()
 
 TWT=function(){$l("TWT video part 2...")
-} 
+	Bb.Model.prototype.idAttribute = '_id'
+	
+	Twit= Bb.M.x({
+		defaults: {author: 'jt', status: 'zzzzzzz'}
+	})
+	Twits = Bb.C.x({
+		model: Twit,
+		url: '/twits'
+	})
+}
+
 
 function _pre(){
 	//https://www.youtube.com/watch?v=2BDGBJUtAmo
@@ -147,3 +157,5 @@ $l('twt00 tweet video part 1 good')
 		
 	})
 }
+
+ 
